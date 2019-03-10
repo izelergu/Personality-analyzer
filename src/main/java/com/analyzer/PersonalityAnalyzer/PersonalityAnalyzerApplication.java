@@ -8,6 +8,8 @@ public class PersonalityAnalyzerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PersonalityAnalyzerApplication.class, args);
+		ZemberekConnection zemberekCon = new ZemberekConnection();
+		zemberekCon.normalize();
 	}
 
 }
