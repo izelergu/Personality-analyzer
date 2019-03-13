@@ -1,11 +1,12 @@
 package com.analyzer.PersonalityAnalyzer;
 
 import com.analyzer.PersonalityAnalyzer.controller.UserController;
+import com.analyzer.PersonalityAnalyzer.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import zemberek.morphology.TurkishMorphology;
 import zemberek.normalization.*;
 
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -14,7 +15,36 @@ public class ZemberekConnection {
     @Autowired
     UserController userController;
 
-    public void normalize () {
+    String zemberekCommand = "cmd /c python src/main/zemberek.py ";
+    String userCommand = "cmd /c python src/main/User.py ";
+    String liwcAppCommand = "cmd /c python src/main/liwcApp.py ";
+
+    public void getTweets(String username){
+        // User.py analyze buttonunun click fonksiyonu
+        try {
+            String line;
+            Process p = Runtime.getRuntime().exec(userCommand + username);
+            System.out.println("value: "+p);
+            BufferedReader bri = new BufferedReader
+                    (new InputStreamReader(p.getInputStream()));
+            BufferedReader bre = new BufferedReader
+                    (new InputStreamReader(p.getErrorStream()));
+            while ((line = bri.readLine()) != null) {
+                System.out.println(line);
+            }
+            bri.close();
+            while ((line = bre.readLine()) != null) {
+                System.out.println(line);
+            }
+            bre.close();
+            p.waitFor();
+        }
+        catch (Exception err) {
+            err.printStackTrace();
+        }
+    }
+
+    public void normalizeTweets () throws IOException {
 
         Path lookupRoot = Paths.get("./data/normalization");
         Path lmFile = Paths.get("./data/lm/lm.2gram.slm");
@@ -26,9 +56,38 @@ public class ZemberekConnection {
             e.printStackTrace();
         }
 
-        System.out.println(normalizer.normalize("Yrn okua gidicem"));
-        System.out.println(normalizer.normalize("Çoooook gzl"));
-
-        userController.findAll();
+        //zemberek.py
+        try {
+            String line;
+            Process p = Runtime.getRuntime().exec(zemberekCommand );
+            BufferedReader bri = new BufferedReader
+                    (new InputStreamReader(p.getInputStream()));
+            while ((line = bri.readLine()) != null) {
+                System.out.println(line);
+            }
+            bri.close();
+            p.waitFor();
+        } catch (Exception err) {
+            err.printStackTrace();
+        }
     }
-}
+
+        public void findWordgroups(){
+
+            String liwcDeneme = "sen sıfır";
+            //liwcApp.py
+            try {
+                String line;
+                Process p = Runtime.getRuntime().exec(liwcAppCommand + liwcDeneme);
+                BufferedReader bri = new BufferedReader
+                        (new InputStreamReader(p.getInputStream()));
+                while ((line = bri.readLine()) != null) {
+                    System.out.println(line);
+                }
+                bri.close();
+                p.waitFor();
+            } catch (Exception err) {
+                err.printStackTrace();
+            }
+        }
+    }

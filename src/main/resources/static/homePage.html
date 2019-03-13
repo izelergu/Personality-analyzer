@@ -1,10 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<title>Home Page</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+<script src="/js/user.js"></script>
+
+<body style="background-color:#c9c6d1">
+<form class="navbar navbar-default navbar-fixed-top" style="background-color:#c9c6d1;border-color:#c9c6d1">
+    <nav class="navbar navbar-inverse" style="background-color:#f37735;border-color:#f37735">
+        <div class="container-fluid" >
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/index.html" style="width:400px;color:white">Personality Analyzer</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li style="width:350px"><a href="/homePage.html" style="color:white">Home</a></li>
+                <li style="width:400px"><a href="/developerTeamPage.html" style="color:white">Developer Team</a></li>
+                <li style="width:350px"><a href="/aboutPage.html" style="color:white">About</a></li>
+            </ul>
+        </div>
+    </nav>
+</form>
+<div ng-app="UserApp" ng-controller="UserCtrl" style="background-color:#a3a2a5;width:700px;height:400px; margin-left:440px;margin-top:100px;border:3px solid #b2b0b7">
+    <h3 style="margin-top:20px;color:#d66f0e;margin-left: 10px">Personality Analyzer</h3>
+    <label style="color:white;margin-left:200px;margin-top:100px;font-family: 'Comic Sans MS'">Please enter your username</label><br>
+    <input type="text" name="name" placeholder="@" style="margin-left:200px" ng-model="username">
+    <button ng-click="getTwitterUsername(username)" type="submit" class="btn btn-primary" style="color:white;background-color:#f37735;border-color:#f37735 ">Analyze</button>
+    <p>{{user.id}}</p>
+    <p>{{user.username}}</p>
+    <p>{{user.last_analysis}}</p>
+</div>
 </body>
 </html>
