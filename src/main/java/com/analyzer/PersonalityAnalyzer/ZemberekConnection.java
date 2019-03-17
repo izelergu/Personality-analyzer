@@ -22,29 +22,22 @@ public class ZemberekConnection {
     public void getTweets(String username){
         // User.py analyze buttonunun click fonksiyonu
         try {
-            String line;
+            String line = "";
             Process p = Runtime.getRuntime().exec(userCommand + username);
             System.out.println("value: "+p);
             BufferedReader bri = new BufferedReader
                     (new InputStreamReader(p.getInputStream()));
-            BufferedReader bre = new BufferedReader
-                    (new InputStreamReader(p.getErrorStream()));
             while ((line = bri.readLine()) != null) {
                 System.out.println(line);
             }
             bri.close();
-            while ((line = bre.readLine()) != null) {
-                System.out.println(line);
-            }
-            bre.close();
-            p.waitFor();
         }
         catch (Exception err) {
             err.printStackTrace();
         }
     }
 
-    public void normalizeTweets () throws IOException {
+    public void normalizeTweets (String tweetsFile) throws IOException {
 
         Path lookupRoot = Paths.get("./data/normalization");
         Path lmFile = Paths.get("./data/lm/lm.2gram.slm");
@@ -55,6 +48,18 @@ public class ZemberekConnection {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/samplefile1.txt"));
+        File f = new File("src/main/normalizedWords.txt");
+        BufferedReader b = new BufferedReader(new FileReader(f));
+        String readLine = "";
+        while ((readLine = b.readLine()) != null) {
+            String normalWord = normalizer.normalize(readLine);
+            writer.write(normalWord+"\n");
+
+        }
+        writer.close();
+        b.close();
 
         //zemberek.py
         try {

@@ -1,6 +1,12 @@
 import tweepy
 import re
 import sys
+import datetime
+import pymongo
+
+myclient = pymongo.MongoClient("mongodb+srv://ismailyankayis:2430zcbg@twitterpersonalityanalyzer-aeniz.mongodb.net/admin")
+mydb = myclient["TwitterPersonalityAnalyzerDB"]
+mycol1 = mydb["User"]
 
 def clearTweet(cleanedTweet):
     prepTweet = list()
@@ -20,6 +26,7 @@ access_token_secret = 'N5G428M0NxMDwvv0Iv3C8cZgsblTBJhsaVW0uzrfz65dy'
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 
+cleanedTweets = ""
 api = tweepy.API(auth)
 
 f = open("src/main/normalizedWords.txt", "w",  encoding='utf-8')
@@ -27,6 +34,11 @@ f = open("src/main/normalizedWords.txt", "w",  encoding='utf-8')
 tweets = api.user_timeline(sys.argv[1], count=10)
 for tweet in tweets:
     cleanedTweet = clearTweet(tweet.text)
-    #print(cleanedTweet)
     for cleaned in cleanedTweet:
-        f.write(cleaned + "\n")
+        print(cleaned + "\n")
+        cleanedTweets+=cleaned + " "
+
+now = datetime.datetime.now()
+now = str(now)
+user1 = {'username':sys.argv[1], 'last_analysis':now, 'tweets':cleanedTweets}
+mycol1.insert_one(user1)

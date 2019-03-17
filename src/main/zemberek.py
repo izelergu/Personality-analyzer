@@ -11,7 +11,7 @@ Zemberek = jpype.JClass("net.zemberek.erisim.Zemberek")
 zemberek = Zemberek(tr)
 
 kelimeler = list()
-f = open("src/main/normalizedWords.txt", "r",  encoding='utf-8')
+f = open("src/main/samplefile1.txt", "r",  encoding='utf-8')
 for line in f:
     kelimeler.append(line)
 
@@ -20,6 +20,7 @@ for kelime in kelimeler:
         yanit = zemberek.asciiCozumle(kelime)
         if yanit:
             print("{}".format(yanit[0]))
+
         else:
             print("{} ÇÖZÜMLENEMEDİ".format(kelime))
 #JVM kapat
