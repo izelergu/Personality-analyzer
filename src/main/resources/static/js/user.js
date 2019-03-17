@@ -18,7 +18,6 @@ app.controller('UserCtrl', function($scope,$http,$window) {
         var usr = $http.get('/User/findUserByUsername/' + $scope.username);
         usr.then(function (response) {
             $scope.user = response.data;
-            $scope.username = "";
         });
     }
 

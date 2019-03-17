@@ -39,8 +39,8 @@ public class UserController {
 
     @RequestMapping(path="/findUserByUsername/{username}", method = RequestMethod.GET)
     public @ResponseBody User findUserByUsername(@PathVariable String username){
-        User usr = userService.findUserByUsername(username);
         zemberekCon.getTweets(username);
+        User usr = userService.findUserByUsername(username);
         zemberekCon.normalizeTweets(usr);
         return usr;
     }
