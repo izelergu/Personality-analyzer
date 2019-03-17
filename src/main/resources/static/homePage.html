@@ -28,7 +28,7 @@
     <h3 style="margin-top:20px;color:#d66f0e;margin-left: 10px">Personality Analyzer</h3>
     <label style="color:white;margin-left:200px;margin-top:100px;font-family: 'Comic Sans MS'">Please enter your username</label><br>
     <input type="text" name="name" placeholder="@" style="margin-left:200px" ng-model="username">
-    <button ng-click="getTwitterUsername(username)" type="submit" class="btn btn-primary" style="color:white;background-color:#f37735;border-color:#f37735 ">Analyze</button>
+    <button ng-click="findUserByName(username)" type="submit" class="btn btn-primary" style="color:white;background-color:#f37735;border-color:#f37735 ">Analyze</button>
     <p>{{user.id}}</p>
     <p>{{user.username}}</p>
     <p>{{user.last_analysis}}</p>

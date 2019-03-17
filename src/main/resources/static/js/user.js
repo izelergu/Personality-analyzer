@@ -14,13 +14,6 @@ app.controller('UserCtrl', function($scope,$http,$window) {
 
     }
 
-    $scope.getTwitterUsername = function(username){
-        var usr = $http.get('/User/getUserTweets/' + $scope.username);
-        usr.then(function (response) {
-            $scope.username = "";
-        });
-    }
-
     $scope.findUserByName = function () {
         var usr = $http.get('/User/findUserByUsername/' + $scope.username);
         usr.then(function (response) {

@@ -38,16 +38,11 @@ public class UserController {
     }
 
     @RequestMapping(path="/findUserByUsername/{username}", method = RequestMethod.GET)
-    public  @ResponseBody User findUserByUsername(@PathVariable String username){
-        return userService.findUserByUsername(username);
-    }
-
-    @RequestMapping(path="/getUserTweets/{username}")
-    public void getUserTweets (@PathVariable String username)throws IOException {
-        String tweetsFile = "normalizedWords.txt";
+    public @ResponseBody User findUserByUsername(@PathVariable String username){
+        User usr = userService.findUserByUsername(username);
         zemberekCon.getTweets(username);
-        //zemberekCon.normalizeTweets(tweetsFile);
-        //zemberekCon.findWordgroups();
+        zemberekCon.normalizeTweets(usr);
+        return usr;
     }
 
 }

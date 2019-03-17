@@ -12,8 +12,11 @@ import java.nio.file.Paths;
 
 public class ZemberekConnection {
 
-    @Autowired
-    UserController userController;
+    User userTweets = new User();
+
+    Path lookupRoot = Paths.get("./data/normalization");
+    Path lmFile = Paths.get("./data/lm/lm.2gram.slm");
+    TurkishMorphology morphology = TurkishMorphology.createWithDefaults();
 
     String zemberekCommand = "cmd /c python src/main/zemberek.py ";
     String userCommand = "cmd /c python src/main/User.py ";
@@ -37,32 +40,19 @@ public class ZemberekConnection {
         }
     }
 
-    public void normalizeTweets (String tweetsFile) throws IOException {
+    public void normalizeTweets (User usr){
 
-        Path lookupRoot = Paths.get("./data/normalization");
-        Path lmFile = Paths.get("./data/lm/lm.2gram.slm");
-        TurkishMorphology morphology = TurkishMorphology.createWithDefaults();
-        TurkishSentenceNormalizer normalizer = null;
+        /*TurkishSentenceNormalizer normalizer = null;
         try {
             normalizer = new TurkishSentenceNormalizer(morphology, lookupRoot, lmFile);
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
 
-        BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/samplefile1.txt"));
-        File f = new File("src/main/normalizedWords.txt");
-        BufferedReader b = new BufferedReader(new FileReader(f));
-        String readLine = "";
-        while ((readLine = b.readLine()) != null) {
-            String normalWord = normalizer.normalize(readLine);
-            writer.write(normalWord+"\n");
-
-        }
-        writer.close();
-        b.close();
+        System.out.println(usr);
 
         //zemberek.py
-        try {
+        /*try {
             String line;
             Process p = Runtime.getRuntime().exec(zemberekCommand );
             BufferedReader bri = new BufferedReader
@@ -74,7 +64,7 @@ public class ZemberekConnection {
             p.waitFor();
         } catch (Exception err) {
             err.printStackTrace();
-        }
+        }*/
     }
 
         public void findWordgroups(){
