@@ -41,7 +41,8 @@ public class ZemberekConnection {
     }
 
     public void normalizeTweets (User usr){
-
+        
+        System.out.println(usr);
         /*TurkishSentenceNormalizer normalizer = null;
         try {
             normalizer = new TurkishSentenceNormalizer(morphology, lookupRoot, lmFile);
@@ -49,7 +50,6 @@ public class ZemberekConnection {
             e.printStackTrace();
         }*/
 
-        System.out.println(usr);
 
         //zemberek.py
         /*try {
