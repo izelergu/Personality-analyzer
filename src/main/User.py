@@ -4,6 +4,7 @@ import sys
 import datetime
 import pymongo
 
+
 myclient = pymongo.MongoClient("mongodb+srv://ismailyankayis:2430zcbg@twitterpersonalityanalyzer-aeniz.mongodb.net/admin")
 mydb = myclient["TwitterPersonalityAnalyzerDB"]
 mycol1 = mydb["User"]
@@ -28,15 +29,15 @@ auth.set_access_token(access_token, access_token_secret)
 cleanedTweets = ""
 api = tweepy.API(auth)
 
-
+tweetList = list()
 tweets = api.user_timeline(sys.argv[1], count=100)
 for tweet in tweets:
-    cleanedTweet = clearTweet(tweet.text)
+    """cleanedTweet = clearTweet(tweet.text)
     for cleaned in cleanedTweet:
         print(cleaned + "\n")
-        cleanedTweets+=cleaned + " "
-
+        cleanedTweets+=cleaned + " """""
+    tweetList.append(tweet.text)
 now = datetime.datetime.now()
 now = str(now)
-user1 = {'username':sys.argv[1], 'last_analysis':now, 'tweets':cleanedTweets}
+user1 = {'username':sys.argv[1], 'last_analysis':now, 'tweets':tweetList}
 mycol1.insert_one(user1)

@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -16,5 +18,5 @@ public class User {
     private String id;
     private String username;
     private String last_analysis;
-    private String tweets;
+    private List tweets;
 }
