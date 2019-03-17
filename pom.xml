@@ -14,19 +14,22 @@
 	<name>PersonalityAnalyzer</name>
 	<description>Spring boot project</description>
 
-	<repositories>
-		<repository>
-			<id>zemberek-repo</id>
-			<name>zemberek Maven Repo on Github</name>
-			<url>https://raw.github.com/ahmetaa/maven-repo/master</url>
-		</repository>
-	</repositories>
-
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
 
+
 	<dependencies>
+        <dependency>
+            <groupId>zemberek-nlp</groupId>
+            <artifactId>zemberek-morphology</artifactId>
+            <version>0.16.0</version>
+        </dependency>
+		<dependency>
+			<groupId>zemberek-nlp</groupId>
+			<artifactId>zemberek-normalization</artifactId>
+			<version>0.16.0</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
@@ -116,7 +119,17 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>zemberek-repo</id>
+			<name>zemberek Maven Repo on Github</name>
+			<url>https://raw.github.com/ahmetaa/maven-repo/master</url>
+		</repository>
+	</repositories>
+
 
 	<build>
 		<plugins>

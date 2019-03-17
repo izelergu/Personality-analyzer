@@ -18,6 +18,8 @@ public class UserController {
     @Autowired
     UserService userService;
 
+    ZemberekConnection zemberekCon = new ZemberekConnection();
+
     @RequestMapping(path="/findAll", method = RequestMethod.GET)
     public  @ResponseBody
     List<User> findAll(){
@@ -43,7 +45,6 @@ public class UserController {
     @RequestMapping(path="/getUserTweets/{username}")
     public void getUserTweets (@PathVariable String username)throws IOException {
         String tweetsFile = "normalizedWords.txt";
-        ZemberekConnection zemberekCon = new ZemberekConnection();
         zemberekCon.getTweets(username);
         //zemberekCon.normalizeTweets(tweetsFile);
         //zemberekCon.findWordgroups();

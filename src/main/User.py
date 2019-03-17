@@ -25,13 +25,11 @@ access_token_secret = 'N5G428M0NxMDwvv0Iv3C8cZgsblTBJhsaVW0uzrfz65dy'
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
-
 cleanedTweets = ""
 api = tweepy.API(auth)
 
-f = open("src/main/normalizedWords.txt", "w",  encoding='utf-8')
 
-tweets = api.user_timeline(sys.argv[1], count=10)
+tweets = api.user_timeline(sys.argv[1], count=100)
 for tweet in tweets:
     cleanedTweet = clearTweet(tweet.text)
     for cleaned in cleanedTweet:
