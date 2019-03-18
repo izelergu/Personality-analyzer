@@ -1,6 +1,8 @@
 package com.analyzer.PersonalityAnalyzer.controller;
 
 import com.analyzer.PersonalityAnalyzer.ZemberekConnection;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
@@ -17,6 +19,8 @@ public class UserController {
 
     @Autowired
     UserService userService;
+
+    Logger logger = LoggerFactory.getLogger(UserController.class);
 
     ZemberekConnection zemberekCon = new ZemberekConnection();
 

@@ -3,9 +3,7 @@ package com.analyzer.PersonalityAnalyzer;
 import com.analyzer.PersonalityAnalyzer.entity.User;
 import zemberek.morphology.TurkishMorphology;
 import zemberek.morphology.analysis.InformalAnalysisConverter;
-import zemberek.morphology.analysis.SentenceAnalysis;
 import zemberek.morphology.analysis.SingleAnalysis;
-import zemberek.morphology.analysis.WordAnalysis;
 import zemberek.morphology.lexicon.DictionaryItem;
 import zemberek.normalization.*;
 
@@ -14,6 +12,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class ZemberekConnection {
 
@@ -24,6 +23,7 @@ public class ZemberekConnection {
 
     private String userCommand = "cmd /c python src/main/User.py ";
     private String liwcAppCommand = "cmd /c python src/main/liwcApp.py ";
+    Logger LOGGER = Logger.getLogger(ZemberekConnection.class.getName());
 
     public ZemberekConnection() {
         morphology = TurkishMorphology.createWithDefaults();
@@ -51,49 +51,65 @@ public class ZemberekConnection {
         }
     }
 
-    public void normalizeTweets(User usr) {
-
+    public List<String> normalizeTweets(User usr) {
         List<String> tweets = new ArrayList<String>();
         tweets.addAll(usr.getTweets());
 
         List<SingleAnalysis> analyses;
-        InformalAnalysisConverter converter = new InformalAnalysisConverter(morphology.getWordGenerator());
         String normalized = "";
         for (int i = 0; i < tweets.size(); i++) {
+            LOGGER.info("Original tweet: " + tweets.get(i));
             analyses = morphology
                     .analyzeAndDisambiguate(tweets.get(i))
                     .bestAnalysis();
 
             normalized = parseRoot(analyses);
-            System.out.println(normalized);
-            /*
-            normalized = normalizer.normalize((tweets.get(i)));
-            System.out.println(tweets.get(i) + " --> " + normalized);
-            tweets.set(i, normalized);//burda normalized olanları liste ekliyoruz*/
+            tweets.set(i, normalized);
         }
-        //zemberek.py
-        //findWordgroups(tweets);
+        return tweets;
     }
 
     public String parseRoot(List<SingleAnalysis> analyses) {
         String normalized = "";
+        String word = "";
+        String wordRoot = "";
+        String previousType = "";
         for (SingleAnalysis a : analyses) {
             DictionaryItem item = a.getDictionaryItem();
             if (item.primaryPos.getStringForm().equalsIgnoreCase("Mention") || item.secondaryPos.getStringForm().equalsIgnoreCase("Mention")) {
-
+                LOGGER.info(item.lemma + " is mention");
             } else if (item.primaryPos.getStringForm().equalsIgnoreCase("URL") || item.secondaryPos.getStringForm().equalsIgnoreCase("URL")) {
-
+                LOGGER.info(item.lemma + " is URL");
             } else if (item.primaryPos.toString().equalsIgnoreCase("Punctuation") || item.secondaryPos.toString().equalsIgnoreCase("Punctuation")) {
-
+                //LOGGER.info(item.lemma + " is Punctuation");
             } else {
-                for (int j = 0; j < a.getMorphemeDataList().size(); j++) {
-                    if (a.getMorphemeDataList().get(j).surface.matches(".*:.*")) {
-                        // ilki kök yada ek, ikincisi türü.
-                        normalized += " " + a.getMorphemeDataList().get(j).surface.split(":")[0];
+                word = item.lemma;
+                wordRoot = item.root;
+                try {
+                    previousType = a.getMorphemeDataList().get(0).morpheme.name;
+                } catch (Exception e) {
+                    LOGGER.info(item.lemma + " has no morpheme!");
+                }
+                for (int j = 1; j < a.getMorphemeDataList().size(); j++) {
+                    if (!a.getMorphemeDataList().get(j).surface.equals("")) {
+                        if (!a.getMorphemeDataList().get(j).morpheme.derivational)
+                            word += " " + a.getMorphemeDataList().get(j).morpheme.name;
+                        else {
+                            if (a.getMorphemeDataList().get(j).morpheme.name.equalsIgnoreCase("with")
+                                    || a.getMorphemeDataList().get(j).morpheme.name.equalsIgnoreCase("without"))
+                                word += a.getMorphemeDataList().get(j).surface;
+                            else {
+                                if (a.getMorphemeDataList().size() > j + 1 && a.getMorphemeDataList().get(j + 1).morpheme.name.equalsIgnoreCase(previousType))
+                                    word = wordRoot + a.getMorphemeDataList().get(j).surface;
+                            }
+                        }
                     }
                 }
+
+                normalized += " " + word;
             }
         }
+        LOGGER.info("Parsed tweet: " + normalized);
         return normalized;
     }
 
