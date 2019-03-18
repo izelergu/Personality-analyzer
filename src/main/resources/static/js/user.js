@@ -21,6 +21,13 @@ app.controller('UserCtrl', function($scope,$http,$window) {
         });
     }
 
+    $scope.analyzeButton = function () {
+        var usr = $http.get('/User/analyzeButton/' + $scope.username);
+        usr.then(function (response) {
+
+        });
+    }
+
     $scope.findUserById = function() {
         var usr = $http.get('/User/findUserByID/' + $scope.userId);
         usr.then(function (response) {
