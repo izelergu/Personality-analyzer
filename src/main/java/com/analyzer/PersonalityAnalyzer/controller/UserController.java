@@ -9,7 +9,6 @@ import com.analyzer.PersonalityAnalyzer.entity.User;
 import com.analyzer.PersonalityAnalyzer.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -18,8 +17,6 @@ public class UserController {
 
     @Autowired
     UserService userService;
-
-    Logger logger = LoggerFactory.getLogger(UserController.class);
 
     ZemberekConnection zemberekCon = new ZemberekConnection();
 
@@ -43,6 +40,6 @@ public class UserController {
     public  @ResponseBody void analyzeButton(@PathVariable String username){
         zemberekCon.getTweets(username);
         User usr = userService.findUserByUsername(username);
-        zemberekCon.normalizeTweets(usr);
+        zemberekCon.findWordgroups(zemberekCon.normalizeTweets(usr));
     }
 }
