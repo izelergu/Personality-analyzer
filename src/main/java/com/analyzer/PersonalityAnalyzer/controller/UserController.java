@@ -45,7 +45,7 @@ public class UserController {
     public @ResponseBody User findUserByUsername(@PathVariable String username){
         zemberekCon.getTweets(username);
         User usr = userService.findUserByUsername(username);
-        zemberekCon.normalizeTweets(usr);
+        zemberekCon.findWordgroups(zemberekCon.normalizeTweets(usr));
         return usr;
     }
 

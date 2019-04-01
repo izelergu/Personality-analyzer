@@ -2,9 +2,9 @@ package com.analyzer.PersonalityAnalyzer;
 
 import com.analyzer.PersonalityAnalyzer.entity.User;
 import zemberek.morphology.TurkishMorphology;
-import zemberek.morphology.analysis.InformalAnalysisConverter;
 import zemberek.morphology.analysis.SingleAnalysis;
-import zemberek.morphology.lexicon.DictionaryItem;
+import zemberek.morphology.analysis.WordAnalysis;
+import zemberek.morphology.lexicon.RootLexicon;
 import zemberek.normalization.*;
 
 import java.io.*;
@@ -20,6 +20,7 @@ public class ZemberekConnection {
     private Path lmFile = Paths.get("./data/lm/lm.2gram.slm");
     private TurkishSentenceNormalizer normalizer;
     private TurkishMorphology morphology;
+    TurkishMorphology analyzer;
 
     private String userCommand = "cmd /c python src/main/User.py ";
     private String liwcAppCommand = "cmd /c python src/main/liwcApp.py ";
@@ -27,6 +28,10 @@ public class ZemberekConnection {
 
     public ZemberekConnection() {
         morphology = TurkishMorphology.createWithDefaults();
+        analyzer = TurkishMorphology.builder()
+                .setLexicon(RootLexicon.DEFAULT)
+                .disableCache()
+                .build();
         try {
             normalizer = new TurkishSentenceNormalizer(morphology, lookupRoot, lmFile);
         } catch (IOException e) {
@@ -55,66 +60,33 @@ public class ZemberekConnection {
         List<String> tweets = new ArrayList<String>();
         tweets.addAll(usr.getTweets());
 
-        List<SingleAnalysis> analyses;
-        String normalized = "";
-        for (int i = 0; i < tweets.size(); i++) {
-            LOGGER.info("Original tweet: " + tweets.get(i));
-            analyses = morphology
-                    .analyzeAndDisambiguate(tweets.get(i))
-                    .bestAnalysis();
 
-            normalized = parseRoot(analyses);
-            tweets.set(i, normalized);
+        String appendedWord = "";
+        String[] splitedWords;
+        WordAnalysis wa = null;
+        for (int i = 0; i < tweets.size(); i++) {
+            //LOGGER.info("Original tweet: " + tweets.get(i));
+            splitedWords = tweets.get(i).split("\\s+");
+            //Each word of a tweet will normalized and its root will be found.
+            for (int j = 0; j < splitedWords.length; j++) {
+
+                if(splitedWords[j].contains("https://") || splitedWords[j].contains("http://") || splitedWords[j].contains("@") || splitedWords[j].equals("RT")) continue;
+                splitedWords[j] = splitedWords[j].replaceAll("[^A-Za-z0-9çÇğĞİıöÖüÜşŞ]+", " ");
+                wa = analyzer.analyze(splitedWords[j]);
+                appendedWord = splitedWords[j];
+                // Every result root of a word
+                for (SingleAnalysis sa : wa) {
+                    appendedWord += "|" + sa.getDictionaryItem().lemma;
+                }
+                appendedWord += " ";
+            }
+            tweets.set(i, appendedWord);
         }
         return tweets;
     }
 
-    public String parseRoot(List<SingleAnalysis> analyses) {
-        String normalized = "";
-        String word = "";
-        String wordRoot = "";
-        String previousType = "";
-        for (SingleAnalysis a : analyses) {
-            DictionaryItem item = a.getDictionaryItem();
-            if (item.primaryPos.getStringForm().equalsIgnoreCase("Mention") || item.secondaryPos.getStringForm().equalsIgnoreCase("Mention")) {
-                LOGGER.info(item.lemma + " is mention");
-            } else if (item.primaryPos.getStringForm().equalsIgnoreCase("URL") || item.secondaryPos.getStringForm().equalsIgnoreCase("URL")) {
-                LOGGER.info(item.lemma + " is URL");
-            } else if (item.primaryPos.toString().equalsIgnoreCase("Punctuation") || item.secondaryPos.toString().equalsIgnoreCase("Punctuation")) {
-                //LOGGER.info(item.lemma + " is Punctuation");
-            } else {
-                word = item.lemma;
-                wordRoot = item.root;
-                try {
-                    previousType = a.getMorphemeDataList().get(0).morpheme.name;
-                } catch (Exception e) {
-                    LOGGER.info(item.lemma + " has no morpheme!");
-                }
-                for (int j = 1; j < a.getMorphemeDataList().size(); j++) {
-                    if (!a.getMorphemeDataList().get(j).surface.equals("")) {
-                        if (!a.getMorphemeDataList().get(j).morpheme.derivational)
-                            word += " " + a.getMorphemeDataList().get(j).morpheme.name;
-                        else {
-                            if (a.getMorphemeDataList().get(j).morpheme.name.equalsIgnoreCase("with")
-                                    || a.getMorphemeDataList().get(j).morpheme.name.equalsIgnoreCase("without"))
-                                word += a.getMorphemeDataList().get(j).surface;
-                            else {
-                                if (a.getMorphemeDataList().size() > j + 1 && a.getMorphemeDataList().get(j + 1).morpheme.name.equalsIgnoreCase(previousType))
-                                    word = wordRoot + a.getMorphemeDataList().get(j).surface;
-                            }
-                        }
-                    }
-                }
-
-                normalized += " " + word;
-            }
-        }
-        LOGGER.info("Parsed tweet: " + normalized);
-        return normalized;
-    }
-
     public void findWordgroups(List<String> tweets) {
-
+        System.out.println("girebilirim.");
         //liwcApp.py
         try {
             String line;
