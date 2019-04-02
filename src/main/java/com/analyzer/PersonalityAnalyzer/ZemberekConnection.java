@@ -66,12 +66,12 @@ public class ZemberekConnection {
         WordAnalysis wa = null;
         for (int i = 0; i < tweets.size(); i++) {
             //LOGGER.info("Original tweet: " + tweets.get(i));
-            splitedWords = tweets.get(i).split("\\s+");
-            //Each word of a tweet will normalized and its root will be found.
-            for (int j = 0; j < splitedWords.length; j++) {
+            tweets.get(i).replaceAll("http.*\\s+", ""); // remove all links
+            tweets.get(i).replaceAll("@\\w+\\s+", ""); //remove mentions
+            tweets.get(i).replaceAll("[^A-Za-z0-9çÇğĞİıöÖüÜşŞ]+", " "); //remove punctuations
+            splitedWords = tweets.get(i).split("\\s+"); // split the tweet word by word
 
-                if(splitedWords[j].contains("https://") || splitedWords[j].contains("http://") || splitedWords[j].contains("@") || splitedWords[j].equals("RT")) continue;
-                splitedWords[j] = splitedWords[j].replaceAll("[^A-Za-z0-9çÇğĞİıöÖüÜşŞ]+", " ");
+            for (int j = 0; j < splitedWords.length; j++) { //Each word of a tweet will normalized and its root will be found.
                 wa = analyzer.analyze(splitedWords[j]);
                 appendedWord = splitedWords[j];
                 // Every result root of a word
