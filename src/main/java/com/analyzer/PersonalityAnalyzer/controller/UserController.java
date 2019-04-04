@@ -40,6 +40,7 @@ public class UserController {
     public  @ResponseBody void analyzeButton(@PathVariable String username){
         zemberekCon.getTweets(username);
         User usr = userService.findUserByUsername(username);
-        zemberekCon.findWordgroups(zemberekCon.normalizeTweets(usr));
+        zemberekCon.normalizeTweets(usr);
+        zemberekCon.findWordgroups(usr);
     }
 }

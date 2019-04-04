@@ -1,0 +1,10 @@
+liwc-0.4.1.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+liwc-0.4.1.dist-info/METADATA,sha256=wU3k8bctHQzwrxZ888y5yZpP3zoNJ65h4iAy2YTbPBc,2693
+liwc-0.4.1.dist-info/RECORD,,
+liwc-0.4.1.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+liwc-0.4.1.dist-info/top_level.txt,sha256=8TFAyU3JhWjGraRtCnTaECDo3DcxLa38op6RCsufv6s,11
+liwc-0.4.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+liwc/__init__.py,sha256=UzFYXBRmgDwwuPvi6sjwGqnR0_Ry5NhJoRHS51-khBM,2716
+liwc/__pycache__/__init__.cpython-37.pyc,,
+tests/__init__.py,sha256=PYi0LG0jIIaPT0xZQD1A1lELswsaIdo5qECoCC1YhU4,647
+tests/__pycache__/__init__.cpython-37.pyc,,
