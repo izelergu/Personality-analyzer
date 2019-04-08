@@ -102,14 +102,6 @@ public class ZemberekConnection {
                 tweets.remove(i--); // remove empty tweets.
             appendedWord = "";
         }
-
-        Document query = new Document();
-        query.append("username",usr.getUsername());
-        Document setData = new Document();
-        setData.append("preprocessedTweets", tweets);
-        Document update = new Document();
-        update.append("$set", setData);
-        colUser.updateOne(query, update);
         return tweets;
     }
 

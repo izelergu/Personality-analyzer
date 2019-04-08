@@ -10,15 +10,14 @@
 9  ipron
 10 article
 11 verb
-12 auxverb
 13 past
 14 present
 15 future
 16 adverb
-17 preps
-18 conj
-19 negate
-20 quant
+17 prepositions
+18 conjunction
+19 negation
+20 quantifier
 21 number
 22 swear
 121    social
@@ -28,18 +27,18 @@
 125    affect
 126    posemo
 127    negemo
-128    anx
+128    anxiety
 129    anger
 130    sad
 131    cogmech
 132    insight
 133    cause
-134    discrep
-135    tentat
+134    discrepancy
+135    tentative
 136    certain
-137    inhib
-138    incl
-139    excl
+137    inhibition
+138    include
+139    exclusive
 140    percept
 141    see
 142    hear
@@ -48,8 +47,8 @@
 147    body
 148    health
 149    sexual
-150    ingest
-250    relativ
+150    ingestion
+250    relative
 251    motion
 252    space
 253    time
@@ -58,2688 +57,2684 @@
 356    leisure
 357    home
 358    money
-359    relig
+359    religion
 360    death
 462    assent
-463    nonfl
-464    filler
+463    nonfluencies
 %
 terketmek   	125  	127  	130  	131  	137  	251
-karýn	146  	147              	
+karï¿½n	146  	147
 kabiliyet      	355  	354
-yapabilmek 	355  	11    	
-kürtaj   146  	148  	149              	
-hakkýnda     	16    	17                	
-yukarýdaki   	1      	17    	252  	250              	
-ani   	253  	250              	
-kas  	146  	147  	
+yapabilmek 	355  	11
+kï¿½rtaj   146  	148  	149
+hakkï¿½nda     	16    	17
+yukarï¿½daki   	1      	17    	252  	250
+ani   	253  	250
+kas  	146  	147
 kesin   125  	126  	131  	136  	462
-kesinlikle     	1      	16    	125  	126  	131  	136  	462              	
-kaçýnmak    	131  	137              	
+kesinlikle     	1      	16    	125  	126  	131  	136  	462
+kaï¿½ï¿½nmak    	131  	137
 taciz	125  	127  	129  	149
-küfür   125  	127  	129              	
+kï¿½fï¿½r   125  	127  	129
 akademi      	354  	355
-kabul   125  	126  	131  	132              	
-hesap  354  	358  	        	
-doðru(luk)   	131  	136  	126
-as    	355              	
-aðrý(lý)  125  	127  	130  	146  	148  	143  	147
-baþarmak   	354  	355  	131  	11
+kabul   125  	126  	131  	132
+hesap  354  	358
+doï¿½ru(luk)   	131  	136  	126
+as    	355
+aï¿½rï¿½(lï¿½)  125  	127  	130  	146  	148  	143  	147
+baï¿½armak   	354  	355  	131  	11
 asit  	140  	146
 akne	146  	148
-tanýdýk 121  	123  	124
+tanï¿½dï¿½k 121  	123  	124
 kazanmak   	355  	358  	354  	126  	125
 buruk   125  	127  	131
 davranmak 	250  	251  	11
 aksiyon       	251  	250  	133
-etkinleþtirmek 131  	133  	354  	250  	11    	355
+etkinleï¿½tirmek 131  	133  	354  	250  	11    	355
 aktif 	125  	126  	138
-aktör	356  	124  	121
+aktï¿½r	356  	124  	121
 aktris   356  	124  	121
-aslýnda                    	16    	250  	131  	136
+aslï¿½nda                    	16    	250  	131  	136
 eklemek      	131  	138  	140
-baðýmlý        	146  	148  	250  	131  	133  	135
-baðýmsýzlýk  	131  	133
-ilave	131  	138  	140              	
-adres   357  	354  	252              	
-nitelik(li)      	355  	131  	133              	
-yönetmek   	354
-beðenmek  	125  	126  	131  	132  	250
+baï¿½ï¿½mlï¿½        	146  	148  	250  	131  	133  	135
+baï¿½ï¿½msï¿½zlï¿½k  	131  	133
+ilave	131  	138  	140
+adres   357  	354  	252
+nitelik(li)      	355  	131  	133
+yï¿½netmek   	354
+beï¿½enmek  	125  	126  	131  	132  	250
 tapmak       	125  	126  	131  	11
-yetiþkin       	121  	124  	250
+yetiï¿½kin       	121  	124  	250
 ilerlemek     	251  	250  	355  	253
 avantaj                    	125  	126  	355  	131
 dezavantaj  	125  	127  	130  	131
-macera       	125  	126  	
+macera       	125  	126
 maceraperest 121  	124  	356  	125  	126
-zýt    	125  	127  	131
+zï¿½t    	125  	127  	131
 reklam 354
 tavsiye 121  	354
-öðüt 	121  	354
-aerobik        	356  	
+ï¿½ï¿½ï¿½t 	121  	354
+aerobik        	356
 etkilemek    	11    	131  	133  	125  	126
 etkileyici      	131  	133  	125  	126
-etkileþim 121  354
+etkileï¿½im 121  354
 sevgi   125  	126  	131
 sevgili  121  	123  	125  	126  	149  	124
 korkmak     	125  	127  	128  	11    	130  	133
-kork(muþ|unç) 125  	127  	128
+kork(muï¿½|unï¿½) 125  	127  	128
 korkusuz     	125  	126
 korku   125  	127  	128
 korkutmak  	125  	127  	128
 ahiret   253  	250  	359  	131
-tekrar  1      	16    	253  	250              	
-tekrarlamak	253  	250  	11    	
-yaþ  	253  	250  	143
-yaþlý 	253  	250  	124  	140
-ajan 	354              	
-kýzdýrmak    	125  	127  	129  	131  	133
-þiddetlendirmek      	125  	127  	129  	131  	133
-saldýr(mak|ý)	125  	127  	129
-yaþlanmak  	253  	250  	11
-kýþkýrtmak   	125  	127  	129  	131  	133
-agnostik      	359  	        	
-kývranmak  	125  	127  	130  	148
-anlaþmak    	125  	126  	462  	131  	132  	121
-hoþ  	125  	126  	140
-anlaþma      	354  	462
-önde	17    	253  	250  	355  	251
-ön    	250  	251
-önce	16    	250  	253
-AIDS   146  	148  	149  	                               	
-hava	250  	252  	        	
+tekrar  1      	16    	253  	250
+tekrarlamak	253  	250  	11
+yaï¿½  	253  	250  	143
+yaï¿½lï¿½ 	253  	250  	124  	140
+ajan 	354
+kï¿½zdï¿½rmak    	125  	127  	129  	131  	133
+ï¿½iddetlendirmek      	125  	127  	129  	131  	133
+saldï¿½r(mak|ï¿½)	125  	127  	129
+yaï¿½lanmak  	253  	250  	11
+kï¿½ï¿½kï¿½rtmak   	125  	127  	129  	131  	133
+agnostik      	359
+kï¿½vranmak  	125  	127  	130  	148
+anlaï¿½mak    	125  	126  	462  	131  	132  	121
+hoï¿½  	125  	126  	140
+anlaï¿½ma      	354  	462
+ï¿½nde	17    	253  	250  	355  	251
+ï¿½n    	250  	251
+ï¿½nce	16    	250  	253
+AIDS   146  	148  	149
+hava	250  	252
 alarm   125  	127  	128  	253
-alkol	146  	148  	150              	
-canlý	146  	148  	360  	140  	141
-herþey 1      	20    	131  	136
+alkol	146  	148  	150
+canlï¿½	146  	148  	360  	140  	141
+herï¿½ey 1      	20    	131  	136
 Allah	359
-tanrý 	359
-alerjik  146  	148              	
+tanrï¿½ 	359
+alerjik  146  	148
 izin   	131  	133  	354
 neredeyse   	131  	135  	16
-yalnýz   125  	127  	130
-yanlýz   125  	127  	130              	
+yalnï¿½z   125  	127  	130
+yanlï¿½z   125  	127  	130
 boyunca      	1      	17    	131  	138  	253
-çok  	1      	20    	131  	135  	16
-zaten   253  	250              	
-peki 	125  	126  	462  	        	
-ayrýca  1      	16    	18    	138
-ayrýcalýk      	125  	126
+ï¿½ok  	1      	20    	131  	135  	16
+zaten   253  	250
+peki 	125  	126  	462
+ayrï¿½ca  1      	16    	18    	138
+ayrï¿½calï¿½k      	125  	126
 altar 	359
 sunak  359
-raðmen       	1      	17    	18    	133  	250
-tamamen    	16    	131  	136  	20    	138              	
-þaþýrtmak    	125  	126  	127  	128  	135  	133  	131
+raï¿½men       	1      	17    	18    	133  	250
+tamamen    	16    	131  	136  	20    	138
+ï¿½aï¿½ï¿½rtmak    	125  	126  	127  	128  	135  	133  	131
 belirsiz(lik)   	131  	135
-hýrs(lý)  354  	355  	125  	127  	129  	358
+hï¿½rs(lï¿½)  354  	355  	125  	127  	129  	358
 amin	359
 amen   359
 amigo  121  	123  	124
 amish  359
-arasýnda      	1      	17    	252  	250
-aþk  	125  	126  	121  	149  	131
-miktar  20                	
-eðlendirmek	125  	126  	356  	121  	
-eðlence       	125  	126  	356  	121  	
-anal 	131  	146  	147  	
+arasï¿½nda      	1      	17    	252  	250
+aï¿½k  	125  	126  	121  	149  	131
+miktar  20
+eï¿½lendirmek	125  	126  	356  	121
+eï¿½lence       	125  	126  	356  	121
+anal 	131  	146  	147
 eski 	253  	250  	140  	141
 ex    	121  	250  	253
-ve    	18    	138              	
+ve    	18    	138
 melek  359  	131
-öfke 	125  	127  	129
-kýzgýn   125  	127  	129
-ýzdýrap 125  	127  	128  	130
+ï¿½fke 	125  	127  	129
+kï¿½zgï¿½n   125  	127  	129
+ï¿½zdï¿½rap 125  	127  	128  	130
 bilek	146  	147
 ayak	146  	147
-ayakkabý     	146  	147  	
-parmak       	146  	147  	
-týrnak   146  	147  	
-yýllýk 	253  	250              	
-anoreksi      	146  	148  	150  	
+ayakkabï¿½     	146  	147
+parmak       	146  	147
+tï¿½rnak   146  	147
+yï¿½llï¿½k 	253  	250
+anoreksi      	146  	148  	150
 cevap  131  	132  	133
-cevapsýz     	125  	127  	130
+cevapsï¿½z     	125  	127  	130
 antiasit 146  	148
-düþman(lýk) 	121  	125  	127  	129
+dï¿½ï¿½man(lï¿½k) 	121  	125  	127  	129
 rakip	125  	127  	129  	354
-antidepresan   146  	148              	
-anüs	146  	147
-kaygý(lý)       	125  	127  	128  	130
-kaygýsýz       	125  	126
-herhangi      	1      	20    	131  	135  	        	
-kimse  1      	2      	9      	19    	121  	131  	135  	124  	
-artýk 	1      	20    	250  	253              	
-neyse  1      	16                	
+antidepresan   146  	148
+anï¿½s	146  	147
+kaygï¿½(lï¿½)       	125  	127  	128  	130
+kaygï¿½sï¿½z       	125  	126
+herhangi      	1      	20    	131  	135
+kimse  1      	2      	9      	19    	121  	131  	135  	124
+artï¿½k 	1      	20    	250  	253
+neyse  1      	16
 tamam 125  	126  	462
-ayrý  	252  	250  	139
+ayrï¿½  	252  	250  	139
 apartman    	356  	357
 ilgi    	131  	132  	125
 ilgisiz(lik)     	125  	127  	131  	132
-ilgili  	131  	132  	125  	126  	        	        	
-özür{dilemek} 121  	131  	132
-yýldýrmak     	11    	125  	127
-bariz	131  	136  	140  	
-görünmek   	11    	131  	132  	135  	251  	250  	140  	141
-belirmek      	11    	131  	135  	251  	250              	
+ilgili  	131  	132  	125  	126
+ï¿½zï¿½r{dilemek} 121  	131  	132
+yï¿½ldï¿½rmak     	11    	125  	127
+bariz	131  	136  	140
+gï¿½rï¿½nmek   	11    	131  	132  	135  	251  	250  	140  	141
+belirmek      	11    	131  	135  	251  	250
 apandis(it)   	146  	147  	148
-iþtah	146  	150              	
-baþvuru       	354  	138  	121  	
+iï¿½tah	146  	150
+baï¿½vuru       	354  	138  	121
 uygulama    	354  	355  	356  	121
-anlamak      	125  	126  	131  	132              	
-endiþe(li)     	125  	127  	128  	
-endiþesiz     	125  	126  	
-çýrak	354
-yaklaþým     	251  	250
-yaklaþmak  	11    	251  	
+anlamak      	125  	126  	131  	132
+endiï¿½e(li)     	125  	127  	128
+endiï¿½esiz     	125  	126
+ï¿½ï¿½rak	354
+yaklaï¿½ï¿½m     	251  	250
+yaklaï¿½mak  	11    	251
 onaylamak  	11    	462  	354  	250
 onay	462  	354  	250
-yaklaþýk      	131  	135  	20    	250  	
-nisan   253              	
+yaklaï¿½ï¿½k      	131  	135  	20    	250
+nisan   253
 key(if|fi)      	131  	126  	125
 kemer 147
-hangi   2      	
-alan 	252  	250              	
-deðil	19    	131  	139              	
-tartýþma       	121  	125  	127  	129  	
-tartýþmak     	121  	125  	127  	129  	11    	
-kol   	146  	147              	
+hangi   2
+alan 	252  	250
+deï¿½il	19    	131  	139
+tartï¿½ï¿½ma       	121  	125  	127  	129
+tartï¿½ï¿½mak     	121  	125  	127  	129  	11
+kol   	146  	147
 topluluk       	121
-koltukaltý     	146  	147              	
-kalabalýk     	121              	
+koltukaltï¿½     	146  	147
+kalabalï¿½k     	121
 aroma 140
-etrafýnda     	1      	16    	17    	131  	138  	252  	250  	
-varýþ	251  	250              	
-varmak       	11    	251  	250  	
-kibir(li) 125  	127  	129  	                               	
+etrafï¿½nda     	1      	16    	17    	131  	138  	252  	250
+varï¿½ï¿½	251  	250
+varmak       	11    	251  	250
+kibir(li) 125  	127  	129
 sanat   356
-sanatçý        	121  	124  	356
+sanatï¿½ï¿½        	121  	124  	356
 arter	146  	147
 atardamar   	146  	147
 eklem  146  	148  	147
-eklembacak(lý)        	146
-gibi  	1      	17    	18                	
-utanç   125  	127  	128              	
+eklembacak(lï¿½)        	146
+gibi  	1      	17    	18
+utanï¿½   125  	127  	128
 sormak       	11    	121  	131  	132
-uyku	146  	147  	        	
+uyku	146  	147
 uykusuz(luk)   146  	148
-aspirin 146  	148              	
-göt   	146  	147  	149  	22
-kýç   	146  	147  	149  	22    	
-birleþtirmek 	121  	354
-birleþme      	354  	121  	
-pislik	125  	127  	129  	22                	
-atamak       	354              	
+aspirin 146  	148
+gï¿½t   	146  	147  	149  	22
+kï¿½ï¿½   	146  	147  	149  	22
+birleï¿½tirmek 	121  	354
+birleï¿½me      	354  	121
+pislik	125  	127  	129  	22
+atamak       	354
 asistan 354
-yardýmcý      	121  	354  	
-yardýmseverlik        	125  	126  	121
-yardýmsever   121  	124  	
-yardým 121  	125  	126
+yardï¿½mcï¿½      	121  	354
+yardï¿½mseverlik        	125  	126  	121
+yardï¿½msever   121  	124
+yardï¿½m 121  	125  	126
 ortak	354  	250  	121  	123  	124
 farzetmek   	131  	132  	135
 sanmak       	131  	132  	135
-güvence      	121  	125  	126  	131  	136  	
-astým   146  	148  	        	
+gï¿½vence      	121  	125  	126  	131  	136
+astï¿½m   146  	148
 yemek 11    	146  	150  	356
-atletik  356  	                    	
+atletik  356
 atletizm       	356
 atlet 	124  	148
-atm  	358                          	
-üstün(de|e) 	17    	252  	250  	
-üstün   125  	126  	355
-ulaþmak      	355  	251
-giriþim 355  	354
-katýlmak      	251  	250  	121  	138
-katýlýmcý      	121  	124  	
-dikkat  131  	132  	
-dikkatli 125  	126  	131  	132  	137              	
-dikkatsiz      	125  	127  	        	
-cezbetmek  	11    	125  	126  	149  	
-vs(.) 	464
-vb(.)	464
+atm  	358
+ï¿½stï¿½n(de|e) 	17    	252  	250
+ï¿½stï¿½n   125  	126  	355
+ulaï¿½mak      	355  	251
+giriï¿½im 355  	354
+katï¿½lmak      	251  	250  	121  	138
+katï¿½lï¿½mcï¿½      	121  	124
+dikkat  131  	132
+dikkatli 125  	126  	131  	132  	137
+dikkatsiz      	125  	127
+cezbetmek  	11    	125  	126  	149
 tamamlamak  131  	136
-ayrýlmak      	251  	250  	131  	137
-belirlemek   	131  	132  	355  	
+ayrï¿½lmak      	251  	250  	131  	137
+belirlemek   	131  	132  	355
 belirgin        	131  	136  	141
 belirsiz 131  	135  	125  	127  	128
 belirtmek     	250  	11
 bildirmek     	250  	11    	354
 duymak      	11    	140  	142
-duyu	131  	132  	
+duyu	131  	132
 ses  	140  	142
-gürültü 140  	142
-seslenmek  	140  	142  	11    	
-denet(im)    	358              	
-denetlemek 	354  	        	
-konferans   	354  	
-aðustos       	253              	
-teyze   121  	122  	124              	
-yetki(n)       	355              	
-otopsi  360              	
-sonbahar     	253              	
-caydýrmak  	125  	127  	128  	11                	
-hoþlanmak  	125  	126  	131
-önlemek      	125  	127  	131  	137  	                                	
-ödül 	125  	126  	354  	355              	
+gï¿½rï¿½ltï¿½ 140  	142
+seslenmek  	140  	142  	11
+denet(im)    	358
+denetlemek 	354
+konferans   	354
+aï¿½ustos       	253
+teyze   121  	122  	124
+yetki(n)       	355
+otopsi  360
+sonbahar     	253
+caydï¿½rmak  	125  	127  	128  	11
+hoï¿½lanmak  	125  	126  	131
+ï¿½nlemek      	125  	127  	131  	137
+ï¿½dï¿½l 	125  	126  	354  	355
 fark 	131  	132  	20
-farklý	131  	136  	
+farklï¿½	131  	136
 farketmek   	131  	132
-uzak	252  	250  	
-uzaklaþmak	252  	251  	127
-müthiþ 125  	126  	462              	
-garip	125  	127  	128              	
+uzak	252  	250
+uzaklaï¿½mak	252  	251  	127
+mï¿½thiï¿½ 125  	126  	462
+garip	125  	127  	128
 bebek  121  	124  	122
-geri  	16    	253  	250  	252              	
-arkabahçe  	357
-kötü 	125  	127
-kötülük 125  	127  	129
-balkon 357              	
-kel   	146  	147              	
-top   	356              	
-bale 	356                                     	
-yasak(lý)      	131  	137  	125  	127
-yasaklamak	131  	137  	11    	
+geri  	16    	253  	250  	252
+arkabahï¿½e  	357
+kï¿½tï¿½ 	125  	127
+kï¿½tï¿½lï¿½k 125  	127  	129
+balkon 357
+kel   	146  	147
+top   	356
+bale 	356
+yasak(lï¿½)      	131  	137  	125  	127
+yasaklamak	131  	137  	11
 grup 	121  	356
-bandaj 146  	148                                     	
-banka  358                                                             	
-vaptis* 359                          	
-bar   	146  	150  	356  	252              	
+bandaj 146  	148
+banka  358
+vaptis* 359
+bar   	146  	150  	356  	252
 zor   	131  	135  	137  	140  	143
 zorlamak     	131  	133  	11
-pazarlýk       	358  	250
+pazarlï¿½k       	358  	250
 pazartesi     	253
 pazar   253
-bariyer 131  	137                          	
-beyzbol       	356              	
-çekingen     	125  	127
-çekinmek    	125  	127  	11    	137
-basketbol    	356  	        	
-piç   	125  	127  	129  	22                	
-banyo  356  	357  	        	
-savaþ  125  	127  	129  	360
-savaþçý       	124  	129
-plaj  	356  	        	
-dövmek      	355  	11    	125  	127  	129  	
+bariyer 131  	137
+beyzbol       	356
+ï¿½ekingen     	125  	127
+ï¿½ekinmek    	125  	127  	11    	137
+basketbol    	356
+piï¿½   	125  	127  	129  	22
+banyo  356  	357
+savaï¿½  125  	127  	129  	360
+savaï¿½ï¿½ï¿½       	124  	129
+plaj  	356
+dï¿½vmek      	355  	11    	125  	127  	129
 nadide 125  	126  	140  	141
-güzel   125  	126  	462  	140  	143  	141  	131  	
-çünkü  18    	131  	133              	
-olmak  11    	12    	131  	132                                     	
-yatak   357  	356                                                 	
-bira  	146  	150  	356                         	
-baþlamak    	11    	253  	250
-baþlangýç    	250  	253
-baþlatmak   	131  	133  	11    	253  	250  	355
-dilenci  358  	124              	
+gï¿½zel   125  	126  	462  	140  	143  	141  	131
+ï¿½ï¿½nkï¿½  18    	131  	133
+olmak  11	131  	132
+yatak   357  	356
+bira  	146  	150  	356
+baï¿½lamak    	11    	253  	250
+baï¿½langï¿½ï¿½    	250  	253
+baï¿½latmak   	131  	133  	11    	253  	250  	355
+dilenci  358  	124
 dilenmek     	358
-acemi  354              	
-davranýþ      	250  	251  	
-arkasýnda    	17    	        	
-inanç   131  	132  	359
+acemi  354
+davranï¿½ï¿½      	250  	251
+arkasï¿½nda    	17
+inanï¿½   131  	132  	359
 inanmak      	11    	131  	132
-göbek  146  	147
-altýnda 17    	252  	250              	
-viraj 	252  	250              	
-bükme 252  	250  	        	
-vurgun 252  	250              	
-yarar(lý)       	125  	126
-yararsýz       	125  	127  	130
-faydalý 121  	125  	126
-faydasýz      	125  	127  	130
+gï¿½bek  146  	147
+altï¿½nda 17    	252  	250
+viraj 	252  	250
+bï¿½kme 252  	250
+vurgun 252  	250
+yarar(lï¿½)       	125  	126
+yararsï¿½z       	125  	127  	130
+faydalï¿½ 121  	125  	126
+faydasï¿½z      	125  	127  	130
 iyilik 	125  	126
-iyiliksever    	125  	126  	124  	121  	
-kývýrmak      	250  	251  	11    	
-yanýnda       	1      	17    	252  	250              	
-dýþýnda        	1      	17    	20    	131  	134  	139              	
-bahis   131  	135  	358  	                    	
-ötesinde      	1      	16    	17    	252  	250              	
+iyiliksever    	125  	126  	124  	121
+kï¿½vï¿½rmak      	250  	251  	11
+yanï¿½nda       	1      	17    	252  	250
+dï¿½ï¿½ï¿½nda        	1      	17    	20    	131  	134  	139
+bahis   131  	135  	358
+ï¿½tesinde      	1      	16    	17    	252  	250
 bf     	121  	123  	124
-bi     	146  	149              	
+bi     	146  	149
 kutsal  359
-Ýncil 	359
+ï¿½ncil 	359
 Kuran  359
 Kur'an 359
-pazý 	146  	147
-bisiklet 356              	
-büyük  252  	250  	20                           	
-fatura  358              	
+pazï¿½ 	146  	147
+bisiklet 356
+bï¿½yï¿½k  252  	250  	20
+fatura  358
 milyar  1      	21    	20
-baðlamak    	131  	138
-baðlantý       	131  	132  	354
+baï¿½lamak    	131  	138
+baï¿½lantï¿½       	131  	132  	354
 biyoloji 354  	146
-biyolog 354  	        	
-bipolar 146  	148              	
-doðum 253  	250  	146
-piskopos     	359              	
-orospu 125  	127  	129  	22    	
-acý   	125  	127  	130  	140  	143
-siyah   140  	141              	
-tahta	354              	
+biyolog 354
+bipolar 146  	148
+doï¿½um 253  	250  	146
+piskopos     	359
+orospu 125  	127  	129  	22
+acï¿½   	125  	127  	130  	140  	143
+siyah   140  	141
+tahta	354
 lekelemek   	140  	141
-siyahýmsý     	140  	141              	
-blackjack    	356              	
+siyahï¿½msï¿½     	140  	141
+blackjack    	356
 mesane       	146  	147
-bla(bla)        	464
-suçlamak    	121  	125  	127  	129
-suç  	125  	127  	128  	129
+suï¿½lamak    	121  	125  	127  	129
+suï¿½  	125  	127  	128  	129
 kanamak    	146  	148
 blender        	357
-karýþtýrmak  	250
-kutsamak    	125  	126  	359              	
-kör   	146  	148  	140  	141              	
-blok(e) 131  	137  	
+karï¿½ï¿½tï¿½rmak  	250
+kutsamak    	125  	126  	359
+kï¿½r   	146  	148  	140  	141
+blok(e) 131  	137
 blog 	356
-sarýþýn  140  	141  	124
-kan  	146  	147              	
-mavi	140  	141  	        	
-bulanýk        	131  	135
-bulantý 146  	148  	                    	
-beden(sel)   	146  	147              	
-vücut   146  	147
+sarï¿½ï¿½ï¿½n  140  	141  	124
+kan  	146  	147
+mavi	140  	141
+bulanï¿½k        	131  	135
+bulantï¿½ 146  	148
+beden(sel)   	146  	147
+vï¿½cut   146  	147
 kaynamak  	146  	150
 cesur   125  	126
-kemik  146  	147  	
-bonus  125  	126  	355  	358  	
+kemik  146  	147
+bonus  125  	126  	355  	358
 dangalak     	22
-kitap	354  	355  	356              	
-gürlemek    	140  	142              	
-sýnýr 	131  	135  	137  	355              	
-sýkýcý	125  	127
-sýkýntý   125  	127  	128
-doðmak      	253  	250  	146
-ödünç  358              	
+kitap	354  	355  	356
+gï¿½rlemek    	140  	142
+sï¿½nï¿½r 	131  	135  	137  	355
+sï¿½kï¿½cï¿½	125  	127
+sï¿½kï¿½ntï¿½   125  	127  	128
+doï¿½mak      	253  	250  	146
+ï¿½dï¿½nï¿½  358
 patron  354  	124
-rahatsýz       	125  	127  	128  	129
+rahatsï¿½z       	125  	127  	128  	129
 rahatlatmak	125  	126  	356
 rahatlamak 	125  	126  	356
 rahat	125  	126  	356
 alt    	252  	250
-altý   	1      	21    	20
-satmak        	11    	358              	
-baðýrsak      	146  	147              	
-oðlan   121  	124
+altï¿½   	1      	21    	20
+satmak        	11    	358
+baï¿½ï¿½rsak      	146  	147
+oï¿½lan   121  	124
 beyin   146  	147
-fren 	131  	137                          	
-ekmek 146  	150              	
+fren 	131  	137
+ekmek 146  	150
 mola	250
-kahvaltý       	146  	150              	
-meme 146  	147  	149  	22                	
+kahvaltï¿½       	146  	150
+meme 146  	147  	149  	22
 nefes   146  	147  	140  	143
 dizgin   131  	137
 dizginlemek	131  	137
-kýsa 	251  	250  	252
-parlak  125  	126  	140  	141  	
-getirmek     	11    	251  	250                         	
-kenar   252  	250              	
-kanka  121  	122              	
-geniþ   252  	250              	
-kýrmak 125  	127  	130  	        	
-komisyoncu	354  	358              	
-bronþ   146  	148  	        	
-süpürge       	357              	
-bro   	121  	122                          	
-kahverengi  	140  	141              	
-brunch        	150              	
-fýrça 	140  	143  	
-fýrçalamak  	140  	143  	250  	251
-süpürmek   	140  	143  	250  	251
-acýmak                    	125  	127  	129              	
-dolar	358              	
+kï¿½sa 	251  	250  	252
+parlak  125  	126  	140  	141
+getirmek     	11    	251  	250
+kenar   252  	250
+kanka  121  	122
+geniï¿½   252  	250
+kï¿½rmak 125  	127  	130
+komisyoncu	354  	358
+bronï¿½   146  	148
+sï¿½pï¿½rge       	357
+bro   	121  	122
+kahverengi  	140  	141
+brunch        	150
+fï¿½rï¿½a 	140  	143
+fï¿½rï¿½alamak  	140  	143  	250  	251
+sï¿½pï¿½rmek   	140  	143  	250  	251
+acï¿½mak                    	125  	127  	129
+dolar	358
 bud  	121  	123
-buddy  121  	123              	
-Buda   359  	
-Buddha       	359                          	
-arkadaþ       	121  	123
-bütçe   358  	        	
+buddy  121  	123
+Buda   359
+Buddha       	359
+arkadaï¿½       	121  	123
+bï¿½tï¿½e   358
 bina 	250
-inþaat  250              	
-bulimia 146  	148  	150  	        	
-bulimik 146  	148  	150  	        	
+inï¿½aat  250
+bulimia 146  	148  	150
+bulimik 146  	148  	150
 demet  1      	20
-salkým 20    	        	
-yük  	125  	127  	20    	
-büro 	354              	
+salkï¿½m 20
+yï¿½k  	125  	127  	20
+bï¿½ro 	354
 defin	360  	359
 defnetmek  	360  	359
-gömülü        	360              	
-burnout       	354  	355  	
-geðirmek    	146  	148              	
-gömmek     	360              	
-iþ     	354  	358              	
-meþgul                    	250  	253  	354              	
-fakat	1      	18    	131  	139  	
-ama 	18    	131  	139  	
-popo	146  	147  	149  	22                           	
-tereyaðý       	140  	150
-yað  	140  	150  	                    	
-tarafýndan   	1      	17
-hoþçakal     	121  	250  	253  	
+gï¿½mï¿½lï¿½        	360
+burnout       	354  	355
+geï¿½irmek    	146  	148
+gï¿½mmek     	360
+iï¿½     	354  	358
+meï¿½gul                    	250  	253  	354
+fakat	1      	18    	131  	139
+ama 	18    	131  	139
+popo	146  	147  	149  	22
+tereyaï¿½ï¿½       	140  	150
+yaï¿½  	140  	150
+tarafï¿½ndan   	1      	17
+hoï¿½ï¿½akal     	121  	250  	253
 by    	121  	250  	253
-bye  	121  	250  	253              	
-kafe 	121  	123  	
-cafe 	121  	123  	
+bye  	121  	250  	253
+kafe 	121  	123
+cafe 	121  	123
 hesap  354
 calculus      	354
 kalkulus      	354
 matematik  	354
-aramak       	121              	                    	
-arayan        	121              	
-çaðrý	121              	
-arama 121              	
-sakin   125  	126              	
-gelmek                    	11    	131  	251  	250  	        	
-kamp   356              	
-kampus       	354                          	
-olamaz                    	11    	1      	12    	14    	19
-yapamamak   11    	1      	12    	14    	19    	
-kanser 146  	148                                     	
-mum   140  	141              	
-þeker   146  	150                                     	
-yetenekli     	355  	354  	125  	126  	
-kapasite      	252  	250              	
-kaptan 121              	
-araba   250  	251              	
-karamel      	140              	
-kardiyak      	146  	148              	
-kardiyo                    	146  	148              	
-kart             	356              	
-bakým  125  	126  	124  	
-kariyer        	354                                                 	
-okþamak     	140  	143              	
-sempatik     	125  	126              	
-halý  	357                          	
-taþýyýcý         	251  	250  	124                         	
-taþýmak       	11    	251  	250                                     	
-nakit	358  	        	
-kumarhane 	356  	358              	
-tabut	360  	359  	
-gündelik      	125  	126  	356
-günlük 125  	126  	356  	        	
-tesadüfen    	125  	126              	
-kaza	360              	
-yakalamak  	250  	251              	
-kategori       	131  	132              	
-kategorik     	131  	132              	
-katolik 359                          	
-neden  131  	133  	132  	
-daðlamak    	131  	137  	        	
-CD  	356              	
-durdurmak  	131  	137  	253  	250  	        	
-kesilmek     	131  	137  	253  	250              	
-tavan   252  	250              	
-kutlamak     	121  	355  	356              	
-þöhret  356  	355              	
-hücre   146  	148  	                                                       	
-mezarlýk      	360              	
-cent 	358              	
-merkez       	252  	250                         	
-yüzyýl   253  	250              	
-CEO	354  	        	
-belli  	125  	126  	131  	136  	        	
-sertifika       	354  	355                                                             	
-tebeþir 354  	                    	
-þampiyon    	125  	126  	354  	355                          	
-deðiþiklik     	250  	251  	131  	133                          	
-deðiþtirmek 	250  	251  	131  	133              	
-kanal   356              	
-tapýnak        	359  	
-cami	359  	
-papaz  359  	
-imam   359  	
+aramak       	121
+arayan        	121
+ï¿½aï¿½rï¿½	121
+arama 121
+sakin   125  	126
+gelmek                    	11    	131  	251  	250
+kamp   356
+kampus       	354
+olamaz                    	11    	1	14    	19
+yapamamak   11    	1	14    	19
+kanser 146  	148
+mum   140  	141
+ï¿½eker   146  	150
+yetenekli     	355  	354  	125  	126
+kapasite      	252  	250
+kaptan 121
+araba   250  	251
+karamel      	140
+kardiyak      	146  	148
+kardiyo                    	146  	148
+kart             	356
+bakï¿½m  125  	126  	124
+kariyer        	354
+okï¿½amak     	140  	143
+sempatik     	125  	126
+halï¿½  	357
+taï¿½ï¿½yï¿½cï¿½         	251  	250  	124
+taï¿½ï¿½mak       	11    	251  	250
+nakit	358
+kumarhane 	356  	358
+tabut	360  	359
+gï¿½ndelik      	125  	126  	356
+gï¿½nlï¿½k 125  	126  	356
+tesadï¿½fen    	125  	126
+kaza	360
+yakalamak  	250  	251
+kategori       	131  	132
+kategorik     	131  	132
+katolik 359
+neden  131  	133  	132
+daï¿½lamak    	131  	137
+CD  	356
+durdurmak  	131  	137  	253  	250
+kesilmek     	131  	137  	253  	250
+tavan   252  	250
+kutlamak     	121  	355  	356
+ï¿½ï¿½hret  356  	355
+hï¿½cre   146  	148
+mezarlï¿½k      	360
+cent 	358
+merkez       	252  	250
+yï¿½zyï¿½l   253  	250
+CEO	354
+belli  	125  	126  	131  	136
+sertifika       	354  	355
+tebeï¿½ir 354
+ï¿½ampiyon    	125  	126  	354  	355
+deï¿½iï¿½iklik     	250  	251  	131  	133
+deï¿½iï¿½tirmek 	250  	251  	131  	133
+kanal   356
+tapï¿½nak        	359
+cami	359
+papaz  359
+imam   359
 hoca 359
-sadaka                    	125  	126  	358  	
-baðýþ           	125  	126  	358  	
-çekici(lik)    	125  	126              	
-sohbet 121  	356  	        	
-ucuz	358  	        	
+sadaka                    	125  	126  	358
+baï¿½ï¿½ï¿½           	125  	126  	358
+ï¿½ekici(lik)    	125  	126
+sohbet 121  	356
+ucuz	358
 hile  	125  	127  	129
-kandýrmak  	125  	127  	129
+kandï¿½rmak  	125  	127  	129
 dama   356
-satranç        	356                          	
-çek  	358  	        	
-yanak  146  	147              	
-tezahürat     	125  	126  	
-neþelendirmek        	125  	16
-neþelenmek	125  	126
-neþe(li)        	125  	126                                     	
-göðüs  146  	147  	        	
-çiðnemek    	146  	150  	        	
-civciv  121                                     	
-çocuk  121  	124              	
-çocukluk     	250  	253  	        	
-takýlmak      	356  	        	
-titremek      	146  	148  	
-ürpermek    	146  	148  	147  	
-kiropraktik   	146  	148  	        	
-kayropraktör   146  	148              	
-klamidya     	146  	148  	149              	
-çikolata       	140  	150  	
-seçim  131  	132  	
-seçmek       	131  	132
-koro 	356  	140  	142              	
-boðulmak    	146  	148  	360  	
-kolesterol    	146  	148  	                               	
-eviþi 	357                                     	
-yiyecek       	146  	150              	
-Ýsa   	359              	
-Hristiyan     	359              	
-noel 	250  	253  	359              	
-kronik  146  	148              	
-kýkýrdamak  	125  	126              	
-kilise	359              	
+satranï¿½        	356
+ï¿½ek  	358
+yanak  146  	147
+tezahï¿½rat     	125  	126
+neï¿½elendirmek        	125  	16
+neï¿½elenmek	125  	126
+neï¿½e(li)        	125  	126
+gï¿½ï¿½ï¿½s  146  	147
+ï¿½iï¿½nemek    	146  	150
+civciv  121
+ï¿½ocuk  121  	124
+ï¿½ocukluk     	250  	253
+takï¿½lmak      	356
+titremek      	146  	148
+ï¿½rpermek    	146  	148  	147
+kiropraktik   	146  	148
+kayropraktï¿½r   146  	148
+klamidya     	146  	148  	149
+ï¿½ikolata       	140  	150
+seï¿½im  131  	132
+seï¿½mek       	131  	132
+koro 	356  	140  	142
+boï¿½ulmak    	146  	148  	360
+kolesterol    	146  	148
+eviï¿½i 	357
+yiyecek       	146  	150
+ï¿½sa   	359
+Hristiyan     	359
+noel 	250  	253  	359
+kronik  146  	148
+kï¿½kï¿½rdamak  	125  	126
+kilise	359
 puro 	146  	150
-sigara  146  	150  	        	
-sinema                    	356              	
-daire	140  	141              	
-vatandaþ     	121  	124                         	
-narenciye    	140  	        	
-turunçgil      	140
-kent 	250  	252  	
-þehir	250  	252  	
-açýklamak   	131  	132  	11    	121
-berraklaþmak 131  	132
-sýnýf 	354  	252  	138  	121  	
-sýnýflandýrmak 354  	
-temiz   125  	126              	
-açýk 	131  	136  	252  	250                         	
-ruhban        	359  	        	
-zeki 	125  	126              	
-týk    	140  	141
-click	140  	141              	
-týrmanmak  	251  	250  	355              	
-klinik	146  	148              	
-saat 	253  	250              	
-kapatmak   	131  	138  	252  	250  	132  	
-kapalý  252  	250  	17                                       	
-yakýn   252  	250  	251  	17
-yakýnda       	16    	253  	250
-yakýnlarý      	121  	122
-kapanmak  	251  	250              	
-dolap   357                          	
-çamaþýr       	146  	147  	357  	
-kulüp   356
-club 	356  	        	
-otobüs 356  	        	
-penis   146  	147  	149  	22                                       	
-kokteyl 146  	150  	356  	        	
-kodein 146  	148              	
-kahve  146  	150  	356  	                               	
-yapýþmak    	131  	132                                                 	
-kola 	146  	150  	
+sigara  146  	150
+sinema                    	356
+daire	140  	141
+vatandaï¿½     	121  	124
+narenciye    	140
+turunï¿½gil      	140
+kent 	250  	252
+ï¿½ehir	250  	252
+aï¿½ï¿½klamak   	131  	132  	11    	121
+berraklaï¿½mak 131  	132
+sï¿½nï¿½f 	354  	252  	138  	121
+sï¿½nï¿½flandï¿½rmak 354
+temiz   125  	126
+aï¿½ï¿½k 	131  	136  	252  	250
+ruhban        	359
+zeki 	125  	126
+tï¿½k    	140  	141
+click	140  	141
+tï¿½rmanmak  	251  	250  	355
+klinik	146  	148
+saat 	253  	250
+kapatmak   	131  	138  	252  	250  	132
+kapalï¿½  252  	250  	17
+yakï¿½n   252  	250  	251  	17
+yakï¿½nda       	16    	253  	250
+yakï¿½nlarï¿½      	121  	122
+kapanmak  	251  	250
+dolap   357
+ï¿½amaï¿½ï¿½r       	146  	147  	357
+kulï¿½p   356
+club 	356
+otobï¿½s 356
+penis   146  	147  	149  	22
+kokteyl 146  	150  	356
+kodein 146  	148
+kahve  146  	150  	356
+yapï¿½ï¿½mak    	131  	132
+kola 	146  	150
 cola 	146  	150
-soðuk  140  	143  	                    	
-kolej	354              	
-kolonya       	140              	
-kolon   146  	147              	
-kolonoskopi	146  	148  	                    	
-renk 	140  	141                                                 	
-iletiþim 121  	
-koma   146  	148              	
-Hadi	11    	14    	131  	138  	251  	250              	
-komedi        	125  	126  	356                                     	
-konfor 125  	126              	
-komik  125  	126  	356  	        	
-gelecek       	251  	250              	
-yorum 121  	        	
+soï¿½uk  140  	143
+kolej	354
+kolonya       	140
+kolon   146  	147
+kolonoskopi	146  	148
+renk 	140  	141
+iletiï¿½im 121
+koma   146  	148
+Hadi	11    	14    	131  	138  	251  	250
+komedi        	125  	126  	356
+konfor 125  	126
+komik  125  	126  	356
+gelecek       	251  	250
+yorum 121
 ticaret  354  	358
-iþlemek       	131  	136              	
-taahhüt        	125  	126  	131  	136                          	
-kurul	131  	13    	
+iï¿½lemek       	131  	136
+taahhï¿½t        	125  	126  	131  	136
+kurul	131  	13
 komite 131  	13
 ortak	131  	136
-yaygýn 131  	136  	                    	
-hafifletmek 	354                                     	
-þirket   354              	
-misafir 121  	123                                     	
-misafirlik     	121  	
-arkadaþlýk   	121  	        	
-merhamet(li)   121  	125  	126                                     	
-karþýlamak  	358  	121              	
-yarýþmak     	355              	
-þikayet        	121  	125  	127                                     	
-karmaþýk     	131  	132              	
-uymak 131  	133  	        	
-güçleþtirmek   131  	132              	
-iltifat	125  	126              	
-uymak 131  	133              	
-idrak	131  	132              	
-kapsamlý     	131  	132              	        	
-hesaplamak	354              	
-yoldaþ 121  	123              	
-yoðunlaþmak  131  	132              	
-konser 356  	140  	142              	
-sonuçlandýrmak      	131  	132  	133  	355  	354  	
-sonuç  131  	132  	355  	        	
-konut   357  	
-apartman    	357  	        	
-prezervatif  	146  	149                                                 	
-kýnamak      	121  	125  	127  	130  	11    	137  	    
-kýna	121	
-itiraf 	121  	131  	132  	359              	
-güvenmek  	121              	
-sýr    	121  	131  	132
-güven(li)      	125  	126  	131  	136  	355                          	
-emin	125  	126  	131  	136  	355  	                                           	
-hapsetmek  	131  	137                                     	
-yüzleþtirmek   125  	127  	129  	
-yüzleþmek  	125  	127  	129  	                    	
-týkanmak     	146  	148              	
-holding                    	354  	        	
-toplanmak   	121  	
-birleþmek    	121  	
-bað  	250  	252              	
+yaygï¿½n 131  	136
+hafifletmek 	354
+ï¿½irket   354
+misafir 121  	123
+misafirlik     	121
+arkadaï¿½lï¿½k   	121
+merhamet(li)   121  	125  	126
+karï¿½ï¿½lamak  	358  	121
+yarï¿½ï¿½mak     	355
+ï¿½ikayet        	121  	125  	127
+karmaï¿½ï¿½k     	131  	132
+uymak 131  	133
+gï¿½ï¿½leï¿½tirmek   131  	132
+iltifat	125  	126
+uymak 131  	133
+idrak	131  	132
+kapsamlï¿½     	131  	132
+hesaplamak	354
+yoldaï¿½ 121  	123
+yoï¿½unlaï¿½mak  131  	132
+konser 356  	140  	142
+sonuï¿½landï¿½rmak      	131  	132  	133  	355  	354
+sonuï¿½  131  	132  	355
+konut   357
+apartman    	357
+prezervatif  	146  	149
+kï¿½namak      	121  	125  	127  	130  	11    	137
+kï¿½na	121
+itiraf 	121  	131  	132  	359
+gï¿½venmek  	121
+sï¿½r    	121  	131  	132
+gï¿½ven(li)      	125  	126  	131  	136  	355
+emin	125  	126  	131  	136  	355
+hapsetmek  	131  	137
+yï¿½zleï¿½tirmek   125  	127  	129
+yï¿½zleï¿½mek  	125  	127  	129
+tï¿½kanmak     	146  	148
+holding                    	354
+toplanmak   	121
+birleï¿½mek    	121
+baï¿½  	250  	252
 fethetmek   	355
 vicdan 131  	132
-vicdanlý       	125  	126  	131  	132
-vicdansýz     	125  	127  	129  	131  	132  	
-bilinçli  131  	132  	
-bilinç	131  	132              	
+vicdanlï¿½       	125  	126  	131  	132
+vicdansï¿½z     	125  	127  	129  	131  	132
+bilinï¿½li  131  	132
+bilinï¿½	131  	132
 koruma(k)   	131  	137
-korumasýz   	125  	127  	                                           	
-sabit	250  	253              	
-sürekli 1      	16    	250  	253  	        	
-kabýz   146  	148  	        	
-sýnýrlamak   	131  	137              	
-daraltmak   	131  	137              	
-danýþmak    	121  	354              	
-tüketici        	354  	358  	        	
-temas  121              	
-bulaþmak    	146  	148  	        	
-içermek      	131  	137              	
-düþünmek   	131  	132  	        	
-aþaðýlamak 	125  	127  	128  	129              	
-mutlu   125  	126              	
-hoþnut 125  	126              	
-kontenjan    	131  	135              	
-devam 253  	250              	
-sözleþme    	354  	        	
-çeliþmek     	121  	125  	127  	129  	131  	137              	
-kontrol 131  	133  	354              	
-manastýr      	359              	
-zaviyeler     	359  	        	
-samimi 121              	
-ikna 	125  	126  	        	
-piþirmek      	146  	150  	356  	357              	
-kornea 146  	147              	
-köþe	252  	250  	                    	
-koroner       	146  	148              	
-adli  	360  	
-kurum 354              	
-tüzel	354  	358                                     	
-ceset   360  	        	
-doðru   131  	136  	        	
-baðýntý 131  	132              	
-marul   150              	
-maliyet        	358  	
-kanepe        	357              	
-öksürük       	146  	148                                                                                                	
-konsey 121  	354                                     	
-ülke 	250  	252              	
-çift   	1      	20                	
-kupon  358              	
-cesaret        	125  	126              	
-kurs 	354              	
-kuzen  121  	122              	
-kapsama     	250  	252                                     	
-çünkü  131  	133  	        	
-kramp 146  	148              	
-bok  	125  	127  	129  	146  	147  	22                	
-berbat  125  	127  	129  	22                	
-çýlgýnlýk        	125  	127  	128              	
-çýlgýn	125  	127  	128  	        	
-krem   140  	141  	        	
-yaratmak    	125  	126  	131  	355  	        	
-yaratýcý        	125  	126  	131  	355  	        	
-ehliyet 354  	        	
+korumasï¿½z   	125  	127
+sabit	250  	253
+sï¿½rekli 1      	16    	250  	253
+kabï¿½z   146  	148
+sï¿½nï¿½rlamak   	131  	137
+daraltmak   	131  	137
+danï¿½ï¿½mak    	121  	354
+tï¿½ketici        	354  	358
+temas  121
+bulaï¿½mak    	146  	148
+iï¿½ermek      	131  	137
+dï¿½ï¿½ï¿½nmek   	131  	132
+aï¿½aï¿½ï¿½lamak 	125  	127  	128  	129
+mutlu   125  	126
+hoï¿½nut 125  	126
+kontenjan    	131  	135
+devam 253  	250
+sï¿½zleï¿½me    	354
+ï¿½eliï¿½mek     	121  	125  	127  	129  	131  	137
+kontrol 131  	133  	354
+manastï¿½r      	359
+zaviyeler     	359
+samimi 121
+ikna 	125  	126
+piï¿½irmek      	146  	150  	356  	357
+kornea 146  	147
+kï¿½ï¿½e	252  	250
+koroner       	146  	148
+adli  	360
+kurum 354
+tï¿½zel	354  	358
+ceset   360
+doï¿½ru   131  	136
+baï¿½ï¿½ntï¿½ 131  	132
+marul   150
+maliyet        	358
+kanepe        	357
+ï¿½ksï¿½rï¿½k       	146  	148
+konsey 121  	354
+ï¿½lke 	250  	252
+ï¿½ift   	1      	20
+kupon  358
+cesaret        	125  	126
+kurs 	354
+kuzen  121  	122
+kapsama     	250  	252
+ï¿½ï¿½nkï¿½  131  	133
+kramp 146  	148
+bok  	125  	127  	129  	146  	147  	22
+berbat  125  	127  	129  	22
+ï¿½ï¿½lgï¿½nlï¿½k        	125  	127  	128
+ï¿½ï¿½lgï¿½n	125  	127  	128
+krem   140  	141
+yaratmak    	125  	126  	131  	355
+yaratï¿½cï¿½        	125  	126  	131  	355
+ehliyet 354
 kimlik  121  	124
-kredi	125  	126  	354  	358  	                    	
-aðlamak      	11    	125  	127  	130  	                    	
-kritik	125  	127  	129              	
-eleþtirmek   	125  	127  	129  	        	
-çapraz 251  	250              	
-kalça   146  	147
-kasýk   146  	147  	        	
-kalabalýk     	121  	20
-taç   	355
-haç  	359  	        	
-nezaket       	125  	126              	
-acýmasýz     	125  	127  	129              	
-seyretmek  	251  	250  	356              	                    	
-ezilmiþ 125  	127  	130              	                                	
-hücre   354  	                    	
-kültür   121              	
+kredi	125  	126  	354  	358
+aï¿½lamak      	11    	125  	127  	130
+kritik	125  	127  	129
+eleï¿½tirmek   	125  	127  	129
+ï¿½apraz 251  	250
+kalï¿½a   146  	147
+kasï¿½k   146  	147
+kalabalï¿½k     	121  	20
+taï¿½   	355
+haï¿½  	359
+nezaket       	125  	126
+acï¿½masï¿½z     	125  	127  	129
+seyretmek  	251  	250  	356
+ezilmiï¿½ 125  	127  	130
+hï¿½cre   354
+kï¿½ltï¿½r   121
 am   	125  	127  	129  	22
-zaptetmek   	131  	137  	        	
-merak 131  	132  	135                                     	
-þimdiki 253  	250              	
-müfredat     	354              	
-kýsaltmak    	131  	137              	
-perde   357              	
-müþteri        	354  	358  	        	
-kesmek       	125  	127  	129  	137  	
-sevimli 125  	126              	                               	
-özgeçmiþ    	354  	
-cv    	354  	
+zaptetmek   	131  	137
+merak 131  	132  	135
+ï¿½imdiki 253  	250
+mï¿½fredat     	354
+kï¿½saltmak    	131  	137
+perde   357
+mï¿½ï¿½teri        	354  	358
+kesmek       	125  	127  	129  	137
+sevimli 125  	126
+ï¿½zgeï¿½miï¿½    	354
+cv    	354
 periyot 253  	250
-süreç   253  	250  	        	        	        	
-kist  	146  	148  	        	
-baba	121  	122  	        	
-günlük 253  	250  	        	
-hasar   125  	127  	130  	                               	
-dans	251  	250  	356                                     	
-tehlike 125  	127  	129  	        	
-lanetlemek  	22                	
-tarih(i|çe)    	253  	250  	        	
+sï¿½reï¿½   253  	250
+kist  	146  	148
+baba	121  	122
+gï¿½nlï¿½k 253  	250
+hasar   125  	127  	130
+dans	251  	250  	356
+tehlike 125  	127  	129
+lanetlemek  	22
+tarih(i|ï¿½e)    	253  	250
 escort  149
 eskort  149
-evlat	121  	122  	        	
-gün  	253  	250
-þaþkýn  125  	127                          	
-þaþkýnlýk      	125  	127  	        	
-ölü   	360                          	
-saðýr	146  	148  	140  	142  	        	                    	
-dekan  354  	        	
-sayýn   125  	126  	                    	
-borç 	358  	                                                       	
-çürüme       	125  	127  	253  	250              	
-ölüm	360  	        	
-aralýk   253  	250  	252              	
-karar   131  	132  	                                           	
+evlat	121  	122
+gï¿½n  	253  	250
+ï¿½aï¿½kï¿½n  125  	127
+ï¿½aï¿½kï¿½nlï¿½k      	125  	127
+ï¿½lï¿½   	360
+saï¿½ï¿½r	146  	148  	140  	142
+dekan  354
+sayï¿½n   125  	126
+borï¿½ 	358
+ï¿½ï¿½rï¿½me       	125  	127  	253  	250
+ï¿½lï¿½m	360
+aralï¿½k   253  	250  	252
+karar   131  	132
 dekorasyon 	356  	141
-çýkarým        	131  	132  	133  	        	
-derin	252  	250  	        	
-yenilgi  125  	127  	130  	355  	
+ï¿½ï¿½karï¿½m        	131  	132  	133
+derin	252  	250
+yenilgi  125  	127  	130  	355
 kusur(lu)     	125  	127
 kusursuz     	125  	126
-savunma     	125  	127  	129  	131  	137  	
-savunmasýz	125  	127  	128
-savunmak   	131  	137  	11                	
-tanýmlamak 	131  	132  	11    	
-küçümsemek 125  	127              	
+savunma     	125  	127  	129  	131  	137
+savunmasï¿½z	125  	127  	128
+savunmak   	131  	137  	11
+tanï¿½mlamak 	131  	132  	11
+kï¿½ï¿½ï¿½msemek 125  	127
 gecikme      	131  	137  	253  	250
 gecikmek    	131  	137  	253  	250  	11
 nefis	140  	125  	126
 temsilci       	354
-temsil  140  	250  	
-narin	125  	126              	
+temsil  140  	250
+narin	125  	126
 lezzet(li)      	125  	126  	140
-lezzetsiz      	140  	125  	127              	
+lezzetsiz      	140  	125  	127
 zevk	125  	126
 zevksiz        	125  	127  	130
-teslim  251  	250  	
-ölümcül       	125  	127  	360
-ölümsüz      	250  	359  	360
+teslim  251  	250
+ï¿½lï¿½mcï¿½l       	125  	127  	360
+ï¿½lï¿½msï¿½z      	250  	359  	360
 fani  	360
-iblis  	359                                                             	
+iblis  	359
 ret    	131  	137  	125  	127  	130
-reddetmek  	125  	127  	130  	131  	137  	
+reddetmek  	125  	127  	130  	131  	137
 inkar	131  	137
-yoðun  252  	250  	        	
-yoðunluk     	252  	250              	
-diþ   	146  	147
-deodorant   	140  	                    	
-bölüm  354  	20    	250  	252              	
-kalkýþ   251  	250                                     	
-baðlý	131  	133  	135                                                 	
-depozito      	358              	
+yoï¿½un  252  	250
+yoï¿½unluk     	252  	250
+diï¿½   	146  	147
+deodorant   	140
+bï¿½lï¿½m  354  	20    	250  	252
+kalkï¿½ï¿½   251  	250
+baï¿½lï¿½	131  	133  	135
+depozito      	358
 depresyon   	125  	127  	130
-bunalým       	125  	127  	130              	
+bunalï¿½m       	125  	127  	130
 mahrum      	125  	127  	130
-yoksun 125  	127  	130  	        	
+yoksun 125  	127  	130
 dept 	354
-departman  	354              	
+departman  	354
 derinlik 252  	250  	140
 dermatolog 	124  	146  	148
-dermotoloji(k) 146  	148  	
-arzu 	131  	134  	        	
-büro 	354
-masaüstü    	354
-umutsuz(luk)   125  	127  	130  	128  	                    	
-tatlý  	146  	150              	
-yýkmak 125  	127  	129  	        	
-imha	125  	127  	129              	
-kararlýlýk      	125  	126  	131  	132  	355
-kararlý  131  	125  	126  	132                         	
-detoks 146  	148  	                               	
-þeytan 125  	127  	359  	        	
-adamak      	125  	126              	
-diyabet                    	146  	148  	        	
-teþhis   146  	148
-taný  	146  	148
+dermotoloji(k) 146  	148
+arzu 	131  	134
+bï¿½ro 	354
+masaï¿½stï¿½    	354
+umutsuz(luk)   125  	127  	130  	128
+tatlï¿½  	146  	150
+yï¿½kmak 125  	127  	129
+imha	125  	127  	129
+kararlï¿½lï¿½k      	125  	126  	131  	132  	355
+kararlï¿½  131  	125  	126  	132
+detoks 146  	148
+ï¿½eytan 125  	127  	359
+adamak      	125  	126
+diyabet                    	146  	148
+teï¿½his   146  	148
+tanï¿½  	146  	148
 diyagonal    	252  	250
-diagonal      	252  	250  	
-günlük 356  	
-ishal 	146  	148  	                    	
-çük  	146  	147  	149  	22                	
-yarak   146  	147  	149  	22    	                                	
-vermemek  	11    	1      	12    	13    	19    	        	
-hiç   	11    	1      	12    	13    	19                	
-ölmek  360  	        	
-vefat	360  	                    	
-diyet	146  	150  	                               	
+diagonal      	252  	250
+gï¿½nlï¿½k 356
+ishal 	146  	148
+ï¿½ï¿½k  	146  	147  	149  	22
+yarak   146  	147  	149  	22
+vermemek  	11    	1	13    	19
+hiï¿½   	11    	1	13    	19
+ï¿½lmek  360
+vefat	360
+diyet	146  	150
 sindirim       	146  	148  	150
-sindirmek    	146  	148  	150  	
-yüce(ltmek)	125  	126              	
-çalýþkan      	355  	354  	
-lira   	358  	        	
-dinar	358                                                             	
-lokanta                    	146  	150  	
-restaurant   	146  	150  	356  	                                                       	
-diploma       	354              	
-direkt   131  	136  	
-direk	131  	136  	
-yönetmen   	354  	                                                       	
-kaybolmak  	251  	250  	        	
-hayalkýrýklýðý	125  	127  	130  	        	
-afet  	125  	127                                     	
-disiplin 131  	137              	
-ifþa  	121  	131  	132                                     	
-indirim 358              	
-vazgeçirmek   125  	127  	130  	131  	137  	        	
-hastalýk       	146  	148  	        	
-iðrenmek    	125  	127  	129  	        	
-tabak   146  	150                                     	
-bulaþýk 146  	150  	357  	                               	
-beðenmemek 125  	127  	                               	
-sevmemek 	125  	127  	                               	
-dehþet 125  	127  	128
-memnuniyetsiz       	125  	127  	130  	                                           	
-memnuniyetsizlik    	125  	127  	130  	        	
-resmi   354  	                                	
-ayýrmak      	131  	132                                     	
-periþan        	125  	127  	128                                     	
-güvensizlik  	125  	127  	129              	
-bozmak       	125  	127  	128              	
-kar   	354  	358  	125  	126  	
-ilahi  	359              	
-boþanmak   	121  	125                         	
-dj     	356                          	
-dua  	360  	        	
-doktor  146  	148  	354  	                                           	
-kulübe 357  	                                	
+sindirmek    	146  	148  	150
+yï¿½ce(ltmek)	125  	126
+ï¿½alï¿½ï¿½kan      	355  	354
+lira   	358
+dinar	358
+lokanta                    	146  	150
+restaurant   	146  	150  	356
+diploma       	354
+direkt   131  	136
+direk	131  	136
+yï¿½netmen   	354
+kaybolmak  	251  	250
+hayalkï¿½rï¿½klï¿½ï¿½ï¿½	125  	127  	130
+afet  	125  	127
+disiplin 131  	137
+ifï¿½a  	121  	131  	132
+indirim 358
+vazgeï¿½irmek   125  	127  	130  	131  	137
+hastalï¿½k       	146  	148
+iï¿½renmek    	125  	127  	129
+tabak   146  	150
+bulaï¿½ï¿½k 146  	150  	357
+beï¿½enmemek 125  	127
+sevmemek 	125  	127
+dehï¿½et 125  	127  	128
+memnuniyetsiz       	125  	127  	130
+memnuniyetsizlik    	125  	127  	130
+resmi   354
+ayï¿½rmak      	131  	132
+periï¿½an        	125  	127  	128
+gï¿½vensizlik  	125  	127  	129
+bozmak       	125  	127  	128
+kar   	354  	358  	125  	126
+ilahi  	359
+boï¿½anmak   	121  	125
+dj     	356
+dua  	360
+doktor  146  	148  	354
+kulï¿½be 357
 evcil	357
-baðýþlamak 	121  	125  	126  	131  	132  	                                	
-yok  	11    	1      	12    	14    	19    	        	
-kader   125  	127  	130  	359  	        	
-kapý 	357  	        	
-salak   125  	127  	129  	
-yurt  	354  	357              	
-dozaj   146  	148              	
-doz  	146  	148                                     	
-internet        	354                          	
-þüphe  125  	127  	128  	131  	135  	        	
-aþaðý   1      	17    	252  	250              	
-küçültmek   	137  	140  	141
-düzine 1      	21    	20                	
-dr     	146  	148              	
-drama 356  	        	
-içmek  146  	150  	        	
-kumaþ 357              	
-rüya 	356              	
-þifonyer       	357  	
-masa   354  	357  	
-kuru 	140  	143  	        	
-sürüklenmek   251  	250  	                    	
-içki  	146  	150  	356
+baï¿½ï¿½ï¿½lamak 	121  	125  	126  	131  	132
+yok  	11    	1	14    	19
+kader   125  	127  	130  	359
+kapï¿½ 	357
+salak   125  	127  	129
+yurt  	354  	357
+dozaj   146  	148
+doz  	146  	148
+internet        	354
+ï¿½ï¿½phe  125  	127  	128  	131  	135
+aï¿½aï¿½ï¿½   1      	17    	252  	250
+kï¿½ï¿½ï¿½ltmek   	137  	140  	141
+dï¿½zine 1      	21    	20
+dr     	146  	148
+drama 356
+iï¿½mek  146  	150
+kumaï¿½ 357
+rï¿½ya 	356
+ï¿½ifonyer       	357
+masa   354  	357
+kuru 	140  	143
+sï¿½rï¿½klenmek   251  	250
+iï¿½ki  	146  	150  	356
 tahrik   125  	127  	129
-sürmek       	251  	250              	
-saçmalamak   250  	134  	131
-tükürük       	140  	146  	147              	
-düþürmek   	250  	251
-býrakmak    	354  	355
-boðmak      	360  	125  	127  	128  	130  	129  	                               	
-drs   	146  	148  	        	
-ilaç  	146  	148              	
-davul   356  	                    	
-sarhoþ 146  	150  	356  	                               	
-þüpheli 131  	135  	125  	127  	128  	132  	
-þüpheci       	131  	135  	                    	
+sï¿½rmek       	251  	250
+saï¿½malamak   250  	134  	131
+tï¿½kï¿½rï¿½k       	140  	146  	147
+dï¿½ï¿½ï¿½rmek   	250  	251
+bï¿½rakmak    	354  	355
+boï¿½mak      	360  	125  	127  	128  	130  	129
+drs   	146  	148
+ilaï¿½  	146  	148
+davul   356
+sarhoï¿½ 146  	150  	356
+ï¿½ï¿½pheli 131  	135  	125  	127  	128  	132
+ï¿½ï¿½pheci       	131  	135
 donuk  140  	143
-aptal	125  	127  	129  	22                	
+aptal	125  	127  	129  	22
 budala 125  	127  	129  	22
-bilmiyorum  	131  	135  	464  	
-dubleks       	357  	        	
-sýra  	250  	354
-görev   131  	354              	
-DVD	356  	        	
-yaþamak     	121  	                                                       	
-lezbiyen      	146  	149  	22                	
+bilmiyorum  	131  	135
+dubleks       	357
+sï¿½ra  	250  	354
+gï¿½rev   131  	354
+DVD	356
+yaï¿½amak     	121
+lezbiyen      	146  	149  	22
 dinamik       	125  	126
-her   	1      	20    	131  	138  	136  	        	
-istek(li) 125  	126  	121  	
-kulak   146  	147  	
-erken   253  	250                                                             	
-kolaylaþtýrmak 125  	126                                     	
+her   	1      	20    	131  	138  	136
+istek(li) 125  	126  	121
+kulak   146  	147
+erken   253  	250
+kolaylaï¿½tï¿½rmak 125  	126
 kolay   125  	126  	356
 hafifletmek 	131  	140  	143
-doðu	252  	250  	                                           	
+doï¿½u	252  	250
 econ	354  	358
-ekonomi      	354  	358  	        	
-coþku  125  	126  	        	
+ekonomi      	354  	358
+coï¿½ku  125  	126
 kenar   252  	250  	140  	143
-süs  	140  	141  	356
-eðitmek       	354  	355
-eðitim  354  	355  	
-etki  	131  	132  	133  	355  	        	
-verimli 125  	126  	355              	
-verim   125  	126  	355              	
-çaba	355
-çabalamak  	355
-yumurta      	146  	150              	
-egoist  125  	127                                     	
-yada	131  	139  	        	
+sï¿½s  	140  	141  	356
+eï¿½itmek       	354  	355
+eï¿½itim  354  	355
+etki  	131  	132  	133  	355
+verimli 125  	126  	355
+verim   125  	126  	355
+ï¿½aba	355
+ï¿½abalamak  	355
+yumurta      	146  	150
+egoist  125  	127
+yada	131  	139
 dirsek  146  	147
-þýk   	125  	126
-çýkarmak    	131  	133              	
-elit   	355  	        	
-baþka  1      	20    	        	
-e-posta        	121  	354  	                                                       	
-mumyalamak 360              	
-utandýrmak 	125  	127  	128  	        	
-zimmet                    	358              	
-duygu  131  	132  	140  	143  	128              	
+ï¿½ï¿½k   	125  	126
+ï¿½ï¿½karmak    	131  	133
+elit   	355
+baï¿½ka  1      	20
+e-posta        	121  	354
+mumyalamak 360
+utandï¿½rmak 	125  	127  	128
+zimmet                    	358
+duygu  131  	132  	140  	143  	128
 duygusal     	125  	127  	128  	130
-duygusuz    	125  	127              	
-anfizem       	146  	148  	        	
-çalýþan        	354  	        	
-boþ  	125  	127  	130  	252  	250  	        	        	        	
-çevrelemek	131  	137  	138  	252  	250              	
-kapsamak   	252  	250              	
-teþvik  121  	125  	126              	
-son  	253  	250  	        	
-gayret  355  	        	
-bitmek 253  	250              	
-bitirmek       	253  	250  	        	
-uç    	253  	250              	
-lavman        	146  	148                                     	
-enerji   125  	126  	        	
-baðlanmak  	125  	126
-niþanlanmak   125  	126  	122  	121              	        	
-aydýnlatmak	131  	132  	140  	141  	
-muazzam    	252  	250  	125  	126  	
+duygusuz    	125  	127
+anfizem       	146  	148
+ï¿½alï¿½ï¿½an        	354
+boï¿½  	125  	127  	130  	252  	250
+ï¿½evrelemek	131  	137  	138  	252  	250
+kapsamak   	252  	250
+teï¿½vik  121  	125  	126
+son  	253  	250
+gayret  355
+bitmek 253  	250
+bitirmek       	253  	250
+uï¿½    	253  	250
+lavman        	146  	148
+enerji   125  	126
+baï¿½lanmak  	125  	126
+niï¿½anlanmak   125  	126  	122  	121
+aydï¿½nlatmak	131  	132  	140  	141
+muazzam    	252  	250  	125  	126
 yeterli  20    	125  	126
 yetersiz       	125  	127  	128  	130  	131  	134
-girmek 251  	250                                     	
-azmettirmek   125  	127  	250              	
-tüm  	20    	131  	136              	
-giriþ 	252  	250  	                    	
-kýskanç       	125  	127  	129              	
-çevre   252  	250              	
-imrenmek   	125  	127  	129              	
-salgýn   360                          	
-eþit  	20                                       	
+girmek 251  	250
+azmettirmek   125  	127  	250
+tï¿½m  	20    	131  	136
+giriï¿½ 	252  	250
+kï¿½skanï¿½       	125  	127  	129
+ï¿½evre   252  	250
+imrenmek   	125  	127  	129
+salgï¿½n   360
+eï¿½it  	20
 asker   121
-çað  	253  	250
-dönem 253  	250
-devir	253  	250  	                               	
-ereksiyon    	146  	147  	149              	
-erotik   146  	149  	                               	
-özellikle       	16                	
-espresso     	150              	
-gerekli 131  	136  	        	
-östrojen       	146  	148                                                 	
-euro 	358  	                                	
-deðerlendirmek      	131  	132              	
-müjde  125  	126              	
-akþam 253  	250              	
-etkinlik 250  	253  	        	
-sonunda      	16    	250  	253              	
-hiç   	16    	131  	136  	253  	250                          	
-herkes 2      	9      	121  	131  	136              	
-hergün 250  	253                          	
-herþey 2      	9      	121  	131  	135  	136              	
-heryer 252  	250  	
-sýnav   354              	
+ï¿½aï¿½  	253  	250
+dï¿½nem 253  	250
+devir	253  	250
+ereksiyon    	146  	147  	149
+erotik   146  	149
+ï¿½zellikle       	16
+espresso     	150
+gerekli 131  	136
+ï¿½strojen       	146  	148
+euro 	358
+deï¿½erlendirmek      	131  	132
+mï¿½jde  125  	126
+akï¿½am 253  	250
+etkinlik 250  	253
+sonunda      	16    	250  	253
+hiï¿½   	16    	131  	136  	253  	250
+herkes 2      	9      	121  	131  	136
+hergï¿½n 250  	253
+herï¿½ey 2      	9      	121  	131  	135  	136
+heryer 252  	250
+sï¿½nav   354
 muayene    	146  	148
-örnek   140
+ï¿½rnek   140
 excel   354
-dýþýnda        	17    	131  	139  	                                	
-heyecanlandýrmak  	125  	126  	        	
-hariç	131  	139  	        	
+dï¿½ï¿½ï¿½nda        	17    	131  	139
+heyecanlandï¿½rmak  	125  	126
+hariï¿½	131  	139
 eziyet  125  	127
 bahane        	121  	125  	127
-icra  	360  	
-yönetici       	354
-müdür 354  	        	
-egzersiz      	146  	148  	356  	                                                       	
-egzoz  356  	                    	
-koca	121  	122  	124  	        	
-çýkýþ 	252  	250  	        	
-beklemek    	131  	134              	
-kovmak      	354              	
-gider	358  	
-masraf 358  	
+icra  	360
+yï¿½netici       	354
+mï¿½dï¿½r 354
+egzersiz      	146  	148  	356
+egzoz  356
+koca	121  	122  	124
+ï¿½ï¿½kï¿½ï¿½ 	252  	250
+beklemek    	131  	134
+kovmak      	354
+gider	358
+masraf 358
 deneyim      	131  	132  	135
 deney  354
-açýklama     	131  	132              	
-keþfetmek  	131  	132  	251  	250              	
-ekspres       	121  	
-express       	121  	        	
-derece 20                	
-dýþ   	252  	250              	
+aï¿½ï¿½klama     	131  	132
+keï¿½fetmek  	131  	132  	251  	250
+ekspres       	121
+express       	121
+derece 20
+dï¿½ï¿½   	252  	250
 yoketmek   	131  	139  	360
-ekstra  20                                                                           	
-göz  	146  	147  	
-süzmek       	140  	141
-harika  125  	126              	
-yüz  	146  	147  	21                                       	
-surat	146  	147  	        	
-gerçek 131  	136                                     	
-fabrika 354                                                             	
-fakülte 354  	        	
-karartmak   	253  	250  	        	
-solmak        	253  	250              	
-baþarýsýz      	125  	127  	130  	354  	355              	
-baygýn 146  	148  	        	
-oldukça       	1      	20    	131  	135                                     	
+ekstra  20
+gï¿½z  	146  	147
+sï¿½zmek       	140  	141
+harika  125  	126
+yï¿½z  	146  	147  	21
+surat	146  	147
+gerï¿½ek 131  	136
+fabrika 354
+fakï¿½lte 354
+karartmak   	253  	250
+solmak        	253  	250
+baï¿½arï¿½sï¿½z      	125  	127  	130  	354  	355
+baygï¿½n 146  	148
+oldukï¿½a       	1      	20    	131  	135
 sahte   125  	127  	129  	131
-düþmek       	251  	250  	                    	
-aile  	121  	122  	357              	
-fantezi 356              	
-fantastik      	125  	126  	                                                       	
-saðduyu      	146  	148              	
-hýzlý  	253  	250  	16                	
-þiþman 146  	147  	148  	
-þiþko	146  	147  	148              	                    	
-yorgunluk    	125  	127  	130  	146  	148  	        	
-yaðlamak    	146  	148  	150  	                                	
-arýza	131  	134
-faks 	354  	                                	
-þubat   253  	250  	        	
-federasyon 	354  	355                                     	
-beslenmek  	146  	150              	
-bildirim 354              	
-besleyici      	146  	150  	                               	
-hissetmek   	11    	131  	132  	140  	143              	
-harç 	358  	354
-adam   121  	124              	
-keçe	356                                     	
-çit    	356
-yýrtýcý   125  	127  	129              	
-festival 125  	126              	
+dï¿½ï¿½mek       	251  	250
+aile  	121  	122  	357
+fantezi 356
+fantastik      	125  	126
+saï¿½duyu      	146  	148
+hï¿½zlï¿½  	253  	250  	16
+ï¿½iï¿½man 146  	147  	148
+ï¿½iï¿½ko	146  	147  	148
+yorgunluk    	125  	127  	130  	146  	148
+yaï¿½lamak    	146  	148  	150
+arï¿½za	131  	134
+faks 	354
+ï¿½ubat   253  	250
+federasyon 	354  	355
+beslenmek  	146  	150
+bildirim 354
+besleyici      	146  	150
+hissetmek   	11    	131  	132  	140  	143
+harï¿½ 	358  	354
+adam   121  	124
+keï¿½e	356
+ï¿½it    	356
+yï¿½rtï¿½cï¿½   125  	127  	129
+festival 125  	126
 kokmak      	140
-yýrtmak       	140  	141              	
-kavga  121  	125  	127  	129              	
-ateþ 	146  	148  	140  	143  	
+yï¿½rtmak       	140  	141
+kavga  121  	125  	127  	129
+ateï¿½ 	146  	148  	140  	143
 az    	20
-niþanlý  121  	122
-ateþli	125  	127  	129  	149  	        	
-þenlik   125  	126                                                 	
-þekil(lendirmek)      	131  	250  	252
-doldurmak  	250  	251              	
+niï¿½anlï¿½  121  	122
+ateï¿½li	125  	127  	129  	149
+ï¿½enlik   125  	126
+ï¿½ekil(lendirmek)      	131  	250  	252
+doldurmak  	250  	251
 film  	356
-nihai	250  	253                                     	
+nihai	250  	253
 en    	17    	252  	250
 final 	354
 maliye 354  	358
 ince 	140  	143  	125  	126  	250
-bulmak                    	131  	132                                     	
-bitiþ  	253  	250  	252
-þömine                    	357
-ilk    	21    	253  	250  	355                                                             	
-balýk	146  	150
-uygun  131  	132  	250              	
-fitness         	356                                                 	
+bulmak                    	131  	132
+bitiï¿½  	253  	250  	252
+ï¿½ï¿½mine                    	357
+ilk    	21    	253  	250  	355
+balï¿½k	146  	150
+uygun  131  	132  	250
+fitness         	356
 ekran   356
-pohpohlamak  121  	125  	126                                                                         	
-kaçmak      	251  	250              	
+pohpohlamak  121  	125  	126
+kaï¿½mak      	251  	250
 et     	146  	147  	150
-ten   	146  	147              	
-uçmak 11    	251  	250              	
-esnek  125  	126  	140  	143  	        	
-sinek   146              	
-flört  	121  	123                          	
-akýþ 	251  	250
-akmak 251  	250  	                    	
-grip  	146  	148              	
-çakmak      	356                                                 	
-takip	11    	251  	250  	                               	
-düþkün                    	131  	132
-severek       	125  	126  	
-gýda 	146  	150                                     	
-için  	17                                       	
-kuvvet 131  	133  	125  	126  	355  	
-alýn  	146  	147              	
-önseviþme  	146  	149  	
-seviþmek    	146  	149
-sikiþmek     	146  	149  	22                                                   	
-unutmak     	131  	137  	        	
-affetmek     	121  	125  	126  	131  	132  	                                	
+ten   	146  	147
+uï¿½mak 11    	251  	250
+esnek  125  	126  	140  	143
+sinek   146
+flï¿½rt  	121  	123
+akï¿½ï¿½ 	251  	250
+akmak 251  	250
+grip  	146  	148
+ï¿½akmak      	356
+takip	11    	251  	250
+dï¿½ï¿½kï¿½n                    	131  	132
+severek       	125  	126
+gï¿½da 	146  	150
+iï¿½in  	17
+kuvvet 131  	133  	125  	126  	355
+alï¿½n  	146  	147
+ï¿½nseviï¿½me  	146  	149
+seviï¿½mek    	146  	149
+sikiï¿½mek     	146  	149  	22
+unutmak     	131  	137
+affetmek     	121  	125  	126  	131  	132
 form	354  	146  	147
 eski 	253  	250
-servet  358              	
-ileri  	251  	250  	252  	253                                     	
-bulunmak    	11    	13    	131  	132  	        	
-vakýf	131  	133              	
-kurmak       	131  	133  	355  	                    	
-kurucu 355  	                                	
-kýrýlgan        	140  	143  	125  	127
-kýrýlmak       	140  	143  	
-koku	140                                     	
-frank   358              	
-imtiyaz 354  	358                                                                                     	
-kardeþ 354
+servet  358
+ileri  	251  	250  	252  	253
+bulunmak    	11    	13    	131  	132
+vakï¿½f	131  	133
+kurmak       	131  	133  	355
+kurucu 355
+kï¿½rï¿½lgan        	140  	143  	125  	127
+kï¿½rï¿½lmak       	140  	143
+koku	140
+frank   358
+imtiyaz 354  	358
+kardeï¿½ 354
 anormal      	125  	127  	131  	134
-ücretsiz       	125  	126  	358
-ücret(li)       	358  	354              	
-beleþ   125  	126  	358  	                               	                    	
-serbest        	125  	126  	131  	                    	
+ï¿½cretsiz       	125  	126  	358
+ï¿½cret(li)       	358  	354
+beleï¿½   125  	126  	358
+serbest        	125  	126  	131
 serbestlik    	125  	126  	131
-özgür   125  	126  	131  	132
-donmak      	140  	143  	        	
-sýk   	253  	250  	16    	131  	135              	
-iþlek 	253  	250  	                                                       	
-cuma   253  	250              	
-buzdolabý    	357                          	
-patates        	150              	
-frizbi	356  	        	
-itibaren        	17                	
-ön    	250  	252                                     	
-meyve 150              	
+ï¿½zgï¿½r   125  	126  	131  	132
+donmak      	140  	143
+sï¿½k   	253  	250  	16    	131  	135
+iï¿½lek 	253  	250
+cuma   253  	250
+buzdolabï¿½    	357
+patates        	150
+frizbi	356
+itibaren        	17
+ï¿½n    	250  	252
+meyve 150
 sinirlenmek 	125  	127  	129  	131  	132
 sinirli	125  	127  	129  	131  	132
-kýzartma      	150  	
-kýzartmak    	150  	
-kahretmek  	11    	125  	127  	129  	146              	
-becermek   	11    	131  	135  	149  	22                	
-pezevenk    	125  	127  	129  	149  	22    	        	
-lanet	125  	127  	129  	146  	22                                                               	
-tam  	20    	252  	250                                                 	
+kï¿½zartma      	150
+kï¿½zartmak    	150
+kahretmek  	11    	125  	127  	129  	146
+becermek   	11    	131  	135  	149  	22
+pezevenk    	125  	127  	129  	149  	22
+lanet	125  	127  	129  	146  	22
+tam  	20    	252  	250
 fon   	358
-sermaye     	358              	
+sermaye     	358
 temel   131  	136  	354
-radikal 131  	136  	359              	
-esasen        	131  	136                         	
-finans  358              	
-finansman   	358  	        	
-para 	358                                     	
-komik  125  	126                          	
-mobilya       	357  	                               	
-þilte  	357  	        	
-gelecek       	253  	250              	
-havalý  131  	135  	140  	143  	        	
-kazanç 355  	358              	
-kumar 358  	356              	
-oyun	121  	356  	                    	
-garaj	357              	
-bahçe  356  	357                                     	
+radikal 131  	136  	359
+esasen        	131  	136
+finans  358
+finansman   	358
+para 	358
+komik  125  	126
+mobilya       	357
+ï¿½ilte  	357
+gelecek       	253  	250
+havalï¿½  131  	135  	140  	143
+kazanï¿½ 355  	358
+kumar 358  	356
+oyun	121  	356
+garaj	357
+bahï¿½e  356  	357
 toplamak     	121  	356
-eþcinsel       	146  	149  	        	
-gay  	146  	149                                     	
+eï¿½cinsel       	146  	149
+gay  	146  	149
 moron 125  	127  	129  	22
-genel   131  	135  	        	
+genel   131  	135
 genellikle     	16    	131  	135  	250  	253
-üretmek      	131  	133  	355  	354  	
-nesil 	253  	250  	        	
-jeneratör     	354  	
-cömert 131  	133
-cömertlik     	125  	126  	132  	131  	
-genital 146  	147  	149              	
-soykýrým      	360              	
-yahudi 359              	
-nazik   125  	126              	
-beyefendi    	121  	124  	                    	
-centilmen    	125  	126              	        	        	
-almak  131  	133  	                                           	
-hayalet                    	360              	
-dev  	252  	250  	20                	
-devasa                    	252  	250  	20                                       	
-toplu	252  	250              	
-kýz   	121  	124  	                                                                   	
-vermek       	11    	121  	                               	
-verici   121  	125  	126  	                                                       	
-memnun     	125  	126  	        	
-memnuniyet   125  	126  	        	
-gözatmak    	354
-bez  	146  	148  	        	
-glokom        	146  	148  	        	
-global  252  	250              	
-kasvet 125  	127  	130                         	
-þan  	125  	126              	
-parýltý   140  	141              	
-obur 	146  	148  	150              	        	        	
-gitmek 11    	251  	250              	
-hedef   354  	355  	                                                       	
-Allah	359                                     	
-kahrolasý     	125  	127  	129  	22    	
-kahrolmak  	125  	127  	129  	
-golf  	356                                                 	
-belsoðukluðu  146  	148
-iyi    	125  	126  	463                                     	
-muhteþem  	125  	126                                     	
-dedikodu     	121  	125  	127              	
+ï¿½retmek      	131  	133  	355  	354
+nesil 	253  	250
+jeneratï¿½r     	354
+cï¿½mert 131  	133
+cï¿½mertlik     	125  	126  	132  	131
+genital 146  	147  	149
+soykï¿½rï¿½m      	360
+yahudi 359
+nazik   125  	126
+beyefendi    	121  	124
+centilmen    	125  	126
+almak  131  	133
+hayalet                    	360
+dev  	252  	250  	20
+devasa                    	252  	250  	20
+toplu	252  	250
+kï¿½z   	121  	124
+vermek       	11    	121
+verici   121  	125  	126
+memnun     	125  	126
+memnuniyet   125  	126
+gï¿½zatmak    	354
+bez  	146  	148
+glokom        	146  	148
+global  252  	250
+kasvet 125  	127  	130
+ï¿½an  	125  	126
+parï¿½ltï¿½   140  	141
+obur 	146  	148  	150
+gitmek 11    	251  	250
+hedef   354  	355
+Allah	359
+kahrolasï¿½     	125  	127  	129  	22
+kahrolmak  	125  	127  	129
+golf  	356
+belsoï¿½ukluï¿½u  146  	148
+iyi    	125  	126  	463
+muhteï¿½em  	125  	126
+dedikodu     	121  	125  	127
 ortalama     	354  	135  	20
-kapmak      	140  	143              	
-zarafet 125  	126  	        	
-süslemek    	125  	126              	
-zarif 	125  	126  	                                           	
-mezun 355  	                                           	
-torun	121  	122  	        	
-büyükbaba  	121  	122                                                                         	        	
-büyükanne  	121  	122  	                               	
-nine 	121  	122  	        	
-kavramak   	131  	132  	140  	143              	
-minnettar    	125  	126              	
+kapmak      	140  	143
+zarafet 125  	126
+sï¿½slemek    	125  	126
+zarif 	125  	126
+mezun 355
+torun	121  	122
+bï¿½yï¿½kbaba  	121  	122
+bï¿½yï¿½kanne  	121  	122
+nine 	121  	122
+kavramak   	131  	132  	140  	143
+minnettar    	125  	126
 sevinmek    	125  	126
-sevinç 125  	126              	
-mezar  125  	127  	130  	360              	
-gri    	140  	141                                                             	
-yeþil 	140  	141              	
-büyümek    	250  	251  	140  	
-keder   125  	127  	130  	
+sevinï¿½ 125  	126
+mezar  125  	127  	130  	360
+gri    	140  	141
+yeï¿½il 	140  	141
+bï¿½yï¿½mek    	250  	251  	140
+keder   125  	127  	130
 kederli 125  	127  	130
 kedersiz      	125  	126
-gaddar 125  	127  	130              	
-sýrýtmak       	125  	126                                                             	
+gaddar 125  	127  	130
+sï¿½rï¿½tmak       	125  	126
 bakkal 146  	150
-manav 146  	150              	
-söylenmek  	125  	127  	129
-mýzmýz        	125  	127  	129              	
-zemin  252  	250                                                 	
+manav 146  	150
+sï¿½ylenmek  	125  	127  	129
+mï¿½zmï¿½z        	125  	127  	129
+zemin  252  	250
 kin   	121  	125  	127  	129
 garez   125  	127  	129
 garanti 131  	136  	125  	126
-bekçi   131  	137  	124
-tahmin 11    	131  	135  	131  	        	
-konuk  121  	123  	                               	
-gitar 	356              	
+bekï¿½i   131  	137  	124
+tahmin 11    	131  	135  	131
+konuk  121  	123
+gitar 	356
 yudum 146  	150
-yutkunmak 	146  	150              	
-diþeti	146  	147                                     	
-jimnastik     	356              	
-jinekolojik    	146  	148              	
+yutkunmak 	146  	150
+diï¿½eti	146  	147
+jimnastik     	356
+jinekolojik    	146  	148
 jinekolog     	146  	148
-ha    	125  	126  	462                                     	
-hah  	125  	126  	462              	
-haha	125  	126  	462              	
-saç  	146  	147              	
-yarým   20
+ha    	125  	126  	462
+hah  	125  	126  	462
+haha	125  	126  	462
+saï¿½  	146  	147
+yarï¿½m   20
 yamalak      	131  	135  	134
-salon   250  	252              	
-halisünasyon   146  	148
-sanrý	146  	148                          	
-topuk   146  	147  	
-el     	146  	147  	140  	143  	        	
-avuç	140  	143  	146  	147
-yakýþýklý       	125  	126
-asmak 250  	251                                                                                     	
-olay 	250  	253                                                             	
-bezdirmek   	125  	127  	128  	129  	
-zarar(lý)       	125  	127  	130                                     	
-zararsýz       	125  	126              	
-harmonik    	125  	126  	140  	142                          	
-nefret  125  	127  	129                                                                                    	
-puslu   125  	131  	135                                     	
-kafa 	146  	147              	
-kafatasý       	146  	147
-baþ  	146  	147
-yönelmek    	251  	250              	
-rota  	251  	250  	                               	
-iyileþmek    	146  	148
-iyileþtirmek 	125  	126  	355  	
-þifa  	146  	148                          	
-saðlýk   146  	148              	
-iþitme  121  	140  	142                         	
-cenaze                    	360              	
-kalp 	146  	147                                     	
+salon   250  	252
+halisï¿½nasyon   146  	148
+sanrï¿½	146  	148
+topuk   146  	147
+el     	146  	147  	140  	143
+avuï¿½	140  	143  	146  	147
+yakï¿½ï¿½ï¿½klï¿½       	125  	126
+asmak 250  	251
+olay 	250  	253
+bezdirmek   	125  	127  	128  	129
+zarar(lï¿½)       	125  	127  	130
+zararsï¿½z       	125  	126
+harmonik    	125  	126  	140  	142
+nefret  125  	127  	129
+puslu   125  	131  	135
+kafa 	146  	147
+kafatasï¿½       	146  	147
+baï¿½  	146  	147
+yï¿½nelmek    	251  	250
+rota  	251  	250
+iyileï¿½mek    	146  	148
+iyileï¿½tirmek 	125  	126  	355
+ï¿½ifa  	146  	148
+saï¿½lï¿½k   146  	148
+iï¿½itme  121  	140  	142
+cenaze                    	360
+kalp 	146  	147
 dert(li)  125  	127  	130
-mide	146  	147  	
-kalpsiz 125  	127  	129                         	
-içaçýcý  125  	126              	
-cennet 125  	126  	359                         	
-aðýr  	140  	143                                                             	
-heh  	125  	126  	462              	
-yüksek(lik)  	252  	250                                     	
+mide	146  	147
+kalpsiz 125  	127  	129
+iï¿½aï¿½ï¿½cï¿½  125  	126
+cennet 125  	126  	359
+aï¿½ï¿½r  	140  	143
+heh  	125  	126  	462
+yï¿½ksek(lik)  	252  	250
 cehennem  	125  	127  	129  	359
-merhaba     	121                                                 	
-porsiyon      	150              	
-çaresiz 125  	127  	130                                     	
-basur   146  	148              	
-dolayý  131  	133
-dolay(lý)       	131  	135                         	
-iþte  	16                	
-burada 16                            	
-kahraman   	125  	126  	355              	
-uçuk	146  	148                                                 	                                	
-tereddüt      	125  	127  	128  	131  	135  	137              	
-hey  	121                                     	
-lise   	354              	
-yürüyüþ       	251  	250  	356                         	
-hindu   359                          	
-hiphop 356                                     	
+merhaba     	121
+porsiyon      	150
+ï¿½aresiz 125  	127  	130
+basur   146  	148
+dolayï¿½  131  	133
+dolay(lï¿½)       	131  	135
+iï¿½te  	16
+burada 16
+kahraman   	125  	126  	355
+uï¿½uk	146  	148
+tereddï¿½t      	125  	127  	128  	131  	135  	137
+hey  	121
+lise   	354
+yï¿½rï¿½yï¿½ï¿½       	251  	250  	356
+hindu   359
+hiphop 356
 kiralama      	354  	357  	358
 kira  	357  	358
-kiracý   357                                                 	
+kiracï¿½   357
 vurmak       	125  	127  	129
-hiv   	146  	148  	149              	
-hm(m|mm) 	462  	463              	
-hobi 	356  	        	
-hokey  356              	
-hoho	125  	126              	
-tutmak 131  	137              	
-tatil  	356                                                             	
-ev    	357  	                                           	
-ödev	354  	357  	        	
-homo   146  	149  	22                           	
-homoseksüel  146  	149              	
-dürüst  125  	126  	        	
-bal   	150  	        	
-onur 	125  	126  	355                                     	
-ümit 	11    	13    	125  	126  	131  	134  	135  	        	
-umut(lu)      	125  	126  	131  	134  	135  	        	
-inþallah        	16    	125  	126  	131  	134  	135  	        	        	
-yatay   252  	250              	
-hormon       	146  	148              	
-abazan        	146  	147  	149  	
-abaza  146  	149  	
-azgýn   146  	147  	149
-azmak 146  	147  	149              	
+hiv   	146  	148  	149
+hm(m|mm) 	462  	463
+hobi 	356
+hokey  356
+hoho	125  	126
+tutmak 131  	137
+tatil  	356
+ev    	357
+ï¿½dev	354  	357
+homo   146  	149  	22
+homoseksï¿½el  146  	149
+dï¿½rï¿½st  125  	126
+bal   	150
+onur 	125  	126  	355
+ï¿½mit 	11    	13    	125  	126  	131  	134  	135
+umut(lu)      	125  	126  	131  	134  	135
+inï¿½allah        	16    	125  	126  	131  	134  	135
+yatay   252  	250
+hormon       	146  	148
+abazan        	146  	147  	149
+abaza  146  	149
+azgï¿½n   146  	147  	149
+azmak 146  	147  	149
 otel  	356
 hotel	356
 motel   356
-hastane       	146  	148  	        	
-hasým  125  	127  	129  	
-saldýrgan     	125  	127  	129
-saldýrmak    	125  	127  	129  	
-sýcak   140  	143                                                                                                            	
-nasýl 	16    	18    	131  	133  	        	
-ancak  16    	18                                                               	
-sarýlmak      	125  	146  	149  	126              	
-kocaman    	252  	250  	                                                                               	
-insan   121  	124  	        	        	        	
+hastane       	146  	148
+hasï¿½m  125  	127  	129
+saldï¿½rgan     	125  	127  	129
+saldï¿½rmak    	125  	127  	129
+sï¿½cak   140  	143
+nasï¿½l 	16    	18    	131  	133
+ancak  16    	18
+sarï¿½lmak      	125  	146  	149  	126
+kocaman    	252  	250
+insan   121  	124
 mizah  125  	126  	356
-aç(lýk)  146  	150                                                 	
-avcýlýk  356
-avcý 	356
-hurra   125  	126              	
-acele   253  	250              	
+aï¿½(lï¿½k)  146  	150
+avcï¿½lï¿½k  356
+avcï¿½ 	356
+hurra   125  	126
+acele   253  	250
 sessiz(lik)    	140  	142
-sükunet       	140  	142
-dingin  140  	142                          	
-hipertansiyon  146  	148              	
-hipotermik   	146  	148              	
+sï¿½kunet       	140  	142
+dingin  140  	142
+hipertansiyon  146  	148
+hipotermik   	146  	148
 hipotez        	131  	135  	355
-kuramsal     	131  	135  	355              	
-ibuprofen    	146  	148              	
-yoðumbakým  146  	148              	
-fikir  	131  	132              	
-ideal	125  	126  	131  	134  	355  	
-eðer 	18    	131  	134  	135  	139                                     	
-aldýrmamak	125  	127  	131  	137
-önemsememek      	125  	127  	131  	137              	
-hasta   146  	148  	125  	127  	130              	
-görüntü       	140  	141
-görüntülemek 140  	141
-görünüm     	140  	141              	
-hayal   131  	132              	
-acil  	253  	250              	
-hemen 16    	253  	250                                     	
-ahlaksýz       	125  	127  	359  	129  	                    	
-baðýþýk(lýk)  	146  	148              	
-sabýrsýz(lýk)  	125  	127  	128
-sabýr(lý)        	125  	126
-kiþiliksiz       	125  	127
-kiþilikli  125  	126
-kiþi   	121  	124              	
-ima  	131  	133                                     	
-kaba(lýk)      	125  	127  	129  	140  	143
-önem   355  	125  	126
-önemli 355  	125  	126  	20
-önemsiz      	125  	127  	130
-imkansýz     	131  	134                                     	
-geliþtirmek  	125  	126  	355              	
-içinde  17    	252  	250              	
-etkisiz  131  	133                                     	
-kabiliyetsiz  	355  	354  	125  	127  	130              	
-özenmek     	355  	125  	126  	        	
-ensest 146  	149              	
-inç   	252  	250
-inch             	
-oran 	250  	253                          	
+kuramsal     	131  	135  	355
+ibuprofen    	146  	148
+yoï¿½umbakï¿½m  146  	148
+fikir  	131  	132
+ideal	125  	126  	131  	134  	355
+eï¿½er 	18    	131  	134  	135  	139
+aldï¿½rmamak	125  	127  	131  	137
+ï¿½nemsememek      	125  	127  	131  	137
+hasta   146  	148  	125  	127  	130
+gï¿½rï¿½ntï¿½       	140  	141
+gï¿½rï¿½ntï¿½lemek 140  	141
+gï¿½rï¿½nï¿½m     	140  	141
+hayal   131  	132
+acil  	253  	250
+hemen 16    	253  	250
+ahlaksï¿½z       	125  	127  	359  	129
+baï¿½ï¿½ï¿½ï¿½k(lï¿½k)  	146  	148
+sabï¿½rsï¿½z(lï¿½k)  	125  	127  	128
+sabï¿½r(lï¿½)        	125  	126
+kiï¿½iliksiz       	125  	127
+kiï¿½ilikli  125  	126
+kiï¿½i   	121  	124
+ima  	131  	133
+kaba(lï¿½k)      	125  	127  	129  	140  	143
+ï¿½nem   355  	125  	126
+ï¿½nemli 355  	125  	126  	20
+ï¿½nemsiz      	125  	127  	130
+imkansï¿½z     	131  	134
+geliï¿½tirmek  	125  	126  	355
+iï¿½inde  17    	252  	250
+etkisiz  131  	133
+kabiliyetsiz  	355  	354  	125  	127  	130
+ï¿½zenmek     	355  	125  	126
+ensest 146  	149
+inï¿½   	252  	250
+inch
+oran 	250  	253
 gelir 	354  	358
 beceri  355  	354  	355
 becerik(li)    	355  	354  	125  	126
 beceriksizlik	355  	125  	127
-artýrmak      	250  	251  	20
-arttýrmak     	250  	251  	20                                                                           	
-hazýmsýzlýk  	146  	148                                     	
+artï¿½rmak      	250  	251  	20
+arttï¿½rmak     	250  	251  	20
+hazï¿½msï¿½zlï¿½k  	146  	148
 bireysel       	121  	124
-uyarmak     	131  	132  	133              	
-sanayi 354                          	
-kaçýnýlmaz  	131  	136                                     	
-yanýlmak     	131  	136  	
-yanýlmaz     	131  	
-bulaþtýrmak 	146  	148  	131  	133  	        	        	
-çýkarsamak 	131  	132  	133              	
-sonsuzluk    	1      	21    	253  	250                                                             	
-bilgi  	131  	132              	
-bilgilenmek 	121  	131  	132                                                 	
-ihbar	131  	132                                                 	
-solumak      	140              	
-miras   358              	
-engellemek 	125  	127  	128  	131  	137  	                                           	
-yaralamak  	146  	148  	147                         	
-iç     	252  	250              	
-masum       	125  	126  	        	
-konukevi     	356                          	
-güvensiz     	125  	127  	128              	
-içeri 	17    	131  	138  	252  	250                          	
-içgörü  131  	132  	
-samimiyet   	125  	126  	
-samimiyetsiz   125  	127  	                               	
-ilham   125  	126  	131  	132              	
-anlýk	253  	250
-an    	253  	250              	
-yerine  16    	251  	250  	
-öðretmek    	354              	
-insülin  146  	148              	
-hakaret       	121  	125  	127  	129              	
-sigorta 358                                                 	
-niyet	131  	133              	
-faiz  	125  	126              	
-müdahale    	131  	137              	
-iç     	252  	250                                     	
-uluslararasý 	250  	252              	
-yorumlamak   131  	132                         	
-kesiþmek    	252  	250                         	
-röportaj       	121  	354  	        	
-ilginç	146  	147                                                 	
+uyarmak     	131  	132  	133
+sanayi 354
+kaï¿½ï¿½nï¿½lmaz  	131  	136
+yanï¿½lmak     	131  	136
+yanï¿½lmaz     	131
+bulaï¿½tï¿½rmak 	146  	148  	131  	133
+ï¿½ï¿½karsamak 	131  	132  	133
+sonsuzluk    	1      	21    	253  	250
+bilgi  	131  	132
+bilgilenmek 	121  	131  	132
+ihbar	131  	132
+solumak      	140
+miras   358
+engellemek 	125  	127  	128  	131  	137
+yaralamak  	146  	148  	147
+iï¿½     	252  	250
+masum       	125  	126
+konukevi     	356
+gï¿½vensiz     	125  	127  	128
+iï¿½eri 	17    	131  	138  	252  	250
+iï¿½gï¿½rï¿½  131  	132
+samimiyet   	125  	126
+samimiyetsiz   125  	127
+ilham   125  	126  	131  	132
+anlï¿½k	253  	250
+an    	253  	250
+yerine  16    	251  	250
+ï¿½ï¿½retmek    	354
+insï¿½lin  146  	148
+hakaret       	121  	125  	127  	129
+sigorta 358
+niyet	131  	133
+faiz  	125  	126
+mï¿½dahale    	131  	137
+iï¿½     	252  	250
+uluslararasï¿½ 	250  	252
+yorumlamak   131  	132
+kesiï¿½mek    	252  	250
+rï¿½portaj       	121  	354
+ilginï¿½	146  	147
 zehirlemek  	146  	148  	125  	127  	129
-zehirlenmek	146  	148                                     	
-deðiþmez    	131  	136              	
-envanter     	354              	
-yatýrmak     	358  	250  	251
-kuvvetlenmek 125  	126              	
-dahil	121  	131  	138  	
-ipod 	356              	
-irrasyonel    	125  	127  	128  	131  	
-sorumsuz    	355                                                                         	
-Ýslam   359
-yalýtmak      	140  	143  	
-yalýtým 140  	143  	
+zehirlenmek	146  	148
+deï¿½iï¿½mez    	131  	136
+envanter     	354
+yatï¿½rmak     	358  	250  	251
+kuvvetlenmek 125  	126
+dahil	121  	131  	138
+ipod 	356
+irrasyonel    	125  	127  	128  	131
+sorumsuz    	355
+ï¿½slam   359
+yalï¿½tmak      	140  	143
+yalï¿½tï¿½m 140  	143
 konu	131  	132
-o      	1      	2      	9                                                                             	
-kaþýntý  146  	147  	148              	                    	
-madde 1      	20    	131  	140  	                                	
-kendisi 1      	2      	9                                                                 	
-ocak	253  	250  	356              	
-çene	146  	147  	        	
-caz  	356  	
-jazz  	356                          	
-sarsýlmak    	125  	127  	129  	250  	251              	
-gerizekalý    	125  	127  	129  	22    	                                	
-cihat	359                                                                                     	
-koþu	251  	250  	356  	                               	
-þaka	125  	126  	356                                                             	
-seyahat       	250  	251  	356                         	
-Juda	359              	
-temmuz      	253  	250  	        	
-atlamak       	251  	250              	
-haziran        	253  	250  	        	
-genç	124  	253  	250  	        	
-sadece                    	16    	131  	139  	                    	
-karaoke      	356  	        	
-karma 359              	
-keskin 140  	143                                                 	
+o      	1      	2      	9
+kaï¿½ï¿½ntï¿½  146  	147  	148
+madde 1      	20    	131  	140
+kendisi 1      	2      	9
+ocak	253  	250  	356
+ï¿½ene	146  	147
+caz  	356
+jazz  	356
+sarsï¿½lmak    	125  	127  	129  	250  	251
+gerizekalï¿½    	125  	127  	129  	22
+cihat	359
+koï¿½u	251  	250  	356
+ï¿½aka	125  	126  	356
+seyahat       	250  	251  	356
+Juda	359
+temmuz      	253  	250
+atlamak       	251  	250
+haziran        	253  	250
+genï¿½	124  	253  	250
+sadece                    	16    	131  	139
+karaoke      	356
+karma 359
+keskin 140  	143
 tutar 	11    	131  	137  	358
-fýçý   	356  	
-tuþ   	354  	                                	
-böbrek 146  	147              	
-kilometre     	252  	250  	        	
-soydaþ 121  	122                          	
-tür    	131  	135                                                             	
-kral  	355  	
-kraliçe 355
-öpmek 125  	126  	146  	149
-mutfak 146  	150  	357  	        	
-km   	252  	250              	
-diz   	146  	147                                     	
-bilmek 11    	131  	132                                                                                    	
-bilinen  131  	132                                     	
-boðum 146  	147              	
-koþer   359              	
-kriþna  359              	
-kron 	358              	
-emek   354  	                                	
-eksiklik                    	20    	131  	134  	                    	
-bayan  121  	124  	                                           	
+fï¿½ï¿½ï¿½   	356
+tuï¿½   	354
+bï¿½brek 146  	147
+kilometre     	252  	250
+soydaï¿½ 121  	122
+tï¿½r    	131  	135
+kral  	355
+kraliï¿½e 355
+ï¿½pmek 125  	126  	146  	149
+mutfak 146  	150  	357
+km   	252  	250
+diz   	146  	147
+bilmek 11    	131  	132
+bilinen  131  	132
+boï¿½um 146  	147
+koï¿½er   359
+kriï¿½na  359
+kron 	358
+emek   354
+eksiklik                    	20    	131  	134
+bayan  121  	124
 topal	137  	127  	125  	130
-arazi	252  	250                                     	
+arazi	252  	250
 dil    	121  	146  	147  	140
-dizüstü 354                                                 	
-geç(miþ)     	253  	250
-geçici  131  	135  	253  	250                                     	
-gülmek        	125  	126
-gülünç 125  	127  	129
-gülümseme 	125  	126                                     	
+dizï¿½stï¿½ 354
+geï¿½(miï¿½)     	253  	250
+geï¿½ici  131  	135  	253  	250
+gï¿½lmek        	125  	126
+gï¿½lï¿½nï¿½ 125  	127  	129
+gï¿½lï¿½mseme 	125  	126
 kanun  131  	136
 yasa	131  	136
 yasal   354
-çim  	357  	356
-avukat 354                                                 	
-tembel 355  	125  	127              	
-öncülü 131  	133  	251  	250  	354  	355              	
-öðrenmek   	131  	132  	354
-öðrenci        	354
-öðretmen    	354  	355                         	
-deri  	140  	143              	
+ï¿½im  	357  	356
+avukat 354
+tembel 355  	125  	127
+ï¿½ncï¿½lï¿½ 131  	133  	251  	250  	354  	355
+ï¿½ï¿½renmek   	131  	132  	354
+ï¿½ï¿½renci        	354
+ï¿½ï¿½retmen    	354  	355
+deri  	140  	143
 teori 	354  	131  	135
-ders 	355  	131  	132              	
-Led  	131  	133  	251  	250              	
-çýkýntý   252  	250  	                               	
-bacak  146  	147                                                                                                            	
-haydi   1      	2      	3      	5      	11    	14    	121              	
-öldürücü      	360                                     	
+ders 	355  	131  	132
+Led  	131  	133  	251  	250
+ï¿½ï¿½kï¿½ntï¿½   252  	250
+bacak  146  	147
+haydi   1      	2      	3      	5      	11    	14    	121
+ï¿½ldï¿½rï¿½cï¿½      	360
 mektup       	121
-lösemi 146  	148                                     	
-seviye 252  	250  	        	
-yükümlü(lük)  125  	127  	131  	134  	
-yalan(cý)      	125  	127  	129  	                                                       	
-kütüphane   	354              	
-yalamak      	140  	
-hayat   146  	148  	121              	
-hayati  125  	126                                                 	
-ýþýk   	140  	141              	
-sevmek       	125  	126  	121  	131                          	
+lï¿½semi 146  	148
+seviye 252  	250
+yï¿½kï¿½mlï¿½(lï¿½k)  125  	127  	131  	134
+yalan(cï¿½)      	125  	127  	129
+kï¿½tï¿½phane   	354
+yalamak      	140
+hayat   146  	148  	121
+hayati  125  	126
+ï¿½ï¿½ï¿½k   	140  	141
+sevmek       	125  	126  	121  	131
 muhtemelen   131  	135  	16
-muhtemel   	131  	135                                                 	
-gevþek 140  	143  	                               	
-dudak  146  	147                          	
-likör 	150  	356                                     	
-dinlemek     	121  	140  	142                                     	
-dinleyici       	121  	140  	142  	124                                                             	
-küçük  252  	250  	20
-karalama(k)	356  	125  	127              	
-karaciðer    	146  	147              	
-yaþam 146  	148  	        	
-lmao	125  	126                                                             	
+muhtemel   	131  	135
+gevï¿½ek 140  	143
+dudak  146  	147
+likï¿½r 	150  	356
+dinlemek     	121  	140  	142
+dinleyici       	121  	140  	142  	124
+kï¿½ï¿½ï¿½k  252  	250  	20
+karalama(k)	356  	125  	127
+karaciï¿½er    	146  	147
+yaï¿½am 146  	148
+lmao	125  	126
 yerel	252  	250
 lokal	252  	250
-local	252  	250              	
-çatý  	357                          	
-mantýk(lý)     	131  	132              	
-lol    	125  	126  	462  	                    	
-uzun	253  	250  	252  	                    	
-özlem  125  	127  	130  	
-özlemek      	125  	127  	130  	131  	134  	
-boylam                    	252  	250  	        	
-bakmak      	140  	141  	        	
-seyir	140  	141  	
-kayýp   125  	127  	130  	355                                                             	
-kaybetmek 	125  	127  	130  	355  	        	
-ezik 	125  	127  	130  	                                                                   	
+local	252  	250
+ï¿½atï¿½  	357
+mantï¿½k(lï¿½)     	131  	132
+lol    	125  	126  	462
+uzun	253  	250  	252
+ï¿½zlem  125  	127  	130
+ï¿½zlemek      	125  	127  	130  	131  	134
+boylam                    	252  	250
+bakmak      	140  	141
+seyir	140  	141
+kayï¿½p   125  	127  	130  	355
+kaybetmek 	125  	127  	130  	355
+ezik 	125  	127  	130
 loto  	358
-piyango       	358  	                               	
-bit    	146  	148  	
-pire  	146  	148  	                                           	
-düþük  125  	127  	130  	252  	250  	354  	358  	
-sadýk   125  	126              	
-pastil	146  	148              	
-SAT 	354  	        	
-ltd    	354  	        	
-þans	125  	126  	131  	135                         	
-iyiki  	125  	126  	131  	135              	
-þanssýz        	125  	127  	131  	135                          	
-þanslý   125  	126  	131  	135                                     	
-þiþ(lik)  146  	148              	        	        	
-akciðer                    	146  	147  	        	
-þehvet(li)     	146  	149              	
-lüteriyen      	359  	                               	
-lenf  	146  	148              	
-linç  	125  	127  	129  	                               	
-Majeste       	121  	124  	355              	
-deli  	125  	127  	129  	        	
-çýldýrmak     	125  	127  	129  	        	
-dergi	356  	                    	
-hizmetçi      	357              	
-posta   121                                     	
-postalamak 	121                                                                         	
-asýl   	1      	20                                       	
-majör   20    	
-major   20                	
-çoðunluk     	1      	20    	
-çoðunlukla  	1      	16    	131  	135  	
-çoðu	1      	20    	131  	135  	
-binbaþý                    	354              	
-yapmak      	133  	131  	355  	
-kusmak       	125  	127  	146  	148  	                                	
-marka 11    	14    	131  	133                         	
-erkek   121  	124              	
-alýþveriþ 356           	
-alýþveriþkolik   356  	358  	
-avm 	356  	
-mamogram 	146  	148  	                               	
-manyak      	125  	127  	129                                     	
-manipülasyon 131  	133  	                               	
-üretim  354  	131  	133                         	
-harita   252  	250              	
-eþlemek      	252  	250                                     	
-maraton      	356              	
-Mart	253  	250  	        	
-Margarita    	356              	
-marjinal       	131  	135              	
-Market 354  	
-evlenmek    	121              	
-evlilik   121              	
-evli  	121  	122  	        	
-Martini 356              	
-mazoþizm   	125  	127  	
-mazoþist     	125  	127  	
-kitle 	252  	250              	
-katliam 360  	        	
-master 355  	
-lisans   354              	
-mastercard 	358  	        	
-hakim  355              	
-ustaca 355                          	
-usta 	355  	
-ustalýk  355  	        	
-dost 	121  	123                          	
-matematik  	354              	
-çiftleþmek   	121  	149                         	
-mozole                    	360  	
-anýtkabir      	360  	125  	130  	
-Mayýs  11    	1      	12    	15    	131  	135  	
-kayýt	354  	                                           	
-ben  	1      	2      	3      	4      	        	
-anlam  131  	132                                     	
-demek 11    	13    	131  	132              	
-ara   	253  	250              	
-esna	253  	250  	        	
-Mekke 359              	
-madalya      	355  	        	
-týbbi 	146  	148  	        	
-týp    	146  	148
-vasat   355                                     	
-aðýrlamak    	121  	        	
-toplantý        	121  	354              	
+piyango       	358
+bit    	146  	148
+pire  	146  	148
+dï¿½ï¿½ï¿½k  125  	127  	130  	252  	250  	354  	358
+sadï¿½k   125  	126
+pastil	146  	148
+SAT 	354
+ltd    	354
+ï¿½ans	125  	126  	131  	135
+iyiki  	125  	126  	131  	135
+ï¿½anssï¿½z        	125  	127  	131  	135
+ï¿½anslï¿½   125  	126  	131  	135
+ï¿½iï¿½(lik)  146  	148
+akciï¿½er                    	146  	147
+ï¿½ehvet(li)     	146  	149
+lï¿½teriyen      	359
+lenf  	146  	148
+linï¿½  	125  	127  	129
+Majeste       	121  	124  	355
+deli  	125  	127  	129
+ï¿½ï¿½ldï¿½rmak     	125  	127  	129
+dergi	356
+hizmetï¿½i      	357
+posta   121
+postalamak 	121
+asï¿½l   	1      	20
+majï¿½r   20
+major   20
+ï¿½oï¿½unluk     	1      	20
+ï¿½oï¿½unlukla  	1      	16    	131  	135
+ï¿½oï¿½u	1      	20    	131  	135
+binbaï¿½ï¿½                    	354
+yapmak      	133  	131  	355
+kusmak       	125  	127  	146  	148
+marka 11    	14    	131  	133
+erkek   121  	124
+alï¿½ï¿½veriï¿½ 356
+alï¿½ï¿½veriï¿½kolik   356  	358
+avm 	356
+mamogram 	146  	148
+manyak      	125  	127  	129
+manipï¿½lasyon 131  	133
+ï¿½retim  354  	131  	133
+harita   252  	250
+eï¿½lemek      	252  	250
+maraton      	356
+Mart	253  	250
+Margarita    	356
+marjinal       	131  	135
+Market 354
+evlenmek    	121
+evlilik   121
+evli  	121  	122
+Martini 356
+mazoï¿½izm   	125  	127
+mazoï¿½ist     	125  	127
+kitle 	252  	250
+katliam 360
+master 355
+lisans   354
+mastercard 	358
+hakim  355
+ustaca 355
+usta 	355
+ustalï¿½k  355
+dost 	121  	123
+matematik  	354
+ï¿½iftleï¿½mek   	121  	149
+mozole                    	360
+anï¿½tkabir      	360  	125  	130
+Mayï¿½s  11    	1	15    	131  	135
+kayï¿½t	354
+ben  	1      	2      	3      	4
+anlam  131  	132
+demek 11    	13    	131  	132
+ara   	253  	250
+esna	253  	250
+Mekke 359
+madalya      	355
+tï¿½bbi 	146  	148
+tï¿½p    	146  	148
+vasat   355
+aï¿½ï¿½rlamak    	121
+toplantï¿½        	121  	354
 oturum 354  	121
-celse   354  	
-sen  	1      	2      	3      	6      	11    	12    	14    	121                                     	
-siz    	1      	2      	3      	6      	121                          	
-gençlik 253  	250  	        	
-melankoli    	125  	127  	130              	
-üye  	121  	124  	        	
-not   	354  	        	
-bellek  131  	132  	                                           	
-bayaðý 354  	        	
-Anmak 121              	
+celse   354
+sen  	1      	2      	3      	6      	11	14    	121
+siz    	1      	2      	3      	6      	121
+genï¿½lik 253  	250
+melankoli    	125  	127  	130
+ï¿½ye  	121  	124
+not   	354
+bellek  131  	132
+bayaï¿½ï¿½ 354
+Anmak 121
 mentor 354
-mentör 354  	        	
-tüccar  358  	                                           	
-hak  	125  	126  	
-hakikat 125  	126  	131  	136                         	
-daðýnýk(lýk)  	125  	127              	
-mesaj  121                                     	
-buluþmak    	11    	13    	121              	
-metre  252  	250              	
-metodist      	359  	
-termometre 	146  	148                                     	
-MFG   354              	
-MFR	354                          	
-yön  	140  	131  	250  	252  	        	
-mikrodalga  	357              	
-orta  	252  	250  	                    	
-vize 	354  	        	
-belki	11    	1      	12    	15    	131  	135  	                                	
-migren 146  	148              	
-mil   	252  	250              	
-Süt  	146  	150  	        	
-milyon 1      	21    	
-milyonlarca 	1      	21    	
-min  	253  	250  	
-minimum    	253  	250  	
-akýl  	131  	                                	
-mayýn  356              	
+mentï¿½r 354
+tï¿½ccar  358
+hak  	125  	126
+hakikat 125  	126  	131  	136
+daï¿½ï¿½nï¿½k(lï¿½k)  	125  	127
+mesaj  121
+buluï¿½mak    	11    	13    	121
+metre  252  	250
+metodist      	359
+termometre 	146  	148
+MFG   354
+MFR	354
+yï¿½n  	140  	131  	250  	252
+mikrodalga  	357
+orta  	252  	250
+vize 	354
+belki	11    	1	15    	131  	135
+migren 146  	148
+mil   	252  	250
+Sï¿½t  	146  	150
+milyon 1      	21
+milyonlarca 	1      	21
+min  	253  	250
+minimum    	253  	250
+akï¿½l  	131
+mayï¿½n  356
 maden 354
-bakan  359              	
-bakanlýk      	359              	
-nane	140  	        	
-dakika 253  	250                          	
-sefil 	125  	127  	128  	130  	22    	        	
-yönlendirmek  131  	133  	        	
-baymak      	11    	14    	125  	127  	130  	                                                       	
-eksik   125  	127  	130  	131  	134  	
-misyoner     	359  	        	
-hata 	125  	127  	131  	134              	
-yanlýþ   131  	132  	125  	127  	
-sevap  359                          	
-çete 	121  	129  	
-mobbing      	121                                                 	
-alay(cý)        	125  	127  	129  	                                                       	
-modern       	253  	250              	
-þerefsiz       	22    	
-adi   	22    	
-kadýnlýk       	121              	
-kadýnca       	121              	
-rahim   146  	147  	148  	149              	
-kadýn   121  	124
-Müslüman(lýk) 359                                                             	
+bakan  359
+bakanlï¿½k      	359
+nane	140
+dakika 253  	250
+sefil 	125  	127  	128  	130  	22
+yï¿½nlendirmek  131  	133
+baymak      	11    	14    	125  	127  	130
+eksik   125  	127  	130  	131  	134
+misyoner     	359
+hata 	125  	127  	131  	134
+yanlï¿½ï¿½   131  	132  	125  	127
+sevap  359
+ï¿½ete 	121  	129
+mobbing      	121
+alay(cï¿½)        	125  	127  	129
+modern       	253  	250
+ï¿½erefsiz       	22
+adi   	22
+kadï¿½nlï¿½k       	121
+kadï¿½nca       	121
+rahim   146  	147  	148  	149
+kadï¿½n   121  	124
+Mï¿½slï¿½man(lï¿½k) 359
 an    	253  	250
-vazgeçmek 	131                                                                                     	
-keþiþ	359  	                                	
-Tekel   358              	
-ay    	253  	250  	252  	        	
-aþýrmak       	125  	127  	
-çalýnmak     	125  	127  	
-psikiyatri     	354              	
-Psikoloji      	354  	125              	
-psikolog      	354  	
-dalgýn  125  	127
-dalmak        	125  	127              	
-gýcýk(lýk)      	125              	
-huy(suz)      	125  	127              	
-paspas                    	357  	
-pas  	251  	250  	
-manevi                    	359              	
-ahlak   359              	
-töre  	359              	
-Daha   1      	20                	
-morg   360  	        	
-mormon      	359  	        	
-sabah  253  	250              	
-ipotek  357  	358                                                                                                	
-hareket(li)   	251  	250              	
-güdü	131  	132  	133  	354  	355              	
-yas  	125  	127  	130  	360              	
-aðýz 	146  	147                          	
-taþýnmak     	251  	250                         	
-taþýyýcý 251  	250  	
-taþýmak       	251  	250  	
-hamle  251  	250                                                 	
-Bay 	121  	124              	
-mRI 	146  	148                                     	
-mTV	356  	                                	
-mukoz 146  	147              	
-muhammed	359              	
-mücahit       	359              	
+vazgeï¿½mek 	131
+keï¿½iï¿½	359
+Tekel   358
+ay    	253  	250  	252
+aï¿½ï¿½rmak       	125  	127
+ï¿½alï¿½nmak     	125  	127
+psikiyatri     	354
+Psikoloji      	354  	125
+psikolog      	354
+dalgï¿½n  125  	127
+dalmak        	125  	127
+gï¿½cï¿½k(lï¿½k)      	125
+huy(suz)      	125  	127
+paspas                    	357
+pas  	251  	250
+manevi                    	359
+ahlak   359
+tï¿½re  	359
+Daha   1      	20
+morg   360
+mormon      	359
+sabah  253  	250
+ipotek  357  	358
+hareket(li)   	251  	250
+gï¿½dï¿½	131  	132  	133  	354  	355
+yas  	125  	127  	130  	360
+aï¿½ï¿½z 	146  	147
+taï¿½ï¿½nmak     	251  	250
+taï¿½ï¿½yï¿½cï¿½ 251  	250
+taï¿½ï¿½mak       	251  	250
+hamle  251  	250
+Bay 	121  	124
+mRI 	146  	148
+mTV	356
+mukoz 146  	147
+muhammed	359
+mï¿½cahit       	359
 anne	121  	122
-üvey	121  	122                                                                                     	
-cinayet 125  	127  	129  	360  	
-müze   356  	                                	
-þart  	131  	134  	136                                                             	
-miyop  146  	148                                     	
-gizem  131  	135  	        	
-dýrdýr	125  	127  	129              	
-çýplak  146  	147  	149              	
-isim 	121  	131              	
-þekerleme   	356  	140  	125  	126
-dar   	252  	250              	
-burun   146  	147  	140                                     	
-ulus 	250  	252                                     	
-boyun  146  	147              	
-gerekmek   	11    	14    	131  	134              	
-gerek   1      	19    	131  	134  	                                           	
-ihtiyaç 131  	134  	        	
-muhtaç       	125  	127              	
-negatif 1      	19                	
-ihmal   125  	127  	130  	131  	137              	
-görüþmek   	121  	354
-görüþ   131  	135              	
-komþu 121  	123  	357
-netflix  356                          	
-nöroloji(k)    	146  	148
-nöron   146  	147              	
-evham(lý)    	125  	127  	128              	
-asla 	19    	131  	136  	253  	250              	
+ï¿½vey	121  	122
+cinayet 125  	127  	129  	360
+mï¿½ze   356
+ï¿½art  	131  	134  	136
+miyop  146  	148
+gizem  131  	135
+dï¿½rdï¿½r	125  	127  	129
+ï¿½ï¿½plak  146  	147  	149
+isim 	121  	131
+ï¿½ekerleme   	356  	140  	125  	126
+dar   	252  	250
+burun   146  	147  	140
+ulus 	250  	252
+boyun  146  	147
+gerekmek   	11    	14    	131  	134
+gerek   1      	19    	131  	134
+ihtiyaï¿½ 131  	134
+muhtaï¿½       	125  	127
+negatif 1      	19
+ihmal   125  	127  	130  	131  	137
+gï¿½rï¿½ï¿½mek   	121  	354
+gï¿½rï¿½ï¿½   131  	135
+komï¿½u 121  	123  	357
+netflix  356
+nï¿½roloji(k)    	146  	148
+nï¿½ron   146  	147
+evham(lï¿½)    	125  	127  	128
+asla 	19    	131  	136  	253  	250
 yeni(lik)       	253  	250
 haber   131  	132
-habersiz      	131  	
-yeðen  121  	122              	
-zenci   22                	
-gece	253  	250              	
-dokuz  1      	21                	
-nintendo      	356                                                                         	
-öðle(n) 253  	250                                     	
-normal 131  	131  	134              	
-kuzey  252  	250                                                             	
+habersiz      	131
+yeï¿½en  121  	122
+zenci   22
+gece	253  	250
+dokuz  1      	21
+nintendo      	356
+ï¿½ï¿½le(n) 253  	250
+normal 131  	131  	134
+kuzey  252  	250
 roman 356
-kasým  253  	250              	
-þimdi   1      	16    	253  	250                                                             	
-uyuþmak     	125  	127  	146  	148
-uyuþuk 125  	127  	146  	148              	
-rahibe  359                                     	
-hemþire       	146  	148              	
-besin   146  	148  	150                                     	
+kasï¿½m  253  	250
+ï¿½imdi   1      	16    	253  	250
+uyuï¿½mak     	125  	127  	146  	148
+uyuï¿½uk 125  	127  	146  	148
+rahibe  359
+hemï¿½ire       	146  	148
+besin   146  	148  	150
 itaat 	131  	133
 obez	146  	148  	150
-itaatkar        	125  	127  	
-iðrenç  125  	127  	129              	
-tedirgin        	125  	127  	128              	
-engel   131  	137                                     	
-nadiren        	131  	135  	253  	250  	16                	
+itaatkar        	125  	127
+iï¿½renï¿½  125  	127  	129
+tedirgin        	125  	127  	128
+engel   131  	137
+nadiren        	131  	135  	253  	250  	16
 meslek 354
-obsesif 146  	148                                     	
-ekim	253  	250                                                             	
-gücenmek  	125  	127  	129                                     	
+obsesif 146  	148
+ekim	253  	250
+gï¿½cenmek  	125  	127  	129
 teklif	121  	354
-ofis  	354              	
-aman   462                                                             	
-üzerin(de|e)	17    	252  	250                                     	
-bir    	21                                       	
-açýlýþ	252  	250                                     	
-açýklýk  125  	126              	
-opera   356                                     	
-fýrsat	125  	126  	355              	
-iyimser 125  	126              	
-seçenek      	131  	135              	
-optometri    	146  	148              	
-veya	18    	131  	135  	139              	
-Portakal      	140  	141  	        	
-orkestra      	356  	        	
-sipariþ  250  	358              	
-düzenlemek	121  	131  	354  	355              	
-orgazm       	146  	147  	149  	                    	
-seks	146  	149  	        	
-Menþei                    	131  	133  	253  	250  	        	
-orijinal  125  	126              	
-köken  131  	133  	253  	250                         	
-ortodontist   	146  	148  	354  	
-ortodontik    	146  	148              	
-Ortodoks     	359              	
+ofis  	354
+aman   462
+ï¿½zerin(de|e)	17    	252  	250
+bir    	21
+aï¿½ï¿½lï¿½ï¿½	252  	250
+aï¿½ï¿½klï¿½k  125  	126
+opera   356
+fï¿½rsat	125  	126  	355
+iyimser 125  	126
+seï¿½enek      	131  	135
+optometri    	146  	148
+veya	18    	131  	135  	139
+Portakal      	140  	141
+orkestra      	356
+sipariï¿½  250  	358
+dï¿½zenlemek	121  	131  	354  	355
+orgazm       	146  	147  	149
+seks	146  	149
+Menï¿½ei                    	131  	133  	253  	250
+orijinal  125  	126
+kï¿½ken  131  	133  	253  	250
+ortodontist   	146  	148  	354
+ortodontik    	146  	148
+Ortodoks     	359
 ortopedik     	146  	148
 ortopedist    	146  	148
-diðer	1      	2      	9                                                                                                    	
-almamak    	11    	1      	12    	15    	19    	131  	134                         	
-Biz   	1      	2      	3      	5      	121  	131  	138  	                                           	
-dýþarý   1      	17    	131  	138  	252  	250  	                                	
-dýþ   	1      	17    	252  	250              	
-dýþadönük   	125  	126  	        	
-taslak  354  	        	
-rezalet 125  	127  	129  	                    	
-yabancý       	121  	                               	
+diï¿½er	1      	2      	9
+almamak    	11    	1	15    	19    	131  	134
+Biz   	1      	2      	3      	5      	121  	131  	138
+dï¿½ï¿½arï¿½   1      	17    	131  	138  	252  	250
+dï¿½ï¿½   	1      	17    	252  	250
+dï¿½ï¿½adï¿½nï¿½k   	125  	126
+taslak  354
+rezalet 125  	127  	129
+yabancï¿½       	121
 outsourcing 	354
-outsource    	354              	
-ödemek      	131  	134  	354  	358
-ödem   146  	147  	148  	                               	
+outsource    	354
+ï¿½demek      	131  	134  	354  	358
+ï¿½dem   146  	147  	148
 soba	357
-fýrýn  	357                          	
-tüm  	131  	20                	
-týkýnmak      	146  	150              	        	
-aþmak 355              	                               	
-taþmak                    	252  	250                         	
-birikmek      	252  	250                         	
-sollamak     	355  	        	
+fï¿½rï¿½n  	357
+tï¿½m  	131  	20
+tï¿½kï¿½nmak      	146  	150
+aï¿½mak 355
+taï¿½mak                    	252  	250
+birikmek      	252  	250
+sollamak     	355
 mesai  354  	358
-kilo(lu) 146  	148  	150  	                                           	
-çalýþmak     	354  	355  	
-borçlu  11    	14    	358              	                                           	
-sahip   121                          	
-putperest     	359              	
-sayfa   20    	                                                       	
-acý   	125  	127  	                    	
-aðrýsýz  125  	126  	146  	148              	
-zahmet        	125  	127  	        	
-ahbap  121  	123                                                             	
-avuç	146  	147  	                               	
-sarsak 121  	123              	
-panik   125  	127  	128  	        	
-lapa 	150  	148  	        	
-kâðýt	354  	                                	
-paralimpik   	146  	148              	
-paranoya    	125  	127  	129  	
-paranoyak  	125  	127  	129  	
-ebeveyn      	121  	122              	
-park 	356  	                                                       	
-kýsmen                    	1      	20    	131  	135                                     	
-parti 	121  	125  	126  	356  	                                                       	
-tutku	125  	126  	146  	149  	                                                       	
-makarna     	146  	150                         	
-acýklý	125  	127  	130              	
-patoloji 146  	148              	
-veranda      	357                          	
+kilo(lu) 146  	148  	150
+ï¿½alï¿½ï¿½mak     	354  	355
+borï¿½lu  11    	14    	358
+sahip   121
+putperest     	359
+sayfa   20
+acï¿½   	125  	127
+aï¿½rï¿½sï¿½z  125  	126  	146  	148
+zahmet        	125  	127
+ahbap  121  	123
+avuï¿½	146  	147
+sarsak 121  	123
+panik   125  	127  	128
+lapa 	150  	148
+kï¿½ï¿½ï¿½t	354
+paralimpik   	146  	148
+paranoya    	125  	127  	129
+paranoyak  	125  	127  	129
+ebeveyn      	121  	122
+park 	356
+kï¿½smen                    	1      	20    	131  	135
+parti 	121  	125  	126  	356
+tutku	125  	126  	146  	149
+makarna     	146  	150
+acï¿½klï¿½	125  	127  	130
+patoloji 146  	148
+veranda      	357
 pc    	354
-bilgisayar    	354  	        	
-barýþ	125  	126              	
-tuhaf	125  	127              	
-pediatrik      	146  	148              	
-iþemek 146  	147  	125  	127  	129  	22    	        	
-çiþ   	146  	147  	125  	127  	129  	22    	        	
-leðen   357  	
-dolma  150              	
-kefaret 359  	
-kefalet 358  	                                	
-kalem  354  	                                           	
-kuruþ   358  	                                	
-emeklilik     	354  	
-emekli 354  	                                           	
-algýlamak    	131  	132  	        	
-yüzde  20                	
-algý  	131  	132  	        	
-mükemmel 	125  	126  	131  	136  	355                          	
-parfüm 140                                                 	
-daimi   253  	250              	
-azim(li)                    	355  	        	
-inat  	355              	
-inatçý   125  	127  	129  	131  	137  	                    	
-terlemek     	146  	147  	
-ter    	146  	147                          	
-sapýk   125  	127  	146  	149  	                                                       	
-karamsar    	125  	127  	130  	        	
-Evcil	357  	        	
+bilgisayar    	354
+barï¿½ï¿½	125  	126
+tuhaf	125  	127
+pediatrik      	146  	148
+iï¿½emek 146  	147  	125  	127  	129  	22
+ï¿½iï¿½   	146  	147  	125  	127  	129  	22
+leï¿½en   357
+dolma  150
+kefaret 359
+kefalet 358
+kalem  354
+kuruï¿½   358
+emeklilik     	354
+emekli 354
+algï¿½lamak    	131  	132
+yï¿½zde  20
+algï¿½  	131  	132
+mï¿½kemmel 	125  	126  	131  	136  	355
+parfï¿½m 140
+daimi   253  	250
+azim(li)                    	355
+inat  	355
+inatï¿½ï¿½   125  	127  	129  	131  	137
+terlemek     	146  	147
+ter    	146  	147
+sapï¿½k   125  	127  	146  	149
+karamsar    	125  	127  	130
+Evcil	357
 hayvan                    	146  	22
-taþ   	140  	143  	
-þok  	125  	127  	128                                     	
-masraf 358                                                             	
-eczacý 146  	148  	
-ecza	146  	148  	
+taï¿½   	140  	143
+ï¿½ok  	125  	127  	128
+masraf 358
+eczacï¿½ 146  	148
+ecza	146  	148
 eczane        	146  	148
-doktora       	354  	        	
-fobi  	125  	127  	128  	146  	148  	        	
-telefon 121              	
-telefonlaþmak 121              	
-fotokopi       	354              	
-fiziksel 146  	148                                     	
-resim   140  	141              	
-parça   1      	20    	        	
-dindarlýk      	359              	
-hacý 	359  	        	
-hap  	146  	148  	        	
-yastýk  357                                     	
-sivilce  146  	148              	
-pembe 140  	141              	
-dindar  359              	                    	
-sürahi  357  	356  	
-acýnmak      	125  	127  	130  	        	
-yazýk   125  	127  	130  	        	
-Pizza   146  	150              	
-yer   	252  	250              	
-yerleþtirmek	252  	250              	
-veba	360  	        	
-plan(lý) 355              	
-planlamak   	355  	                    	
-platform      	252  	250  	                    	
-þakacý 125  	126  	356  	        	
-oynamak    	125  	126  	356  	                                	
-hoþ  	125  	126              	
-Lütfen  125  	126  	                               	
-rehin	250  	127  	127  	        	
-bol   	1      	20    	        	
-artý   	1      	17    	18    	131  	138              	
-pms 	146  	148              	
-podiatri        	146  	148              	
-þiir   	356              	
-puan	250  	252              	
-zehir	125  	127  	129  	146  	148  	        	
-poker   356  	        	
-polis 	354  	        	
-politika 354              	
-siyasi   354              	
-siyaset 354  	                    	
-havuz  356              	
-Kaka   146  	147              	
-fakir 	358              	
-papa	359  	        	
-popüler        	125  	126  	356  	355  	        	
-porno   146  	149              	
-portföy 358              	
+doktora       	354
+fobi  	125  	127  	128  	146  	148
+telefon 121
+telefonlaï¿½mak 121
+fotokopi       	354
+fiziksel 146  	148
+resim   140  	141
+parï¿½a   1      	20
+dindarlï¿½k      	359
+hacï¿½ 	359
+hap  	146  	148
+yastï¿½k  357
+sivilce  146  	148
+pembe 140  	141
+dindar  359
+sï¿½rahi  357  	356
+acï¿½nmak      	125  	127  	130
+yazï¿½k   125  	127  	130
+Pizza   146  	150
+yer   	252  	250
+yerleï¿½tirmek	252  	250
+veba	360
+plan(lï¿½) 355
+planlamak   	355
+platform      	252  	250
+ï¿½akacï¿½ 125  	126  	356
+oynamak    	125  	126  	356
+hoï¿½  	125  	126
+Lï¿½tfen  125  	126
+rehin	250  	127  	127
+bol   	1      	20
+artï¿½   	1      	17    	18    	131  	138
+pms 	146  	148
+podiatri        	146  	148
+ï¿½iir   	356
+puan	250  	252
+zehir	125  	127  	129  	146  	148
+poker   356
+polis 	354
+politika 354
+siyasi   354
+siyaset 354
+havuz  356
+Kaka   146  	147
+fakir 	358
+papa	359
+popï¿½ler        	125  	126  	356  	355
+porno   146  	149
+portfï¿½y 358
 portfolyo     	354
-kýsým   20                	
-pozisyon     	252  	250              	
-pozitif  125  	126  	131  	136              	
-mümkün     	131  	135  	                               	
-potansiyel   	355              	
-yoksul(luk)  	358  	        	
-güç(lü) 355  	125  	126
-güçsüz 355  	125  	127  	
-pratik   131  	135              	        	
-övgü	121  	125  	126  	355  	359  	
-övmek 121  	125  	126  	355  	359                          	
-vaaz	359                          	
-tercih   131  	132  	134              	
-hamile 146  	148  	149  	        	
-önyargý        	125  	127  	129  	        	
-gereksinim  	354              	
-presbyterian	359              	
-reçetelemek   146  	148
-reçete  146  	148  	        	
-mevcut                   	253  	250  	        	
-sunum 354  	121  	                               	
-baþkan                    	354  	355  	        	
-basýn   140  	143              	
-preslemek   	140  	143              	
-pres 	140  	143                          	
-baský   125  	127  	128  	
-basýnç 140  	143  	                               	
-taklit	356  	                                           	
-fiyat 	358              	
-fiyatlandýrmak 358  	        	
-sikmek 149  	22                	
-gurur(lu)      	125  	126  	355  	
-gurursuz      	125  	127  	
-rahip	359  	                                	
-özel 	121  	125  	126                                                 	
-olasýlýk 131  	135  	                    	
-sorun   125  	127  	131  	134  	
-soru 	121  	131  	132  	135  	
-ertelemek   	354  	253  	
-imal 	131  	133  	354  	355  	        	
-profesör      	354                                     	
-prof 	354  	                                           	
-prognoz       	146  	148              	
-program      	354  	253  	250  	                                           	
-proje	354              	
-projektör     	354  	                               	
-balo 	121  	123  	356  	        	
-söz  	125  	126
-sözde  11    	13    	131  	135  	
-sözcük 131  	121  	
-kelime 131  	121  	        	
-Komut 354  	355  	        	
-kanýt	131  	136              	
-kehanet       	359  	        	
-prostat 146  	147  	149  	        	
-fahiþe  146  	149  	125  	127  	22                	
-protesto(cu)	125  	127  	129              	
-Protestan    	359              	                                                       	
-kanýtlamak  	131  	132  	136  	        	
-saðlamak    	121  	354  	250  	131
-provoke      	131  	133  	                    	
-provokasyon   131  	133  	                    	
-prozac 146  	148              	                    	
-namus 131  	137  	146  	149  	        	
-iffet  	131  	137  	146  	149              	
-mezmur      	359                                     	
-birahane      	356  	121  	123  	
-halk 	121  	        	
-yayýn   354
-yayýnlamak             	354                                                 	
-çekmek      	251  	250  	        	
-nabýz   146  	147  	148  	
-sivri 	140              	        	
-cezalandýrmak        	125  	127  	129  	        	
-saf   	131  	136  	        	
-araf 	359  	        	
-püritan 359  	        	
-mor 	140  	141  	        	
-amaç   131  	133  	355  	        	
+kï¿½sï¿½m   20
+pozisyon     	252  	250
+pozitif  125  	126  	131  	136
+mï¿½mkï¿½n     	131  	135
+potansiyel   	355
+yoksul(luk)  	358
+gï¿½ï¿½(lï¿½) 355  	125  	126
+gï¿½ï¿½sï¿½z 355  	125  	127
+pratik   131  	135
+ï¿½vgï¿½	121  	125  	126  	355  	359
+ï¿½vmek 121  	125  	126  	355  	359
+vaaz	359
+tercih   131  	132  	134
+hamile 146  	148  	149
+ï¿½nyargï¿½        	125  	127  	129
+gereksinim  	354
+presbyterian	359
+reï¿½etelemek   146  	148
+reï¿½ete  146  	148
+mevcut                   	253  	250
+sunum 354  	121
+baï¿½kan                    	354  	355
+basï¿½n   140  	143
+preslemek   	140  	143
+pres 	140  	143
+baskï¿½   125  	127  	128
+basï¿½nï¿½ 140  	143
+taklit	356
+fiyat 	358
+fiyatlandï¿½rmak 358
+sikmek 149  	22
+gurur(lu)      	125  	126  	355
+gurursuz      	125  	127
+rahip	359
+ï¿½zel 	121  	125  	126
+olasï¿½lï¿½k 131  	135
+sorun   125  	127  	131  	134
+soru 	121  	131  	132  	135
+ertelemek   	354  	253
+imal 	131  	133  	354  	355
+profesï¿½r      	354
+prof 	354
+prognoz       	146  	148
+program      	354  	253  	250
+proje	354
+projektï¿½r     	354
+balo 	121  	123  	356
+sï¿½z  	125  	126
+sï¿½zde  11    	13    	131  	135
+sï¿½zcï¿½k 131  	121
+kelime 131  	121
+Komut 354  	355
+kanï¿½t	131  	136
+kehanet       	359
+prostat 146  	147  	149
+fahiï¿½e  146  	149  	125  	127  	22
+protesto(cu)	125  	127  	129
+Protestan    	359
+kanï¿½tlamak  	131  	132  	136
+saï¿½lamak    	121  	354  	250  	131
+provoke      	131  	133
+provokasyon   131  	133
+prozac 146  	148
+namus 131  	137  	146  	149
+iffet  	131  	137  	146  	149
+mezmur      	359
+birahane      	356  	121  	123
+halk 	121
+yayï¿½n   354
+yayï¿½nlamak             	354
+ï¿½ekmek      	251  	250
+nabï¿½z   146  	147  	148
+sivri 	140
+cezalandï¿½rmak        	125  	127  	129
+saf   	131  	136
+araf 	359
+pï¿½ritan 359
+mor 	140  	141
+amaï¿½   131  	133  	355
 itmek   251  	250
-köpek  146
+kï¿½pek  146
 kedi 	146
-amcýk  146  	147  	149  	22                                                   	
-koymak      	250  	251  	                               	
-bulmaca      	131  	135              	
-niteleyici      	354              	
-çeyrek 1      	21    	20    	        	
-bulanmak    	146  	148                                                 	
-sorgu   131  	132                                                                         	
-çýkmak 355              	                    	
-yarýþma       	354  	                                           	
-haham 359  	                    	
-radyan 125  	126              	
-radyo   356  	142  	        	
-þiddetli 125  	127  	129              	
-ramazan     	359  	        	
-koþmak       	251  	250                         	
-rastgele       	131  	135              	
-çalmak 140  	142  	        	
-rütbe	355  	                                	
-sýralama      	355                          	
-týklatmak     	356
-týklamak      	356  	                    	
-tecavüz       	125  	127  	129  	146  	149  	        	
-ýrz    	125  	127  	129  	146  	149  	                                	
-isilik 	146  	147  	                    	
-akýlcý	131  	132  	133  	        	
-tepki	131  	133  	        	
-okumak      	354  	356  	        	
-hazýr	125  	126                                                 	
-gerçek(lik)  	131  	136              	
-gerçekçi      	131  	132                         	
-gerçekleþtirmek      	131  	132
-gerçekten   	1      	16    	125  	126  	131  	136  	                               	
-biçmek        	360  	                                                       	
-asi(lik) 125  	127  	129              	
-hatýrlamak   	131  	132  	                                                       	
-durgun(luk) 	125  	127  	130  	        	        	                                           	
-uzlaþmak    	131  	132  	                               	
-inþa 	131  	132  	                               	
-kurtarmak   	355  	                    	
-dikdörtgen   	140  	141              	
-yinelemek   	253  	250  	
-yenilemek   	357  	
-yine 	1      	16    	253  	250  	        	
-kýrmýzý(lýk)   	140  	141                                     	
-kýrmýzýmsý   	140  	141              	
-kýrmýzýlýk      	140  	141                         	
-buðulanmak	140  	125  	127  	
-buðu	140  	141  	
-deðer   358  	125  	
-deðersiz      	125  	127  	130              	
-deðerli 125  	126  	
-baþvurmak 	131  	132  	121  	354
-yansýtmak   	131  	132  	
-yansýma      	250  	141
-alýkoymak   	131  	137  	
-Reggae       	356  	                               	
-piþman(lýk)  	125  	127  	130  	131  	134  	        	
-rehabilitasyon 146  	148  	                                                                               	
-iliþki 	121  	123                                                                                     	
-din   	359  	        	
-isteksiz(lik)  	125  	127  	128  	131  	137  	                                                       	
+amcï¿½k  146  	147  	149  	22
+koymak      	250  	251
+bulmaca      	131  	135
+niteleyici      	354
+ï¿½eyrek 1      	21    	20
+bulanmak    	146  	148
+sorgu   131  	132
+ï¿½ï¿½kmak 355
+yarï¿½ï¿½ma       	354
+haham 359
+radyan 125  	126
+radyo   356  	142
+ï¿½iddetli 125  	127  	129
+ramazan     	359
+koï¿½mak       	251  	250
+rastgele       	131  	135
+ï¿½almak 140  	142
+rï¿½tbe	355
+sï¿½ralama      	355
+tï¿½klatmak     	356
+tï¿½klamak      	356
+tecavï¿½z       	125  	127  	129  	146  	149
+ï¿½rz    	125  	127  	129  	146  	149
+isilik 	146  	147
+akï¿½lcï¿½	131  	132  	133
+tepki	131  	133
+okumak      	354  	356
+hazï¿½r	125  	126
+gerï¿½ek(lik)  	131  	136
+gerï¿½ekï¿½i      	131  	132
+gerï¿½ekleï¿½tirmek      	131  	132
+gerï¿½ekten   	1      	16    	125  	126  	131  	136
+biï¿½mek        	360
+asi(lik) 125  	127  	129
+hatï¿½rlamak   	131  	132
+durgun(luk) 	125  	127  	130
+uzlaï¿½mak    	131  	132
+inï¿½a 	131  	132
+kurtarmak   	355
+dikdï¿½rtgen   	140  	141
+yinelemek   	253  	250
+yenilemek   	357
+yine 	1      	16    	253  	250
+kï¿½rmï¿½zï¿½(lï¿½k)   	140  	141
+kï¿½rmï¿½zï¿½msï¿½   	140  	141
+kï¿½rmï¿½zï¿½lï¿½k      	140  	141
+buï¿½ulanmak	140  	125  	127
+buï¿½u	140  	141
+deï¿½er   358  	125
+deï¿½ersiz      	125  	127  	130
+deï¿½erli 125  	126
+baï¿½vurmak 	131  	132  	121  	354
+yansï¿½tmak   	131  	132
+yansï¿½ma      	250  	141
+alï¿½koymak   	131  	137
+Reggae       	356
+piï¿½man(lï¿½k)  	125  	127  	130  	131  	134
+rehabilitasyon 146  	148
+iliï¿½ki 	121  	123
+din   	359
+isteksiz(lik)  	125  	127  	128  	131  	137
 azap	125  	127  	130
-kaldýrmak    	251  	250  	                    	
-rapor   354              	
-bastýrmak    	125  	127  	128  	131  	137  	                    	
-gerektirmek	131  	137  	354  	355              	
-araþtýrmak  	354  	
-araþtýrma    	354  	
-içerlemek    	125  	127  	129              	
-istifa	125  	127  	130                         	
-çözmek       	125  	126  	131  	132  	355  	133  	
-çözüm 131  	132  	133  	355              	                                	
-kaynak 354  	131  	133                         	
-saygý   125  	126
-sorumlu       	131  	137  	354  	355  	
-sorumluluk  	131  	137  	354  	355  	
+kaldï¿½rmak    	251  	250
+rapor   354
+bastï¿½rmak    	125  	127  	128  	131  	137
+gerektirmek	131  	137  	354  	355
+araï¿½tï¿½rmak  	354
+araï¿½tï¿½rma    	354
+iï¿½erlemek    	125  	127  	129
+istifa	125  	127  	130
+ï¿½ï¿½zmek       	125  	126  	131  	132  	355  	133
+ï¿½ï¿½zï¿½m 131  	132  	133  	355
+kaynak 354  	131  	133
+saygï¿½   125  	126
+sorumlu       	131  	137  	354  	355
+sorumluluk  	131  	137  	354  	355
 kalan   20
-restoran      	146  	150  	356              	
-dinlenme(k)	356              	
+restoran      	146  	150  	356
+dinlenme(k)	356
 huzursuz     	125  	127  	128
-huzur(lu)     	125  	126  	
-kýsýtlamak   	131  	137              	                                                                   	
+huzur(lu)     	125  	126
+kï¿½sï¿½tlamak   	131  	137
 perakende  	358
-yeniden       	131  	132  	        	
-retina   146  	147                                                 	
-iade 	253  	250  	358                                     	
+yeniden       	131  	132
+retina   146  	147
+iade 	253  	250  	358
 intikam 125  	127  	129
-sözbilim       	354
+sï¿½zbilim       	354
 ritim 	250
 ahenk  250  	142
-kaburga      	146  	147              	
-zengin 125  	126  	358              	                    	
-binmek        	251  	250                                                                                    	
-sað  	250  	252
-katý  	125  	127  	128  	131  	137  	140  	143
+kaburga      	146  	147
+zengin 125  	126  	358
+binmek        	251  	250
+saï¿½  	250  	252
+katï¿½  	125  	127  	128  	131  	137  	140  	143
 sert  	125  	127  	128  	131  	137  	140  	143
-zil     	140  	142              	
-çýnlama(k)  	140  	142              	                    	
-yükselmek  	251  	250                                     	
-risk  	125  	127  	128              	
-ritalin   146  	148              	
-ayin 	359              	
-yol   	252  	250              	
-kaya(ç)       	356                                     	                                	
-rol    	121  	356              	
+zil     	140  	142
+ï¿½ï¿½nlama(k)  	140  	142
+yï¿½kselmek  	251  	250
+risk  	125  	127  	128
+ritalin   146  	148
+ayin 	359
+yol   	252  	250
+kaya(ï¿½)       	356
+rol    	121  	356
 paten   356
-romantik     	125  	126                                     	
-oda  	252  	250  	357              	
-kök  	131  	133  	146
-tespih  359                                                             	
-çürük   140  	125  	127  	146                                     	
-yuvarlak      	140  	141  	143              	
-kayýk   356              	                    	
-pürüz   140  	143              	
-ovmak 140  	143              	
-sürtme(k)    	140  	143              	
+romantik     	125  	126
+oda  	252  	250  	357
+kï¿½k  	131  	133  	146
+tespih  359
+ï¿½ï¿½rï¿½k   140  	125  	127  	146
+yuvarlak      	140  	141  	143
+kayï¿½k   356
+pï¿½rï¿½z   140  	143
+ovmak 140  	143
+sï¿½rtme(k)    	140  	143
 ruble	358
 rupi  	358
-kilim	357              	
-Ragb(i|y)     	356              	                    	
-iflas 	125  	127  	130              	
-ROM   356              	
-söylenti       	121  	
-koþucu 251  	250  	356  	124                                                                         	
-bayram       	359  	125  	126              	
+kilim	357
+Ragb(i|y)     	356
+iflas 	125  	127  	130
+ROM   356
+sï¿½ylenti       	121
+koï¿½ucu 251  	250  	356  	124
+bayram       	359  	125  	126
 kurban 359  	125  	127  	129
-üzgün  125  	127  	130  	128                                     	
-üzüntü 125  	127  	130  	128                                     	
-aziz  	359              	
-salata  146  	150              	
-maaþ   354  	358              	
-satýþ 	358                          	                    	
-salsa	356              	
-tuz(lu)  140  	150              	
-ayný 	131  	20    	
+ï¿½zgï¿½n  125  	127  	130  	128
+ï¿½zï¿½ntï¿½ 125  	127  	130  	128
+aziz  	359
+salata  146  	150
+maaï¿½   354  	358
+satï¿½ï¿½ 	358
+salsa	356
+tuz(lu)  140  	150
+aynï¿½ 	131  	20
 numune      	140
-kum 	140  	143                                     	
-sandviç       	146  	150                         	
-þarký	356  	140  	142              	
-iðneleme(k)	125  	127  	129              	                    	
-satanizm     	359              	
-tatmin  125  	126              	
-cumartesi    	253  	250              	
-vahþi   125  	127  	129                         	
-tasarruf       	358              	
-görme(k)     	11    	13    	140  	141              	
-söylemek    	121  	140  	142              	
-uyuz	146  	148  	22    	
+kum 	140  	143
+sandviï¿½       	146  	150
+ï¿½arkï¿½	356  	140  	142
+iï¿½neleme(k)	125  	127  	129
+satanizm     	359
+tatmin  125  	126
+cumartesi    	253  	250
+vahï¿½i   125  	127  	129
+tasarruf       	358
+gï¿½rme(k)     	11    	13    	140  	141
+sï¿½ylemek    	121  	140  	142
+uyuz	146  	148  	22
 taramak      	140  	141
-scan	140  	141                                                             	
-kuþku(cu)   	125  	127  	129                                     	
-þizofren(i)    	146  	148
-akademisyen  354  	355              	                    	
-bilim(sel)     	354              	
+scan	140  	141
+kuï¿½ku(cu)   	125  	127  	129
+ï¿½izofren(i)    	146  	148
+akademisyen  354  	355
+bilim(sel)     	354
 alim 	354  	355
 burs 	354  	358  	355
-skolastik      	354              	
-okul 	354  	355                          	                    	
-sýyrýk   146  	148              	
-çizik 	140  	143              	
-çýðlýk	125  	127  	140  	142              	        	
-cimri	125  	127  	129  	22                	                                           	
-heykel 356              	
-sezon  253  	250              	                    	
-saniye 253  	250              	
+skolastik      	354
+okul 	354  	355
+sï¿½yrï¿½k   146  	148
+ï¿½izik 	140  	143
+ï¿½ï¿½ï¿½lï¿½k	125  	127  	140  	142
+cimri	125  	127  	129  	22
+heykel 356
+sezon  253  	250
+saniye 253  	250
 gizli  	121  	131  	132  	137
-sekreter      	354              	
-ketum  121              	                    	
-mezhep       	359                                                             	
-sektör  354              	                    	        	        	
-ayartmak    	146  	149              	
-fal(cý)   140  	141  	356                         	
-felç  	146  	148                                     	
-bencil  125  	127                                     	
-satýcý	358                                     	                                	
-göndermek 	121  	250  	251              	
-kýdem(li)      	253  	250  	354
-senior  250  	253  	354              	
-his   	146  	147                                                                                                	
-eylül	253  	250                                     	
-ardýþýk 253  	250              	
+sekreter      	354
+ketum  121
+mezhep       	359
+sektï¿½r  354
+ayartmak    	146  	149
+fal(cï¿½)   140  	141  	356
+felï¿½  	146  	148
+bencil  125  	127
+satï¿½cï¿½	358
+gï¿½ndermek 	121  	250  	251
+kï¿½dem(li)      	253  	250  	354
+senior  250  	253  	354
+his   	146  	147
+eylï¿½l	253  	250
+ardï¿½ï¿½ï¿½k 253  	250
 dizi   	20    	356
 ciddi(yet)     	125
-hizmet 354              	
-yedi 	21                	
-birkaç  20                            	                    	
-sarsmak      	125  	127  	128  	251  	250                                     	
-paylaþmak  	121  	125  	126
-paylaþým     	121  	125  	126  	356
-þii     	359
-þilin  	358
-gömlek        	147                                     	                                                       	
-dükkan        	356  	358                         	
-shop	356  	358  	
-omuz   146  	147                          	
-baðýrmak    	140  	142  	129  	
-þov  	356
-duþ  	356  	357
-türbe	359              	                    	
-utangaç       	125  	127  	128                                                                                    	
-yan  	252  	250              	
-taraf	252  	250                                                             	
-iþaret   131  	140  	141
-Sih   	359              	                    	
-ipek 	140  	143              	
-saçma 125  	126              	
-eþzamanlý   	253  	250
-günah  125  	127  	359              	                    	
-içten(lik|likle)   125  	126                                     	
-tek   	20                                       	
-uðursuz       	125  	127  	129
-uður(lu)       	125  	126              	
-günahkar    	359                                     	
-sinüs	146  	148              	                    	
-abla 	121  	122                          	
-oturmak      	250  	356                                                             	
-iskelet  146  	147                          	
-kayak  356                                                                                     	
-cilt   	140  	143  	146  	147              	
-soyulma(k) 	146  	147  	150              	
-sýska	146  	147                                                             	
-gökyüzü      	252  	250              	
-kaymak      	251  	250              	                                           	
-yavaþ  253  	250              	
-sürtük  125  	127  	146  	149  	22
-akýllý 	125  	126
-akýlsýz  125  	127  	129  	22                	                                           	
+hizmet 354
+yedi 	21
+birkaï¿½  20
+sarsmak      	125  	127  	128  	251  	250
+paylaï¿½mak  	121  	125  	126
+paylaï¿½ï¿½m     	121  	125  	126  	356
+ï¿½ii     	359
+ï¿½ilin  	358
+gï¿½mlek        	147
+dï¿½kkan        	356  	358
+shop	356  	358
+omuz   146  	147
+baï¿½ï¿½rmak    	140  	142  	129
+ï¿½ov  	356
+duï¿½  	356  	357
+tï¿½rbe	359
+utangaï¿½       	125  	127  	128
+yan  	252  	250
+taraf	252  	250
+iï¿½aret   131  	140  	141
+Sih   	359
+ipek 	140  	143
+saï¿½ma 125  	126
+eï¿½zamanlï¿½   	253  	250
+gï¿½nah  125  	127  	359
+iï¿½ten(lik|likle)   125  	126
+tek   	20
+uï¿½ursuz       	125  	127  	129
+uï¿½ur(lu)       	125  	126
+gï¿½nahkar    	359
+sinï¿½s	146  	148
+abla 	121  	122
+oturmak      	250  	356
+iskelet  146  	147
+kayak  356
+cilt   	140  	143  	146  	147
+soyulma(k) 	146  	147  	150
+sï¿½ska	146  	147
+gï¿½kyï¿½zï¿½      	252  	250
+kaymak      	251  	250
+yavaï¿½  253  	250
+sï¿½rtï¿½k  125  	127  	146  	149  	22
+akï¿½llï¿½ 	125  	126
+akï¿½lsï¿½z  125  	127  	129  	22
 duman 146
-pürüzsüz     	140  	143
-kibir 	125  	127                                     	
-kibirli	125  	127  	        	
-aburcubur   	146  	150              	
-koklamak    	140              	
-züppe  125  	127  	129  	22
-homurdanma(k)     	140              	
-yani 	16    	18                	
+pï¿½rï¿½zsï¿½z     	140  	143
+kibir 	125  	127
+kibirli	125  	127
+aburcubur   	146  	150
+koklamak    	140
+zï¿½ppe  125  	127  	129  	22
+homurdanma(k)     	140
+yani 	16    	18
 sabun  146
-hýçkýrýk                    	125  	127  	130  	22    	146  	148              	
-futbol   356  	                    	
-sosyal  121              	
-toplum 121  	124              	
-soda	146  	150                                     	
-yumuþak     	140  	143                                     	
-aðýrbaþlý      	125  	126              	
-tektaþ  356                                     	
-bazý 	20    	131  	135                         	
-bazen  131  	135  	139  	253  	250              	
-arasýra 131  	135  	253  	250              	
-biraz	131  	135  	20                           	
-oðul 	121  	122                                     	
-Boðaz  146  	147  	252  	
-Çeþit	131  	135
-ruh   	359              	
-Ekþi(mek)   	140  	
-soðurmak   	140
-güney  252  	250              	
-spa  	356              	
-uzay	252  	250              	
-aralýklý  252  	250                                                 	
-karýþ	252  	250              	
-kaplýca         	356              	
-konuþmak   	121  	140  	142              	
-hýzlandýrmak   253  	250  	251
-hýz   	253  	250  	251
-harcamak   	358              	
-müsrif  358
-Baharat(lý)   	140  	
-belkemiði    	146  	147              	
-omurga       	146  	147                                     	
-tükürmek    	146  	147  	140              	
-nispet  125  	127  	129                                     	
-þaþaalý 125  	126                                     	
-spor 	356                                     	
-eþ    	121  	122              	
-bahar   253  	250              	
-kare 	140  	141              	
-sýkmak 140  	143              	
-Personel     	354              	
-evre 	250              	
-basamak     	250  	252              	
-kekeleme(k)   125  	127              	
-durmak       	250              	
-standart       	131              	
-standup       	356                                     	
-zýmba  354                                                                                                                        	
-ifade	131  	132              	
-kalmak 250                                                                                                            	
-adým	251  	250                          	
-üvey	121  	122
-müzik  356  	
-stereo  356                                                 	
-canlandýrmak  131  	133                                                 	
-Stok	354                                     	
-Hisse   354  	358              	
-durak   131  	137  	253  	250              	
-maðaza       	358  	356              	
-hikaye 121  	131              	
-Öykü   121  	131              	
-Düz 	250  	252              	
+hï¿½ï¿½kï¿½rï¿½k                    	125  	127  	130  	22    	146  	148
+futbol   356
+sosyal  121
+toplum 121  	124
+soda	146  	150
+yumuï¿½ak     	140  	143
+aï¿½ï¿½rbaï¿½lï¿½      	125  	126
+tektaï¿½  356
+bazï¿½ 	20    	131  	135
+bazen  131  	135  	139  	253  	250
+arasï¿½ra 131  	135  	253  	250
+biraz	131  	135  	20
+oï¿½ul 	121  	122
+Boï¿½az  146  	147  	252
+ï¿½eï¿½it	131  	135
+ruh   	359
+Ekï¿½i(mek)   	140
+soï¿½urmak   	140
+gï¿½ney  252  	250
+spa  	356
+uzay	252  	250
+aralï¿½klï¿½  252  	250
+karï¿½ï¿½	252  	250
+kaplï¿½ca         	356
+konuï¿½mak   	121  	140  	142
+hï¿½zlandï¿½rmak   253  	250  	251
+hï¿½z   	253  	250  	251
+harcamak   	358
+mï¿½srif  358
+Baharat(lï¿½)   	140
+belkemiï¿½i    	146  	147
+omurga       	146  	147
+tï¿½kï¿½rmek    	146  	147  	140
+nispet  125  	127  	129
+ï¿½aï¿½aalï¿½ 125  	126
+spor 	356
+eï¿½    	121  	122
+bahar   253  	250
+kare 	140  	141
+sï¿½kmak 140  	143
+Personel     	354
+evre 	250
+basamak     	250  	252
+kekeleme(k)   125  	127
+durmak       	250
+standart       	131
+standup       	356
+zï¿½mba  354
+ifade	131  	132
+kalmak 250
+adï¿½m	251  	250
+ï¿½vey	121  	122
+mï¿½zik  356
+stereo  356
+canlandï¿½rmak  131  	133
+Stok	354
+Hisse   354  	358
+durak   131  	137  	253  	250
+maï¿½aza       	358  	356
+hikaye 121  	131
+ï¿½ykï¿½   121  	131
+Dï¿½z 	250  	252
 Gergin(lik)   	125  	127  	128
-strateji 355              	
-sokak  252  	250              	                    	
-stress(s)      	125  	127  	128              	
-Uzatmak     	252  	250                         	                                                                   	
-mücadele    	125  	127  	128              	
-damýzlýk      	146  	149                                                             	        	
-stüdyo 356                                                                                                	
-afalla(mýþ|mak)      	125  	127  	128                                                             	
-gevelemek  	125  	127                                                 	
-baþarýlý        	125  	126  	354  	355              	
-baþarý  125  	126  	354  	355  	        	
-böyle   16                	                    	
+strateji 355
+sokak  252  	250
+stress(s)      	125  	127  	128
+Uzatmak     	252  	250
+mï¿½cadele    	125  	127  	128
+damï¿½zlï¿½k      	146  	149
+stï¿½dyo 356
+afalla(mï¿½ï¿½|mak)      	125  	127  	128
+gevelemek  	125  	127
+baï¿½arï¿½lï¿½        	125  	126  	354  	355
+baï¿½arï¿½  125  	126  	354  	355
+bï¿½yle   16
 enayi   125  	127  	129  	22
-çile  	125  	127  	130                                                             	
-önermek     	121              	
-intihar  360              	
+ï¿½ile  	125  	127  	130
+ï¿½nermek     	121
+intihar  360
 yaz  	253  	250
-görkem(li)   	140  	125  	126
-güneþlenme	356                                                                                     	
-Sünni   359                          	
-güneþli 125  	126                                                             	
-Süper  125  	126  	355                                                             	        	                    	
-Destek(li|lemek)     	125  	126  	                                                                   	        	
-Varsay(ým|mak)     	131  	132  	135                                     	                               	
-yüzey  252  	250              	
-Cerrah 146  	148  	        	
-ameliyat      	146  	148              	
-sürpriz 125  	126                                                                                                	
-Yutmak       	146  	150              	                                                                   	
-birtanem     	121  	123  	125  	126              	
-tatlým   121  	123  	125  	126  	140  	                                	
-tatlýlýk   140  	125  	126  	                                                       	
-yüzmek       	251  	250  	356                         	                    	
-senfoni                    	356              	
-semptom    	146  	148              	
-senkronize  	253  	250              	
-sendrom     	146  	148              	
-frengi   146  	148  	149              	
-sistem 250              	
-tabu 	131  	137  	356                                     	        	
-týngýrtý  140  	141                          	
-bronzlaþma(k) 356              	
-aksilik  125  	127  	129              	
-turta 	150                          	
-vergi	354  	358              	
-takson 354  	358                                     	
-vergilendirme(k)     	354  	358  	        	
-çay  	146  	150                                     	
-takým   121  	354  	355  	356              	
-gözyaþý       	125  	127  	130                                     	
-tekno   356              	
-televizyon   	356                                                                                     	                    	
-on    	21                                                   	
-hassas 125  	146  	148              	
-tendon 146  	147  	        	
-tendinit        	146  	148                                                 	
-tenis	356                                     	
-germek       	125  	127  	128                                                             	        	
-Tekila  356  	150                                                                                                	
-bölge   252  	250              	
-terör	125  	127  	128              	
+gï¿½rkem(li)   	140  	125  	126
+gï¿½neï¿½lenme	356
+Sï¿½nni   359
+gï¿½neï¿½li 125  	126
+Sï¿½per  125  	126  	355
+Destek(li|lemek)     	125  	126
+Varsay(ï¿½m|mak)     	131  	132  	135
+yï¿½zey  252  	250
+Cerrah 146  	148
+ameliyat      	146  	148
+sï¿½rpriz 125  	126
+Yutmak       	146  	150
+birtanem     	121  	123  	125  	126
+tatlï¿½m   121  	123  	125  	126  	140
+tatlï¿½lï¿½k   140  	125  	126
+yï¿½zmek       	251  	250  	356
+senfoni                    	356
+semptom    	146  	148
+senkronize  	253  	250
+sendrom     	146  	148
+frengi   146  	148  	149
+sistem 250
+tabu 	131  	137  	356
+tï¿½ngï¿½rtï¿½  140  	141
+bronzlaï¿½ma(k) 356
+aksilik  125  	127  	129
+turta 	150
+vergi	354  	358
+takson 354  	358
+vergilendirme(k)     	354  	358
+ï¿½ay  	146  	150
+takï¿½m   121  	354  	355  	356
+gï¿½zyaï¿½ï¿½       	125  	127  	130
+tekno   356
+televizyon   	356
+on    	21
+hassas 125  	146  	148
+tendon 146  	147
+tendinit        	146  	148
+tenis	356
+germek       	125  	127  	128
+Tekila  356  	150
+bï¿½lge   252  	250
+terï¿½r	125  	127  	128
 test  	354
-ahit  	359  	
+ahit  	359
 testosteron  	146  	148  	149
-testesteron  	146  	148  	149                                     	
-göre 	17                	
-teþekkür      	125  	126                                     	
-müteþekkir  	125  	126              	        	                    	
-tiyatro  356              	                               	
-sonra   18    	253  	250              	
-ilahiyat 359                                     	
-terapi   146  	148              	
-Orada  1      	16                	
-var   	11    	16                                                   	
-tez   	354              	                                                                   	
-kalýn	252  	250  	140  	143              	
-hýrsýz	125  	127                                     	
-uyluk   146  	147                          	        	
-þey  	9                                                                                         	
-susuzluk      	146  	147  	150              	
-bu    	9                                                                 	
-gerçi	1      	16    	18                	
-düþünce      	131  	132              	
-düþünceli    	125  	126                         	
-bin   	21                                       	
-tehdit   125  	127  	129              	
-üç    	1      	21                                       	
-tutumluluk   	358              	
-heyecan      	125  	126  	131  	132              	
-çarpýntý        	146  	148              	
-vasýtasýyla   	17                	
-atmak  251  	250              	
-sayesinde   	17                	
-Perþembe   	253  	250  	                               	
+testesteron  	146  	148  	149
+gï¿½re 	17
+teï¿½ekkï¿½r      	125  	126
+mï¿½teï¿½ekkir  	125  	126
+tiyatro  356
+sonra   18    	253  	250
+ilahiyat 359
+terapi   146  	148
+Orada  1      	16
+var   	11    	16
+tez   	354
+kalï¿½n	252  	250  	140  	143
+hï¿½rsï¿½z	125  	127
+uyluk   146  	147
+ï¿½ey  	9
+susuzluk      	146  	147  	150
+bu    	9
+gerï¿½i	1      	16    	18
+dï¿½ï¿½ï¿½nce      	131  	132
+dï¿½ï¿½ï¿½nceli    	125  	126
+bin   	21
+tehdit   125  	127  	129
+ï¿½ï¿½    	1      	21
+tutumluluk   	358
+heyecan      	125  	126  	131  	132
+ï¿½arpï¿½ntï¿½        	146  	148
+vasï¿½tasï¿½yla   	17
+atmak  251  	250
+sayesinde   	17
+Perï¿½embe   	253  	250
 tiroid	146  	148
-tümör  146  	148              	
-telaþ	125  	127  	128              	
-bilet 	356                                     	
-düzenli 131  	137  	125  	126              	
-sýký   	131  	137  	140  	143              	                    	
-kadar   17    	18    	253  	250              	
-zaman 253  	250              	
-ürkek   125  	127  	128                                     	
-sýzlama(k)   	146  	148
+tï¿½mï¿½r  146  	148
+telaï¿½	125  	127  	128
+bilet 	356
+dï¿½zenli 131  	137  	125  	126
+sï¿½kï¿½   	131  	137  	140  	143
+kadar   17    	18    	253  	250
+zaman 253  	250
+ï¿½rkek   125  	127  	128
+sï¿½zlama(k)   	146  	148
 ufak 	252  	250
-minik   252  	250                                     	        	
-bugün  253  	250                                     	
-toefl 	354                                                             	
-birlikte 252  	250              	
-hoþgörü       	125  	126              	
-yarýn	253  	250              	
-ton   	20                                                                                       	
-bademcik    	146  	147              	
-üst   	252  	250  	355              	
-Tevrat 359              	
-iþkence       	125  	127  	129
-toplam 20                                       	
-bütünüyle    	16    	131  	136              	
-dokunma(k)	140  	143                         	
-karþý	17    	252  	250              	
-kasaba        	250  	252              	
-toksi(n|k)     	146  	148              	
-oyuncak      	356  	        	
-ticari	354  	358              	
-trajedi  125  	127  	130              	
-trajik	125  	127  	130                                     	
-iþlem   250  	251  	121              	
+minik   252  	250
+bugï¿½n  253  	250
+toefl 	354
+birlikte 252  	250
+hoï¿½gï¿½rï¿½       	125  	126
+yarï¿½n	253  	250
+ton   	20
+bademcik    	146  	147
+ï¿½st   	252  	250  	355
+Tevrat 359
+iï¿½kence       	125  	127  	129
+toplam 20
+bï¿½tï¿½nï¿½yle    	16    	131  	136
+dokunma(k)	140  	143
+karï¿½ï¿½	17    	252  	250
+kasaba        	250  	252
+toksi(n|k)     	146  	148
+oyuncak      	356
+ticari	354  	358
+trajedi  125  	127  	130
+trajik	125  	127  	130
+iï¿½lem   250  	251  	121
 Transcript   	354
 transkript
 Aktarmak    	354  	251
 Transfer      	354  	251
-travma 125  	127                                     	
-hazine 125  	126  	358              	
-tedavi  146  	148              	
-üçgen  140  	141              	
-triatlon 356              	
-triseps 146  	147              	
+travma 125  	127
+hazine 125  	126  	358
+tedavi  146  	148
+ï¿½ï¿½gen  140  	141
+triatlon 356
+triseps 146  	147
 tetik 	131  	133
 tetiklemek   	131  	133  	250
-trilyon  1      	21                	
-gezi 	251  	250  	                                           	
-bayat   125  	127              	
-zafer	125  	126  	355                                                             	
-doðru   131  	136  	125  	126                                                             	
-denemek    	11    	355              	
-Salý  	253  	250  	
-yirmi	21                	
-seðirme(k)  	146  	148                                     	
-taylenol       	146  	148              	
+trilyon  1      	21
+gezi 	251  	250
+bayat   125  	127
+zafer	125  	126  	355
+doï¿½ru   131  	136  	125  	126
+denemek    	11    	355
+Salï¿½  	253  	250
+yirmi	21
+seï¿½irme(k)  	146  	148
+taylenol       	146  	148
 yazmak       	121  	131
-tür    	354
-tipik 	131  	135                                     	
-öf     	125  	127
-çirkin   125  	127  	129              	
-ah    	463  	                                                       	
-ülser	146  	148                                                                                     	
-rakipsiz       	355                                     	
+tï¿½r    	354
+tipik 	131  	135
+ï¿½f     	125  	127
+ï¿½irkin   125  	127  	129
+ah    	463
+ï¿½lser	146  	148
+rakipsiz       	355
 amca   121  	122
-dayý 	121  	122                                                 	
-kontrolsüz   	125  	127  	128              	
-kararsýz       	131  	135              	                                                                               	
-anlaþýlabilir  	131  	132              	
-anlayýþ 131  	132              	        	
-istenmeyen 	131  	134  	125  	127  	
-þüphesiz      	131  	136                                     	
-iþsiz 	354                          	
-nankör 125  	127              	
-mutsuz        	125  	127  	130              	
-saðlýksýz      	146  	148  	125  	127                                     	        	
+dayï¿½ 	121  	122
+kontrolsï¿½z   	125  	127  	128
+kararsï¿½z       	131  	135
+anlaï¿½ï¿½labilir  	131  	132
+anlayï¿½ï¿½ 131  	132
+istenmeyen 	131  	134  	125  	127
+ï¿½ï¿½phesiz      	131  	136
+iï¿½siz 	354
+nankï¿½r 125  	127
+mutsuz        	125  	127  	130
+saï¿½lï¿½ksï¿½z      	146  	148  	125  	127
 benzersiz    	20    	125  	126  	131
-Evren  252  	250                                     	
-kýrýcý	125  	127              	
+Evren  252  	250
+kï¿½rï¿½cï¿½	125  	127
 bilinmeyen  	131  	135
 sevimsiz      	125  	127
-gereksiz      	131  	134              	
-tartýþmasýz  	131  	136                                                                                                	
-þöyle   17                                       	
-gevþemek   	356              	
-yukarý  1      	17    	252  	250              	
-güncelleþtirme        	250  	253
+gereksiz      	131  	134
+tartï¿½ï¿½masï¿½z  	131  	136
+ï¿½ï¿½yle   17
+gevï¿½emek   	356
+yukarï¿½  1      	17    	252  	250
+gï¿½ncelleï¿½tirme        	250  	253
 idrar 	146  	147
-sidik 	146  	147  	        	
-kullanmak   	11    	131  	133              	
-kullanýþlý      	125  	126                                                 	
-olaðan 253  	250                                                                                     	
-vajina  146  	147  	149  	                    	
-nafile   125  	127                                                             	
-deðiþken     	131  	135                                                 	        	
-üniversite    	354                                                             	
-Vatikan       	359                                     	
-Zührevi       	146  	149              	
-sebze  146  	150              	
+sidik 	146  	147
+kullanmak   	11    	131  	133
+kullanï¿½ï¿½lï¿½      	125  	126
+olaï¿½an 253  	250
+vajina  146  	147  	149
+nafile   125  	127
+deï¿½iï¿½ken     	131  	135
+ï¿½niversite    	354
+Vatikan       	359
+Zï¿½hrevi       	146  	149
+sebze  146  	150
 vejetaryen   	146  	150
-peçe	359
+peï¿½e	359
 damar 146  	147
-meyletmek 	252  	250              	
+meyletmek 	252  	250
 versiyon      	20
-version                    	20                	
-aleyh(inde)  	131  	139              	
-dikey   252  	250              	                                           	
-veto 	131  	137              	
+version                    	20
+aleyh(inde)  	131  	139
+dikey   252  	250
+veto 	131  	137
 viagra  146  	148  	149
-vicodin 146  	148                                     	
-galip	355              	
-video   356                                                             	
-dinçlik  125  	126              	
-aþaðýlýk        	125  	127  	129              	
-cani 	125  	127  	129              	
-ihlal  	125  	127  	129              	
-bakire  146  	149              	
-Erdem(li)     	125  	126                         	
-Visa 	358              	
-ziyaret 121  	251  	250                                     	
-vitamin 146  	148                                                                                     	
-votka   356  	150                          	
-voleybol      	356                                                                                                            	
+vicodin 146  	148
+galip	355
+video   356
+dinï¿½lik  125  	126
+aï¿½aï¿½ï¿½lï¿½k        	125  	127  	129
+cani 	125  	127  	129
+ihlal  	125  	127  	129
+bakire  146  	149
+Erdem(li)     	125  	126
+Visa 	358
+ziyaret 121  	251  	250
+vitamin 146  	148
+votka   356  	150
+voleybol      	356
 esinti	140  	143
-bel   	146  	147              	
-uyanmak    	146  	147              	
-yürümek     	251  	250              	
+bel   	146  	147
+uyanmak    	146  	147
+yï¿½rï¿½mek     	251  	250
 duvar   252  	250
-otuzbirci      	22                	        	
+otuzbirci      	22
 istemek       	11    	131  	134
 depo	354
 ambar 354
-ihtiyat  131  	137              	
-Ilýk   	140  	143
-siðil  	146  	148
-yumru 146  	148                          	
-yýkamak      	146  	148  	250
-izlemek       	140  	141              	
+ihtiyat  131  	137
+Ilï¿½k   	140  	143
+siï¿½il  	146  	148
+yumru 146  	148
+yï¿½kamak      	146  	148  	250
+izlemek       	140  	141
 Su   	146  	150
-zayýf	125  	127  	146  	148  	                    	
-silah 	125  	127  	129              	
-giyinmek     	146  	147              	
-yorgun 146  	148  	125  	127              	
-düðün  121              	
-Çarþamba   	253  	250                                     	
-hafta	253  	250                                     	
-haftasonu    	253  	250  	356                         	
-aðýrlýk  140  	143              	
-Hoþgeldiniz 	121  	125  	126              	
-refah   354                                                             	
-batý  	252  	250              	
-ýslak 	140  	143              	
-ne    	2      	9      	
-hýrýltý 	146  	148                                                             	
+zayï¿½f	125  	127  	146  	148
+silah 	125  	127  	129
+giyinmek     	146  	147
+yorgun 146  	148  	125  	127
+dï¿½ï¿½ï¿½n  121
+ï¿½arï¿½amba   	253  	250
+hafta	253  	250
+haftasonu    	253  	250  	356
+aï¿½ï¿½rlï¿½k  140  	143
+Hoï¿½geldiniz 	121  	125  	126
+refah   354
+batï¿½  	252  	250
+ï¿½slak 	140  	143
+ne    	2      	9
+hï¿½rï¿½ltï¿½ 	146  	148
 nerede 252  	250
-iken 	253  	250              	
-mýzýrdanmak   125  	127  	130                                     	
-viski 	150  	356                                     	
-fýsýltý 	140  	142              	
-beyaz  140  	141              	
-beyazýmsý   	140  	141              	
-kim  	2      	9      	121                                     	                                                       	
-niye 	131  	133                                                 	                                           	
-pýsýrýk   125  	127                                     	
-pencere      	357              	
-þarap   146  	150  	356
-kýþ   	253  	250              	
-bilgelik 125  	126              	
-bilge	125  	126              	
-dilek	131  	134              	
-cadý 	125  	127
-ile    	17    	131  	138                         	
+iken 	253  	250
+mï¿½zï¿½rdanmak   125  	127  	130
+viski 	150  	356
+fï¿½sï¿½ltï¿½ 	140  	142
+beyaz  140  	141
+beyazï¿½msï¿½   	140  	141
+kim  	2      	9      	121
+niye 	131  	133
+pï¿½sï¿½rï¿½k   125  	127
+pencere      	357
+ï¿½arap   146  	150  	356
+kï¿½ï¿½   	253  	250
+bilgelik 125  	126
+bilge	125  	126
+dilek	131  	134
+cadï¿½ 	125  	127
+ile    	17    	131  	138
 tevkif   131  	137
-vah  	125  	127  	130              	        	
-alýþkanlýk     	131
-iþçi   	354  	355              	
-egzersiz      	356                                     	
-dünya  250  	252                                                                         	
-ibadet  125  	126  	359                         	
-yara 	146  	148              	
-vay  	125  	126              	                    	
-yazý 	121  	131
-xanax  146  	148              	
-xbox	356                          	
-röntgen       	146  	148              	                                           	
-avlu 	356  	357              	
-esnemek     	146  	148              	
-yuppi   125  	126  	462              	
-yýl    	253  	250                                                                                                            	
-Sarý 	140  	141              	
-yen  	358                                     	
-evet 	462  	        	
-dün  	253  	250  	        	
-henüz  16    	253  	250  	                    	
+vah  	125  	127  	130
+alï¿½ï¿½kanlï¿½k     	131
+iï¿½ï¿½i   	354  	355
+egzersiz      	356
+dï¿½nya  250  	252
+ibadet  125  	126  	359
+yara 	146  	148
+vay  	125  	126
+yazï¿½ 	121  	131
+xanax  146  	148
+xbox	356
+rï¿½ntgen       	146  	148
+avlu 	356  	357
+esnemek     	146  	148
+yuppi   125  	126  	462
+yï¿½l    	253  	250
+Sarï¿½ 	140  	141
+yen  	358
+evet 	462
+dï¿½n  	253  	250
+henï¿½z  16    	253  	250
 yoga	356
 yuan	358
-sýfýr  	21
+sï¿½fï¿½r  	21

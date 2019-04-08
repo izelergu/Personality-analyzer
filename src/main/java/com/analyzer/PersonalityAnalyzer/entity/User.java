@@ -19,9 +19,28 @@ public class User {
     private String username;
     private String last_analysis;
     private List tweets;
+    private List groups;
+    private List preprocessedTweets;
+
+    public void setPreprocessedTweets(List preprocessedTweets) {
+        this.preprocessedTweets = preprocessedTweets;
+    }
+
+    public List getPreprocessedTweets() {
+        return preprocessedTweets;
+    }
 
     public String getId() {
         return id;
+    }
+
+    public List getGroups() {
+        return groups;
+    }
+
+    public void setGroups(List groups) {
+        this.groups = groups;
+
     }
 
     public void setId(String id) {
