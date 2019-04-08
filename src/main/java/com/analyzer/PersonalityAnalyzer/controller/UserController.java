@@ -4,6 +4,7 @@ import com.analyzer.PersonalityAnalyzer.ZemberekConnection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import com.analyzer.PersonalityAnalyzer.entity.User;
 import com.analyzer.PersonalityAnalyzer.service.UserService;
@@ -36,11 +37,20 @@ public class UserController {
         return userService.findUserByUsername(username);
     }
 
+    @RequestMapping(path="/update", method = RequestMethod.POST, consumes = "application/json")
+    public @ResponseBody
+    HttpStatus update (@RequestBody User usr){
+        userService.update(usr);
+        return HttpStatus.OK;
+    }
+
     @RequestMapping(path="/analyzeButton/{username}")
     public  @ResponseBody void analyzeButton(@PathVariable String username){
         zemberekCon.getTweets(username);
         User usr = userService.findUserByUsername(username);
-        zemberekCon.normalizeTweets(usr);
+        List<String> tweets = zemberekCon.normalizeTweets(usr);
+        usr.setPreprocessedTweets(tweets);
+        update(usr);
         zemberekCon.findWordgroups(usr);
     }
 }
