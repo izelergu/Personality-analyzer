@@ -1,34 +1,76 @@
 <!DOCTYPE html>
 <title>About</title>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<head>
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/singin.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<script src="/js/employer.js"></script>
+    <!-- Bootstrap core CSS -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<body style="background-color:#c9c6d1">
-<form class="navbar navbar-default navbar-fixed-top" style="background-color:#c9c6d1;border-color:#c9c6d1">
-    <nav class="navbar navbar-inverse" style="background-color:#f37735;border-color:#f37735">
-        <div class="container-fluid" >
-            <div class="navbar-header">
-                <a class="navbar-brand" href="/index.html" style="width:400px;color:white">Personality Analyzer</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li style="width:350px"><a href="/homePage.html" style="color:white">Home</a></li>
-                <li style="width:400px"><a href="/developerTeamPage.html" style="color:white">Developer Team</a></li>
-                <li style="width:350px"><a href="/aboutPage.html" style="color:white">About</a></li>
-            </ul>
+    <!-- Custom fonts for this template -->
+    <link href="/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/landing-page.min.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/js/user.js"></script>
+
+</head>
+
+<body>
+<!-- Navigation -->
+<div>
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+            <a class="navbar" style="color: white" href="homePage.html">Home Page</a>
+            <a class="navbar" style="color: white" href="aboutPage.html">What is Personality Analyzer ?</a>
+            <a class="navbar" style="color: white" href="developerteamPage.html">Developer Team</a>
         </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
     </nav>
-</form>
-<div style="background-color:#a3a2a5;width:700px;height:400px; margin-left:440px;margin-top:100px;border:3px solid #b2b0b7">
-    <h4 style="margin-top:20px;color:#d66f0e;margin-left: 10px">Personality Analyzer</h4>
-    <p style="margin-left: 10px">Proje ...</p>
 </div>
+
+<!-- Masthead -->
+<header class="masthead text-white text-center align-text-top" style="background-color:white;background:url(/img/personality_2.jpg)no-repeat center center">
+    <div class="overlay"></div>
+    <div class="container">
+            <div class="col-xl-9 mx-auto">
+                <h1 class="mb-5">What is Personality Analyzer ?</h1>
+                <div class="jumbotron" style="background-color:#95999c">
+                    <p>This project was developed for predicting personality of users based on their Twitter posts.
+                        Personality analysis was done for each individual. There is a tool for gathering tweets from Twitter platform and also
+                        one more tool for analyzing Turkish words of tweets. The tweets are only in Turkish, in another language will not be analyzed
+                        in the project. Tweets also include images as well as text. But in this project scope, only texts are processed and word content
+                        of tweets are analyzed. Words are grouped according to personality prediction models. The main personality model is
+                        used in the project is the Big Five Personality Model.
+                        There is a simple user interface that contains operations as a minimum. Most of the works are done as a background / batch
+                        process. In the background, gathering tweets and grouping words in tweets and analyzing them is done. Users are able to only see
+                        the results of personality predictions.
+                        The results of this project can be used in any sector. For example, human resources can use the results of this project to
+                        estimate the personality of workers that will be hired in companies. The project can be used in education field to predict
+                        teachers’ behaviors towards students. Another domain can be social media applications such as music application can use the
+                        result of this project for a new content recommendation for a user.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 </body>
 </html>

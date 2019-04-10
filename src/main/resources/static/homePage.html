@@ -1,34 +1,141 @@
 <!DOCTYPE html>
 <title>Home Page</title>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<head>
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<script src="/js/user.js"></script>
+    <!-- Bootstrap core CSS -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<body style="background-color:#c9c6d1">
-<form class="navbar navbar-default navbar-fixed-top" style="background-color:#c9c6d1;border-color:#c9c6d1">
-    <nav class="navbar navbar-inverse" style="background-color:#f37735;border-color:#f37735">
-        <div class="container-fluid" >
-            <div class="navbar-header">
-                <a class="navbar-brand" href="/index.html" style="width:400px;color:white">Personality Analyzer</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li style="width:350px"><a href="/homePage.html" style="color:white">Home</a></li>
-                <li style="width:400px"><a href="/developerTeamPage.html" style="color:white">Developer Team</a></li>
-                <li style="width:350px"><a href="/aboutPage.html" style="color:white">About</a></li>
-            </ul>
+    <!-- Custom fonts for this template -->
+    <link href="/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/landing-page.min.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/js/user.js"></script>
+
+</head>
+
+<body>
+<!-- Navigation -->
+<div>
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+            <a class="navbar" style="color: white" href="homePage.html">Home Page</a>
+            <a class="navbar" style="color: white" href="aboutPage.html">What is Personality Analyzer ?</a>
+            <a class="navbar" style="color: white" href="developerteamPage.html">Developer Team</a>
         </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
     </nav>
-</form>
-<div ng-app="UserApp" ng-controller="UserCtrl" style="background-color:#a3a2a5;width:700px;height:400px; margin-left:440px;margin-top:100px;border:3px solid #b2b0b7">
-    <h3 style="margin-top:20px;color:#d66f0e;margin-left: 10px">Personality Analyzer</h3>
-    <label style="color:white;margin-left:200px;margin-top:100px;font-family: 'Comic Sans MS'">Please enter your username</label><br>
-    <input type="text" name="name" placeholder="@" style="margin-left:200px" ng-model="username">
-    <button ng-click="analyzeButton(username)" type="submit" class="btn btn-primary" style="color:white;background-color:#f37735;border-color:#f37735 ">Analyze</button>
 </div>
+
+<!-- Masthead -->
+<header class="masthead text-white text-center" style="background-color:white;background:url(/img/personality_2.jpg)no-repeat center center">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <h1 class="mb-5">Analyze personality by entering username!</h1>
+            </div>
+            <div class="col-md-10 col-lg-8 col-xl-7 mx-auto" ng-app="UserApp" ng-controller="UserCtrl">
+                <form>
+                    <div class="form-row">
+                        <div class="col-12 col-md-9 mb-2 mb-md-0">
+                            <input type="username" class="form-control form-control-lg" placeholder="@" ng-model="username">
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <button ng-click="analyzeButton(username)" type="submit" class="btn btn-block btn-lg btn-primary" style="background-color: black;border-color: black">Analyze</button>
+                            <!--<button ng-click="" type="submit" class="btn btn-block btn-lg btn-primary" style="background-color: black;border-color: black">Last Analysis</button>-->
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Icons Grid -->
+<section class="features-icons bg-light text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                    <div class="features-icons-icon d-flex">
+                        <img src="/img/neuroticism.png" height="100" width="100">
+                    </div>
+                    <h4>Neuroticism</h4>
+                    <p class="lead mb-0">Neuroticism is a trait characterized by sadness, moodiness, and emotional instability.
+                        Individuals who are high in this trait tend to experience mood swings, anxiety, irritability, and sadness.
+                        Those low in this trait tend to be more stable and emotionally resilient.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                    <div class="features-icons-icon d-flex">
+                        <img src="/img/conscientiousness.png" height="90" width="130">
+                    </div>
+                    <h4>Conscientiousness</h4>
+                    <p class="lead mb-0">Standard features of this dimension include high levels of thoughtfulness, good impulse control,
+                        and goal-directed behaviors. Highly conscientious people tend to be organized and mindful of details.
+                        They plan ahead, think about how their behavior affects others, and are mindful of deadlines.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                    <div class="features-icons-icon d-flex">
+                        <img src="/img/agreeableness.png">
+                    </div>
+                    <h4>Agreeableness</h4>
+                    <p class="lead mb-0">This personality dimension includes attributes such as trust, altruism,
+                        kindness, affection, and other prosocial behaviors. People who are high in agreeableness tend to be more cooperative
+                        while those low in this trait tend to be more competitive and sometimes even manipulative.</p>
+                </div>
+            </div>
+            <div class="col-lg-4" style="margin-left: 220px">
+                <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                    <div class="features-icons-icon d-flex">
+                        <img src="/img/extraversion.png" height="100" width="100">
+                    </div>
+                    <h4>Extraversion</h4>
+                    <p class="lead mb-0">Extraversion (or extroversion) is characterized by excitability, sociability, talkativeness,
+                        assertiveness, and high amounts of emotional expressiveness.
+                        People who are high in extraversion are outgoing and tend to gain energy in social situations.
+                        Being around other people helps them feel energized and excited.
+                        People who are low in extraversion (or introverted) tend to be more reserved and have to expend energy in social settings.
+                        Social events can feel draining and introverts often require a period of solitude and quiet in order to "recharge."</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                    <div class="features-icons-icon d-flex">
+                        <img src="/img/opennes.png" height="90" width="130">
+                    </div>
+                    <h4>Opennes</h4>
+                    <p class="lead mb-0">This trait features characteristics such as imagination and insight.
+                        People who are high in this trait also tend to have a broad range of interests.
+                        They are curious about the world and other people and eager to learn new things and enjoy new experiences.
+                        People who are high in this trait tend to be more adventurous and creative. People low in this trait are often much
+                        more traditional and may struggle with abstract thinking.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 </body>
 </html>
