@@ -11,12 +11,12 @@ mydb = myclient["TwitterPersonalityAnalyzerDB"]
 mycol1 = mydb["User"]
 
 categoryList = list()
-categoryList = ["funct","pronoun","ppron","i","we","you","3rd person singular(o)","they","ipron","verb","past","present","future","adverb","prepositions","conjunction","negation","quantifier",
+categoryList = ["funct","pronoun","ppron","i","we","you","3rdPersonSingular","they","ipron","verb","past","present","future","adverb","prepositions","conjunction","negation","quantifier",
                 "number","swear","social","family","friend","humans","affect","posemo","negemo","anxiety","anger","sad","cogmech","insight","cause","discrepancy",
                 "tentative","certain","inhibition","include","exclusive","percept","see","hear","feel","bio","body","health","sexual","ingestion","relative","motion",
-                "space","time","work","achieve","leisure","home","money","religion","death","assent","nonfluencies","words > 6 letter"]
+                "space","time","politic","work","achieve","leisure","home","money","religion","death","assent","nonfluencies","words > 6 letter"]
 data = pd.read_csv("src/main/LIWC/Data2.csv")
-data2 = data
+data2 = data.copy()
 categoryCounts = dict()
 global index
 
@@ -68,7 +68,7 @@ def determineCategories(usr):
         data2[cat][index] = round(normalized,3)
         catList.append(cat + "," + str(round(normalized,3)))
 
-    for i in range(0, len(data)):
+    for i in range(0, len(categoryList)):
         print(data2[categoryList[i]][index])
         if(pd.isnull(data2[categoryList[i]][index])):
             data2[categoryList[i]][index] = 0.0
@@ -78,8 +78,8 @@ def determineCategories(usr):
         liwcGroups = {"$set": {"groups": catList}}
         doc = mycol1.update_one(updateDoc, liwcGroups)
         print("Updated: " + str(updateDoc))
-        data.to_csv(r'src/main/LIWC/Data2.csv')
-        data2.to_excel(r'C:\Users\izele\Desktop\Data3.xlsx')
+        data2.to_csv(r'src/main/LIWC/Data2.csv')
+        data2.to_excel(r'src/main/LIWC/Data3.xlsx')
     else:
         print("There is no user as " + sys.argv[1] )
 
