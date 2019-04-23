@@ -1,8 +1,6 @@
 package com.analyzer.PersonalityAnalyzer.controller;
 
 import com.analyzer.PersonalityAnalyzer.ZemberekConnection;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
@@ -52,5 +50,14 @@ public class UserController {
         usr.setPreprocessedTweets(tweets);
         update(usr);
         zemberekCon.findWordgroups(usr);
+        /*List<User> list  = userService.findAll();
+        for (int i = 0; i < list.size(); i++) {
+            zemberekCon.getTweets(list.get(i).getUsername());
+            list.set(i, userService.findUserByUsername(list.get(i).getUsername()));
+            List<String> tweets = zemberekCon.normalizeTweets(list.get(i));
+            list.get(i).setPreprocessedTweets(tweets);
+            update(list.get(i));
+            zemberekCon.findWordgroups(list.get(i));
+        }*/
     }
 }

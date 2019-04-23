@@ -10,13 +10,15 @@ myclient = pymongo.MongoClient(
 mydb = myclient["TwitterPersonalityAnalyzerDB"]
 mycol1 = mydb["User"]
 
+'''
 categoryList = list()
 categoryList = ["funct","pronoun","ppron","i","we","you","3rdPersonSingular","they","ipron","verb","past","present","future","adverb","prepositions","conjunction","negation","quantifier",
                 "number","swear","social","family","friend","humans","affect","posemo","negemo","anxiety","anger","sad","cogmech","insight","cause","discrepancy",
                 "tentative","certain","inhibition","include","exclusive","percept","see","hear","feel","bio","body","health","sexual","ingestion","relative","motion",
                 "space","time","politic","work","achieve","leisure","home","money","religion","death","assent","nonfluencies","words > 6 letter"]
-data = pd.read_csv("src/main/LIWC/Data2.csv")
-data2 = data.copy()
+'''
+data = pd.read_csv("src/main/LIWC/Data2.csv", index_col="index")
+data2 = data
 categoryCounts = dict()
 global index
 
@@ -62,16 +64,17 @@ def determineCategories(usr):
     for cat in sorted(categoryCounts.keys()):
         print(cat,":",str(categoryCounts[cat]))
         sum = sum + categoryCounts[cat]
+    print("sum: " + str(sum))
     for cat in sorted(categoryCounts.keys()):
         normalized = categoryCounts[cat]/sum
         print(cat,":",str(round(normalized,3)))
         data2[cat][index] = round(normalized,3)
         catList.append(cat + "," + str(round(normalized,3)))
 
-    for i in range(0, len(categoryList)):
-        print(data2[categoryList[i]][index])
-        if(pd.isnull(data2[categoryList[i]][index])):
-            data2[categoryList[i]][index] = 0.0
+    for i in range(0, len(category_names)):
+        print(data2[category_names[i]][index])
+        if(pd.isnull(data2[category_names[i]][index])):
+            data2[category_names[i]][index] = 0.0
 
     if usr is not None:
         updateDoc = {"username": sys.argv[1]}
