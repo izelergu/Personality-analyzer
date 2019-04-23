@@ -1,15 +1,6 @@
 package com.analyzer.PersonalityAnalyzer;
 
 import com.analyzer.PersonalityAnalyzer.entity.User;
-import com.mongodb.BasicDBObject;
-
-
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
-import com.mongodb.ServerAddress;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
-import org.bson.Document;
 import zemberek.morphology.TurkishMorphology;
 import zemberek.morphology.analysis.SingleAnalysis;
 import zemberek.morphology.analysis.WordAnalysis;
@@ -27,21 +18,12 @@ public class ZemberekConnection {
     private String liwcAppCommand = "cmd /c python src/main/LIWC/liwcApp.py ";
     Logger LOGGER = Logger.getLogger(ZemberekConnection.class.getName());
 
-    MongoClientURI uri;
-    MongoClient client;
-    MongoDatabase db;
-    MongoCollection<Document> colUser;
-
     public ZemberekConnection() {
         analyzer = TurkishMorphology.builder()
                 .setLexicon(RootLexicon.DEFAULT)
                 .disableCache()
                 .build();
 
-        uri = new MongoClientURI("mongodb+srv://ismailyankayis:2430zcbg@twitterpersonalityanalyzer-aeniz.mongodb.net/test?retryWrites=true");
-        client = new MongoClient(uri);
-        db = client.getDatabase("TwitterPersonalityAnalyzerDB");
-        colUser = db.getCollection("User");
     }
 
     public void getTweets(String username) {
@@ -57,6 +39,8 @@ public class ZemberekConnection {
                 System.out.println(line);
             }
             bri.close();
+            p.waitFor();
+            LOGGER.info("getTweets function finished for " + username);
         } catch (Exception err) {
             err.printStackTrace();
         }
@@ -102,11 +86,12 @@ public class ZemberekConnection {
                 tweets.remove(i--); // remove empty tweets.
             appendedWord = "";
         }
+        LOGGER.info("normalizeTweets function finished for " + usr.getUsername());
         return tweets;
     }
 
     public void findWordgroups(User usr) {
-        LOGGER.info("findWordGroups function started.");
+        LOGGER.info("findWordGroups function started for " + usr.getUsername());
         //liwcApp.py
         try {
             String line;
@@ -122,6 +107,7 @@ public class ZemberekConnection {
             }
             bri.close();
             p.waitFor();
+            LOGGER.info("findWordGroups function finished for " + usr.getUsername());
         } catch (Exception err) {
             err.printStackTrace();
         }
