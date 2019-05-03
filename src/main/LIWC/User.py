@@ -7,6 +7,7 @@ myclient = pymongo.MongoClient(
     "mongodb+srv://ismailyankayis:2430zcbg@twitterpersonalityanalyzer-aeniz.mongodb.net/admin")
 mydb = myclient["TwitterPersonalityAnalyzerDB"]
 mycol1 = mydb["User"]
+mycol2 = mydb['Detail']
 
 consumer_key = '5EoGuierDVOdYhvbEZVDsN9jO'
 consumer_secret = 'eA227eYOJ8T7hmK46sbZ5ONPQYxxYC3FKyrRM6Lfl3ym4wZAUG'
@@ -32,7 +33,9 @@ user = mycol1.find({"username": sys.argv[1]})
 if user.count() is not 0:
     updateDoc = {"username": sys.argv[1]}
     newTweets = {"$set": {"tweets": tweetList}}
-    doc = mycol1.update_one(updateDoc, newTweets)
+    numberOfTweets = {"$set": {"numberOfTweets": len(tweets)}}
+    doc1 = mycol1.update_one(updateDoc, newTweets)
+    doc2 = mycol2.update_one(updateDoc, numberOfTweets)
     print("Updated: " + str(updateDoc))
 else:
 

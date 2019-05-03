@@ -5,6 +5,7 @@ app.controller('UserCtrl', function($scope,$http,$window) {
     $scope.user = {};
     $scope.username = "";
     $scope.userId = "";
+    $scope.details = {};
 
     $scope.pageOpen = function(){
         var usr = $http.get('/User/findAll');
@@ -23,6 +24,8 @@ app.controller('UserCtrl', function($scope,$http,$window) {
 
     $scope.analyzeButton = function () {
         var usr = $http.get('/User/analyzeButton/' + $scope.username);
+        $scope.details.username = $scope.username;
+        $scope.createDetail($scope.details);
         usr.then(function (response) {
 
         });
@@ -34,6 +37,13 @@ app.controller('UserCtrl', function($scope,$http,$window) {
             $scope.employeeList = response.data;
             $scope.employeeId ="";
 
+        });
+    }
+
+    $scope.createDetail = function(){
+        var det = $http.post('/Detail/Create/', $scope.details);
+        det.then(function(response){
+            console.log("yazdıı");
         });
     }
 });

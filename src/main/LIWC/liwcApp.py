@@ -9,6 +9,7 @@ myclient = pymongo.MongoClient(
     "mongodb+srv://ismailyankayis:2430zcbg@twitterpersonalityanalyzer-aeniz.mongodb.net/admin")
 mydb = myclient["TwitterPersonalityAnalyzerDB"]
 mycol1 = mydb["User"]
+mycol2 = mydb["Detail"]
 
 '''
 categoryList = list()
@@ -17,8 +18,8 @@ categoryList = ["funct","pronoun","ppron","i","we","you","3rdPersonSingular","th
                 "tentative","certain","inhibition","include","exclusive","percept","see","hear","feel","bio","body","health","sexual","ingestion","relative","motion",
                 "space","time","politic","work","achieve","leisure","home","money","religion","death","assent","nonfluencies","words > 6 letter"]
 '''
-data = pd.read_csv("src/main/LIWC/Data2.csv", index_col="index")
-data2 = data
+data = pd.read_csv("src/main/LIWC/Dataset_2.csv", index_col="index")
+global data2
 categoryCounts = dict()
 global index
 
@@ -28,6 +29,7 @@ for i in range(0, len(data)):
         break
 
 global sum
+global totalWords
 
 def tokenize(text):
     # you may want to use a smarter tokenizer
@@ -42,7 +44,7 @@ def addCategory(category):
 
 def determineCategories(usr):
     parse = None
-
+    totalWords = 0
     parse, category_names = liwc.load_token_parser('src/main/LIWC/LIWC_Turkish.dic')
     gettysburg_counts = None
     tweets = usr['preprocessedTweets']
@@ -51,6 +53,7 @@ def determineCategories(usr):
         #print(tweet)
         words = tweet.split(" ")
         for eachWord in words:  ## each word in a tweet
+            totalWords = totalWords + 1
             optionalWords = eachWord.split("|")
             for eachOptionalWord in optionalWords:  #each options of a word. It will run till find a option which belongs to any category.
                 category_tokens = tokenize(eachOptionalWord)    #categories of the option
@@ -61,6 +64,7 @@ def determineCategories(usr):
                     break;
     catList = list()
     sum = 0
+    data2 = data
     for cat in sorted(categoryCounts.keys()):
         print(cat,":",str(categoryCounts[cat]))
         sum = sum + categoryCounts[cat]
@@ -75,14 +79,28 @@ def determineCategories(usr):
         print(data2[category_names[i]][index])
         if(pd.isnull(data2[category_names[i]][index])):
             data2[category_names[i]][index] = 0.0
+    # data2 = data2.drop(columns = "i")
+    # data2 = data2.drop(columns = "anger")
+    # data2 = data2.drop(columns = "past")
+    # data2 = data2.drop(columns = "present")
+    # data2 = data2.drop(columns = "future")
+    # data2 = data2.drop(columns = "cogmech")
+    # data2 = data2.drop(columns = "affect")
+    # data2 = data2.drop(columns = "relative")
+    # data2 = data2.drop(columns = "percept")
 
     if usr is not None:
         updateDoc = {"username": sys.argv[1]}
         liwcGroups = {"$set": {"groups": catList}}
-        doc = mycol1.update_one(updateDoc, liwcGroups)
+        numberofWordsUsed = {"$set": {"numberofWordsUsed": sum }}
+        numberofWordsAnalyzed = {"$set": {"numberofWordsAnalyzed": totalWords}}
+        doc1 = mycol1.update_one(updateDoc, liwcGroups)
+        doc2 = mycol2.update_one(updateDoc, numberofWordsUsed)
+        doc3 = mycol2.update_one(updateDoc, numberofWordsAnalyzed)
         print("Updated: " + str(updateDoc))
-        data2.to_csv(r'src/main/LIWC/Data2.csv')
-        data2.to_excel(r'src/main/LIWC/Data3.xlsx')
+
+        data2.to_csv(r'src/main/LIWC/Dataset_2.csv')
+        data2.to_excel(r'src/main/LIWC/Dataset_2.xlsx')
     else:
         print("There is no user as " + sys.argv[1] )
 

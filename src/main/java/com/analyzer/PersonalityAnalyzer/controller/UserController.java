@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import com.analyzer.PersonalityAnalyzer.entity.User;
 import com.analyzer.PersonalityAnalyzer.service.UserService;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @Controller
