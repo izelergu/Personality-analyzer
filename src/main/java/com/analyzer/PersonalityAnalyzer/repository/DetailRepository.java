@@ -1,12 +1,10 @@
 package com.analyzer.PersonalityAnalyzer.repository;
 
-import com.analyzer.PersonalityAnalyzer.entity.Result;
+import com.analyzer.PersonalityAnalyzer.entity.Detail;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ResultRepository extends MongoRepository <Result, String>{
-
-
+public interface DetailRepository extends MongoRepository <Detail, String>{
 
 }
