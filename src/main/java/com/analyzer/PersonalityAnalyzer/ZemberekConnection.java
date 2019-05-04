@@ -66,24 +66,30 @@ public class ZemberekConnection {
         WordAnalysis wa;
         int countRT = 0;
         int countDeletedTweet = 0;
+        int startIndex = 0;
         String tweet = "";
         for (int i = 0; i < tweets.size(); i++) {
+            startIndex = 0;
             tweet = tweets.get(i);
-            tweet = tweet.replaceAll("(http.*\\s*)", ""); // remove all links
+            tweet = tweet.replaceAll("(http[A-za-z0-9/:.]+\\s*)", ""); // remove all links
             tweet = tweet.replaceAll("(@\\w+\\s*)", ""); //remove mentions
             //tweet.replaceAll("(\\s+RT\\s+)|(^RT\\s+)", ""); // remove RT tags
             tweet = tweet.replaceAll("[^A-Za-z0-9çÇğĞİıöÖüÜşŞ]+", " "); //remove punctuations
             tweets.set(i, tweet);
             splitedWords = tweets.get(i).split("\\s+"); // split the tweet word by word
 
+            if(splitedWords[0].equals("RT")) {
+                countRT++;
+                startIndex = 1;
+            }
+
             if(splitedWords.length < 2  && splitedWords[0].equals("RT")) { // Tweet has only 1 word or 'RT'
                 tweets.remove(i--);
                 countDeletedTweet++;
                 continue;
             }
-            if(splitedWords[0].equals("RT")) countRT++;
 
-            for (int j = 1; j < splitedWords.length; j++) { //Each word of a tweet will normalized and its root will be found.
+            for (int j = startIndex; j < splitedWords.length; j++) { //Each word of a tweet will normalized and its root will be found.
                 wa = analyzer.analyze(splitedWords[j]);
                 optionsList.add(splitedWords[j].toLowerCase());
                 // Every result root of a word
