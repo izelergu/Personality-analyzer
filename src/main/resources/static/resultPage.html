@@ -25,6 +25,7 @@
     <script src="/jquery/jquery.min.js"></script>
     <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <!--<script src="/js/detail.js"></script>-->
     <script src="/js/user.js"></script>
 
 </head>
@@ -48,14 +49,17 @@
 <!-- Masthead -->
 <header class="masthead text-white text-center align-text-top" style="background-color:white;background:url(/img/personality_2.jpg)no-repeat center center">
     <div class="overlay"></div>
-    <div class="container">
+    <div class="container" ng-app="UserApp" ng-controller="UserCtrl">
         <div class="col-xl-9 mx-auto">
             <h1 class="mb-5">Personality Traits</h1>
-            <button ng-click="getAllDetails()" type="submit" class="btn btn-block btn-lg btn-primary" style="background-color: black;border-color: black;width:160px;margin-left:750px">Details >></button>
-            <!--<div class="jumbotron" style="background-color:#95999c">
-                <p>
-                </p>
-            </div>-->
+            <p>{{username}}</p>
+            <button ng-click="showDetails()" type="submit" class="btn btn-block btn-lg btn-primary" style="background-color: black;border-color: black;width:160px;margin-left:750px">Details >></button>
+        </div>
+    </div>
+    <div class="col-xl-9 mx-auto" style="width: 800px">
+        <div class="jumbotron" style="background-color:#95999c" ng-app="ResultApp" ng-controller="ResultCtrl">
+            <p>buraya graphı koyabilirsin iso :D
+            </p>
         </div>
     </div>
     </div>

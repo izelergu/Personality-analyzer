@@ -15,12 +15,9 @@ public class DetailController {
     @Autowired
     DetailService detailService;
 
-    ZemberekConnection zemberekCon = new ZemberekConnection();
-    @RequestMapping(path="/getAllDetails", method = RequestMethod.POST, consumes = "application/json")
-    public @ResponseBody
-    void getAllDetails (@PathVariable String username){
-        zemberekCon.getTweets(username);
-        //detailService.getAllDetails(username);
+    @RequestMapping(path="/getDetails/{username}", method = RequestMethod.GET)
+    public @ResponseBody Detail findDetailByUsername (@PathVariable String username){
+        return detailService.findDetailByUsername(username);
     }
 
     @RequestMapping(path = "/Create", method = RequestMethod.POST, consumes = "application/json")
