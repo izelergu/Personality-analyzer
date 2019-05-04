@@ -21,7 +21,8 @@ public class DetailController {
 
     @RequestMapping(path = "/Create", method = RequestMethod.POST, consumes = "application/json")
     public @ResponseBody HttpStatus create(@RequestBody Detail detail){
-        detailService.create(detail);
+        if(findDetailByUsername(detail.getUsername()) == null)
+            detailService.create(detail);
         return HttpStatus.OK;
 
     }

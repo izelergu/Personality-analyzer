@@ -5,8 +5,12 @@ app.controller('ResultCtrl', function($scope,$http,$window) {
 
     $scope.username = $window.sessionStorage.getItem("username");
 
+    $scope.showDetails = function(){
+        $window.location.href = '/detailPage.html';
+    }
+
     $scope.getResults = function () {
-        var res = $http.get('/Result/getResults/'+ $scope.username);
+        var res = $http.get('/Result/getResult/'+ $scope.username);
         res.then(function (response) {
             $scope.results = response.data;
         });
