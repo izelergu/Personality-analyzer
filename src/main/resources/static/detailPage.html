@@ -53,18 +53,40 @@
     <div class="container" ng-app="DetailApp" ng-controller="DetailCtrl" ng-init="getDetails()">
         <div class="col-xl-9 mx-auto">
             <h1 class="mb-5">{{details.username}} - Analiz Detayları</h1>
-            <label class="mb-5">Analiz için kullanılan tweets sayısı:</label>
-            <p><input></input></p>
-            <label >Analiz için kullanılan retweet sayısı:</label>
-            <p><input></input></p>
-            <label >Kullanıcı tarafından atılan ilk tweetin tarihi:</label>
-            <p><input></input></p>
-            <label >Kullanıcı tarafından atılan ilk tweetin tarihi:</label>
-            <p><input></input></p>
-            <label >Analiz için kullanılan kelime sayısı:</label>
-            <p><textarea></textarea></p>
-            <label >Analiz edilen kelime sayısı:</label>
-            <p><textarea>{{details.username}}</textarea></p>
+            <div class="table-responsive table-striped">
+                <table class="table table-sm table-dark">
+                    <tbody>
+                    <tr>
+                        <td>Kullanıcınn Toplam Tweet ve Retweet Sayısı</td>
+                        <td>{{details.numberOfTweets}}  ({{details.numberOfTweets - details.numberOfRT}} Tweet)</td>
+                    </tr>
+                    <tr>
+                        <td>Retweet Sayısı</td>
+                        <td>{{details.numberOfRT}}</td>
+                    </tr>
+                    <tr>
+                        <td>Analiz Edilen Tweet ve Retweet Sayısı</td>
+                        <td>{{details.numberOfAnalyzedTweets}}</td>
+                    </tr>
+                    <tr>
+                        <td>Tweetlerde Yer Alan Kelime Sayısı</td>
+                        <td>{{details.numberofWordsUsed}}</td>
+                    </tr>
+                    <tr>
+                        <td>Analizde Kullanılan Kelime Sayısı</td>
+                        <td>{{details.numberOfWordsAnalyzed}}</td>
+                    </tr>
+                    <tr>
+                        <td>Analizde Kullanılan En Eski Tweet</td>
+                        <td>{{details.firstTweetDate}}</td>
+                    </tr>
+                    <tr>
+                        <td>Analizde Kullanılan En Yeni Tweet</td>
+                        <td>{{details.lastTweetDate}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     </div>

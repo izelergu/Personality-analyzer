@@ -25,14 +25,12 @@ app.controller('UserCtrl', function($scope,$http,$window) {
 
     $scope.analyzeButton = function () {
         var usr = $http.get('/User/analyzeButton/' + $scope.username);
-        $window.sessionStorage.setItem("username",$scope.username);
-        $scope.username = $window.sessionStorage.getItem("username");//session
-        $scope.detail.username = $scope.username;
-        //$scope.result.username = $scope.username;
-        $window.location.href = '/resultPage.html';
-        //$scope.createDetail($scope.result);
-        $scope.createDetail($scope.detail);
         usr.then(function (response) {
+            $window.sessionStorage.setItem("username",$scope.username);
+            $scope.username = $window.sessionStorage.getItem("username");//session
+            $scope.detail.username = $scope.username;
+            $window.location.href = '/resultPage.html';
+            $scope.createDetail($scope.detail);
         });
     }
 
