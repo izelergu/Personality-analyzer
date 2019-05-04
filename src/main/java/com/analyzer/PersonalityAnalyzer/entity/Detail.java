@@ -23,6 +23,7 @@ public class Detail {
     private Date lastDate;
     private int numberofWordsUsed;
     private int numberOfWordsAnalyzed;
+    private int numberOfAnalyzedTweets;
 
     public String getUsername() {
         return username;
@@ -86,5 +87,13 @@ public class Detail {
 
     public void setNumberOfWordsAnalyzed(int numberOfWordsAnalyzed) {
         this.numberOfWordsAnalyzed = numberOfWordsAnalyzed;
+    }
+
+    public int getNumberOfAnalyzedTweets() {
+        return numberOfAnalyzedTweets;
+    }
+
+    public void setNumberOfAnalyzedTweets(int numberOfAnalyzedTweets) {
+        this.numberOfAnalyzedTweets = numberOfAnalyzedTweets;
     }
 }

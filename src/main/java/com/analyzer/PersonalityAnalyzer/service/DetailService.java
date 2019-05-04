@@ -14,12 +14,13 @@ public class DetailService {
     public void create (Detail detail){
         detailRepository.save(detail);
     }
+
     public Detail findDetailByUsername(String username){
         return detailRepository.findDetailByUsername(username);
     }
 
-    public void update(Detail user) {
-        detailRepository.save(user);
+    public void update(Detail detail) {
+        detailRepository.save(detail);
     }
 
 }

@@ -1,6 +1,5 @@
 package com.analyzer.PersonalityAnalyzer.controller;
 
-import com.analyzer.PersonalityAnalyzer.ZemberekConnection;
 import com.analyzer.PersonalityAnalyzer.entity.Detail;
 import com.analyzer.PersonalityAnalyzer.service.DetailService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,8 +28,8 @@ public class DetailController {
 
     @RequestMapping(path="/update", method = RequestMethod.POST, consumes = "application/json")
     public @ResponseBody
-    HttpStatus update (@RequestBody Detail det){
-        detailService.update(det);
+    HttpStatus update (@RequestBody Detail detail){
+        detailService.update(detail);
         return HttpStatus.OK;
     }
 
