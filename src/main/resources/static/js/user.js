@@ -5,7 +5,8 @@ app.controller('UserCtrl', function($scope,$http,$window) {
     $scope.user = {};
     $scope.username = "";
     $scope.userId = "";
-    $scope.details = {};
+    $scope.detail = {};
+    $scope.result = {};
 
     $scope.pageOpen = function(){
         var usr = $http.get('/User/findAll');
@@ -24,27 +25,28 @@ app.controller('UserCtrl', function($scope,$http,$window) {
 
     $scope.analyzeButton = function () {
         var usr = $http.get('/User/analyzeButton/' + $scope.username);
-        $scope.details.username = $scope.username;
-        $scope.createDetail($scope.details);
+        $window.sessionStorage.setItem("username",$scope.username);
+        $scope.username = $window.sessionStorage.getItem("username");//session
+        $scope.detail.username = $scope.username;
+        $scope.createDetail($scope.detail);
         usr.then(function (response) {
-
-        });
-    }
-
-    $scope.findUserById = function() {
-        var usr = $http.get('/User/findUserByID/' + $scope.userId);
-        usr.then(function (response) {
-            $scope.employeeList = response.data;
-            $scope.employeeId ="";
-
         });
     }
 
     $scope.createDetail = function(){
-        var det = $http.post('/Detail/Create/', $scope.details);
         det.then(function(response){
-            console.log("yazdıı");
         });
     }
+
+    $scope.createResult = function(){
+        var res = $http.post('/Result/Create/', $scope.result);
+        res.then(function(response){
+        });
+    }
+
+    $scope.showDetails = function(){
+        $window.location.href = '/detailPage.html';
+    }
+
 });
 

@@ -1,13 +1,15 @@
 var app = angular.module('DetailApp', []);
 app.controller('DetailCtrl', function($scope,$http,$window) {
 
-    $scope.username
-    $scope.details ={};
+    $scope.details = {};
 
-    $scope.pageOpen = function () {
-        var usr = $http.get('/Details/getDetails'+ $scope.username);
-        usr.then(function (response) {
+    $scope.username = $window.sessionStorage.getItem("username");
+
+    $scope.getDetails = function () {
+        var det = $http.get('/Detail/getDetails/'+ $scope.username);
+        det.then(function (response) {
             $scope.details = response.data;
+            $window.sessionStorage.clear();
         });
     }
 });
