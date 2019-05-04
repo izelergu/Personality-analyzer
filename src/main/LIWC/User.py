@@ -53,7 +53,7 @@ def main():
     # Insert or Update the details of the user
     detailInstance = col_Detail.find({"username": sys.argv[1]})
     if detailInstance.count() is not 0:
-        detail = {"$set": {'firstTweetDate': first_tweet_date, 'lastTweetDate': last_tweet_date}, 'numberOfTweets': len(tweets)}
+        detail = {"$set": {'firstTweetDate': first_tweet_date, 'lastTweetDate': last_tweet_date, 'numberOfTweets': len(tweets)}}
         doc2 = col_Detail.update_one(updateDoc, detail)
         print("Detail Updated : " + str(updateDoc))
     else:
