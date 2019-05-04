@@ -28,12 +28,14 @@ app.controller('UserCtrl', function($scope,$http,$window) {
         $window.sessionStorage.setItem("username",$scope.username);
         $scope.username = $window.sessionStorage.getItem("username");//session
         $scope.detail.username = $scope.username;
+        $window.location.href = '/resultPage.html';
         $scope.createDetail($scope.detail);
         usr.then(function (response) {
         });
     }
 
     $scope.createDetail = function(){
+        var det = $http.post('/Detail/Create/', $scope.detail);
         det.then(function(response){
         });
     }

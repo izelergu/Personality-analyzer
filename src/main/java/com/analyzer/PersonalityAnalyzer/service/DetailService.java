@@ -18,4 +18,8 @@ public class DetailService {
         return detailRepository.findDetailByUsername(username);
     }
 
+    public void update(Detail user) {
+        detailRepository.save(user);
+    }
+
 }

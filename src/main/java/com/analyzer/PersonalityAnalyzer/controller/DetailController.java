@@ -27,4 +27,11 @@ public class DetailController {
 
     }
 
+    @RequestMapping(path="/update", method = RequestMethod.POST, consumes = "application/json")
+    public @ResponseBody
+    HttpStatus update (@RequestBody Detail det){
+        detailService.update(det);
+        return HttpStatus.OK;
+    }
+
 }
