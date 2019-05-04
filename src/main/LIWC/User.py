@@ -6,8 +6,8 @@ import pymongo
 myclient = pymongo.MongoClient(
     "mongodb+srv://ismailyankayis:2430zcbg@twitterpersonalityanalyzer-aeniz.mongodb.net/admin")
 mydb = myclient["TwitterPersonalityAnalyzerDB"]
-mycol1 = mydb["User"]
-mycol2 = mydb['Detail']
+col_User = mydb["User"]
+col_Detail = mydb['Detail']
 
 consumer_key = '5EoGuierDVOdYhvbEZVDsN9jO'
 consumer_secret = 'eA227eYOJ8T7hmK46sbZ5ONPQYxxYC3FKyrRM6Lfl3ym4wZAUG'
@@ -16,28 +16,54 @@ access_token_secret = 'N5G428M0NxMDwvv0Iv3C8cZgsblTBJhsaVW0uzrfz65dy'
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
-cleanedTweets = ""
 api = tweepy.API(auth)
 
-tweetList = list()
-tweets = api.user_timeline(sys.argv[1], count=100)
+def main():
+    tweetList = list()
+    tweets = {}
+    try:
+        tweets = api.user_timeline(sys.argv[1], count=100)
+    except tweepy.error.TweepError:
+        print("NotAuthorized")
+        return -1;
 
-for tweet in tweets:
-    tweetList.append(tweet.text)
+    last_tweet_date = str(tweets[0].created_at)
+    first_tweet_date = str(tweets[len(tweets) - 1].created_at)
+    for i in range(0,len(tweets)):
+        tweetList.append(tweets[i].text)
+    #for tweet in tweets:
+     #   tweetList.append(tweet.text)
 
-now = datetime.datetime.now()
-now = str(now)
-user1 = {'username': sys.argv[1], 'last_analysis': now, 'tweets': tweetList }
+    now = datetime.datetime.now()
+    now = str(now)
 
-user = mycol1.find({"username": sys.argv[1]})
-if user.count() is not 0:
     updateDoc = {"username": sys.argv[1]}
-    newTweets = {"$set": {"tweets": tweetList}}
-    numberOfTweets = {"$set": {"numberOfTweets": len(tweets)}}
-    doc1 = mycol1.update_one(updateDoc, newTweets)
-    doc2 = mycol2.update_one(updateDoc, numberOfTweets)
-    print("Updated: " + str(updateDoc))
-else:
 
-    mycol1.insert_one(user1)
-    print("Inserted: " + str(user1))
+    #Insert or Update the User
+    user = col_User.find({"username": sys.argv[1]})
+    if user.count() is not 0:
+        newTweets = {"$set": {"tweets": tweetList, "last_analysis": now}}
+        doc1 = col_User.update_one(updateDoc, newTweets)
+        print("User Updated: " + str(updateDoc))
+    else:
+        user = {'username': sys.argv[1], 'last_analysis': now, 'tweets': tweetList, 'groups': list(), 'preprocessedTweets': list() }
+        col_User.insert_one(user)
+        print("User Inserted: " + str(updateDoc))
+
+    # Insert or Update the details of the user
+    detailInstance = col_Detail.find({"username": sys.argv[1]})
+    if detailInstance.count() is not 0:
+        detail = {"$set": {'firstTweetDate': first_tweet_date, 'lastTweetDate': last_tweet_date}, 'numberOfTweets': len(tweets)}
+        doc2 = col_Detail.update_one(updateDoc, detail)
+        print("Detail Updated : " + str(updateDoc))
+    else:
+        detail = {'username': sys.argv[1], 'firstTweetDate': first_tweet_date, 'lastTweetDate': last_tweet_date, 'numberOfTweets': len(tweets), 'numberOfAnalyzedTweets': 0, 'numberOfRT': 0, 'numberofWordsUsed': 0, 'numberOfWordsAnalyzed': 0 }
+        col_Detail.insert_one(detail)
+        print("Detail Inserted: " + str(updateDoc))
+
+
+    print("Authorized")
+
+
+if __name__ == '__main__':
+    main()

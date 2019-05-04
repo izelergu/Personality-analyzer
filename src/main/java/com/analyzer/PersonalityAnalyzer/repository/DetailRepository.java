@@ -6,5 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DetailRepository extends MongoRepository <Detail, String>{
+
     Detail findDetailByUsername(String username);
+
 }
