@@ -1,11 +1,25 @@
 package com.analyzer.PersonalityAnalyzer.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Document(collection = "Result")
 public class Result {
 
     @Id
     private String id;
+    private String username;
+    private String opennes;
+    private String extraversion;
+    private String neuroticism;
+    private String conscientiousness;
+    private String aggreeableness;
 
     public String getId() {
         return id;
@@ -62,11 +76,4 @@ public class Result {
     public void setAggreeableness(String aggreeableness) {
         this.aggreeableness = aggreeableness;
     }
-
-    private String username;
-    private String opennes;
-    private String extraversion;
-    private String neuroticism;
-    private String conscientiousness;
-    private String aggreeableness;
 }

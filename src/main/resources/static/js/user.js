@@ -28,7 +28,9 @@ app.controller('UserCtrl', function($scope,$http,$window) {
         $window.sessionStorage.setItem("username",$scope.username);
         $scope.username = $window.sessionStorage.getItem("username");//session
         $scope.detail.username = $scope.username;
+        //$scope.result.username = $scope.username;
         $window.location.href = '/resultPage.html';
+        //$scope.createDetail($scope.result);
         $scope.createDetail($scope.detail);
         usr.then(function (response) {
         });
@@ -44,10 +46,6 @@ app.controller('UserCtrl', function($scope,$http,$window) {
         var res = $http.post('/Result/Create/', $scope.result);
         res.then(function(response){
         });
-    }
-
-    $scope.showDetails = function(){
-        $window.location.href = '/detailPage.html';
     }
 
 });
