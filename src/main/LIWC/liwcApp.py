@@ -56,7 +56,6 @@ def determineCategories(usr):
                     for cat in gettysburg_counts.items():
                         addCategory(cat)
                     UsedWords += 1
-                    print ("count" + str(UsedWords))
                     break;
     catList = list()
     sum = 0

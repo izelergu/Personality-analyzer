@@ -17,10 +17,10 @@ public class Detail {
     @Id
     private String id;
     private String username;
+    private String firstTweetDate;
+    private String lastTweetDate;
     private int numberOfTweets;
     private int numberOfRT;
-    private Date firstDate;
-    private Date lastDate;
     private int numberofWordsUsed;
     private int numberOfWordsAnalyzed;
     private int numberOfAnalyzedTweets;
@@ -53,24 +53,24 @@ public class Detail {
         return numberOfRT;
     }
 
+    public String getFirstTweetDate() {
+        return firstTweetDate;
+    }
+
+    public void setFirstTweetDate(String firstTweetDate) {
+        this.firstTweetDate = firstTweetDate;
+    }
+
+    public String getLastTweetDate() {
+        return lastTweetDate;
+    }
+
+    public void setLastTweetDate(String lastTweetDate) {
+        this.lastTweetDate = lastTweetDate;
+    }
+
     public void setNumberOfRT(int numberOfRT) {
         this.numberOfRT = numberOfRT;
-    }
-
-    public Date getFirstDate() {
-        return firstDate;
-    }
-
-    public void setFirstDate(Date firstDate) {
-        this.firstDate = firstDate;
-    }
-
-    public Date getLastDate() {
-        return lastDate;
-    }
-
-    public void setLastDate(Date lastDate) {
-        this.lastDate = lastDate;
     }
 
     public int getNumberofWordsUsed() {
