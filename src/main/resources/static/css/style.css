@@ -1,0 +1,33 @@
+.progressCirculardemoBasicUsage body {
+    padding: 20px;
+}
+
+.progressCirculardemoBasicUsage h4 {
+    margin: 10px 0;
+}
+
+md-dialog {
+    height : 200px
+}
+md-progress-circular {
+    z-index: -1;
+}
+
+button {
+    width: 200px;
+}
+
+#num {
+    border : 1px;
+    border-color  : black;
+    font-size : 36px;
+    font-weight : bolder;
+    position: absolute;
+    left: 0;
+    top: 38%;
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    /* Note, this must be half the font size */
+    z-index: 100;
+}

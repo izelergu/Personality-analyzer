@@ -18,6 +18,7 @@
 
     <!-- Custom styles for this template -->
     <link href="/css/landing-page.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
@@ -34,9 +35,9 @@
 <div>
     <div class="collapse" id="navbarToggleExternalContent">
         <div class="bg-dark p-4">
-            <a class="navbar" style="color: white" href="homePage.html">Home Page</a>
-            <a class="navbar" style="color: white" href="aboutPage.html">What is Personality Analyzer ?</a>
-            <a class="navbar" style="color: white" href="developerteamPage.html">Developer Team</a>
+            <a class="navbar" style="color: white" href="homePage.html">Analiz</a>
+            <a class="navbar" style="color: white" href="aboutPage.html">Personality Analyzer Nedir?</a>
+            <a class="navbar" style="color: white" href="developerteamPage.html">Biz Kimiz ?</a>
         </div>
     </div>
     <nav class="navbar navbar-dark bg-dark">
@@ -47,21 +48,21 @@
 </div>
 
 <!-- Masthead -->
-<header class="masthead text-white text-center" style="background-color:white;background:url(/img/personality_2.jpg)no-repeat center center">
+<header class="masthead text-white text-center" style="background-color:white;background:url(/img/personality_7.jpg)no-repeat center center" ng-app="UserApp" ng-controller="UserCtrl" >
     <div class="overlay"></div>
-    <div class="container">
+    <div class="container" ng-show="!isLoading">
         <div class="row">
             <div class="col-xl-9 mx-auto">
-                <h1 class="mb-5">Analyze personality by entering username!</h1>
+                <h1 class="mb-5">Kullanıcı Adını Girerek Kişiliği Analiz Et!</h1>
             </div>
-            <div class="col-md-10 col-lg-8 col-xl-7 mx-auto" ng-app="UserApp" ng-controller="UserCtrl">
+            <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
                 <form>
                     <div class="form-row">
                         <div class="col-12 col-md-9 mb-2 mb-md-0">
                             <input type="username" class="form-control form-control-lg" placeholder="@" ng-model="username">
                         </div>
                         <div class="col-12 col-md-3">
-                            <button ng-click="analyzeButton(username)" type="submit" class="btn btn-block btn-lg btn-primary" style="background-color: black;border-color: black">Analyze</button>
+                            <button ng-click="analyzeButton(username)" type="submit" class="btn btn-block btn-lg btn-primary" style="background-color: black;border-color: black">Analiz</button>
                             <!--<button ng-click="" type="submit" class="btn btn-block btn-lg btn-primary" style="background-color: black;border-color: black">Last Analysis</button>-->
                         </div>
                     </div>
@@ -69,6 +70,7 @@
             </div>
         </div>
     </div>
+    <img src="/img/loading5.gif" ng-show="isLoading" />
 </header>
 <!-- Icons Grid -->
 <section class="features-icons bg-light text-center">
@@ -79,10 +81,11 @@
                     <div class="features-icons-icon d-flex">
                         <img src="/img/neuroticism.png" height="100" width="100">
                     </div>
-                    <h4>Neuroticism</h4>
-                    <p class="lead mb-0">Neuroticism is a trait characterized by sadness, moodiness, and emotional instability.
-                        Individuals who are high in this trait tend to experience mood swings, anxiety, irritability, and sadness.
-                        Those low in this trait tend to be more stable and emotionally resilient.</p>
+                    <h4>Nevrotiklik</h4>
+                    <p class="lead mb-0">Nevrotiklik üzüntü, karamsarlık ve duygusal dengesizlik ile karakterize
+                        bir özelliktir. Bu özellige sahip olan kisiler, ruh hali degisimleri, kaygı, sinirlilik
+                        ve üzüntü yasama egilimindedirler. Bu özelligi düsük olanlar daha stabil ve duygusal
+                        olarak dirençli olma egilimindedir.</p>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -90,10 +93,11 @@
                     <div class="features-icons-icon d-flex">
                         <img src="/img/conscientiousness.png" height="90" width="130">
                     </div>
-                    <h4>Conscientiousness</h4>
-                    <p class="lead mb-0">Standard features of this dimension include high levels of thoughtfulness, good impulse control,
-                        and goal-directed behaviors. Highly conscientious people tend to be organized and mindful of details.
-                        They plan ahead, think about how their behavior affects others, and are mindful of deadlines.</p>
+                    <h4>Dürüstlük</h4>
+                    <p class="lead mb-0">Bu karakterin standart özellikleri arasında fazla düsünceli olma,
+                        kendini kontrol etme ve hedefe yönelik davranıslar bulunur. Son derece vicdan sahibi insanlar organize
+                        olma ve ayrıntılara dikkat etme egilimindedir. Önceden plan yaparlar, davranıslarının baskalarını
+                        nasıl etkiledigini düsünürler ve son teslim tarihlerine dikkat ederler.</p>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -101,10 +105,10 @@
                     <div class="features-icons-icon d-flex">
                         <img src="/img/agreeableness.png">
                     </div>
-                    <h4>Agreeableness</h4>
-                    <p class="lead mb-0">This personality dimension includes attributes such as trust, altruism,
-                        kindness, affection, and other prosocial behaviors. People who are high in agreeableness tend to be more cooperative
-                        while those low in this trait tend to be more competitive and sometimes even manipulative.</p>
+                    <h4>Uyumluluk</h4>
+                    <p class="lead mb-0">Bu kisilik boyutu, güven, fedakarlık, nezaket, sefkat ve diger sosyal davranıslar gibi nitelikleri içerir.
+                        Kabul edilebilirligi yüksek olan insanlar daha kooperatif olma egilimindeyken, bu özelligi düsük olanlar daha rekabetçi
+                        ve hatta bazen manipülatif olma egilimindedir.</p>
                 </div>
             </div>
             <div class="col-lg-4" style="margin-left: 220px">
@@ -112,13 +116,13 @@
                     <div class="features-icons-icon d-flex">
                         <img src="/img/extraversion.png" height="100" width="100">
                     </div>
-                    <h4>Extraversion</h4>
-                    <p class="lead mb-0">Extraversion (or extroversion) is characterized by excitability, sociability, talkativeness,
-                        assertiveness, and high amounts of emotional expressiveness.
-                        People who are high in extraversion are outgoing and tend to gain energy in social situations.
-                        Being around other people helps them feel energized and excited.
-                        People who are low in extraversion (or introverted) tend to be more reserved and have to expend energy in social settings.
-                        Social events can feel draining and introverts often require a period of solitude and quiet in order to "recharge."</p>
+                    <h4>Dısa Dönüklük</h4>
+                    <p class="lead mb-0">Dısa dönüklük, uyarılabilirlik, giriskenlik, konusma yetenegi,
+                        atılganlık ve yüksek miktarda duygusal ifade ile karakterizedir. Dısa dönüklük özelligi yüksek olan insanlar
+                        dısarı çıkma ve sosyal durumlarda enerji kazanma egilimindedir. Baskalarının yanında olmak onların kendilerini
+                        enerjik ve heyecanlı hissetmelerine yardımcı olur. Dısa dönüklük özelligi düsük (ya da içe dönük) insanlar daha fazla
+                        ayrılma egilimindedir ve enerjiyi sosyal ortamlarda tüketmek zorundadır. Sosyal olaylar drene olabilir ve
+                        içe dönük seyler genellikle “sarj olmak” için yalnızlık süresi ve sessizlik gerektirir.</p>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -126,12 +130,13 @@
                     <div class="features-icons-icon d-flex">
                         <img src="/img/opennes.png" height="90" width="130">
                     </div>
-                    <h4>Opennes</h4>
-                    <p class="lead mb-0">This trait features characteristics such as imagination and insight.
-                        People who are high in this trait also tend to have a broad range of interests.
-                        They are curious about the world and other people and eager to learn new things and enjoy new experiences.
-                        People who are high in this trait tend to be more adventurous and creative. People low in this trait are often much
-                        more traditional and may struggle with abstract thinking.</p>
+                    <h4>Deneyime Açıklık</h4>
+                    <p class="lead mb-0">Bu özellikteki kisiler, hayal gücü ve içgörü gibi özelliklere sahiptir. Bu özelligi yüksek olan insanlar
+                        da genis bir ilgi alanına girme egilimindedir. Dünyayı ve diger insanları merak ediyorlar ve yeni seyler
+                        ögrenmeye ve yeni deneyimlerden zevk almaya hevesliler. Daha maceracı ve yaratıcı olma egilimindedir.
+                        Bu özelligi düsük insanlar genellikle daha gelenekseldir ve soyut düsünceyle
+                        mücadele edebilirler.
+                    </p>
                 </div>
             </div>
         </div>

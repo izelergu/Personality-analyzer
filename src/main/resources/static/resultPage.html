@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Result</title>
+<title>Sonuçlar</title>
 <head>
 
     <meta charset="utf-8">
@@ -36,9 +36,9 @@
 <div>
     <div class="collapse" id="navbarToggleExternalContent">
         <div class="bg-dark p-4">
-            <a class="navbar" style="color: white" href="homePage.html">Home Page</a>
-            <a class="navbar" style="color: white" href="aboutPage.html">What is Personality Analyzer ?</a>
-            <a class="navbar" style="color: white" href="developerteamPage.html">Developer Team</a>
+            <a class="navbar" style="color: white" href="homePage.html">Analiz</a>
+            <a class="navbar" style="color: white" href="aboutPage.html">Personality Analyzer Nedir ?</a>
+            <a class="navbar" style="color: white" href="developerteamPage.html">Biz Kimiz ?</a>
         </div>
     </div>
     <nav class="navbar navbar-dark bg-dark">
@@ -48,63 +48,65 @@
     </nav>
 </div>
 <!-- Masthead -->
-<header class="masthead text-white text-center align-text-top" style="background-color:white;background:url(/img/personality_2.jpg)no-repeat center center">
+<header class="masthead text-white text-center align-text-top" style="background-color:white;background:url(/img/personality_7.jpg)no-repeat center center" ng-app="ResultApp" ng-controller="ResultCtrl" ng-init="getResults()">
     <div class="overlay"></div>
-    <div class="container"  ng-app="ResultApp" ng-controller="ResultCtrl" ng-init="getResults()">
-            <h1 class="mb-5">Personality Traits</h1>
+    <div class="container">
+        <div class="col-12 col-md-3">
             <button ng-click="showDetails()" type="submit" class="btn btn-block btn-lg btn-primary" style="background-color: black;border-color: black;width:160px;margin-left:880px">Details >></button>
-        <div style="margin:0px;margin-top:0px">
-            <div class="jumbotron"style="background-color:#00e700;height: 300px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="results.opennes == 'Uygun'" >
-                <p class="mb-5">Opennes</p>
+        </div>
+        <div class="jumbotron" style="background:transparent;width:1500px;margin-top:0px">
+            <div class="jumbotron"style="background-color:#5cb85c;height: 285px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="results.opennes == 'Uygun'" >
+                <p>Deneyime Açıklık</p>
                 <p>{{results.opennes}}</p>
-                <p>hskfjlsnldfkmşmnf</p>
+                <p></p>
             </div>
-            <div class="jumbotron"style="background-color:	#FF0000;height: 300px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="results.opennes == 'Uygun değil'" >
-                <p class="mb-5">Opennes</p>
+            <div class="jumbotron"style="background-color:#d9534f;height: 285px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="results.opennes == 'Uygun değil'" >
+                <p>Deneyime Açıklık</p>
                 <p>{{results.opennes}}</p>
-                <p>hskfjlsnldfkmşmnf</p>
+                <p></p>
             </div>
-            <div class="jumbotron" style="background-color:#00e700;height: 300px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="results.extraversion == 'Uygun'" >
-                <p class="mb-5">Extraversion</p>
+            <div class="jumbotron" style="background-color:#5cb85c;height: 285px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="results.extraversion == 'Uygun'" >
+                <p>Dışa Dönüklük</p>
                 <p>{{results.extraversion}}</p>
-                <p>hskfjlsnldfkmşmnf</p>
+                <p></p>
             </div>
-            <div class="jumbotron" style="background-color:#FF0000;height: 300px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="results.extraversion == 'Uygun değil'">
-                <p class="mb-5">Extraversion</p>
+            <div class="jumbotron" style="background-color:#d9534f;height: 285px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="results.extraversion == 'Uygun değil'">
+                <p>Dışa Dönüklük</p>
                 <p>{{results.extraversion}}</p>
-                <p>hskfjlsnldfkmşmnf</p>
+                <p></p>
             </div>
-            <div class="jumbotron" style="background-color:#00e700;height: 300px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="results.aggreeableness == 'Uygun'">
-                <p class="mb-5">Aggreablenes</p>
+            <div class="jumbotron" style="background-color:#5cb85c;height: 285px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="results.aggreeableness == 'Uygun'">
+                <p>Uyumluluk</p>
                 <p>{{results.aggreeableness}}</p>
                 <p>hskfjlsnldfkmşmnf</p>
             </div>
-            <div class="jumbotron" style="background-color:#FF0000;height: 300px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="results.aggreeableness == 'Uygun değil'">
-                <p class="mb-5">Aggreablenes</p>
+            <div class="jumbotron" style="background-color:#d9534f;height: 285px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="results.aggreeableness == 'Uygun değil'">
+                <p>Uyumluluk</p>
                 <p>{{results.aggreeableness}}</p>
-                <p>hskfjlsnldfkmşmnf</p>
+                <p></p>
             </div>
-            <div class="jumbotron" style="background-color:#00e700;height: 300px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="results.neuroticism == 'Uygun'">
-                <p class="mb-5">Neuroticism</p>
+            <div class="jumbotron" style="background-color:#5cb85c;height: 285px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="results.neuroticism == 'Uygun'">
+                <p>Nevrotiklik</p>
                 <p>{{results.neuroticism}}</p>
-                <p>hskfjlsnldfkmşmnf</p>
+                <p></p>
             </div>
-            <div class="jumbotron" style="background-color:#FF0000;height: 300px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="results.neuroticism == 'Uygun değil'">
-                <p class="mb-5">Neuroticism</p>
+            <div class="jumbotron" style="background-color:#d9534f;height: 285px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="results.neuroticism == 'Uygun değil'">
+                <p>Nevrotiklik</p>
                 <p>{{results.neuroticism}}</p>
-                <p>hskfjlsnldfkmşmnf</p>
+                <p></p>
             </div>
-            <div class="jumbotron" style="background-color:#00e700;height: 300px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="results.conscientiousness == 'Uygun'">
-                <p class="mb-5">Conscientiousness</p>
+            <div class="jumbotron" style="background-color:#5cb85c;height: 285px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="results.conscientiousness == 'Uygun'">
+                <p >Sorumluluk</p>
                 <p>{{results.conscientiousness}}</p>
-                <p>hskfjlsnldfkmşmnf</p>
+                <p></p>
             </div>
-            <div class="jumbotron" style="background-color:#FF0000;height: 300px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="results.conscientiousness == 'Uygun değil'">
-                <p class="mb-5">Conscientiousness</p>
+            <div class="jumbotron" style="background-color:#d9534f;height: 285px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="results.conscientiousness == 'Uygun değil'">
+                <p >Sorumluluk</p>
                 <p>{{results.conscientiousness}}</p>
-                <p>hskfjlsnldfkmşmnf</p>
+                <p></p>
             </div>
         </div>
+        <h1 class="mb-5">{{username}} - Analiz Sonuçları</h1>
     </div>
 </header>
 </body>
