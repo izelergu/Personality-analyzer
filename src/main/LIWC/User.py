@@ -23,8 +23,14 @@ def main():
     tweets = {}
     try:
         tweets = api.user_timeline(sys.argv[1], count=100)
-    except tweepy.error.TweepError:
-        print("NotAuthorized")
+    except tweepy.error.TweepError as e:
+        print(e.response.text)
+        if e.response.text == '{"errors":[{"code":34,"message":"Sorry, that page does not exist."}]}':
+            print ("UserNotFound")
+        elif e.response.text == '{"request":"\/1.1\/statuses\/user_timeline.json","error":"Not authorized."}':
+            print("NotAuthorized")
+        else:
+            print ("UnknownError")
         return -1;
 
     last_tweet_date = str(tweets[0].created_at)

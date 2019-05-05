@@ -8,6 +8,7 @@ app.controller('UserCtrl', function($scope,$http,$window) {
     $scope.detail = {};
     $scope.result = {};
     $scope.isLoading = false;
+    $scope.errorMessage = "";
 
     $scope.pageOpen = function(){
         var usr = $http.get('/User/findAll');
@@ -26,15 +27,25 @@ app.controller('UserCtrl', function($scope,$http,$window) {
 
     $scope.analyzeButton = function () {
         $scope.isLoading = true;
-        var usr = $http.get('/User/analyzeButton/' + $scope.username);
-        usr.then(function (response) {
-            $window.sessionStorage.setItem("username",$scope.username);
-            $window.sessionStorage.setItem("isLoading",$scope.isLoading);
-            $scope.username = $window.sessionStorage.getItem("username");//session
-            $scope.detail.username = $scope.username;
-            $window.location.href = '/resultPage.html';
-            //$scope.isLoading = false;
-            $scope.createDetail($scope.detail);
+        var usrResponse = $http.get('/User/analyzeButton/' + $scope.username);
+        usrResponse.then(function (response) {
+            var stringResponse = response.data;
+            $scope.errorMessage = stringResponse.response;
+            if($scope.errorMessage === "Başarılı") {
+                console.log("girdi")
+                $scope.errorMessage = "";
+                $window.sessionStorage.setItem("username",$scope.username);
+                $window.sessionStorage.setItem("isLoading",$scope.isLoading);
+                $scope.username = $window.sessionStorage.getItem("username");//session
+                $scope.detail.username = $scope.username;
+                $scope.createDetail($scope.detail);
+                $scope.isLoading = false;
+                $window.location.href = '/resultPage.html';
+            }
+            else {
+                console.log("girmedi")
+                $scope.isLoading = false;
+            }
         });
     }
 
