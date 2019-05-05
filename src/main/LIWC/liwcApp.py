@@ -3,7 +3,6 @@ from collections import Counter
 import liwc
 import sys
 import pymongo
-import pandas as pd
 
 myclient = pymongo.MongoClient(
     "mongodb+srv://ismailyankayis:2430zcbg@twitterpersonalityanalyzer-aeniz.mongodb.net/admin")
@@ -11,15 +10,7 @@ mydb = myclient["TwitterPersonalityAnalyzerDB"]
 col_User = mydb["User"]
 col_Detail = mydb["Detail"]
 
-data = pd.read_csv("src/main/LIWC/Data2.csv", index_col="index")
-data2 = data
 categoryCounts = dict()
-index = 0
-
-for i in range(0, len(data)):
-    if (data['username'].iloc[i] == sys.argv[1]) == True:
-        index = i
-        break
 
 global sum
 global totalWords
@@ -59,15 +50,12 @@ def determineCategories(usr):
                     break;
     catList = list()
     sum = 0
-    data2 = data
     for cat in sorted(categoryCounts.keys()):
         #print(cat,":",str(categoryCounts[cat]))
         sum = sum + categoryCounts[cat]
     print("sum: " + str(sum))
     for cat in sorted(categoryCounts.keys()):
         normalized = categoryCounts[cat]/sum
-        #print(cat,":",str(round(normalized,3)))
-        data2[cat].iloc[index] = round(normalized,3)
         catList.append(cat + "," + str(round(normalized,3)))
 
     userDetail = col_Detail.find_one({"username": sys.argv[1]})
@@ -86,8 +74,6 @@ def determineCategories(usr):
         liwcGroups = {"$set": {"groups": catList}}
         doc1 = col_User.update_one(updateDoc, liwcGroups)
         print("Updated User: " + str(updateDoc))
-        data2.to_csv(r'src/main/LIWC/Dataset_2.csv')
-        data2.to_excel(r'src/main/LIWC/Dataset_2.xlsx')
     else:
         print("There is no user as " + sys.argv[1] )
 
