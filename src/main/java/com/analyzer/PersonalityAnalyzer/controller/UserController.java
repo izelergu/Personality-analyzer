@@ -66,7 +66,7 @@ public class UserController {
             detailController.update(detail);
             usr.setPreprocessedTweets(tweets);
             update(usr);
-            zemberekCon.findWordgroups(usr);
+            zemberekCon.findWordgroups(usr.getUsername());
         }
         /*try {
             FileReader fr = new FileReader("src/main/LIWC/Data3.csv");

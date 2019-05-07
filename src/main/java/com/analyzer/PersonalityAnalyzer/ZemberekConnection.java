@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Logger;
+import java.util.Random;
 
 public class ZemberekConnection {
 
@@ -81,25 +82,18 @@ public class ZemberekConnection {
         String[] splitedWords; // list to pick up all optional root of a word
         ArrayList<String> optionsList = new ArrayList<>();
         WordAnalysis wa;
-        int countRT = 0;
+        int countRT = findRTCount(tweets);
         int countDeletedTweet = 0;
-        int startIndex = 0;
         String tweet = "";
         for (int i = 0; i < tweets.size(); i++) {
-            startIndex = 0;
             tweet = tweets.get(i);
             tweet = tweet.replaceAll("(http[A-za-z0-9/:.]+\\s*)", ""); // remove all links
             tweet = tweet.replaceAll("(@\\w+\\s*)", ""); //remove mentions
-            //tweet.replaceAll("(\\s+RT\\s+)|(^RT\\s+)", ""); // remove RT tags
+            tweet.replaceAll("(^RT\\s+)", ""); // remove RT tags
             tweet = normalizer.normalize(tweet);
             tweet = tweet.replaceAll("[^A-Za-z0-9çÇğĞİıöÖüÜşŞ]+", " "); //remove punctuations
             tweets.set(i, tweet);
             splitedWords = tweets.get(i).split("\\s+"); // split the tweet word by word
-
-            if(splitedWords[0].equalsIgnoreCase("RT")) {
-                countRT++;
-                startIndex = 1;
-            }
 
             if(splitedWords.length < 2  && splitedWords[0].equalsIgnoreCase("RT")) { // Tweet has only 1 word or 'RT'
                 tweets.remove(i--);
@@ -107,7 +101,7 @@ public class ZemberekConnection {
                 continue;
             }
 
-            for (int j = startIndex; j < splitedWords.length; j++) { //Each word of a tweet will normalized and its root will be found.
+            for (int j = 0; j < splitedWords.length; j++) { //Each word of a tweet will normalized and its root will be found.
                 wa = analyzer.analyze(splitedWords[j]);
                 optionsList.add(splitedWords[j].toLowerCase());
                 // Every result root of a word
@@ -135,12 +129,12 @@ public class ZemberekConnection {
         return Arrays.asList(tweets, countDeletedTweet, countRT);
     }
 
-    public void findWordgroups(User usr) {
-        LOGGER.info("findWordGroups function started for " + usr.getUsername());
+    public void findWordgroups(String username) {
+        LOGGER.info("findWordGroups function started for " + username);
         //liwcApp.py
         try {
             String line;
-            Process p = Runtime.getRuntime().exec(liwcAppCommand + usr.getUsername());
+            Process p = Runtime.getRuntime().exec(liwcAppCommand + username);
             BufferedReader bri = new BufferedReader
                     (new InputStreamReader(p.getInputStream()));
             while ((line = bri.readLine()) != null) {
@@ -148,9 +142,59 @@ public class ZemberekConnection {
             }
             bri.close();
             p.waitFor();
-            LOGGER.info("findWordGroups function finished for " + usr.getUsername());
+            LOGGER.info("findWordGroups function finished for " + username);
         } catch (Exception err) {
             err.printStackTrace();
         }
+    }
+
+    /**
+     * Get User tweets as string list as parameter. Choose random tweets from the list amount of the count.
+     * @param list
+     * @param count
+     * @return
+     */
+    public List<String> chooseRandomTweet(List<String> list, int count) {
+        if(count > list.size()) {
+            LOGGER.info("User has not " + count + " tweets, only have " + list.size());
+            return null;
+        }
+        List<String> returnList = new ArrayList<>();
+        List<Integer> choosedIndexes = new ArrayList<>() ;
+        String tweet = "";
+        Random rand = new Random();
+        int index = 0;
+        for (int i = 0; i < count; i++) {
+            index = rand.nextInt(list.size());
+            while(choosedIndexes.contains(index)) index = rand.nextInt(list.size());
+            tweet = list.get(index);
+            tweet = tweet.replaceAll("(http[A-za-z0-9/:.]+\\s*)", ""); // remove all links
+            tweet = tweet.replaceAll("(@\\w+\\s*)", ""); //remove mentions
+            tweet.replaceAll("(^RT\\s+)", ""); // remove RT tags
+            tweet = normalizer.normalize(tweet);
+            tweet = tweet.replaceAll("[^A-Za-z0-9çÇğĞİıöÖüÜşŞ]+", " "); //remove punctuations
+            if(tweet.split("\\s+").length > 0) {
+                choosedIndexes.add(index);
+                returnList.add(tweet);
+            }
+        }
+        return  returnList;
+    }
+
+    /**
+     * Find amount of RT in the user tweets.
+     * @param list
+     * @return
+     */
+    public int findRTCount(List<String> list) {
+        String[] temp;
+        int count = 0;
+        for (int i = 0; i < list.size(); i++) {
+            temp = list.get(i).split("\\s+");
+            if(temp.length > 0 && temp[0].equalsIgnoreCase("RT"))
+                count++;
+        }
+
+        return count;
     }
 }
