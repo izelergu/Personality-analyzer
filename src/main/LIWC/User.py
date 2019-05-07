@@ -22,7 +22,8 @@ def main():
     tweetList = list()
     tweets = {}
     try:
-        tweets = api.user_timeline(sys.argv[1], count=100)
+        # Tweepy allows to max 200 tweet
+        tweets = api.user_timeline(sys.argv[1], count=200)
     except tweepy.error.TweepError as e:
         print(e.response.text)
         if e.response.text == '{"errors":[{"code":34,"message":"Sorry, that page does not exist."}]}':
