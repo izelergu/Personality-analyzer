@@ -1,0 +1,89 @@
+<html>
+
+<title>Log in</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+<script src="/scripts/angular-recaptcha.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+<script src="/js/login.js"></script>
+<script src="/js/loginApp.js"></script>
+
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/login.css">
+<link rel="stylesheet" href="/css/sidebar.css">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<!-- Bootstrap core CSS -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<script src="/jquery/jquery.min.js"></script>
+<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<body style="background-color:white">
+
+<script type="text/javascript">
+        (function () {
+            var p = document.createElement('script');
+            p.teype = 'text/javascript';
+            p.async = true;
+            p.src = 'https://apis.google.com/js/client.js?onload=onLoadFunction';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(p, s);
+        })();
+</script>
+<div>
+    <div class="collapse" id="navbarToggleExternalContent">
+
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+</div>
+
+<header class="masthead text-white text-center align-text-top" style="background-color:white;background:url(/img/personality_7.jpg)no-repeat center center">
+<div ng-app="logIn" class="login-form" ng-controller="loginCtrl as recap" style="background-color: transparent">
+    <form name="recap.signupForm" ng-submit="recap.signup()" method="POST" >
+        <h2 class="text-center">Sign in</h2>
+
+        <div class="text-center social-btn">
+            <button class="btn btn-danger btn-block" ng-click="onGoogleLogin()"><i class="fa fa-google"></i> Sign in
+                with
+                <b>Google</b></button>
+        </div>
+
+        <div class="or-seperator"><i>or</i></div>
+
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input type="text" class="form-control" name="username" placeholder="Username" required="required"
+                       ng-model="account.username">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                <input type="password" class="form-control" name="password" placeholder="Password" required="required"
+                       ng-model="account.password">
+            </div>
+        </div>
+
+        <div theme="clean" vc-recaptcha
+             key="'6Lc_9mAUAAAAAOgsOoGtGJVE6Xcz511BsPV8x9fy'" style="margin-bottom:10px"></div>
+
+        <button class="btn btn-success btn-block login-btn" ng-click="login()" ng-model="login"  style="background-color: black" >Sign in</button>
+    </form>
+
+    <!-----------google&facebook log in test------------>
+    <h4>{{gmail.email}}</h4>
+
+    <div class="hint-text small">Don't have an account? <a href="/signin.html" class="text-success">Register Now!</a>
+    </div>
+</div>
+</header>
+</body>
+</html>
