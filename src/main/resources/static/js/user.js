@@ -9,6 +9,8 @@ app.controller('UserCtrl', function($scope,$http,$window) {
     $scope.result = {};
     $scope.isLoading = false;
     $scope.errorMessage = "";
+    $scope.account = {};
+
 
     $scope.pageOpen = function(){
         var usr = $http.get('/User/findAll');
@@ -61,5 +63,12 @@ app.controller('UserCtrl', function($scope,$http,$window) {
         });
     }
 
+    $scope.accountCreate = function () {
+        var acc = $http.post("/account/create", $scope.account);
+        $window.sessionStorage.setItem("AccUsername",$scope.account.username);
+        acc.then(function(response) {
+            alert(response.data);
+        });
+    }
 });
 

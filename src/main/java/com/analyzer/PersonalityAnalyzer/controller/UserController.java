@@ -68,37 +68,6 @@ public class UserController {
             update(usr);
             zemberekCon.findWordgroups(usr.getUsername());
         }
-        /*try {
-            FileReader fr = new FileReader("src/main/LIWC/Data3.csv");
-            BufferedReader br = new BufferedReader(fr);
-            String line = "";
-            String uname = "";
-            line = br.readLine();
-            while((line = br.readLine()) != null) {
-                uname = line.split(",")[1];
-                if(zemberekCon.getTweets(uname)) {
-                    usr = userService.findUserByUsername(uname);
-                    List<String> tweets = zemberekCon.normalizeTweets(usr);
-                    usr.setPreprocessedTweets(tweets);
-                    update(usr);
-                    zemberekCon.findWordgroups(usr);
-                }
-            }
-            fr.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
         return new StringResponse(returnMessage);
-        /*List<User> list  = userService.findAll();
-        for (int i = 0; i < list.size(); i++) {
-            zemberekCon.getTweets(list.get(i).getUsername());
-            list.set(i, userService.findUserByUsername(list.get(i).getUsername()));
-            List<String> tweets = zemberekCon.normalizeTweets(list.get(i));
-            list.get(i).setPreprocessedTweets(tweets);
-            update(list.get(i));
-            zemberekCon.findWordgroups(list.get(i));
-        }*/
     }
 }
