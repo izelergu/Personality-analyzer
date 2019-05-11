@@ -10,14 +10,22 @@ app.controller('UserCtrl', function($scope,$http,$window) {
     $scope.isLoading = false;
     $scope.errorMessage = "";
     $scope.account = {};
-
+    $scope.id = "";
 
     $scope.pageOpen = function(){
-        var usr = $http.get('/User/findAll');
+        $scope.account.username = $window.sessionStorage.getItem("AccUsername");
+        var usr = $http.get('/account/getAccount/' + $scope.account.username);
         usr.then(function (response) {
-            $scope.userList = response.data;
+            $scope.account = response.data;
+            $window.sessionStorage.setItem("AccUsername",$scope.account.username);
         });
+    }
 
+    $scope.findResultById = function(id){
+        var usr = $http.get('/Result/getResultById/' + id);
+        usr.then(function (response) {
+            $scope.result = response.data;
+        });
     }
 
     $scope.findUserByName = function () {
@@ -34,19 +42,18 @@ app.controller('UserCtrl', function($scope,$http,$window) {
             var stringResponse = response.data;
             $scope.errorMessage = stringResponse.response;
             if($scope.errorMessage === "Başarılı") {
-                console.log("girdi")
                 $scope.errorMessage = "";
                 $window.sessionStorage.setItem("username",$scope.username);
                 $window.sessionStorage.setItem("isLoading",$scope.isLoading);
                 $scope.username = $window.sessionStorage.getItem("username");//session
                 $scope.detail.username = $scope.username;
                 $scope.createDetail($scope.detail);
-                $scope.isLoading = false;
+                $scope.isLoading = true;
                 $window.location.href = '/resultPage.html';
             }
             else {
-                console.log("girmedi")
                 $scope.isLoading = false;
+                alert($scope.errorMessage);
             }
         });
     }
@@ -68,6 +75,7 @@ app.controller('UserCtrl', function($scope,$http,$window) {
         $window.sessionStorage.setItem("AccUsername",$scope.account.username);
         acc.then(function(response) {
             alert(response.data);
+            $window.location.href = '/logIn.html';
         });
     }
 });

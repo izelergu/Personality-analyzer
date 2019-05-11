@@ -5,10 +5,7 @@ import com.analyzer.PersonalityAnalyzer.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,6 +19,11 @@ public class AccountController {
     public @ResponseBody HttpStatus create(@RequestBody Account account){
         accountService.create(account);
         return HttpStatus.OK;
+    }
+
+    @RequestMapping(path="/getAccount/{username}", method = RequestMethod.GET)
+    public @ResponseBody Account findAccountByUsername (@PathVariable String username){
+        return accountService.findAccountByUsername(username);
     }
 
     @RequestMapping(path = "/login", method = RequestMethod.GET)

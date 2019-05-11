@@ -1,8 +1,8 @@
 var app = angular.module('ResultApp', []);
 app.controller('ResultCtrl', function($scope,$http,$window) {
 
+    $scope.result = {};
     $scope.results = {};
-
     $scope.username = $window.sessionStorage.getItem("username");
     $scope.isLoading = $window.sessionStorage.getItem("isLoading");
 
@@ -10,12 +10,11 @@ app.controller('ResultCtrl', function($scope,$http,$window) {
         $scope.isLoading = false;
         var res = $http.get('/Result/getResult/'+ $scope.username);
         res.then(function (response) {
-            $scope.results = response.data;
+            $scope.result = response.data;
         });
     }
 
     $scope.showDetails = function(){
         $window.location.href = '/detailPage.html';
     }
-
 });

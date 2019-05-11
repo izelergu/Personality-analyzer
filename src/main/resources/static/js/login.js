@@ -10,12 +10,10 @@ app.controller("loginCtrl", function ($http, $scope, vcRecaptchaService, $window
 
     $scope.accountList=[];
 
-    //If the recaptcha value is empty alert error else alert the recaptcha resonse
+    //If the recaptcha value is empty alert error else alert the recaptcha response
     vm.signup = function () {
         if (vcRecaptchaService.getResponse() === "") {
             alert("Please resolve the captcha and submit!")
-        } else {
-            alert(vcRecaptchaService.getResponse());
         }
     }
 
@@ -32,6 +30,7 @@ app.controller("loginCtrl", function ($http, $scope, vcRecaptchaService, $window
                         $scope.$apply(function(){
                             $scope.gmail.username = resp.displayName;
                             $scope.gmail.email = resp.emails[0].value;
+                            $window.location.href = '/homePage.html';
                         });
                     });
                 }
@@ -50,7 +49,9 @@ app.controller("loginCtrl", function ($http, $scope, vcRecaptchaService, $window
                 if($scope.accountList[i].username == $scope.account.username && $scope.accountList[i].password == $scope.account.password){
                     isAcc = true;
                     if(vcRecaptchaService.getResponse() !== "" && isAcc == true) {
+                        console.log(vcRecaptchaService.getResponse());
                         $window.location.href = '/homePage.html';
+                        $window.sessionStorage.setItem("AccUsername",$scope.account.username);
                     }
                     break;
                 }
