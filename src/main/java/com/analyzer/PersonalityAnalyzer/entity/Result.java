@@ -21,6 +21,15 @@ public class Result {
     private String conscientiousness;
     private String aggreeableness;
 
+    public Result(String username, String opennes, String extraversion, String neuroticism, String conscientiousness, String aggreeableness) {
+        this.username = username;
+        this.opennes = opennes;
+        this.extraversion = extraversion;
+        this.neuroticism = neuroticism;
+        this.conscientiousness = conscientiousness;
+        this.aggreeableness = aggreeableness;
+    }
+
     public String getId() {
         return id;
     }

@@ -2,6 +2,7 @@ package com.analyzer.PersonalityAnalyzer.controller;
 
 import com.analyzer.PersonalityAnalyzer.ZemberekConnection;
 import com.analyzer.PersonalityAnalyzer.entity.Detail;
+import com.analyzer.PersonalityAnalyzer.entity.Result;
 import com.analyzer.PersonalityAnalyzer.entity.StringResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,6 +23,9 @@ public class UserController {
 
     @Autowired
     DetailController detailController;
+
+    @Autowired
+    ResultController resultController;
 
     ZemberekConnection zemberekCon = new ZemberekConnection();
 
@@ -67,6 +71,8 @@ public class UserController {
             usr.setPreprocessedTweets(tweets);
             update(usr);
             zemberekCon.findWordgroups(usr.getUsername());
+            //Result result = new Result(usr.username, "Uygun", "Uygun değil", "Uygun değil", "Uygun", "Uygun");
+            //resultController.create(result);
         }
         return new StringResponse(returnMessage);
     }

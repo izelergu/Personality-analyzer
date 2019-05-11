@@ -19,6 +19,15 @@ public class Account {
     private String surname;
     private String email;
     private String password;
+    private String[] history;
+
+    public String[] getHistory() {
+        return history;
+    }
+
+    public void setHistory(String[] history) {
+        this.history = history;
+    }
 
     public Account(String username, String password) {
         this.username = username;

@@ -11,8 +11,12 @@ public class ResultService {
     @Autowired
     ResultRepository resultRepository;
 
-    public Result findResultByUsername(String username){
-        return resultRepository.findResultByUsername(username);
+    public Result findResultByUsername(String name){
+        return resultRepository.findResultByUsername(name);
+    }
+
+    public Result findResultById(String id){
+        return resultRepository.findResultById(id);
     }
 
     public void create (Result result){

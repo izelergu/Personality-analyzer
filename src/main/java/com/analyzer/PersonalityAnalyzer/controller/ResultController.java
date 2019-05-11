@@ -20,6 +20,12 @@ public class ResultController {
         return resultService.findResultByUsername(username);
     }
 
+    @RequestMapping(path="/getResultById/{id}", method = RequestMethod.GET)
+    public @ResponseBody
+    Result findResultById (@PathVariable String id){
+        return resultService.findResultById(id);
+    }
+
     @RequestMapping(path = "/Create", method = RequestMethod.POST, consumes = "application/json")
     public @ResponseBody
     HttpStatus create(@RequestBody Result result){
