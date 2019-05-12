@@ -47,7 +47,7 @@ def trainKNN(x=None, y=None, n=None, metric=None, weight=None, output_filename='
     print("Mean Accuracy: " + str(sum_score/y.size))
     #pickle.dump(knn, open(output_filename, 'wb'))
     joblib.dump(knn, output_filename)
-    return 0
+    return sum_score/y.size
 
 
 def trainDecisionTree(x=None, y=None, min_sample_in_leaf=None, output_filename='output_decision_tree.mdl'):
@@ -77,7 +77,7 @@ def trainDecisionTree(x=None, y=None, min_sample_in_leaf=None, output_filename='
     #tree.export_graphviz(dt, out_file='tree.dot', feature_names=x.columns)
     #pickle.dump(dt, open(output_filename, 'wb'))
     joblib.dump(dt, output_filename)
-    return 0
+    return sum_score / y.size)
 
 
 def trainRandomForest(x=None, y=None, number_of_trees=None, random_seed=None, output_filename='random_forest.mdl'):
@@ -106,7 +106,7 @@ def trainRandomForest(x=None, y=None, number_of_trees=None, random_seed=None, ou
 
     #pickle.dump(randomForest, open(output_filename, 'wb'))
     joblib.dump(randomForest, output_filename)
-    return 0
+    return sum_score / y.size
 
 
 def main():
@@ -114,7 +114,7 @@ def main():
     X = data.iloc[:, 2:-5] # 0,1 are index and username columns, last five columns are targets
     trainKNN(x=X, y=data['Aggreeableness'], n=1, metric='chebyshev', weight='distance', output_filename='src/main/LIWC/models/aggreeableness_knn_model.mdl')
     trainDecisionTree(x=X, y=data['Extraversion'], min_sample_in_leaf=13, output_filename='src/main/LIWC/models/extraversion_tree_model.mdl')
-    trainRandomForest(x=X, y=data['Concientiousnes'], number_of_trees=11, random_seed=15, output_filename='src/main/LIWC/models/concientiousnes_random_forest_model.mdl')
+    trainRandomForest(x=X, y=data['Concientiousnes'], number_of_trees=9, random_seed=13, output_filename='src/main/LIWC/models/concientiousnes_random_forest_model.mdl')
     trainKNN(x=X, y=data['Neuroticism'], n=2, metric='chebyshev', weight='distance', output_filename='src/main/LIWC/models/neuroticism_knn_model.mdl')
     trainDecisionTree(x=X, y=data['Opennes'], min_sample_in_leaf=6, output_filename='src/main/LIWC/models/opennes_tree_model.mdl')
     print('SUCCESSFUL!')
