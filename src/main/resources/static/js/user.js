@@ -37,6 +37,7 @@ app.controller('UserCtrl', function($scope,$http,$window) {
 
     $scope.analyzeButton = function () {
         $scope.isLoading = true;
+
         var usrResponse = $http.get('/User/analyzeButton/' + $scope.username);
         usrResponse.then(function (response) {
             var stringResponse = response.data;

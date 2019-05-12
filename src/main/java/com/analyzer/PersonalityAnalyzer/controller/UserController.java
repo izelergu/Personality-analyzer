@@ -60,7 +60,6 @@ public class UserController {
     @ResponseBody
     public StringResponse analyzeButton(@PathVariable String username){
         User usr = null;
-        //String returnMessage = "";
         String returnMessage = zemberekCon.getTweets(username);
 
         if(returnMessage.equals("Başarılı")) {
@@ -78,28 +77,6 @@ public class UserController {
             zemberekCon.findWordgroups(usr.getUsername());
             callPrediction(username);
         }
-       /*try {
-            FileReader fr = new FileReader("src/main/LIWC/Data3.csv");
-            BufferedReader br = new BufferedReader(fr);
-            String line = "";
-            String uname = "";
-            line = br.readLine();
-            while((line = br.readLine()) != null) {
-                uname = line.split(",")[1];
-                if(zemberekCon.getTweets(uname).equals("Başarılı")) {
-                    usr = userService.findUserByUsername(uname);
-                    List<String> tweets = (List<String>)zemberekCon.normalizeTweets(usr).get(0);
-                    usr.setPreprocessedTweets(tweets);
-                    update(usr);
-                    zemberekCon.findWordgroups(usr.getUsername());
-                }
-            }
-            fr.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
         return new StringResponse(returnMessage);
     }
 
