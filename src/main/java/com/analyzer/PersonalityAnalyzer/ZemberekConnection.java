@@ -18,11 +18,13 @@ import java.util.Random;
 
 public class ZemberekConnection {
 
-    Path lookupRoot = Paths.get("data/normalization");
-    Path lmFile = Paths.get("data/lm/lm.2gram.slm");
-    TurkishMorphology morphology;
-    TurkishSentenceNormalizer normalizer;
-    TurkishMorphology analyzer;
+    private final int NUMBER_OF_TWEET = 25;
+
+    private Path lookupRoot = Paths.get("data/normalization");
+    private Path lmFile = Paths.get("data/lm/lm.2gram.slm");
+    private TurkishMorphology morphology;
+    private TurkishSentenceNormalizer normalizer;
+    private TurkishMorphology analyzer;
     private String userCommand = "cmd /c python src/main/LIWC/User.py ";
     private String liwcAppCommand = "cmd /c python src/main/LIWC/liwcApp.py ";
     Logger LOGGER = Logger.getLogger(ZemberekConnection.class.getName());
@@ -84,22 +86,24 @@ public class ZemberekConnection {
         WordAnalysis wa;
         int countRT = findRTCount(tweets);
         int countDeletedTweet = 0;
+        tweets = chooseRandomTweet(tweets, NUMBER_OF_TWEET);
         String tweet = "";
         for (int i = 0; i < tweets.size(); i++) {
-            tweet = tweets.get(i);
+            /*tweet = tweets.get(i);
             tweet = tweet.replaceAll("(http[A-za-z0-9/:.]+\\s*)", ""); // remove all links
-            tweet = tweet.replaceAll("(@\\w+\\s*)", ""); //remove mentions
-            tweet.replaceAll("(^RT\\s+)", ""); // remove RT tags
-            tweet = normalizer.normalize(tweet);
+            tweet = tweet.replaceAll("(@\\w+:\\s*)", ""); //remove mentions
+            tweet = tweet.replaceAll("^RT\\s+", ""); // remove RT tags
             tweet = tweet.replaceAll("[^A-Za-z0-9çÇğĞİıöÖüÜşŞ]+", " "); //remove punctuations
-            tweets.set(i, tweet);
+            if(tweet.equals("") || tweet.replaceAll("\\s+", "").equals("")) continue;
+            tweet = normalizer.normalizeSingleTweet(tweet);
+            tweets.set(i, tweet);*/
             splitedWords = tweets.get(i).split("\\s+"); // split the tweet word by word
 
-            if(splitedWords.length < 2  && splitedWords[0].equalsIgnoreCase("RT")) { // Tweet has only 1 word or 'RT'
+            /*if(splitedWords.length < 2  && splitedWords[0].equalsIgnoreCase("RT")) { // Tweet has only 1 word or 'RT'
                 tweets.remove(i--);
                 countDeletedTweet++;
                 continue;
-            }
+            }*/
 
             for (int j = 0; j < splitedWords.length; j++) { //Each word of a tweet will normalized and its root will be found.
                 wa = analyzer.analyze(splitedWords[j]);
@@ -154,31 +158,68 @@ public class ZemberekConnection {
      * @param count
      * @return
      */
-    public List<String> chooseRandomTweet(List<String> list, int count) {
-        if(count > list.size()) {
-            LOGGER.info("User has not " + count + " tweets, only have " + list.size());
-            return null;
-        }
+    private List<String> chooseRandomTweet(List<String> list, int count) {
+
         List<String> returnList = new ArrayList<>();
         List<Integer> choosedIndexes = new ArrayList<>() ;
-        String tweet = "";
+        int countDeletedTweet = 0;
         Random rand = new Random();
         int index = 0;
+        String tweet = "";
+
+        if(count > list.size()) {
+            LOGGER.info("User has not " + count + " tweets, only have " + list.size());
+            for (int i = 0; i < list.size(); i++) {
+                tweet = list.get(i);
+                tweet = normalizeSingleTweet(tweet);
+                if(tweet.split("\\s+").length > 0 && !tweet.equalsIgnoreCase("RT") && !tweet.equals("")) {
+                    returnList.add(tweet);
+                }
+                else {
+                    countDeletedTweet++;
+                }
+            }
+            LOGGER.info(String.format("%d tweets added and %d tweets deleted",returnList.size(),countDeletedTweet));
+            return list;
+        }
+
         for (int i = 0; i < count; i++) {
+            if(countDeletedTweet + returnList.size() == list.size()) break;
             index = rand.nextInt(list.size());
             while(choosedIndexes.contains(index)) index = rand.nextInt(list.size());
-            tweet = list.get(index);
-            tweet = tweet.replaceAll("(http[A-za-z0-9/:.]+\\s*)", ""); // remove all links
-            tweet = tweet.replaceAll("(@\\w+\\s*)", ""); //remove mentions
-            tweet.replaceAll("(^RT\\s+)", ""); // remove RT tags
-            tweet = normalizer.normalize(tweet);
-            tweet = tweet.replaceAll("[^A-Za-z0-9çÇğĞİıöÖüÜşŞ]+", " "); //remove punctuations
-            if(tweet.split("\\s+").length > 0) {
-                choosedIndexes.add(index);
-                returnList.add(tweet);
+            try {
+                tweet = list.get(index);
+                tweet = normalizeSingleTweet(tweet);
+                if(tweet.split("\\s+").length > 0 && !tweet.equalsIgnoreCase("RT")) {
+                    choosedIndexes.add(index);
+                    returnList.add(tweet);
+                }
+                else {
+                    countDeletedTweet++;
+                    i--;
+                }
+            } catch (Exception e) {
+                countDeletedTweet++;
+                i--;
             }
         }
+        LOGGER.info(String.format("%d tweets added and %d tweets deleted",returnList.size(),countDeletedTweet));
         return  returnList;
+    }
+
+    /**
+     * Removes unneccesary links, mentions, words, and punctuations from given tweet.
+     * @param tweet
+     * @return
+     */
+    private String normalizeSingleTweet(String tweet) {
+        tweet = tweet.replaceAll("(http[A-za-z0-9/:.]+\\s*)", ""); // remove all links
+        tweet = tweet.replaceAll("(@\\w+:\\s*)", ""); //remove mentions
+        tweet = tweet.replaceAll("^RT\\s+", ""); // remove RT tags
+        tweet = tweet.replaceAll("[^A-Za-z0-9çÇğĞİıöÖüÜşŞ]+", " "); //remove punctuations
+        if(tweet.equals("") || tweet.replaceAll("\\s+", "").equals("")) return "";
+        tweet = normalizer.normalize(tweet);
+        return tweet;
     }
 
     /**
@@ -186,7 +227,7 @@ public class ZemberekConnection {
      * @param list
      * @return
      */
-    public int findRTCount(List<String> list) {
+    private int findRTCount(List<String> list) {
         String[] temp;
         int count = 0;
         for (int i = 0; i < list.size(); i++) {

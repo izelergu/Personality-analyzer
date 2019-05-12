@@ -3,6 +3,7 @@ from collections import Counter
 import liwc
 import sys
 import pymongo
+import pandas as pd
 
 myclient = pymongo.MongoClient(
     "mongodb+srv://ismailyankayis:2430zcbg@twitterpersonalityanalyzer-aeniz.mongodb.net/admin")
@@ -56,7 +57,8 @@ def determineCategories(usr):
     print("sum: " + str(sum))
     for cat in sorted(categoryCounts.keys()):
         normalized = categoryCounts[cat]/sum
-        catList.append(cat + "," + str(round(normalized,3)))
+        if cat not in ['humans', 'anger', 'see', 'bio', 'health']: #bu gruplar kullanılmadığı için eklenmedi. ama data sette bu değerler varken normalize ediğildği için değerleri sum'a eklendi.
+            catList.append(cat + "," + str(("%.3f" % normalized)))
 
     userDetail = col_Detail.find_one({"username": sys.argv[1]})
     updateDoc = {"username": sys.argv[1]}

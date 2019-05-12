@@ -12,7 +12,9 @@ import com.analyzer.PersonalityAnalyzer.entity.User;
 import com.analyzer.PersonalityAnalyzer.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.*;
 import java.util.List;
+import java.util.logging.Logger;
 
 @Controller
 @RequestMapping("/User")
@@ -28,6 +30,8 @@ public class UserController {
     ResultController resultController;
 
     ZemberekConnection zemberekCon = new ZemberekConnection();
+    Logger LOGGER = Logger.getLogger(UserController.class.getName());
+    private String predictCommand = "cmd /c python src/main/LIWC/predictPersonality.py ";
 
     @RequestMapping(path="/findAll", method = RequestMethod.GET)
     public  @ResponseBody
@@ -56,6 +60,7 @@ public class UserController {
     @ResponseBody
     public StringResponse analyzeButton(@PathVariable String username){
         User usr = null;
+        //String returnMessage = "";
         String returnMessage = zemberekCon.getTweets(username);
 
         if(returnMessage.equals("Başarılı")) {
@@ -71,9 +76,49 @@ public class UserController {
             usr.setPreprocessedTweets(tweets);
             update(usr);
             zemberekCon.findWordgroups(usr.getUsername());
-            //Result result = new Result(usr.username, "Uygun", "Uygun değil", "Uygun değil", "Uygun", "Uygun");
-            //resultController.create(result);
+            callPrediction(username);
         }
+       /*try {
+            FileReader fr = new FileReader("src/main/LIWC/Data3.csv");
+            BufferedReader br = new BufferedReader(fr);
+            String line = "";
+            String uname = "";
+            line = br.readLine();
+            while((line = br.readLine()) != null) {
+                uname = line.split(",")[1];
+                if(zemberekCon.getTweets(uname).equals("Başarılı")) {
+                    usr = userService.findUserByUsername(uname);
+                    List<String> tweets = (List<String>)zemberekCon.normalizeTweets(usr).get(0);
+                    usr.setPreprocessedTweets(tweets);
+                    update(usr);
+                    zemberekCon.findWordgroups(usr.getUsername());
+                }
+            }
+            fr.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
         return new StringResponse(returnMessage);
+    }
+
+    private void callPrediction(String username) {
+        LOGGER.info("Prediction function started for " + username);
+        //liwcApp.py
+        try {
+            String line;
+            Process p = Runtime.getRuntime().exec(predictCommand + username);
+            BufferedReader bri = new BufferedReader
+                    (new InputStreamReader(p.getInputStream()));
+            while ((line = bri.readLine()) != null) {
+                System.out.println(line);
+            }
+            bri.close();
+            p.waitFor();
+            LOGGER.info("Prediction function finished for " + username);
+        } catch (Exception err) {
+            err.printStackTrace();
+        }
     }
 }
