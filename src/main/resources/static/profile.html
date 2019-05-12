@@ -53,7 +53,7 @@
                 <table class="table table-sm table-dark">
                     <tbody>
                     <tr>
-                        <td>Twitter kullanıcı adı</td>
+                        <td>Kullanıcı adı</td>
                         <td>{{account.username}}</td>
                         <td></td>
                     </tr>
@@ -72,35 +72,35 @@
                         <td>{{account.email}}</td>
                         <td></td>
                     </tr>
-                    <tr ng-repeat="temp in account.history">
-                        <td>Analiz id</td>
-                        <td ng-init="findResultById(temp)">{{temp}}</td>
-                        <td></td>
-                        <tr></tr>
-                        <tr></tr>
-                        <td></td>
-                        <td>Deneyime açıklık</td>
-                        <td>{{result.opennes}}</td>
-                        <tr></tr>
-                        <tr></tr>
-                        <td></td>
-                        <td>Dışa dönüklük</td>
-                        <td>{{result.extraversion}}</td>
-                        <tr></tr>
-                        <tr></tr>
-                        <td></td>
-                        <td>Sorumluluk</td>
-                        <td>{{result.conscientiousness}}</td>
-                        <tr></tr>
-                        <tr></tr>
-                        <td></td>
-                        <td>Duygusal Denge</td>
-                        <td>{{result.neuroticism}}</td>
-                        <tr></tr>
-                        <tr></tr>
-                        <td></td>
-                        <td>Uyumluluk</td>
-                        <td>{{result.aggreeableness}}</td>
+                    <tr ng-repeat="temp in account.history" ng-if="account.history.length > 0">
+                        <td ng-if="account.history.length > 0">Analiz id</td >
+                        <td ng-init="findResultById(temp)" ng-if="account.history.length > 0">{{temp}}</td>
+                        <td ng-if="account.history.length > 0"></td>
+                        <tr ng-if="account.history.length > 0"></tr>
+                        <tr ng-if="account.history.length > 0"></tr>
+                        <td ng-if="account.history.length > 0"></td>
+                        <td ng-if="account.history.length > 0">Deneyime açıklık</td>
+                        <td ng-if="account.history.length > 0">{{result.opennes}}</td>
+                        <tr ng-if="account.history.length > 0"></tr>
+                        <tr ng-if="account.history.length > 0"></tr>
+                        <td ng-if="account.history.length > 0"></td>
+                        <td ng-if="account.history.length > 0">Dışa dönüklük</td>
+                        <td ng-if="account.history.length > 0">{{result.extraversion}}</td>
+                        <tr ng-if="account.history.length > 0"></tr>
+                        <tr ng-if="account.history.length > 0"></tr>
+                        <td ng-if="account.history.length > 0"></td>
+                        <td ng-if="account.history.length > 0">Sorumluluk</td>
+                        <td ng-if="account.history.length > 0">{{result.conscientiousness}}</td>
+                        <tr ng-if="account.history.length > 0"></tr>
+                        <tr ng-if="account.history.length > 0"></tr>
+                        <td ng-if="account.history.length > 0"></td>
+                        <td ng-if="account.history.length > 0">Duygusal Denge</td>
+                        <td ng-if="account.history.length > 0">{{result.neuroticism}}</td>
+                        <tr ng-if="account.history.length > 0"></tr>
+                        <tr ng-if="account.history.length > 0"></tr>
+                        <td ng-if="account.history.length > 0"></td>
+                        <td ng-if="account.history.length > 0">Uyumluluk</td>
+                        <td ng-if="account.history.length > 0">{{result.aggreeableness}}</td>
                     </tr>
                     </tbody>
                 </table>

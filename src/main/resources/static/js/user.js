@@ -11,6 +11,7 @@ app.controller('UserCtrl', function($scope,$http,$window) {
     $scope.errorMessage = "";
     $scope.account = {};
     $scope.id = "";
+    $scope.password2 = "";
 
     $scope.pageOpen = function(){
         $scope.account.username = $window.sessionStorage.getItem("AccUsername");
@@ -37,7 +38,6 @@ app.controller('UserCtrl', function($scope,$http,$window) {
 
     $scope.analyzeButton = function () {
         $scope.isLoading = true;
-
         var usrResponse = $http.get('/User/analyzeButton/' + $scope.username);
         usrResponse.then(function (response) {
             var stringResponse = response.data;
@@ -72,12 +72,15 @@ app.controller('UserCtrl', function($scope,$http,$window) {
     }
 
     $scope.accountCreate = function () {
-        var acc = $http.post("/account/create", $scope.account);
-        $window.sessionStorage.setItem("AccUsername",$scope.account.username);
-        acc.then(function(response) {
-            alert(response.data);
-            $window.location.href = '/logIn.html';
-        });
+        if($scope.account.password != $scope.password2){
+            alert("Parolalar uyuşmamaktadır !")
+        }else {
+            var acc = $http.post("/account/create", $scope.account);
+            $window.sessionStorage.setItem("AccUsername",$scope.account.username);
+            acc.then(function (response) {
+                $window.location.href = '/logIn.html';
+            });
+        }
     }
 });
 
