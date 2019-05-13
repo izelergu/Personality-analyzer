@@ -21,9 +21,9 @@ public class AccountService {
 
         return accountRepository.findAll();
     }
-    public List <Account> login(){
+    public Account login(String username){
 
-        return accountRepository.findAll();
+        return accountRepository.findAccountByUsername(username);
     }
 
     public Account findAccountByUsername(String username){
@@ -34,7 +34,4 @@ public class AccountService {
         accountRepository.save(acc);
     }
 
-    public Account findUserByUsername(String Username){
-        return accountRepository.findAccountByUsername(Username);
-    }
 }

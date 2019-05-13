@@ -19,6 +19,10 @@ public class DetailService {
         return detailRepository.findDetailByUsername(username);
     }
 
+    public Detail findDetailById(String id){
+        return detailRepository.findDetailById(id);
+    }
+
     public void update(Detail detail) {
         detailRepository.save(detail);
     }

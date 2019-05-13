@@ -8,5 +8,6 @@ import org.springframework.stereotype.Repository;
 public interface DetailRepository extends MongoRepository <Detail, String>{
 
     Detail findDetailByUsername(String username);
+    Detail findDetailById(String id);
 
 }

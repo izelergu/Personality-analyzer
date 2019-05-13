@@ -22,4 +22,8 @@ public class ResultService {
     public void create (Result result){
         resultRepository.save(result);
     }
+
+    public void update(Result result) {
+        resultRepository.save(result);
+    }
 }

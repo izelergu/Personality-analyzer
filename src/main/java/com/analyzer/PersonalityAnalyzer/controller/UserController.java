@@ -60,7 +60,11 @@ public class UserController {
     @ResponseBody
     public StringResponse analyzeButton(@PathVariable String username){
         User usr = null;
-        String returnMessage = zemberekCon.getTweets(username);
+        List<Object> tweepyResponse = zemberekCon.getTweets(username);
+        String returnMessage = tweepyResponse.get(0).toString();
+        String detail_id= tweepyResponse.get(1).toString();
+        String result_id = "";
+        StringResponse sr = new StringResponse(returnMessage);
 
         if(returnMessage.equals("Başarılı")) {
             usr = userService.findUserByUsername(username);
@@ -68,20 +72,25 @@ public class UserController {
             List<String> tweets = (List<String>)returnValues.get(0);
             int countDelete = (int)returnValues.get(1);
             int countRT = (int)returnValues.get(2);
-            Detail detail = detailController.findDetailByUsername(username);
+            Detail detail = detailController.findDetailById(detail_id);
             detail.setNumberOfRT(countRT);
             detail.setNumberOfAnalyzedTweets(tweets.size());
             detailController.update(detail);
             usr.setPreprocessedTweets(tweets);
             update(usr);
-            zemberekCon.findWordgroups(usr.getUsername());
-            callPrediction(username);
+            zemberekCon.findWordgroups(usr.getUsername(), detail_id);
+            result_id = callPrediction(username);
+            Result result = resultController.findResultById(result_id);
+            result.setDetail_id(detail_id);
+            resultController.update(result);
+            sr.setData(result_id);
         }
-        return new StringResponse(returnMessage);
+        return sr;
     }
 
-    private void callPrediction(String username) {
+    private String callPrediction(String username) {
         LOGGER.info("Prediction function started for " + username);
+        String result_id = "";
         //liwcApp.py
         try {
             String line;
@@ -89,6 +98,8 @@ public class UserController {
             BufferedReader bri = new BufferedReader
                     (new InputStreamReader(p.getInputStream()));
             while ((line = bri.readLine()) != null) {
+                if(line.contains("result_id:"))
+                    result_id = line.split(":")[1];
                 System.out.println(line);
             }
             bri.close();
@@ -97,5 +108,6 @@ public class UserController {
         } catch (Exception err) {
             err.printStackTrace();
         }
+        return result_id;
     }
 }

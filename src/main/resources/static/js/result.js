@@ -9,9 +9,11 @@ app.controller('ResultCtrl', function($scope,$http,$window) {
 
     $scope.getResults = function () {
         $scope.isLoading = false;
-        var res = $http.get('/Result/getResult/'+ $scope.username);
+        var res = $http.get('/Result/getResultById/'+ $window.sessionStorage.getItem('result_id'));
         res.then(function (response) {
             $scope.result = response.data;
+            $window.sessionStorage.setItem("detail_id", $scope.result.detail_id);
+            console.log($scope.result.detail_id)
             $scope.findAccountByUsername();
         });
     }

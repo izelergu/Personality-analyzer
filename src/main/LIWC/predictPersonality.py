@@ -27,7 +27,6 @@ def main():
             df[splited[0]] = float(splited[1])
 
         # Prediction of Personalities
-        print (len(df.columns))
         extraversion_value = extraversion_tree.predict(df)
         aggreeableness_value = aggreeableness_knn.predict(df)
         concientiousnes_value = concientiousnes_random_forest.predict(df)
@@ -36,17 +35,12 @@ def main():
 
         # Predicted Personalities are updated on DB
         result = col_result.find({'username': sys.argv[1]})
-        if result.count() is not 0:
-            updateDoc = {"username": sys.argv[1]}
-            results = {"$set": {"opennes": opennes_value[0], "extraversion": extraversion_value[0], "neuroticism": neuroticism_value[0], "conscientiousness": concientiousnes_value[0], "aggreeableness": aggreeableness_value[0]}}
-            doc = col_result.update_one(updateDoc, results)
-            print("Result Updated: " + str(updateDoc))
-        else:
-            results = {"username": sys.argv[1], "opennes": opennes_value[0], "extraversion": extraversion_value[0],
-                                "neuroticism": neuroticism_value[0], "conscientiousness": concientiousnes_value[0],
-                                "aggreeableness": aggreeableness_value[0]}
-            col_result.insert_one(results)
-            print("Result Inserted: " + str(results))
+        results = {"username": sys.argv[1], "opennes": opennes_value[0], "extraversion": extraversion_value[0],
+                            "neuroticism": neuroticism_value[0], "conscientiousness": concientiousnes_value[0],
+                            "aggreeableness": aggreeableness_value[0]}
+        resuld_id = col_result.insert_one(results)
+        print("result_id:" + str(resuld_id.inserted_id))
+        print("Result Inserted: " + str(results))
     else:
         print("There is no user as " + sys.argv[1])
 

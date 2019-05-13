@@ -33,4 +33,11 @@ public class ResultController {
         return HttpStatus.OK;
     }
 
+    @RequestMapping(path="/update", method = RequestMethod.POST, consumes = "application/json")
+    public @ResponseBody
+    HttpStatus update (@RequestBody Result result){
+        resultService.update(result);
+        return HttpStatus.OK;
+    }
+
 }

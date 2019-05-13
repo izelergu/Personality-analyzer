@@ -3,7 +3,7 @@ from collections import Counter
 import liwc
 import sys
 import pymongo
-import pandas as pd
+from bson.objectid import ObjectId
 
 myclient = pymongo.MongoClient(
     "mongodb+srv://ismailyankayis:2430zcbg@twitterpersonalityanalyzer-aeniz.mongodb.net/admin")
@@ -60,8 +60,9 @@ def determineCategories(usr):
         if cat not in ['humans', 'anger', 'see', 'bio', 'health']: #bu gruplar kullanılmadığı için eklenmedi. ama data sette bu değerler varken normalize ediğildği için değerleri sum'a eklendi.
             catList.append(cat + "," + str(("%.3f" % normalized)))
 
-    userDetail = col_Detail.find_one({"username": sys.argv[1]})
-    updateDoc = {"username": sys.argv[1]}
+    print(ObjectId(sys.argv[2]))
+    userDetail = col_Detail.find_one({"_id": ObjectId(sys.argv[2])})
+    updateDoc = {"_id": ObjectId(sys.argv[2])}
     if userDetail is not None:
         details = {"$set": {"numberofWordsUsed": totalWords, "numberOfWordsAnalyzed": UsedWords }}
         doc2 = col_Detail.update_one(updateDoc, details)

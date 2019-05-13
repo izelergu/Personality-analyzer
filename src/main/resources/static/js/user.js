@@ -6,7 +6,8 @@ app.controller('UserCtrl', function($scope,$http,$window) {
     $scope.username = "";
     $scope.userId = "";
     $scope.detail = {};
-    $scope.result = {};
+    $scope.resuld_id = "";
+    $scope.resultList = [];
     $scope.isLoading = false;
     $scope.errorMessage = "";
     $scope.account = {};
@@ -20,13 +21,16 @@ app.controller('UserCtrl', function($scope,$http,$window) {
         usr.then(function (response) {
             $scope.account = response.data;
             $window.sessionStorage.setItem("AccUsername",$scope.account.username);
+            for (var i = 0; i < $scope.account.history.length; i++) {
+                $scope.findResultById($scope.account.history[i]);
+            }
         });
     }
 
     $scope.findResultById = function(id){
         var usr = $http.get('/Result/getResultById/' + id);
         usr.then(function (response) {
-            $scope.result = response.data;
+            $scope.resultList.push(response.data);
         });
     }
 
@@ -43,31 +47,22 @@ app.controller('UserCtrl', function($scope,$http,$window) {
         usrResponse.then(function (response) {
             var stringResponse = response.data;
             $scope.errorMessage = stringResponse.response;
+            $scope.resuld_id = stringResponse.data;
+            if($scope.resuld_id != null)
+                $window.sessionStorage.setItem("result_id",$scope.resuld_id);
             if($scope.errorMessage === "Başarılı") {
                 $scope.errorMessage = "";
                 $window.sessionStorage.setItem("username",$scope.username);
                 $window.sessionStorage.setItem("isLoading",$scope.isLoading);
                 $scope.username = $window.sessionStorage.getItem("username");//session
                 $scope.detail.username = $scope.username;
-                $scope.createDetail($scope.detail);
+                //$scope.findAccountByUsername($scope.result.id); $scope.isLoading = true;
                 $window.location.href = '/resultPage.html';
             }
             else {
                 $scope.isLoading = false;
                 alert($scope.errorMessage);
             }
-        });
-    }
-
-    $scope.createDetail = function(){
-        var det = $http.post('/Detail/Create/', $scope.detail);
-        det.then(function(response){
-        });
-    }
-
-    $scope.createResult = function(){
-        var res = $http.post('/Result/Create/', $scope.result);
-        res.then(function(response){
         });
     }
 
