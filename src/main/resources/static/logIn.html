@@ -8,6 +8,9 @@
 <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
 <script src="/js/login.js"></script>
 
+<!-- Custom styles for this template -->
+<link href="/css/landing-page.min.css" rel="stylesheet">
+
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/login.css">
 <link rel="stylesheet" href="/css/sidebar.css">
@@ -42,47 +45,46 @@
     </nav>
 </div>
 
-<header class="masthead text-white text-center align-text-top" style="background-color:white;background:url(/img/personality_7.jpg)no-repeat center center">
-<div ng-app="logIn" class="login-form" ng-controller="loginCtrl as recap" style="background-color: transparent">
-    <form name="recap.signupForm" ng-submit="recap.signup()" method="POST" >
-        <h2 class="text-center">Sign in</h2>
+<header class="masthead text-white text-center align-text-top" style="background-color:white;background:url(/img/personality_2.jpg)no-repeat center center">
+    <div ng-app="logIn" class="login-form" ng-controller="loginCtrl as recap" style="background-color: transparent">
+        <form name="recap.signupForm" ng-submit="recap.signup()" method="POST" >
+            <h2 class="text-center" style="color: #adb5bd">Sign in</h2>
 
-        <div class="text-center social-btn">
-            <button class="btn btn-danger btn-block" ng-click="onGoogleLogin()"><i class="fa fa-google"></i> Sign in
-                with
-                <b>Google</b></button>
-        </div>
-
-        <div class="or-seperator"><i>or</i></div>
-
-        <div class="form-group">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                <input type="text" class="form-control" name="username" placeholder="Username" required="required"
-                       ng-model="account.username">
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input type="text" class="form-control" name="username" placeholder="Username" required="required"
+                           ng-model="account.username">
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                <input type="password" class="form-control" name="password" placeholder="Password" required="required"
-                       ng-model="account.password">
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <input type="password" class="form-control" name="password" placeholder="Password" required="required"
+                           ng-model="account.password">
+                </div>
             </div>
+
+            <div theme="clean" vc-recaptcha
+                 key="'6Lc_9mAUAAAAAOgsOoGtGJVE6Xcz511BsPV8x9fy'" style="margin-bottom:10px"></div>
+
+            <button class="btn btn-success btn-block login-btn" ng-click="login()" ng-model="login"  style="background-color: black;border-color: black" >Sign in</button>
+            <div class="or-seperator" style="color:#adb5bd"><i>or</i></div>
+            <div class="text-center social-btn">
+                <button class="btn btn-danger btn-block" ng-click="onGoogleLogin()"><i class="fa fa-google"></i> Sign in
+                    with
+                    <b>Google</b></button>
+            </div>
+
+        </form>
+
+        <!-----------google log in test------------>
+        <h4>{{gmail.email}}</h4>
+
+        <div class="hint-text small">Don't have an account? <a href="/signin.html" class="text-success">Register Now!</a>
         </div>
-
-        <div theme="clean" vc-recaptcha
-             key="'6Lc_9mAUAAAAAOgsOoGtGJVE6Xcz511BsPV8x9fy'" style="margin-bottom:10px"></div>
-
-        <button class="btn btn-success btn-block login-btn" ng-click="login()" ng-model="login"  style="background-color: black" >Sign in</button>
-    </form>
-
-    <!-----------google log in test------------>
-    <h4>{{gmail.email}}</h4>
-
-    <div class="hint-text small">Don't have an account? <a href="/signin.html" class="text-success">Register Now!</a>
     </div>
-</div>
 </header>
 </body>
 </html>

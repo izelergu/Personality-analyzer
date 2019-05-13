@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -48,65 +48,311 @@
     </nav>
 </div>
 <!-- Masthead -->
-<header class="masthead text-white text-center align-text-top" style="background-color:white;background:url(/img/personality_7.jpg)no-repeat center center" ng-app="ResultApp" ng-controller="ResultCtrl" ng-init="getResults()">
+<header class="masthead text-white text-center" style="background-color:white;background:url(/img/personality_2.jpg)no-repeat center center" ng-app="ResultApp" ng-controller="ResultCtrl" ng-init="getResults()">
     <div class="overlay"></div>
     <div class="container">
-        <div class="col-12 col-md-3">
-            <button ng-click="showDetails()" type="submit" class="btn btn-block btn-lg btn-primary" style="background-color: black;border-color: black;width:160px;margin-left:880px">Details >></button>
+            <!-- News jumbotron -->
+            <div class="jumbotron text-center hoverable p-4" ng-if="result.opennes == 'Uygun'" style="background-color:#5cb85c">
+                <!-- Grid row -->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <!-- Featured image -->
+                        <div>
+                            <p>Deneyime Açıklık</p>
+                            <p>{{result.opennes}}</p>
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-7 text-md-left ml-3 mt-3">
+                        <p>Çok yaratıcı.</p>
+                        <p>Yeni şeyler denemeye açık.</p>
+                        <p>Zorluklarla mücadele etmeye odaklı.</p>
+                        <p>Soyut kavramlar hakkında düşünmeyi sever.</p>
+                    </div>
+                    <!-- Grid column -->
+                </div><!-- Grid row -->
+            </div>
+            <!-- News jumbotron -->
+            <div class="col-md-4 offset-md-1 mx-3 my-3">
+                <img src="/img/logo_developers.png" style="height: 200px;width: 250px" class="img-fluid" alt="Sample image for first version of blog listing">
+            </div>
+                <!-- Grid row -->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <!-- Featured image -->
+                        <div>
+                            <p>Deneyime Açıklık</p>
+                            <p>{{result.opennes}}</p>
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-7 text-md-left ml-3 mt-3">
+                        <p>Değişiklikleri sevmez.</p>
+                        <p>Yeni şeylerden zevk almaz.</p>
+                        <p>Yeni fikirlere direnir.</p>
+                        <p>Çok yaratıcı değildir.</p>
+                        <p>Soyut veya teorik kavramları sevmez.</p>
+                    </div>
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <img src="/img/logo_developers.png" style="height: 200px;width: 250px" class="img-fluid" alt="Sample image for first version of blog listing">
+                    </div>
+                    <!-- Grid column -->
+                </div><!-- Grid row -->
+            </div>
+            <!-- News jumbotron -->
+            <div class="jumbotron text-center hoverable p-4"  ng-if="result.extraversion == 'Uygun'"  style="background-color:#5cb85c">
+                <!-- Grid row -->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <!-- Featured image -->
+                        <div>
+                            <p>Dışa Dönüklük</p>
+                            <p>{{result.extraversion}}</p>
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-7 text-md-left ml-3 mt-3">
+                        <p>İlgi odağı olmaktan hoşlanır.</p>
+                        <p>Konuşma başlatmayı sever.</p>
+                        <p>Yeni insanlarla tanışmaktan hoşlanır.</p>
+                        <p>Geniş sosyal arkadaş çevresi ve tanıdıklar var.</p>
+                        <p>Kolayca yeni arkadaş edinebilir.</p>
+                        <p>Diğer insanların yanındayken enerjik hisseder.</p>
+                        <p>İnsanlar hakkında bir şeyler söylemeden önce düşünür.</p>
+                    </div>
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <img src="/img/logo_developers.png" style="height: 200px;width: 250px" class="img-fluid" alt="Sample image for first version of blog listing">
+                    </div>
+                    <!-- Grid column -->
+                </div><!-- Grid row -->
+            </div>
+            <!-- News jumbotron -->
+            <div class="jumbotron text-center hoverable p-4"  ng-if="result.extraversion == 'Uygun Değil'"  style="background-color:#d9534f">
+                <!-- Grid row -->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <!-- Featured image -->
+                        <div>
+                            <p>Dışa dönüklük</p>
+                            <p>{{result.extraversion}}</p>
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-7 text-md-left ml-3 mt-3">
+                        <p>Yalnızlığı tercih eder.</p>
+                        <p>Sosyalleşmeyi zor bulur.</p>
+                        <p>Konuşma başlatmayı zor bulur.</p>
+                        <p>Kısa sohbetlerden hoşlanmıyor</p>
+                        <p>Konuşmadan önce bir şeyleri dikkatlice düşünür.</p>
+                        <p>İlgi odağı olmayı sevmez.</p>
+                    </div>
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <img src="/img/logo_developers.png" style="height: 200px;width: 250px" class="img-fluid" alt="Sample image for first version of blog listing">
+                    </div>
+                    <!-- Grid column -->
+                </div><!-- Grid row -->
+            </div>
+            <div class="jumbotron text-center hoverable p-4"  ng-if="result.aggreeableness == 'Uygun'"  style="background-color:#5cb85c">
+                <!-- Grid row -->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <!-- Featured image -->
+                        <div>
+                            <p>Uyumluluk</p>
+                            <p>{{result.aggreeableness}}</p>
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-7 text-md-left ml-3 mt-3">
+                        <p>Başka insanlara çok fazla ilgi gösterir.<p>
+                        <p>Başkalarını önemser.</p>
+                        <p>Empati kurar ve diğer insanlar için endişe eder.</p>
+                        <p>Başkalarının mutlu olması için yardım etmeyi ve katkıda bulunmayı sever.</p>
+                        <p>Yardıma muhtaç olanlara yardım eder.</p>
+                    </div>
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <img src="/img/logo_developers.png" style="height: 200px;width: 250px" class="img-fluid" alt="Sample image for first version of blog listing">
+                    </div>
+                    <!-- Grid column -->
+                </div><!-- Grid row -->
+            </div>
+            <div class="jumbotron text-center hoverable p-4"  ng-if="result.aggreeableness == 'Uygun Değil'"  style="background-color:#d9534f">
+                <!-- Grid row -->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <!-- Featured image -->
+                        <div>
+                            <p>Uyumluluk</p>
+                            <p>{{result.aggreeableness}}</p>
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-7 text-md-left ml-3 mt-3">
+                        <p>Başkalarına az ilgi gösterir.</p>
+                        <p>Başkalarının nasıl hissettiği umrunda değildir.</p>
+                        <p>Diğer insanların sorunlarına çok az ilgi duyar.</p>
+                        <p>Başkalarına hakaret eder ve aşağılar.</p>
+                        <p>İstediklerini elde etmek için başkalarını manipüle eder.</p>
+                    </div>
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <img src="/img/logo_developers.png" style="height: 200px;width: 250px" class="img-fluid" alt="Sample image for first version of blog listing">
+                    </div>
+                    <!-- Grid column -->
+                </div><!-- Grid row -->
+            </div>
+            <div class="jumbotron text-center hoverable p-4"  ng-if="result.neuroticism == 'Uygun'"  style="background-color:#5cb85c">
+                <!-- Grid row -->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <!-- Featured image -->
+                        <div>
+                            <p>Nevrotiklik</p>
+                            <p>{{result.neuroticism}}</p>
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+                    <div class="col-md-7 text-md-left ml-3 mt-3">
+                        <p>Çok fazla stres yaşar.</p>
+                        <p>Birçok farklı şey hakkında endişelenir.</p>
+                        <p>Kolayca üzülür.</p>
+                        <p>DRuh halindeki dramatik değişimleri deneyimler.</p>
+                        <p>Endişeli hisseder.</p>
+                        <p>Stresli olaylardan sonra kendine toplamak için çabalar.</p>
+                    </div>
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <img src="/img/logo_developers.png" style="height: 200px;width: 250px" class="img-fluid" alt="Sample image for first version of blog listing">
+                    </div>
+                    <!-- Grid column -->
+                </div><!-- Grid row -->
+            </div>
+            <div class="jumbotron text-center hoverable p-4"  ng-if="result.neuroticism == 'Uygun Değil'"  style="background-color:#d9534f">
+                <!-- Grid row -->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <!-- Featured image -->
+                        <div>
+                            <p>Nevrotiklik</p>
+                            <p>{{result.neuroticism}}</p>
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-7 text-md-left ml-3 mt-3">
+                        <p>Duygusal olarak istikrarlıdır.</p>
+                        <p>Stresle başa çıkabilir</p>
+                        <p>Nadiren üzgün veya depresyonda hisseder.</p>
+                        <p>Çok endişelenmez.</p>
+                        <p>Genelde çok rahattır.</p>
+                    </div>
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <img src="/img/logo_developers.png" style="height: 200px;width: 250px" class="img-fluid" alt="Sample image for first version of blog listing">
+                    </div>
+                    <!-- Grid column -->
+                </div><!-- Grid row -->
+            </div>
+            <div class="jumbotron text-center hoverable p-4"  ng-if="result.conscientiousness == 'Uygun'"  style="background-color:#d9534f">
+                <!-- Grid row -->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <!-- Featured image -->
+                        <div>
+                            <p >Sorumluluk</p>
+                            <p>{{result.conscientiousness}}</p>
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <img src="/img/logo_developers.png" style="height: 200px;width: 250px" class="img-fluid" alt="Sample image for first version of blog listing">
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-7 text-md-left ml-3 mt-3">
+                        <p>Hazırlık için çok zaman harcar.</p>
+                        <p>Önemli işleri hemen bitirir.</p>
+                        <p>Detaylara dikkat eder.</p>
+                        <p>Ayarlanmış bir zamanlamaya sahip olmaktan hoşlanır.</p>
+                    </div>
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <img src="/img/logo_developers.png" style="height: 200px;width: 250px" class="img-fluid" alt="Sample image for first version of blog listing">
+                    </div>
+                    <!-- Grid column -->
+                </div><!-- Grid row -->
+            </div>
+            <div class="jumbotron text-center hoverable p-4"  ng-if="result.conscientiousness == 'Uygun Değil'"  style="background-color: #5cb85c">
+                <!-- Grid row -->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <!-- Featured image -->
+                        <div>
+                            <p >Sorumluluk</p>
+                            <p>{{result.conscientiousness}}</p>
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-7 text-md-left ml-3 mt-3">
+                        <p>Yapı ve programları beğenmez.</p>
+                        <p>Dağınıktır ve ilgilenmesi gereken şeylerle ilgilenmez.</p>
+                        <p>Aldığı şeyleri geri getirmez veya ait oldukları yere geri koyamaz.</p>
+                        <p>Önemli işleri erteler.</p>
+                        <p>Gerekli veya atanmış görevleri tamamlayamaz.</p>
+                    </div>
+                    <div class="col-md-7 text-md-left ml-3 mt-3">
+                        <img src="/img/logo_developers.png" style="height: 200px;width: 250px" class="img-fluid" alt="Sample image for first version of blog listing">
+                    </div>
+                    <!-- Grid column -->
+                </div><!-- Grid row -->
+            </div>
+        <div class="form-row">
+            <div class="col-12 col-md-3">
+                <button ng-click="showDetails()" type="submit" class="btn btn-block btn-lg btn-primary" style="background-color: black;border-color: black;width:160px">Detay>></button>
+            </div>
         </div>
-        <div class="jumbotron" style="background:transparent;width:1500px;margin-top:0px">
-            <div class="jumbotron"style="background-color:#5cb85c;height: 285px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="result.opennes == 'Uygun'" >
-                <p>Deneyime Açıklık</p>
-                <p>{{result.opennes}}</p>
-                <p></p>
-            </div>
-            <div class="jumbotron"style="background-color:#d9534f;height: 285px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="result.opennes == 'Uygun değil'" >
-                <p>Deneyime Açıklık</p>
-                <p>{{result.opennes}}</p>
-                <p></p>
-            </div>
-            <div class="jumbotron" style="background-color:#5cb85c;height: 285px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="result.extraversion == 'Uygun'" >
-                <p>Dışa Dönüklük</p>
-                <p>{{result.extraversion}}</p>
-                <p></p>
-            </div>
-            <div class="jumbotron" style="background-color:#d9534f;height: 285px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="result.extraversion == 'Uygun değil'">
-                <p>Dışa Dönüklük</p>
-                <p>{{result.extraversion}}</p>
-                <p></p>
-            </div>
-            <div class="jumbotron" style="background-color:#5cb85c;height: 285px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="result.aggreeableness == 'Uygun'">
-                <p>Uyumluluk</p>
-                <p>{{result.aggreeableness}}</p>
-                <p>hskfjlsnldfkmşmnf</p>
-            </div>
-            <div class="jumbotron" style="background-color:#d9534f;height: 285px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="result.aggreeableness == 'Uygun değil'">
-                <p>Uyumluluk</p>
-                <p>{{result.aggreeableness}}</p>
-                <p></p>
-            </div>
-            <div class="jumbotron" style="background-color:#5cb85c;height: 285px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="result.neuroticism == 'Uygun'">
-                <p>Nevrotiklik</p>
-                <p>{{result.neuroticism}}</p>
-                <p></p>
-            </div>
-            <div class="jumbotron" style="background-color:#d9534f;height: 285px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="result.neuroticism == 'Uygun değil'">
-                <p>Nevrotiklik</p>
-                <p>{{result.neuroticism}}</p>
-                <p></p>
-            </div>
-            <div class="jumbotron" style="background-color:#5cb85c;height: 285px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="result.conscientiousness == 'Uygun'">
-                <p >Sorumluluk</p>
-                <p>{{result.conscientiousness}}</p>
-                <p></p>
-            </div>
-            <div class="jumbotron" style="background-color:#d9534f;height: 285px;width: 200px;margin:5px;padding:5px;float:left;" ng-if="result.conscientiousness == 'Uygun değil'">
-                <p >Sorumluluk</p>
-                <p>{{result.conscientiousness}}</p>
-                <p></p>
-            </div>
-        </div>
-        <h1 class="mb-5">{{username}} - Analiz Sonuçları</h1>
     </div>
 </header>
 </body>
