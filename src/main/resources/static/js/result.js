@@ -36,4 +36,8 @@ app.controller('ResultCtrl', function($scope,$http,$window) {
 
         });
     }
+    $scope.logout = function(){
+        $window.sessionStorage.setItem("AccUsername","");
+        $window.sessionStorage.setItem("username","");
+    }
 });
