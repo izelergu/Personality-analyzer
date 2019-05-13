@@ -17,7 +17,12 @@ public class AccountService {
         accountRepository.save(account);
     }
 
+    public List <Account> findAll (){
+
+        return accountRepository.findAll();
+    }
     public List <Account> login(){
+
         return accountRepository.findAll();
     }
 
@@ -27,5 +32,9 @@ public class AccountService {
 
     public void update(Account acc) {
         accountRepository.save(acc);
+    }
+
+    public Account findUserByUsername(String Username){
+        return accountRepository.findAccountByUsername(Username);
     }
 }

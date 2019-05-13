@@ -2,7 +2,7 @@ var app = angular.module('logIn', ['vcRecaptcha']);
 app.controller("loginCtrl", function ($http, $scope, vcRecaptchaService, $window) {
     var vm = this;
     var i = 0;
-    var isAcc = false;
+    $scope.isAcc = false;
     $scope.gmail= {
         username: "",
         email: ""
@@ -45,22 +45,28 @@ app.controller("loginCtrl", function ($http, $scope, vcRecaptchaService, $window
         var emplog = $http.get('/account/login');
         emplog.then(function (response) {
             $scope.accountList = response.data;
-             for(i =0;i<$scope.accountList.length;i++){
-                if($scope.accountList[i].username == $scope.account.username && $scope.accountList[i].password == $scope.account.password){
-                    isAcc = true;
-                    if(vcRecaptchaService.getResponse() !== "" && isAcc == true) {
+            for(i =0;i<$scope.accountList.length;i++){
+                if($scope.accountList[i].username === $scope.account.username){
+                    var isPass = {};
+                    isPass.response = "false";
+                    var pass = $http.get('/account/checkPassword/'+ $scope.account.password +'/'+$scope.account.username);
+                    pass.then(function (response) {
+                        isPass = response.data;
+                    if(isPass.response == "true")
+                        $scope.isAcc = true;
+                    if(vcRecaptchaService.getResponse() !== "" && $scope.isAcc == true) {
                         console.log(vcRecaptchaService.getResponse());
                         $window.location.href = '/homePage.html';
                         $window.sessionStorage.setItem("AccUsername",$scope.account.username);
                     }
-                    break;
+                    });
                 }
             }
-            if(isAcc == false){
-                 alert("Username or password is incorrect");
+            if($scope.isAcc == false){
+                alert("Username or password is incorrect");
             }
         });
-
     }
+
 });
 

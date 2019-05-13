@@ -12,6 +12,7 @@ app.controller('UserCtrl', function($scope,$http,$window) {
     $scope.account = {};
     $scope.id = "";
     $scope.password2 = "";
+    $scope.accountList = [];
 
     $scope.pageOpen = function(){
         $scope.account.username = $window.sessionStorage.getItem("AccUsername");
@@ -49,7 +50,6 @@ app.controller('UserCtrl', function($scope,$http,$window) {
                 $scope.username = $window.sessionStorage.getItem("username");//session
                 $scope.detail.username = $scope.username;
                 $scope.createDetail($scope.detail);
-                //$scope.findAccountByUsername($scope.result.id); $scope.isLoading = true;
                 $window.location.href = '/resultPage.html';
             }
             else {
@@ -75,13 +75,32 @@ app.controller('UserCtrl', function($scope,$http,$window) {
         if($scope.account.password != $scope.password2){
             alert("Parolalar uyuşmamaktadır !")
         }else {
-            $scope.account.history = [];
-            var acc = $http.post("/account/create", $scope.account);
-            $window.sessionStorage.setItem("AccUsername",$scope.account.username);
-            acc.then(function (response) {
-                $window.location.href = '/logIn.html';
+            var acc1 = $http.get("/account/findAll");
+            acc1.then(function (response) {
+                $scope.accountList = response.data;
+                var i;
+                var flag = true;
+                for (i = 0; i < $scope.accountList.length; i++) {
+                    if($scope.accountList[i].username == $scope.account.username || $scope.accountList[i].email == $scope.account.email){
+                        flag = false;
+                        alert("Bu kullanıcı adı veya email ile kayıtlı kişi var !");
+                    }
+                }
+                if(flag == true) {
+                    $scope.account.history = [];
+                    var acc = $http.post("/account/create", $scope.account);
+                    $window.sessionStorage.setItem("AccUsername", $scope.account.username);
+                    acc.then(function (response) {
+                        $window.location.href = '/logIn.html';
+                    });
+                }
             });
         }
+    }
+
+    $scope.logout = function(){
+        $window.sessionStorage.setItem("AccUsername","");
+        $window.sessionStorage.setItem("username","");
     }
 });
 

@@ -29,7 +29,7 @@
 
 </head>
 
-<body>
+<body ng-app="UserApp" ng-controller="UserCtrl">
 <!-- Navigation -->
 <div>
     <div class="collapse" id="navbarToggleExternalContent">
@@ -38,6 +38,7 @@
             <a class="navbar" style="color: white" href="aboutPage.html">Personality Analyzer Nedir ?</a>
             <a class="navbar" style="color: white" href="developerteamPage.html">Biz Kimiz ?</a>
             <a class="navbar" style="color: white" href="profile.html">Profil</a>
+            <a class="navbar" style="color: white" href="logIn.html" ng-click="logout()">Log out</a>
         </div>
     </div>
     <nav class="navbar navbar-dark bg-dark">
@@ -48,7 +49,7 @@
 </div>
 
 <!-- Masthead -->
-<header class="masthead text-center text-white" style="background-color:white;background:url(/img/personality_2.jpg)no-repeat center center">
+<header class="masthead text-center text-white" style="background-color:white;background:url(/img/personality_7.jpg)no-repeat center center">
     <div class="overlay"></div>
     <div class="container">
         <!-- News jumbotron -->

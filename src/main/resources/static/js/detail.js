@@ -11,4 +11,9 @@ app.controller('DetailCtrl', function($scope,$http,$window) {
             //$window.sessionStorage.clear();
         });
     }
+
+    $scope.logout = function(){
+        $window.sessionStorage.setItem("AccUsername","");
+        $window.sessionStorage.setItem("username","");
+    }
 });
