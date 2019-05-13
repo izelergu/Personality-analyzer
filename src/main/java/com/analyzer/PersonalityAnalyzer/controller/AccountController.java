@@ -19,10 +19,6 @@ public class AccountController {
     @Autowired
     AccountService accountService;
 
-    @RequestMapping(path="/findUserByUsername/{username}", method = RequestMethod.GET)
-    public @ResponseBody Account findUserByUsername(@PathVariable String username){
-        return accountService.findUserByUsername(username);
-    }
 
     @Bean
     public PasswordEncoder customPasswordEncoder() {
@@ -55,6 +51,7 @@ public class AccountController {
     StringResponse checkPassword (@PathVariable String password, @PathVariable String username){
         boolean flag;
         Account account = findAccountByUsername(username);
+        if(account == null)  return new StringResponse("false");
         flag = BCrypt.checkpw(password, account.getPassword());
         if(flag)
             return new StringResponse("true");
@@ -67,9 +64,9 @@ public class AccountController {
         return accountService.findAll();
     }
 
-    @RequestMapping(path = "/login", method = RequestMethod.GET)
-    public @ResponseBody List<Account> login (){
-        return accountService.login();
+    @RequestMapping(path = "/login/{username}", method = RequestMethod.GET)
+    public @ResponseBody Account login (@PathVariable String username){
+        return accountService.login(username);
     }
 
     @RequestMapping(path="/update", method = RequestMethod.POST, consumes = "application/json")

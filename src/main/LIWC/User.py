@@ -57,16 +57,11 @@ def main():
         col_User.insert_one(user)
         print("User Inserted: " + str(updateDoc))
 
-    # Insert or Update the details of the user
-    detailInstance = col_Detail.find({"username": sys.argv[1]})
-    if detailInstance.count() is not 0:
-        detail = {"$set": {'firstTweetDate': first_tweet_date, 'lastTweetDate': last_tweet_date, 'numberOfTweets': len(tweets)}}
-        doc2 = col_Detail.update_one(updateDoc, detail)
-        print("Detail Updated : " + str(updateDoc))
-    else:
-        detail = {'username': sys.argv[1], 'firstTweetDate': first_tweet_date, 'lastTweetDate': last_tweet_date, 'numberOfTweets': len(tweets), 'numberOfAnalyzedTweets': 0, 'numberOfRT': 0, 'numberofWordsUsed': 0, 'numberOfWordsAnalyzed': 0 }
-        col_Detail.insert_one(detail)
-        print("Detail Inserted: " + str(updateDoc))
+    # Insert the details of the user
+    detail = {'username': sys.argv[1], 'firstTweetDate': first_tweet_date, 'lastTweetDate': last_tweet_date, 'numberOfTweets': len(tweets), 'numberOfAnalyzedTweets': 0, 'numberOfRT': 0, 'numberofWordsUsed': 0, 'numberOfWordsAnalyzed': 0 }
+    detail_id = col_Detail.insert_one(detail)
+    print("detail_id:"+str(detail_id.inserted_id))
+    print("Detail Inserted: " + str(updateDoc))
 
 
     print("Authorized")

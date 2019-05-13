@@ -8,7 +8,7 @@ app.controller("loginCtrl", function ($http, $scope, vcRecaptchaService, $window
         email: ""
     };
 
-    $scope.accountList=[];
+    $scope.accountt=[];
 
     //If the recaptcha value is empty alert error else alert the recaptcha response
     vm.signup = function () {
@@ -42,30 +42,24 @@ app.controller("loginCtrl", function ($http, $scope, vcRecaptchaService, $window
     }
 
     $scope.login = function(){
-        var emplog = $http.get('/account/login');
-        emplog.then(function (response) {
-            $scope.accountList = response.data;
-            for(i =0;i<$scope.accountList.length;i++){
-                if($scope.accountList[i].username === $scope.account.username){
-                    var isPass = {};
-                    isPass.response = "false";
-                    var pass = $http.get('/account/checkPassword/'+ $scope.account.password +'/'+$scope.account.username);
-                    pass.then(function (response) {
-                        isPass = response.data;
-                    if(isPass.response == "true")
-                        $scope.isAcc = true;
-                    if(vcRecaptchaService.getResponse() !== "" && $scope.isAcc == true) {
-                        console.log(vcRecaptchaService.getResponse());
-                        $window.location.href = '/homePage.html';
-                        $window.sessionStorage.setItem("AccUsername",$scope.account.username);
-                    }
-                    });
-                }
+
+        var isPass = {};
+        var pass = $http.get('/account/checkPassword/'+ $scope.account.password +'/'+$scope.account.username);
+        pass.then(function (response) {
+            isPass = response.data;
+            if(isPass.response === "true")
+                $scope.isAcc = true;
+            if(vcRecaptchaService.getResponse() !== "" && $scope.isAcc === true) {
+                console.log(vcRecaptchaService.getResponse());
+                $window.location.href = '/homePage.html';
+                $window.sessionStorage.setItem("AccUsername",$scope.account.username);
             }
-            if($scope.isAcc == false){
+            else if($scope.isAcc === false){
                 alert("Username or password is incorrect");
             }
         });
+
+
     }
 
 });

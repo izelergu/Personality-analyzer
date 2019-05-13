@@ -19,6 +19,11 @@ public class DetailController {
         return detailService.findDetailByUsername(username);
     }
 
+    @RequestMapping(path="/getDetailsById/{id}", method = RequestMethod.GET)
+    public @ResponseBody Detail findDetailById (@PathVariable String id){
+        return detailService.findDetailById(id);
+    }
+
     @RequestMapping(path = "/Create", method = RequestMethod.POST, consumes = "application/json")
     public @ResponseBody HttpStatus create(@RequestBody Detail detail){
         if(findDetailByUsername(detail.getUsername()) == null)

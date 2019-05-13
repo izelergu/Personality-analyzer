@@ -73,36 +73,22 @@
                         <td>{{account.email}}</td>
                         <td></td>
                     </tr>
-                    <tr ng-repeat="temp in account.history" ng-if="account.history.length > 0">
-                        <td ng-if="account.history.length > 0">Analiz id</td >
-                        <td ng-init="findResultById(temp)" ng-if="account.history.length > 0">{{temp}}</td>
-                        <td ng-if="account.history.length > 0"></td>
-                        <tr ng-if="account.history.length > 0"></tr>
-                        <tr ng-if="account.history.length > 0"></tr>
-                        <td ng-if="account.history.length > 0"></td>
-                        <td ng-if="account.history.length > 0">Deneyime açıklık</td>
-                        <td ng-if="account.history.length > 0">{{result.opennes}}</td>
-                        <tr ng-if="account.history.length > 0"></tr>
-                        <tr ng-if="account.history.length > 0"></tr>
-                        <td ng-if="account.history.length > 0"></td>
-                        <td ng-if="account.history.length > 0">Dışa dönüklük</td>
-                        <td ng-if="account.history.length > 0">{{result.extraversion}}</td>
-                        <tr ng-if="account.history.length > 0"></tr>
-                        <tr ng-if="account.history.length > 0"></tr>
-                        <td ng-if="account.history.length > 0"></td>
-                        <td ng-if="account.history.length > 0">Sorumluluk</td>
-                        <td ng-if="account.history.length > 0">{{result.conscientiousness}}</td>
-                        <tr ng-if="account.history.length > 0"></tr>
-                        <tr ng-if="account.history.length > 0"></tr>
-                        <td ng-if="account.history.length > 0"></td>
-                        <td ng-if="account.history.length > 0">Duygusal Denge</td>
-                        <td ng-if="account.history.length > 0">{{result.neuroticism}}</td>
-                        <tr ng-if="account.history.length > 0"></tr>
-                        <tr ng-if="account.history.length > 0"></tr>
-                        <td ng-if="account.history.length > 0"></td>
-                        <td ng-if="account.history.length > 0">Uyumluluk</td>
-                        <td ng-if="account.history.length > 0">{{result.aggreeableness}}</td>
-                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <h1 class="mb-5" ng-if="resultList.length > 0">Analiz Geçmişi</h1>
+            <div class="table-responsive table-striped">
+                <table class="table table-sm table-dark"  ng-if="resultList.length > 0">
+                    <tbody ng-repeat="result in resultList" >
+                        <tr>
+                            <td class="text-center align-middle">{{result.username}}</td>
+                            <td class="text-center">Deneyime Açıklık<br>{{result.opennes}}</td>
+                            <td class="text-center">Dışa Dönüklük<br>{{result.extraversion}}</td>
+                            <td class="text-center">Sorumluluk<br>{{result.conscientiousness}}</td>
+                            <td class="text-center">Duygusal Denge<br>{{result.neuroticism}}</td>
+                            <td class="text-center">Uyumluluk<br>{{result.aggreeableness}}</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
