@@ -21,7 +21,7 @@ public class AccountController {
         return HttpStatus.OK;
     }
 
-    @RequestMapping(path="/getAccount/{username}", method = RequestMethod.GET)
+    @RequestMapping(path="/findAccountByUsername/{username}", method = RequestMethod.GET)
     public @ResponseBody Account findAccountByUsername (@PathVariable String username){
         return accountService.findAccountByUsername(username);
     }
@@ -29,6 +29,14 @@ public class AccountController {
     @RequestMapping(path = "/login", method = RequestMethod.GET)
     public @ResponseBody List<Account> login (){
         return accountService.login();
+    }
+
+
+    @RequestMapping(path="/update", method = RequestMethod.POST, consumes = "application/json")
+    public @ResponseBody
+    HttpStatus update (@RequestBody Account acc){
+        accountService.update(acc);
+        return HttpStatus.OK;
     }
 
 }
