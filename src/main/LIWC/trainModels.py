@@ -77,7 +77,7 @@ def trainDecisionTree(x=None, y=None, min_sample_in_leaf=None, output_filename='
     #tree.export_graphviz(dt, out_file='tree.dot', feature_names=x.columns)
     #pickle.dump(dt, open(output_filename, 'wb'))
     joblib.dump(dt, output_filename)
-    return sum_score / y.size)
+    return sum_score / y.size
 
 
 def trainRandomForest(x=None, y=None, number_of_trees=None, random_seed=None, output_filename='random_forest.mdl'):
