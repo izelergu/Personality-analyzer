@@ -18,7 +18,7 @@ import java.util.Random;
 
 public class ZemberekConnection {
 
-    private final int NUMBER_OF_TWEET = 25;
+    private final int NUMBER_OF_TWEET = 50;
 
     private Path lookupRoot = Paths.get("data/normalization");
     private Path lmFile = Paths.get("data/lm/lm.2gram.slm");
@@ -89,8 +89,8 @@ public class ZemberekConnection {
         WordAnalysis wa;
         int countRT = findRTCount(tweets);
         int countDeletedTweet = 0;
-        //tweets = chooseRandomTweet(tweets, NUMBER_OF_TWEET);
-        tweets = chooseInOrderTwets(tweets, NUMBER_OF_TWEET);
+        tweets = chooseRandomTweet(tweets, NUMBER_OF_TWEET);
+        //tweets = chooseInOrderTwets(tweets, NUMBER_OF_TWEET);
         String tweet = "";
         for (int i = 0; i < tweets.size(); i++) {
             splitedWords = tweets.get(i).split("\\s+"); // split the tweet word by word
@@ -221,17 +221,18 @@ public class ZemberekConnection {
 
         for (int i = 0; i < count; i++) {
             try {
+                if(i >= list.size()) break;
                 tweet = list.get(i);
                 tweet = normalizeSingleTweet(tweet);
                 if (tweet.split("\\s+").length > 0 && !tweet.equalsIgnoreCase("RT")) {
                     returnList.add(tweet);
                 } else {
                     countDeletedTweet++;
-                    i--;
+                    list.remove(i--);
                 }
             } catch (Exception e) {
                 countDeletedTweet++;
-                i--;
+                list.remove(i--);
             }
         }
         LOGGER.info(String.format("%d tweets added and %d tweets deleted", returnList.size(), countDeletedTweet));

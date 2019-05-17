@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/Detail")
 public class DetailController {
@@ -15,7 +17,8 @@ public class DetailController {
     DetailService detailService;
 
     @RequestMapping(path="/getDetails/{username}", method = RequestMethod.GET)
-    public @ResponseBody Detail findDetailByUsername (@PathVariable String username){
+    public @ResponseBody
+    List<Detail> findDetailByUsername (@PathVariable String username){
         return detailService.findDetailByUsername(username);
     }
 
@@ -29,7 +32,6 @@ public class DetailController {
         if(findDetailByUsername(detail.getUsername()) == null)
             detailService.create(detail);
         return HttpStatus.OK;
-
     }
 
     @RequestMapping(path="/update", method = RequestMethod.POST, consumes = "application/json")

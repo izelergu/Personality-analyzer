@@ -56,7 +56,6 @@ app.controller('UserCtrl', function($scope,$http,$window) {
                 $window.sessionStorage.setItem("isLoading",$scope.isLoading);
                 $scope.username = $window.sessionStorage.getItem("username");//session
                 $scope.detail.username = $scope.username;
-                //$scope.findAccountByUsername($scope.result.id); $scope.isLoading = true;
                 $window.location.href = '/resultPage.html';
             }
             else {

@@ -112,9 +112,9 @@ def trainRandomForest(x=None, y=None, number_of_trees=None, random_seed=None, ou
 def main():
     data = pd.read_csv("src/main/LIWC/models/dataset.csv")
     X = data.iloc[:, 2:-5] # 0,1 are index and username columns, last five columns are targets
-    trainKNN(x=X, y=data['Aggreeableness'], n=1, metric='chebyshev', weight='distance', output_filename='src/main/LIWC/models/aggreeableness_knn_model.mdl')
+    trainKNN(x=X, y=data['Aggreeableness'], n=2, metric='chebyshev', weight='distance', output_filename='src/main/LIWC/models/aggreeableness_knn_model.mdl')
     trainDecisionTree(x=X, y=data['Extraversion'], min_sample_in_leaf=13, output_filename='src/main/LIWC/models/extraversion_tree_model.mdl')
-    trainRandomForest(x=X, y=data['Concientiousnes'], number_of_trees=9, random_seed=13, output_filename='src/main/LIWC/models/concientiousnes_random_forest_model.mdl')
+    trainRandomForest(x=X, y=data['Concientiousnes'], number_of_trees=11, random_seed=15, output_filename='src/main/LIWC/models/concientiousnes_random_forest_model.mdl')
     trainKNN(x=X, y=data['Neuroticism'], n=2, metric='chebyshev', weight='distance', output_filename='src/main/LIWC/models/neuroticism_knn_model.mdl')
     trainDecisionTree(x=X, y=data['Opennes'], min_sample_in_leaf=6, output_filename='src/main/LIWC/models/opennes_tree_model.mdl')
     print('SUCCESSFUL!')

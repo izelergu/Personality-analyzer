@@ -5,6 +5,8 @@ import com.analyzer.PersonalityAnalyzer.repository.DetailRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class DetailService {
 
@@ -15,7 +17,7 @@ public class DetailService {
         detailRepository.save(detail);
     }
 
-    public Detail findDetailByUsername(String username){
+    public List<Detail> findDetailByUsername(String username){
         return detailRepository.findDetailByUsername(username);
     }
 

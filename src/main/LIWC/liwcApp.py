@@ -57,8 +57,7 @@ def determineCategories(usr):
     print("sum: " + str(sum))
     for cat in sorted(categoryCounts.keys()):
         normalized = categoryCounts[cat]/sum
-        if cat not in ['humans', 'anger', 'see', 'bio', 'health']: #bu gruplar kullanılmadığı için eklenmedi. ama data sette bu değerler varken normalize ediğildği için değerleri sum'a eklendi.
-            catList.append(cat + "," + str(("%.3f" % normalized)))
+        catList.append(cat + "," + str(("%.3f" % normalized)))
 
     print(ObjectId(sys.argv[2]))
     userDetail = col_Detail.find_one({"_id": ObjectId(sys.argv[2])})
