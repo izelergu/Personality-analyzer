@@ -1,7 +1,6 @@
 package com.analyzer.PersonalityAnalyzer.controller;
 
 import com.analyzer.PersonalityAnalyzer.ZemberekConnection;
-import com.analyzer.PersonalityAnalyzer.entity.Detail;
 import com.analyzer.PersonalityAnalyzer.entity.Result;
 import com.analyzer.PersonalityAnalyzer.entity.StringResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +21,6 @@ public class UserController {
 
     @Autowired
     UserService userService;
-
-    @Autowired
-    DetailController detailController;
 
     @Autowired
     ResultController resultController;
@@ -72,10 +68,6 @@ public class UserController {
             List<String> tweets = (List<String>)returnValues.get(0);
             int countDelete = (int)returnValues.get(1);
             int countRT = (int)returnValues.get(2);
-            Detail detail = detailController.findDetailById(detail_id);
-            detail.setNumberOfRT(countRT);
-            detail.setNumberOfAnalyzedTweets(tweets.size());
-            detailController.update(detail);
             usr.setPreprocessedTweets(tweets);
             update(usr);
             zemberekCon.findWordgroups(usr.getUsername(), detail_id);

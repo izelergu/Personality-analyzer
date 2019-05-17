@@ -5,8 +5,6 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn import tree
 from sklearn.externals import joblib
-import pickle
-
 
 def trainKNN(x=None, y=None, n=None, metric=None, weight=None, output_filename='output_knn.mdl'):
     if x is None:

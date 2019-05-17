@@ -33,15 +33,25 @@
 <body ng-app="UserApp" ng-controller="UserCtrl">
 <!-- Navigation -->
 <div>
-    <div class="collapse" id="navbarToggleExternalContent">
-        <div class="bg-dark p-4">
-            <a class="navbar" style="color: white" href="homePage.html">Analiz</a>
-            <a class="navbar" style="color: white" href="aboutPage.html">Personality Analyzer Nedir?</a>
-            <a class="navbar" style="color: white" href="developerteamPage.html">Biz Kimiz ?</a>
-            <a class="navbar" style="color: white" href="profile.html">Profil</a>
-            <a class="navbar" style="color: white" href="logIn.html" ng-click="logout()">Log out</a>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="homePage.html">Analiz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutPage">Personality Analyzer Nedir?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="developerteamPage.html">Biz Kimiz?</a>
+                </li>
+            </ul>
         </div>
-    </div>
+    </nav>
     <nav class="navbar navbar-dark bg-dark">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
