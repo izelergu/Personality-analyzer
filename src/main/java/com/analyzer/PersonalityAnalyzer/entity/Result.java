@@ -14,7 +14,6 @@ public class Result {
 
     @Id
     private String id;
-    private String detail_id;
     private String username;
     private String opennes;
     private String extraversion;
@@ -85,13 +84,5 @@ public class Result {
 
     public void setAggreeableness(String aggreeableness) {
         this.aggreeableness = aggreeableness;
-    }
-
-    public String getDetail_id() {
-        return detail_id;
-    }
-
-    public void setDetail_id(String detail_id) {
-        this.detail_id = detail_id;
     }
 }

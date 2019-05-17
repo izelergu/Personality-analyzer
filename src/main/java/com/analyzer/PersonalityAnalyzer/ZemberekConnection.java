@@ -18,7 +18,7 @@ import java.util.Random;
 
 public class ZemberekConnection {
 
-    private final int NUMBER_OF_TWEET = 25;
+    private final int NUMBER_OF_TWEET = 50;
 
     private Path lookupRoot = Paths.get("data/normalization");
     private Path lmFile = Paths.get("data/lm/lm.2gram.slm");
@@ -43,11 +43,10 @@ public class ZemberekConnection {
         }
     }
 
-    public List<Object> getTweets(String username) {
+    public String getTweets(String username) {
         // User.py analyze buttonunun click fonksiyonu
         LOGGER.info("getTweets function started for " + username);
         String returnMessage = "";
-        String detail_id = "";
         try {
             String line = "";
             Process p = Runtime.getRuntime().exec(userCommand + username);
@@ -63,8 +62,6 @@ public class ZemberekConnection {
                     returnMessage = "Kullanıcı Adı Bulunamadı!";
                 else if (line.equals("UnknownError"))
                     returnMessage = "Hata! Lütfen Daha Sonra Tekrar Deneyiniz!";
-                else if (line.contains("detail_id:"))
-                    detail_id = line.split(":")[1];
                 System.out.println(line);
             }
             bri.close();
@@ -75,7 +72,7 @@ public class ZemberekConnection {
             err.printStackTrace();
         }
         LOGGER.info(returnMessage);
-        return Arrays.asList(returnMessage, detail_id);
+        return returnMessage;
     }
 
     public List<Object> normalizeTweets(User usr) {
@@ -89,8 +86,8 @@ public class ZemberekConnection {
         WordAnalysis wa;
         int countRT = findRTCount(tweets);
         int countDeletedTweet = 0;
-        //tweets = chooseRandomTweet(tweets, NUMBER_OF_TWEET);
-        tweets = chooseInOrderTwets(tweets, NUMBER_OF_TWEET);
+        tweets = chooseRandomTweet(tweets, NUMBER_OF_TWEET);
+        //tweets = chooseInOrderTwets(tweets, NUMBER_OF_TWEET);
         String tweet = "";
         for (int i = 0; i < tweets.size(); i++) {
             splitedWords = tweets.get(i).split("\\s+"); // split the tweet word by word
@@ -123,12 +120,12 @@ public class ZemberekConnection {
         return Arrays.asList(tweets, countDeletedTweet, countRT);
     }
 
-    public void findWordgroups(String username, String detail_id) {
+    public void findWordgroups(String username) {
         LOGGER.info("findWordGroups function started for " + username);
         //liwcApp.py
         try {
             String line;
-            Process p = Runtime.getRuntime().exec(liwcAppCommand + username + " " + detail_id);
+            Process p = Runtime.getRuntime().exec(liwcAppCommand + username);
             BufferedReader bri = new BufferedReader
                     (new InputStreamReader(p.getInputStream()));
             while ((line = bri.readLine()) != null) {
@@ -221,17 +218,18 @@ public class ZemberekConnection {
 
         for (int i = 0; i < count; i++) {
             try {
+                if(i >= list.size()) break;
                 tweet = list.get(i);
                 tweet = normalizeSingleTweet(tweet);
                 if (tweet.split("\\s+").length > 0 && !tweet.equalsIgnoreCase("RT")) {
                     returnList.add(tweet);
                 } else {
                     countDeletedTweet++;
-                    i--;
+                    list.remove(i--);
                 }
             } catch (Exception e) {
                 countDeletedTweet++;
-                i--;
+                list.remove(i--);
             }
         }
         LOGGER.info(String.format("%d tweets added and %d tweets deleted", returnList.size(), countDeletedTweet));

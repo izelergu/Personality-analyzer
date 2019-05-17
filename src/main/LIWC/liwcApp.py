@@ -9,7 +9,6 @@ myclient = pymongo.MongoClient(
     "mongodb+srv://ismailyankayis:2430zcbg@twitterpersonalityanalyzer-aeniz.mongodb.net/admin")
 mydb = myclient["TwitterPersonalityAnalyzerDB"]
 col_User = mydb["User"]
-col_Detail = mydb["Detail"]
 
 categoryCounts = dict()
 
@@ -57,21 +56,9 @@ def determineCategories(usr):
     print("sum: " + str(sum))
     for cat in sorted(categoryCounts.keys()):
         normalized = categoryCounts[cat]/sum
-        if cat not in ['humans', 'anger', 'see', 'bio', 'health']: #bu gruplar kullanılmadığı için eklenmedi. ama data sette bu değerler varken normalize ediğildği için değerleri sum'a eklendi.
-            catList.append(cat + "," + str(("%.3f" % normalized)))
+        catList.append(cat + "," + str(("%.3f" % normalized)))
 
     print(ObjectId(sys.argv[2]))
-    userDetail = col_Detail.find_one({"_id": ObjectId(sys.argv[2])})
-    updateDoc = {"_id": ObjectId(sys.argv[2])}
-    if userDetail is not None:
-        details = {"$set": {"numberofWordsUsed": totalWords, "numberOfWordsAnalyzed": UsedWords }}
-        doc2 = col_Detail.update_one(updateDoc, details)
-        print("Updated Details: " + str(details))
-    else:
-        #detail = {'username': sys.argv[1], 'numberOfTweets': 0, 'numberOfRT': 0, 'numberofWordsUsed': sum, 'numberofWordsAnalyzed': totalWords }
-        #col_Detail.insert_one(detail)
-        #print("Inserted: " + str(detail))
-        print("Detail is not founded!")
 
     if usr is not None:
         liwcGroups = {"$set": {"groups": catList}}
