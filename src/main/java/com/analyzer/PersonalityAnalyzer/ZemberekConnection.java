@@ -43,11 +43,10 @@ public class ZemberekConnection {
         }
     }
 
-    public List<Object> getTweets(String username) {
+    public String getTweets(String username) {
         // User.py analyze buttonunun click fonksiyonu
         LOGGER.info("getTweets function started for " + username);
         String returnMessage = "";
-        String detail_id = "";
         try {
             String line = "";
             Process p = Runtime.getRuntime().exec(userCommand + username);
@@ -63,8 +62,6 @@ public class ZemberekConnection {
                     returnMessage = "Kullanıcı Adı Bulunamadı!";
                 else if (line.equals("UnknownError"))
                     returnMessage = "Hata! Lütfen Daha Sonra Tekrar Deneyiniz!";
-                else if (line.contains("detail_id:"))
-                    detail_id = line.split(":")[1];
                 System.out.println(line);
             }
             bri.close();
@@ -75,7 +72,7 @@ public class ZemberekConnection {
             err.printStackTrace();
         }
         LOGGER.info(returnMessage);
-        return Arrays.asList(returnMessage, detail_id);
+        return returnMessage;
     }
 
     public List<Object> normalizeTweets(User usr) {
@@ -123,12 +120,12 @@ public class ZemberekConnection {
         return Arrays.asList(tweets, countDeletedTweet, countRT);
     }
 
-    public void findWordgroups(String username, String detail_id) {
+    public void findWordgroups(String username) {
         LOGGER.info("findWordGroups function started for " + username);
         //liwcApp.py
         try {
             String line;
-            Process p = Runtime.getRuntime().exec(liwcAppCommand + username + " " + detail_id);
+            Process p = Runtime.getRuntime().exec(liwcAppCommand + username);
             BufferedReader bri = new BufferedReader
                     (new InputStreamReader(p.getInputStream()));
             while ((line = bri.readLine()) != null) {

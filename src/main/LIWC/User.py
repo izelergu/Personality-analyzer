@@ -7,7 +7,6 @@ myclient = pymongo.MongoClient(
     "mongodb+srv://ismailyankayis:2430zcbg@twitterpersonalityanalyzer-aeniz.mongodb.net/admin")
 mydb = myclient["TwitterPersonalityAnalyzerDB"]
 col_User = mydb["User"]
-col_Detail = mydb['Detail']
 
 consumer_key = '5EoGuierDVOdYhvbEZVDsN9jO'
 consumer_secret = 'eA227eYOJ8T7hmK46sbZ5ONPQYxxYC3FKyrRM6Lfl3ym4wZAUG'
@@ -57,11 +56,6 @@ def main():
         col_User.insert_one(user)
         print("User Inserted: " + str(updateDoc))
 
-    # Insert the details of the user
-    detail = {'username': sys.argv[1], 'firstTweetDate': first_tweet_date, 'lastTweetDate': last_tweet_date, 'numberOfTweets': len(tweets), 'numberOfAnalyzedTweets': 0, 'numberOfRT': 0, 'numberofWordsUsed': 0, 'numberOfWordsAnalyzed': 0 }
-    detail_id = col_Detail.insert_one(detail)
-    print("detail_id:"+str(detail_id.inserted_id))
-    print("Detail Inserted: " + str(updateDoc))
 
 
     print("Authorized")

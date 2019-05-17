@@ -55,9 +55,7 @@ public class UserController {
     @ResponseBody
     public StringResponse analyzeButton(@PathVariable String username){
         User usr = null;
-        List<Object> tweepyResponse = zemberekCon.getTweets(username);
-        String returnMessage = tweepyResponse.get(0).toString();
-        String detail_id= tweepyResponse.get(1).toString();
+        String returnMessage = zemberekCon.getTweets(username);
         String result_id = "";
         StringResponse sr = new StringResponse(returnMessage);
 
@@ -65,13 +63,11 @@ public class UserController {
             usr = userService.findUserByUsername(username);
             List<Object> returnValues = zemberekCon.normalizeTweets(usr);
             List<String> tweets = (List<String>)returnValues.get(0);
-            int countRT = (int)returnValues.get(2);
             usr.setPreprocessedTweets(tweets);
             update(usr);
-            zemberekCon.findWordgroups(usr.getUsername(), detail_id);
+            zemberekCon.findWordgroups(usr.getUsername());
             result_id = callPrediction(username);
             Result result = resultController.findResultById(result_id);
-            result.setDetail_id(detail_id);
             resultController.update(result);
             sr.setData(result_id);
         }
