@@ -7,6 +7,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
     <!-- Bootstrap core CSS -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -38,8 +42,6 @@
             <a class="navbar" style="color: white" href="homePage.html">Analiz</a>
             <a class="navbar" style="color: white" href="aboutPage.html">Personality Analyzer Nedir ?</a>
             <a class="navbar" style="color: white" href="developerteamPage.html">Biz Kimiz ?</a>
-            <a class="navbar" style="color: white" href="profile.html">Profil</a>
-            <a class="navbar" style="color: white" href="logIn.html" ng-click="logout()">Log out</a>
         </div>
     </div>
     <nav class="navbar navbar-dark bg-dark">
@@ -55,284 +57,131 @@
         <div class="col-xl-9 mx-auto">
             <h1 class="mb-5">{{result.username}} - Analiz Sonuçları</h1>
         </div>
-            <!-- News jumbotron -->
-            <div class="jumbotron text-center hoverable p-4" ng-if="result.opennes == 'Uygun'" style="background-color:#5cb85c">
-                <!-- Grid row -->
-                <div class="row">
-                    <!-- Grid column -->
-                    <div class="col-md-4 offset-md-1 mx-3 my-3">
-                        <!-- Featured image -->
-                        <img src="/img/opennes.png" style="height:90px;width:130px" class="img-fluid" alt="Sample image for first version of blog listing">
-                        <div>
-                            <p>Deneyime Açıklık</p>
-                            <p>{{result.opennes}}</p>
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="/img/sorumluluk.jpg" alt="Sorumluluk">
+                    <div class="carousel-caption" ng-if="result.conscientiousness == 'Uygun'">
+                        <h1 style="color: #5cb85c">{{result.conscientiousness}}</h1><br><br>
+                        <p style="font-size: 20px">Hazırlık için çok zaman harcar.</p>
+                        <p style="font-size: 20px">Önemli işleri hemen bitirir.</p>
+                        <p style="font-size: 20px">Detaylara dikkat eder.</p>
+                        <p style="font-size: 20px">Ayarlanmış bir zamanlamaya sahip olmaktan hoşlanır.</p>
                     </div>
-                    <!-- Grid column -->
-                    <!-- Grid column -->
-                    <div class="col-md-7 text-md-left ml-3 mt-3">
-                        <p>Çok yaratıcı.</p>
-                        <p>Yeni şeyler denemeye açık.</p>
-                        <p>Zorluklarla mücadele etmeye odaklı.</p>
-                        <p>Soyut kavramlar hakkında düşünmeyi sever.</p>
+                    <div class="carousel-caption" ng-if="result.conscientiousness == 'Uygun Değil'">
+                        <h1 style="color: #d9534f">{{result.conscientiousness}}</h1><br><br>
+                        <p style="font-size: 20px">Yapı ve programları beğenmez.</p>
+                        <p style="font-size: 20px">Dağınıktır ve ilgilenmesi gereken şeylerle ilgilenmez.</p>
+                        <p style="font-size: 20px">Aldığı şeyleri geri getirmez veya ait oldukları yere geri koyamaz.</p>
+                        <p style="font-size: 20px">Önemli işleri erteler.</p>
+                        <p style="font-size: 20px">Gerekli veya atanmış görevleri tamamlayamaz.</p>
                     </div>
-                    <!-- Grid column -->
-                </div><!-- Grid row -->
+                </div>
+                <div class="item">
+                    <img src="/img/uyumluluk.jpg" alt="Uyumluluk">
+                    <div class="carousel-caption" ng-if="result.aggreeableness == 'Uygun'">
+                        <h1 style="color: #5cb85c">{{result.aggreeableness}}</h1><br><br>
+                        <p style="font-size: 20px">Başka insanlara çok fazla ilgi gösterir.<p>
+                        <p style="font-size: 20px">Başkalarını önemser.</p>
+                        <p style="font-size: 20px">Empati kurar ve diğer insanlar için endişe eder.</p>
+                        <p style="font-size: 20px">Başkalarının mutlu olması için yardım etmeyi ve katkıda bulunmayı sever.</p>
+                        <p style="font-size: 20px">Yardıma muhtaç olanlara yardım eder.</p>
+                    </div>
+                    <div class="carousel-caption" ng-if="result.aggreeableness == 'Uygun Değil'">
+                        <h1 style="color: #d9534f">{{result.aggreeableness}}</h1><br><br>
+                        <p style="font-size: 20px">Başkalarına az ilgi gösterir.</p>
+                        <p style="font-size: 20px">Başkalarının nasıl hissettiği umrunda değildir.</p>
+                        <p style="font-size: 20px">Diğer insanların sorunlarına çok az ilgi duyar.</p>
+                        <p style="font-size: 20px">Başkalarına hakaret eder ve aşağılar.</p>
+                        <p style="font-size: 20px">İstediklerini elde etmek için başkalarını manipüle eder.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/img/deneyim.jpg" alt="Deneyime açıklık">
+                    <div class="carousel-caption" ng-if="result.opennes == 'Uygun'">
+                        <h1 style="color: #5cb85c">{{result.opennes}}</h1><br><br>
+                        <p style="font-size: 20px">Değişiklikleri sevmez.</p>
+                        <p style="font-size: 20px">Yeni şeylerden zevk almaz.</p>
+                        <p style="font-size: 20px">Yeni fikirlere direnir.</p>
+                        <p style="font-size: 20px">Çok yaratıcı değildir.</p>
+                        <p style="font-size: 20px">Soyut veya teorik kavramları sevmez.</p>
+                    </div>
+                    <div class="carousel-caption" ng-if="result.opennes == 'Uygun Değil'">
+                        <h1 style="color: #d9534f">{{result.opennes}}</h1><br><br>
+                        <p style="font-size: 20px">İlgi odağı olmaktan hoşlanır.</p>
+                        <p style="font-size: 20px">Konuşma başlatmayı sever.</p>
+                        <p style="font-size: 20px">Yeni insanlarla tanışmaktan hoşlanır.</p>
+                        <p style="font-size: 20px">Geniş sosyal arkadaş çevresi ve tanıdıklar var.</p>
+                        <p style="font-size: 20px">Kolayca yeni arkadaş edinebilir.</p>
+                        <p style="font-size: 20px">Diğer insanların yanındayken enerjik hisseder.</p>
+                        <p style="font-size: 20px">İnsanlar hakkında bir şeyler söylemeden önce düşünür.</p>
+                    </div>
+                </div>
+
+                <div class="item active">
+                    <img src="/img/duygusal.jpg" alt="Duygusal denge">
+                    <div class="carousel-caption" ng-if="result.neuroticism == 'Uygun Değil'">
+                        <h1 style="color: #d9534f">{{result.neuroticism}}</h1><br><br>
+                        <p style="font-size: 20px">Çok fazla stres yaşar.</p>
+                        <p style="font-size: 20px">Birçok farklı şey hakkında endişelenir.</p>
+                        <p style="font-size: 20px">Kolayca üzülür.</p>
+                        <p style="font-size: 20px">DRuh halindeki dramatik değişimleri deneyimler.</p>
+                        <p style="font-size: 20px">Endişeli hisseder.</p>
+                        <p style="font-size: 20px">Stresli olaylardan sonra kendine toplamak için çabalar.</p>
+                    </div>
+                    <div class="carousel-caption" ng-if="result.neuroticsim == 'Uygun'">
+                        <h1 style="color: #5cb85c">{{result.neuroticism}}</h1><br><br>
+                        <p style="font-size: 20px">Duygusal olarak istikrarlıdır.</p>
+                        <p style="font-size: 20px">Stresle başa çıkabilir</p>
+                        <p style="font-size: 20px">Nadiren üzgün veya depresyonda hisseder.</p>
+                        <p style="font-size: 20px">Çok endişelenmez.</p>
+                        <p style="font-size: 20px">Genelde çok rahattır.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="/img/dönüklük.jpg" alt="Dışa dönüklük">
+                    <div class="carousel-caption" ng-if="result.extraversion == 'Uygun'">
+                        <h1 style="color: #5cb85c">{{result.extraversion}}</h1><br><br>
+                        <p style="font-size: 20px">İlgi odağı olmaktan hoşlanır.</p>
+                        <p style="font-size: 20px">Konuşma başlatmayı sever.</p>
+                        <p style="font-size: 20px">Yeni insanlarla tanışmaktan hoşlanır.</p>
+                        <p style="font-size: 20px">Geniş sosyal arkadaş çevresi ve tanıdıklar var.</p>
+                        <p style="font-size: 20px">Kolayca yeni arkadaş edinebilir.</p>
+                        <p style="font-size: 20px">Diğer insanların yanındayken enerjik hisseder.</p>
+                        <p style="font-size: 20px">İnsanlar hakkında bir şeyler söylemeden önce düşünür.</p>
+                    </div>
+                    <div class="carousel-caption" ng-if="result.extraversion == 'Uygun Değil'">
+                        <h1 style="color: #d9534f">{{result.extraversion}}</h1><br><br>
+                        <p style="font-size: 20px">Yalnızlığı tercih eder.</p>
+                        <p style="font-size: 20px">Sosyalleşmeyi zor bulur.</p>
+                        <p style="font-size: 20px">Konuşma başlatmayı zor bulur.</p>
+                        <p style="font-size: 20px">Kısa sohbetlerden hoşlanmıyor</p>
+                        <p style="font-size: 20px">Konuşmadan önce bir şeyleri dikkatlice düşünür.</p>
+                        <p style="font-size: 20px">İlgi odağı olmayı sevmez.</p>
+                    </div>
+                </div>
             </div>
-            <!-- News jumbotron -->
-            <div class="jumbotron text-center hoverable p-4" ng-if="result.opennes == 'Uygun Değil'" style="background-color:#d9534f">
-                <!-- Grid row -->
-                <div class="row">
-                    <!-- Grid column -->
-                    <div class="col-md-4 offset-md-1 mx-3 my-3">
-                        <!-- Featured image -->
-                        <img src="/img/opennes.png" style="height:90px;width:130px" class="img-fluid" alt="Sample image for first version of blog listing">
-                        <div>
-                            <p>Deneyime Açıklık</p>
-                            <p>{{result.opennes}}</p>
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-                    <!-- Grid column -->
-                    <div class="col-md-7 text-md-left ml-3 mt-3">
-                        <p>Değişiklikleri sevmez.</p>
-                        <p>Yeni şeylerden zevk almaz.</p>
-                        <p>Yeni fikirlere direnir.</p>
-                        <p>Çok yaratıcı değildir.</p>
-                        <p>Soyut veya teorik kavramları sevmez.</p>
-                    </div>
-                    <!-- Grid column -->
-                </div><!-- Grid row -->
-            </div>
-            <!-- News jumbotron -->
-            <div class="jumbotron text-center hoverable p-4"  ng-if="result.extraversion == 'Uygun'"  style="background-color:#5cb85c">
-                <!-- Grid row -->
-                <div class="row">
-                    <!-- Grid column -->
-                    <div class="col-md-4 offset-md-1 mx-3 my-3">
-                        <!-- Featured image -->
-                        <img src="/img/extraversion.png" height="100" width="100" class="img-fluid" alt="Sample image for first version of blog listing">
-                        <div>
-                            <p>Dışa Dönüklük</p>
-                            <p>{{result.extraversion}}</p>
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-                    <!-- Grid column -->
-                    <div class="col-md-7 text-md-left ml-3 mt-3">
-                        <p>İlgi odağı olmaktan hoşlanır.</p>
-                        <p>Konuşma başlatmayı sever.</p>
-                        <p>Yeni insanlarla tanışmaktan hoşlanır.</p>
-                        <p>Geniş sosyal arkadaş çevresi ve tanıdıklar var.</p>
-                        <p>Kolayca yeni arkadaş edinebilir.</p>
-                        <p>Diğer insanların yanındayken enerjik hisseder.</p>
-                        <p>İnsanlar hakkında bir şeyler söylemeden önce düşünür.</p>
-                    </div>
-                    <!-- Grid column -->
-                </div><!-- Grid row -->
-            </div>
-            <!-- News jumbotron -->
-            <div class="jumbotron text-center hoverable p-4"  ng-if="result.extraversion == 'Uygun Değil'"  style="background-color:#d9534f">
-                <!-- Grid row -->
-                <div class="row">
-                    <!-- Grid column -->
-                    <div class="col-md-4 offset-md-1 mx-3 my-3">
-                        <!-- Featured image -->
-                        <img src="/img/extraversion.png" height="100" width="100" class="img-fluid" alt="Sample image for first version of blog listing">
-                        <div>
-                            <p>Dışa dönüklük</p>
-                            <p>{{result.extraversion}}</p>
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-                    <!-- Grid column -->
-                    <div class="col-md-7 text-md-left ml-3 mt-3">
-                        <p>Yalnızlığı tercih eder.</p>
-                        <p>Sosyalleşmeyi zor bulur.</p>
-                        <p>Konuşma başlatmayı zor bulur.</p>
-                        <p>Kısa sohbetlerden hoşlanmıyor</p>
-                        <p>Konuşmadan önce bir şeyleri dikkatlice düşünür.</p>
-                        <p>İlgi odağı olmayı sevmez.</p>
-                    </div>
-                    <!-- Grid column -->
-                </div><!-- Grid row -->
-            </div>
-            <div class="jumbotron text-center hoverable p-4"  ng-if="result.aggreeableness == 'Uygun'"  style="background-color:#5cb85c">
-                <!-- Grid row -->
-                <div class="row">
-                    <!-- Grid column -->
-                    <div class="col-md-4 offset-md-1 mx-3 my-3">
-                        <!-- Featured image -->
-                        <img src="/img/agreeableness.png" class="img-fluid" alt="Sample image for first version of blog listing">
-                        <div>
-                            <p>Uyumluluk</p>
-                            <p>{{result.aggreeableness}}</p>
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-                    <!-- Grid column -->
-                    <div class="col-md-7 text-md-left ml-3 mt-3">
-                        <p>Başka insanlara çok fazla ilgi gösterir.<p>
-                        <p>Başkalarını önemser.</p>
-                        <p>Empati kurar ve diğer insanlar için endişe eder.</p>
-                        <p>Başkalarının mutlu olması için yardım etmeyi ve katkıda bulunmayı sever.</p>
-                        <p>Yardıma muhtaç olanlara yardım eder.</p>
-                    </div>
-                    <!-- Grid column -->
-                </div><!-- Grid row -->
-            </div>
-            <div class="jumbotron text-center hoverable p-4"  ng-if="result.aggreeableness == 'Uygun Değil'"  style="background-color:#d9534f">
-                <!-- Grid row -->
-                <div class="row">
-                    <!-- Grid column -->
-                    <div class="col-md-4 offset-md-1 mx-3 my-3">
-                        <!-- Featured image -->
-                        <img src="/img/agreeableness.png" class="img-fluid" alt="Sample image for first version of blog listing">
-                        <div>
-                            <p>Uyumluluk</p>
-                            <p>{{result.aggreeableness}}</p>
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-                    <!-- Grid column -->
-                    <div class="col-md-7 text-md-left ml-3 mt-3">
-                        <p>Başkalarına az ilgi gösterir.</p>
-                        <p>Başkalarının nasıl hissettiği umrunda değildir.</p>
-                        <p>Diğer insanların sorunlarına çok az ilgi duyar.</p>
-                        <p>Başkalarına hakaret eder ve aşağılar.</p>
-                        <p>İstediklerini elde etmek için başkalarını manipüle eder.</p>
-                    </div>
-                    <!-- Grid column -->
-                </div><!-- Grid row -->
-            </div>
-            <div class="jumbotron text-center hoverable p-4"  ng-if="result.neuroticism == 'Uygun'"  style="background-color:#d9534f">
-                <!-- Grid row -->
-                <div class="row">
-                    <!-- Grid column -->
-                    <div class="col-md-4 offset-md-1 mx-3 my-3">
-                        <!-- Featured image -->
-                        <img src="/img/neuroticism.png" height="100" width="100" class="img-fluid" alt="Sample image for first version of blog listing">
-                        <div>
-                            <p>Nevrotiklik</p>
-                            <p>{{result.neuroticism}}</p>
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-                    <div class="col-md-7 text-md-left ml-3 mt-3">
-                        <p>Çok fazla stres yaşar.</p>
-                        <p>Birçok farklı şey hakkında endişelenir.</p>
-                        <p>Kolayca üzülür.</p>
-                        <p>DRuh halindeki dramatik değişimleri deneyimler.</p>
-                        <p>Endişeli hisseder.</p>
-                        <p>Stresli olaylardan sonra kendine toplamak için çabalar.</p>
-                    </div>
-                    <!-- Grid column -->
-                </div><!-- Grid row -->
-            </div>
-            <div class="jumbotron text-center hoverable p-4"  ng-if="result.neuroticism == 'Uygun Değil'"  style="background-color:#5cb85c">
-                <!-- Grid row -->
-                <div class="row">
-                    <!-- Grid column -->
-                    <div class="col-md-4 offset-md-1 mx-3 my-3">
-                        <!-- Featured image -->
-                        <img src="/img/neuroticism.png" height="100" width="100" class="img-fluid" alt="Sample image for first version of blog listing">
-                        <div>
-                            <p>Nevrotiklik</p>
-                            <p>{{result.neuroticism}}</p>
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-                    <!-- Grid column -->
-                    <div class="col-md-7 text-md-left ml-3 mt-3">
-                        <p>Duygusal olarak istikrarlıdır.</p>
-                        <p>Stresle başa çıkabilir</p>
-                        <p>Nadiren üzgün veya depresyonda hisseder.</p>
-                        <p>Çok endişelenmez.</p>
-                        <p>Genelde çok rahattır.</p>
-                    </div>
-                    <!-- Grid column -->
-                </div><!-- Grid row -->
-            </div>
-            <div class="jumbotron text-center hoverable p-4"  ng-if="result.conscientiousness == 'Uygun'"  style="background-color:#5cb85c">
-                <!-- Grid row -->
-                <div class="row">
-                    <!-- Grid column -->
-                    <div class="col-md-4 offset-md-1 mx-3 my-3">
-                        <!-- Featured image -->
-                        <img src="/img/conscientiousness.png" height="90" width="130" class="img-fluid" alt="Sample image for first version of blog listing">
-                        <div>
-                            <p >Sorumluluk</p>
-                            <p>{{result.conscientiousness}}</p>
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-                    <div class="col-md-7 text-md-left ml-3 mt-3">
-                        <p>Hazırlık için çok zaman harcar.</p>
-                        <p>Önemli işleri hemen bitirir.</p>
-                        <p>Detaylara dikkat eder.</p>
-                        <p>Ayarlanmış bir zamanlamaya sahip olmaktan hoşlanır.</p>
-                    </div>
-                    <!-- Grid column -->
-                </div><!-- Grid row -->
-            </div>
-            <div class="jumbotron text-center hoverable p-4"  ng-if="result.conscientiousness == 'Uygun Değil'"  style="background-color:#d9534f">
-                <!-- Grid row -->
-                <div class="row">
-                    <!-- Grid column -->
-                    <div class="col-md-4 offset-md-1 mx-3 my-3">
-                        <!-- Featured image -->
-                        <img src="/img/conscientiousness.png" height="90" width="130" class="img-fluid" alt="Sample image for first version of blog listing">
-                        <div>
-                            <p >Sorumluluk</p>
-                            <p>{{result.conscientiousness}}</p>
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-                    <!-- Grid column -->
-                    <div class="col-md-7 text-md-left ml-3 mt-3">
-                        <p>Yapı ve programları beğenmez.</p>
-                        <p>Dağınıktır ve ilgilenmesi gereken şeylerle ilgilenmez.</p>
-                        <p>Aldığı şeyleri geri getirmez veya ait oldukları yere geri koyamaz.</p>
-                        <p>Önemli işleri erteler.</p>
-                        <p>Gerekli veya atanmış görevleri tamamlayamaz.</p>
-                    </div>
-                    <!-- Grid column -->
-                </div><!-- Grid row -->
-            </div>
-        <div class="form-row">
-            <div class="col-12 col-md-3">
-                <button ng-click="showDetails()" type="submit" class="btn btn-block btn-lg btn-primary" style="background-color: black;border-color: black;width:160px">Detay>></button>
-            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </div>
 </header>
