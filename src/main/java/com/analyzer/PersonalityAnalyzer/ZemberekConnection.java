@@ -86,8 +86,8 @@ public class ZemberekConnection {
         WordAnalysis wa;
         int countRT = findRTCount(tweets);
         int countDeletedTweet = 0;
-        tweets = chooseRandomTweet(tweets, NUMBER_OF_TWEET);
-        //tweets = chooseInOrderTwets(tweets, NUMBER_OF_TWEET);
+        //tweets = chooseRandomTweet(tweets, NUMBER_OF_TWEET);
+        tweets = chooseInOrderTwets(tweets, NUMBER_OF_TWEET);
         String tweet = "";
         for (int i = 0; i < tweets.size(); i++) {
             splitedWords = tweets.get(i).split("\\s+"); // split the tweet word by word

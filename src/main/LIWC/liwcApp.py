@@ -57,9 +57,8 @@ def determineCategories(usr):
     for cat in sorted(categoryCounts.keys()):
         normalized = categoryCounts[cat]/sum
         catList.append(cat + "," + str(("%.3f" % normalized)))
-
-    print(ObjectId(sys.argv[2]))
-
+    
+    updateDoc = {"username": sys.argv[1]}
     if usr is not None:
         liwcGroups = {"$set": {"groups": catList}}
         doc1 = col_User.update_one(updateDoc, liwcGroups)

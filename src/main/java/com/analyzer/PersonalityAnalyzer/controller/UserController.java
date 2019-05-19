@@ -71,52 +71,6 @@ public class UserController {
             resultController.update(result);
             sr.setData(result_id);
         }
-
-        /*List<String> lines;
-        List<Object> tweepyResponse;
-        String returnMessage;
-        String detail_id;
-        String result_id = "";
-        StringResponse sr = new StringResponse("");
-        String lin = "";
-        try
-        {
-            lines = Files.readAllLines(Paths.get("src/main/LIWC/models/DataSet_Initial.csv"), StandardCharsets.UTF_8);
-            Iterator<String> itr = lines.iterator();
-            while (itr.hasNext()){
-                lin = itr.next();
-                username = lin.split(",")[1];
-                tweepyResponse = zemberekCon.getTweets(username);
-                returnMessage = tweepyResponse.get(0).toString();
-                sr.setResponse(returnMessage);
-                detail_id= tweepyResponse.get(1).toString();
-                sr = new StringResponse(returnMessage);
-                if(returnMessage.equals("Başarılı")) {
-                    usr = userService.findUserByUsername(username);
-                    List<Object> returnValues = zemberekCon.normalizeTweets(usr);
-                    List<String> tweets = (List<String>)returnValues.get(0);
-                    int countRT = (int)returnValues.get(2);
-                    Detail detail = detailController.findDetailById(detail_id);
-                    detail.setNumberOfRT(countRT);
-                    detail.setNumberOfAnalyzedTweets(tweets.size());
-                    detailController.update(detail);
-                    usr.setPreprocessedTweets(tweets);
-                    update(usr);
-                    zemberekCon.findWordgroups(usr.getUsername(), detail_id);
-                    /*result_id = callPrediction(username);
-                    Result result = resultController.findResultById(result_id);
-                    result.setDetail_id(detail_id);
-                    resultController.update(result);
-                    sr.setData(result_id);
-                }
-            }
-        }
-        catch (IOException e)
-        {
-
-            // do something
-            e.printStackTrace();
-        }*/
         return sr;
     }
 
