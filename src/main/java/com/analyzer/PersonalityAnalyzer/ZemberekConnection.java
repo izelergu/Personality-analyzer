@@ -215,23 +215,25 @@ public class ZemberekConnection {
                 }
             }
         }
-
-        for (int i = 0; i < count; i++) {
-            try {
-                if(i >= list.size()) break;
-                tweet = list.get(i);
-                tweet = normalizeSingleTweet(tweet);
-                if (tweet.split("\\s+").length > 0 && !tweet.equalsIgnoreCase("RT")) {
-                    returnList.add(tweet);
-                } else {
+        else {
+            for (int i = 0; i < count; i++) {
+                try {
+                    if(i >= list.size()) break;
+                    tweet = list.get(i);
+                    tweet = normalizeSingleTweet(tweet);
+                    if (tweet.split("\\s+").length > 0 && !tweet.equalsIgnoreCase("RT")) {
+                        returnList.add(tweet);
+                    } else {
+                        countDeletedTweet++;
+                        list.remove(i--);
+                    }
+                } catch (Exception e) {
                     countDeletedTweet++;
                     list.remove(i--);
                 }
-            } catch (Exception e) {
-                countDeletedTweet++;
-                list.remove(i--);
             }
         }
+
         LOGGER.info(String.format("%d tweets added and %d tweets deleted", returnList.size(), countDeletedTweet));
         return returnList;
     }

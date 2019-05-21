@@ -5,13 +5,18 @@ import sys
 
 
 def predictExtraversion(groups):
-    extraversion_nn = joblib.load('src/main/LIWC/models/extraversion_nn.mdl')
+    extraversion_nn = joblib.load('src/main/LIWC/models/extraversion_svm.mdl')
     df = pd.read_csv("src/main/LIWC//models/empty_extraversion.csv")
 
     for group in groups:
         splited = group.split(',')
-        if any(splited[0] is col for col in df.columns):
-            df[splited[0]] = splited[1]
+        try:
+            df[splited[0]][0] = ((float(splited[1]) - float(df[splited[0]][1])) / (float(df[splited[0]][2]) - float(df[splited[0]][1]))) + float(df[splited[0]][1])
+        except KeyError:
+            continue
+    df = df.drop(index=2)
+    df = df.drop(index=1)
+    print(df)
     return extraversion_nn.predict(df)
 
 
@@ -21,8 +26,13 @@ def predictAggreableness(groups):
 
     for group in groups:
         splited = group.split(',')
-        if any(splited[0] is col for col in df.columns):
-            df[splited[0]] = splited[1]
+        try:
+            df[splited[0]][0] = ((float(splited[1]) - float(df[splited[0]][1])) / (float(df[splited[0]][2]) - float(df[splited[0]][1]))) + float(df[splited[0]][1])
+        except KeyError:
+            continue
+    df = df.drop(index=2)
+    df = df.drop(index=1)
+    print(df)
     return aggreeableness_adaboost.predict(df)
 
 
@@ -32,8 +42,13 @@ def predictConscientiousness(groups):
 
     for group in groups:
         splited = group.split(',')
-        if any(splited[0] is col for col in df.columns):
-            df[splited[0]] = splited[1]
+        try:
+            df[splited[0]][0] = ((float(splited[1]) - float(df[splited[0]][1])) / (float(df[splited[0]][2]) - float(df[splited[0]][1]))) + float(df[splited[0]][1])
+        except KeyError:
+            continue
+    df = df.drop(index=2)
+    df = df.drop(index=1)
+    print(df)
     return concientiousnes_sgd.predict(df)
 
 
@@ -43,19 +58,29 @@ def predictOpenness(groups):
 
     for group in groups:
         splited = group.split(',')
-        if any(splited[0] is col for col in df.columns):
-            df[splited[0]] = splited[1]
+        try:
+            df[splited[0]][0] = ((float(splited[1]) - float(df[splited[0]][1])) / (float(df[splited[0]][2]) - float(df[splited[0]][1]))) + float(df[splited[0]][1])
+        except KeyError:
+            continue
+    df = df.drop(index=2)
+    df = df.drop(index=1)
+    print(df)
     return opennes_gbc.predict(df)
 
 
 def predictNeuroticism(groups):
     neuroticism_sgd = joblib.load('src/main/LIWC/models/Neuroticism_SGD.mdl')
-    df = pd.read_csv("src/main/LIWC//models/empty_opennes.csv")
+    df = pd.read_csv("src/main/LIWC//models/empty_neuroticism.csv")
 
     for group in groups:
         splited = group.split(',')
-        if any(splited[0] is col for col in df.columns):
-            df[splited[0]] = splited[1]
+        try:
+            df[splited[0]][0] = ((float(splited[1]) - float(df[splited[0]][1])) / (float(df[splited[0]][2]) - float(df[splited[0]][1]))) + float(df[splited[0]][1])
+        except KeyError:
+            continue
+    df = df.drop(index=2)
+    df = df.drop(index=1)
+    print(df)
     return neuroticism_sgd.predict(df)
 
 
@@ -71,10 +96,8 @@ def main():
         groups = user['groups']
 
         # Predicted Personalities are updated on DB
-        result = col_result.find({'username': sys.argv[1]})
-        results = {"username": sys.argv[1], "opennes": predictOpenness(groups)[0], "extraversion": predictExtraversion(groups)[0],
-                            "neuroticism": predictNeuroticism(groups)[0], "conscientiousness": predictConscientiousness(groups)[0],
-                            "aggreeableness": predictConscientiousness(groups)[0]}
+        results = {"username": sys.argv[1], "extraversion": predictExtraversion(groups)[0], "aggreeableness": predictAggreableness(groups)[0],
+                   "conscientiousness": predictConscientiousness(groups)[0], "opennes": predictOpenness(groups)[0], "neuroticism": predictNeuroticism(groups)[0]}
         resuld_id = col_result.insert_one(results)
         print("result_id:" + str(resuld_id.inserted_id))
         print("Result Inserted: " + str(results))
