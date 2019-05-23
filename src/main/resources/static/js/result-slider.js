@@ -49,7 +49,7 @@ $(document).ready(function(){
 
     setInterval(function(){
         var dataTab= $('.itemDot.active').data("tab");
-        if(dataTab>6||i>6){
+        if(dataTab>5||i>5){
             dataTab=1;
             i=1;
         }
@@ -61,11 +61,11 @@ $(document).ready(function(){
 
 
         $('.dotCircle').css({
-            "transform":"rotate("+(360-(i-2)*36)+"deg)",
+            "transform":"rotate("+(360-(i-2)*25)+"deg)",
             "transition":"2s"
         });
         $('.itemDot').css({
-            "transform":"rotate("+((i-2)*36)+"deg)",
+            "transform":"rotate("+((i-2)*25)+"deg)",
             "transition":"1s"
         });
 

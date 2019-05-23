@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
     <!-- Custom fonts for this template -->
@@ -62,7 +62,7 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="col-xl-9 mx-auto">
-            <h1 class="mb-5">{{result.username}} - Analiz Sonuçları</h1>
+            <h1 class="mb-5">{{result.username}} - Karakter Analiz Sonuçları</h1>
         </div>
         <!-- Slider -->
         <section class="iq-features">
@@ -72,7 +72,7 @@
                     <div class="col-lg-6 col-md-12">
                         <div class="holderCircle">
                             <div class="round"></div>
-                            <div class="dotCircle" style="transform: rotate(360deg); transition: all 2s ease 0s;">
+                            <div class="dotCircle" style="transform: rotate(360deg); transition: all 2s ease 0s">
                                <span class="itemDot active itemDot1" data-tab="1" style="background-image:url(/img/conscientiousness.png); background-repeat: no-repeat; background-position: center; background-size: auto;">
                                    <span class="forActive"></span>
                                </span>
@@ -175,8 +175,6 @@
                                         <p style="color: #ffffff">Yeni insanlarla tanışmaktan hoşlanır.</p>
                                         <p style="color: #ffffff">Geniş sosyal arkadaş çevresi ve tanıdıklar var.</p>
                                         <p style="color: #ffffff">Kolayca yeni arkadaş edinebilir.</p>
-                                        <p style="color: #ffffff">Diğer insanların yanındayken enerjik hisseder.</p>
-                                        <p style="color: #ffffff">İnsanlar hakkında bir şeyler söylemeden önce düşünür.</p>
                                     </div>
                                     <div ng-if="result.extraversion  == 'Uygun Değil'">
                                         <h3 style="color: #d9534f">{{result.extraversion }}</h3>
