@@ -6,7 +6,7 @@ import sys
 
 def predictExtraversion(groups):
     extraversion_nn = joblib.load('src/main/LIWC/models/extraversion_svm.mdl')
-    df = pd.read_csv("src/main/LIWC//models/empty_extraversion.csv")
+    df = pd.read_csv("src/main/LIWC/models/empty_extraversion.csv")
 
     for group in groups:
         splited = group.split(',')
@@ -22,7 +22,7 @@ def predictExtraversion(groups):
 
 def predictAggreableness(groups):
     aggreeableness_adaboost = joblib.load('src/main/LIWC/models/aggreableness_adaboost.mdl')
-    df = pd.read_csv("src/main/LIWC//models/empty_aggreableness.csv")
+    df = pd.read_csv("src/main/LIWC/models/empty_aggreableness.csv")
 
     for group in groups:
         splited = group.split(',')
@@ -38,7 +38,7 @@ def predictAggreableness(groups):
 
 def predictConscientiousness(groups):
     concientiousnes_sgd = joblib.load('src/main/LIWC/models/conscientiousness_SGD.mdl')
-    df = pd.read_csv("src/main/LIWC//models/empty_conscientiousness.csv")
+    df = pd.read_csv("src/main/LIWC/models/empty_conscientiousness.csv")
 
     for group in groups:
         splited = group.split(',')
@@ -54,7 +54,7 @@ def predictConscientiousness(groups):
 
 def predictOpenness(groups):
     opennes_gbc = joblib.load('src/main/LIWC/models/openness_GBC.mdl')
-    df = pd.read_csv("src/main/LIWC//models/empty_opennes.csv")
+    df = pd.read_csv("src/main/LIWC/models/empty_opennes.csv")
 
     for group in groups:
         splited = group.split(',')
@@ -70,7 +70,7 @@ def predictOpenness(groups):
 
 def predictNeuroticism(groups):
     neuroticism_sgd = joblib.load('src/main/LIWC/models/Neuroticism_SGD.mdl')
-    df = pd.read_csv("src/main/LIWC//models/empty_neuroticism.csv")
+    df = pd.read_csv("src/main/LIWC/models/empty_neuroticism.csv")
 
     for group in groups:
         splited = group.split(',')
@@ -98,8 +98,8 @@ def main():
         # Predicted Personalities are updated on DB
         results = {"username": sys.argv[1], "extraversion": predictExtraversion(groups)[0], "aggreeableness": predictAggreableness(groups)[0],
                    "conscientiousness": predictConscientiousness(groups)[0], "opennes": predictOpenness(groups)[0], "neuroticism": predictNeuroticism(groups)[0]}
-        resuld_id = col_result.insert_one(results)
-        print("result_id:" + str(resuld_id.inserted_id))
+        result_id = col_result.insert_one(results)
+        print("result_id:" + str(result_id.inserted_id))
         print("Result Inserted: " + str(results))
     else:
         print("There is no user as " + sys.argv[1])

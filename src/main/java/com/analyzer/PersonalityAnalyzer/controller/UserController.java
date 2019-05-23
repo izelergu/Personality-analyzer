@@ -66,7 +66,7 @@ public class UserController {
             usr.setPreprocessedTweets(tweets);
             update(usr);
             zemberekCon.findWordgroups(usr.getUsername());
-            result_id = callPrediction(username);
+            result_id = /*callPrediction(username);*/"5ce69a2d90e1ad23040b4d12";
             Result result = resultController.findResultById(result_id);
             resultController.update(result);
             sr.setData(result_id);
@@ -77,7 +77,6 @@ public class UserController {
     private String callPrediction(String username) {
         LOGGER.info("Prediction function started for " + username);
         String result_id = "";
-        //liwcApp.py
         try {
             String line;
             Process p = Runtime.getRuntime().exec(predictCommand + username);
