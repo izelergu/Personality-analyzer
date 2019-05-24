@@ -93,97 +93,117 @@
                                 <div class="CirItem title-box active CirItem1">
                                     <h2 class="title"><span>Sorumluluk</span></h2>
                                     <div ng-if="result.conscientiousness == 'Uygun'">
-                                        <h3 style="color: #5cb85c">{{result.conscientiousness}}</h3>
-                                        <p style="color: #ffffff">Hazırlık için çok zaman harcar.</p>
-                                        <p style="color: #ffffff">Önemli işleri hemen bitirir.</p>
-                                        <p style="color: #ffffff">Detaylara dikkat eder.</p>
-                                        <p style="color: #ffffff">Ayarlanmış bir zamanlamaya sahip olmaktan hoşlanır.</p>
+                                        <h3 style="color: #5cb85c; padding-bottom: 20px">{{result.conscientiousness}}</h3>
+                                        <ul style="line-height: 2; color: #ffffff; padding-left: 0px">
+                                            <li>Hazırlık için çok zaman harcar.</li>
+                                            <li>Önemli işleri hemen bitirir.</li>
+                                            <li>Detaylara dikkat eder.</li>
+                                            <li>Ayarlanmış bir zamanlamaya sahip olmaktan hoşlanır.</li>
+                                        </ul>
                                     </div>
                                     <div ng-if="result.conscientiousness == 'Uygun Değil'">
-                                        <h3 style="color: #d9534f">{{result.conscientiousness}}</h3>
-                                        <p style="color: #ffffff">Yapı ve programları beğenmez.</p>
-                                        <p style="color: #ffffff">Dağınıktır ve ilgilenmesi gereken şeylerle ilgilenmez.</p>
-                                        <p style="color: #ffffff">Aldığı şeyleri geri getirmez veya ait oldukları yere geri koyamaz.</p>
-                                        <p style="color: #ffffff">Önemli işleri erteler.</p>
-                                        <p style="color: #ffffff">Gerekli veya atanmış görevleri tamamlayamaz.</p>
+                                        <h3 style="color: #d9534f; padding-bottom: 20px">{{result.conscientiousness}}</h3>
+                                        <ul style="line-height: 2; color: #ffffff; padding-left: 0px">
+                                            <li>Yapı ve programları beğenmez.</li>
+                                            <li>Dağınıktır ve ilgilenmesi gereken şeylerle ilgilenmez.</li>
+                                            <li>Aldığı şeyleri geri getirmez veya ait oldukları yere geri koyamaz.</li>
+                                            <li>Önemli işleri erteler.</li>
+                                            <li>Gerekli veya atanmış görevleri tamamlayamaz.</li>
+                                        </ul>
                                     </div>
                                 </div>
                                 <div class="CirItem title-box CirItem2">
                                     <h2 class="title"><span>Uyumluluk</span></h2>
                                     <div ng-if="result.aggreeableness == 'Uygun'">
-                                        <h3 style="color: #5cb85c">{{result.aggreeableness }}</h3>
-                                        <p style="color: #ffffff">Başka insanlara çok fazla ilgi gösterir.<p>
-                                        <p style="color: #ffffff">Başkalarını önemser.</p>
-                                        <p style="color: #ffffff">Empati kurar ve diğer insanlar için endişe eder.</p>
-                                        <p style="color: #ffffff">Başkalarının mutlu olması için yardım etmeyi ve katkıda bulunmayı sever.</p>
-                                        <p style="color: #ffffff">Yardıma muhtaç olanlara yardım eder.</p>
+                                        <h3 style="color: #5cb85c; padding-bottom: 20px">{{result.aggreeableness }}</h3>
+                                        <ul style="line-height: 2; color: #ffffff; padding-left: 0px">
+                                            <li>Başka insanlara çok fazla ilgi gösterir.</li>
+                                            <li>Başkalarını önemser.</li>
+                                            <li>Empati kurar ve diğer insanlar için endişe eder.</li>
+                                            <li>Başkalarının mutlu olması için yardım etmeyi ve katkıda bulunmayı sever.</li>
+                                            <li>Yardıma muhtaç olanlara yardım eder.</li>
+                                        </ul>
                                     </div>
                                     <div ng-if="result.aggreeableness == 'Uygun Değil'">
-                                        <h3 style="color: #d9534f">{{result.aggreeableness }}</h3>
-                                        <p style="color: #ffffff">Başkalarına az ilgi gösterir.</p>
-                                        <p style="color: #ffffff">Başkalarının nasıl hissettiği umrunda değildir.</p>
-                                        <p style="color: #ffffff">Diğer insanların sorunlarına çok az ilgi duyar.</p>
-                                        <p style="color: #ffffff">Başkalarına hakaret eder ve aşağılar.</p>
-                                        <p style="color: #ffffff">İstediklerini elde etmek için başkalarını manipüle eder.</p>
+                                        <h3 style="color: #d9534f; padding-bottom: 20px">{{result.aggreeableness }}</h3>
+                                        <ul style="line-height: 2; color: #ffffff; padding-left: 0px">
+                                            <li>Başkalarına az ilgi gösterir.</li>
+                                            <li>Başkalarının nasıl hissettiği umrunda değildir.</li>
+                                            <li>Diğer insanların sorunlarına çok az ilgi duyar.</li>
+                                            <li>Başkalarına hakaret eder ve aşağılar.</li>
+                                            <li>İstediklerini elde etmek için başkalarını manipüle eder.</li>
+                                        </ul>
                                     </div>
                                 </div>
                                 <div class="CirItem title-box CirItem3">
                                     <h2 class="title"><span>Deneyime Açıklık</span></h2>
                                     <div ng-if="result.opennes == 'Uygun'">
-                                        <h3 style="color: #5cb85c">{{result.opennes }}</h3>
-                                        <p style="color: #ffffff">Değişiklikleri sevmez.</p>
-                                        <p style="color: #ffffff">Yeni şeylerden zevk almaz.</p>
-                                        <p style="color: #ffffff">Yeni fikirlere direnir.</p>
-                                        <p style="color: #ffffff">Çok yaratıcı değildir.</p>
-                                        <p style="color: #ffffff">Soyut veya teorik kavramları sevmez.</p>
+                                        <h3 style="color: #5cb85c; padding-bottom: 20px">{{result.opennes }}</h3>
+                                        <ul style="line-height: 2; color: #ffffff; padding-left: 0px">
+                                            <li>Değişiklikleri sevmez.</li>
+                                            <li>Yeni şeylerden zevk almaz.</li>
+                                            <li>Yeni fikirlere direnir.</li>
+                                            <li>Çok yaratıcı değildir.</li>
+                                            <li>Soyut veya teorik kavramları sevmez.</li>
+                                        </ul>
                                     </div>
                                     <div ng-if="result.opennes == 'Uygun Değil'">
-                                        <h3 style="color: #d9534f">{{result.opennes }}</h3>
-                                        <p style="color: #ffffff">Değişiklikleri sevmez.</p>
-                                        <p style="color: #ffffff">Yeni şeylerden zevk almaz.</p>
-                                        <p style="color: #ffffff">Yeni fikirlere direnir.</p>
-                                        <p style="color: #ffffff">Çok yaratıcı değildir.</p>
-                                        <p style="color: #ffffff">Soyut veya teorik kavramları sevmez.</p>
+                                        <h3 style="color: #d9534f; padding-bottom: 20px">{{result.opennes }}</h3>
+                                        <ul style="line-height: 2; color: #ffffff; padding-left: 0px">
+                                            <li>Değişiklikleri sevmez.</li>
+                                            <li>Yeni şeylerden zevk almaz.</li>
+                                            <li>Yeni fikirlere direnir.</li>
+                                            <li>Çok yaratıcı değildir.</li>
+                                            <li>Soyut veya teorik kavramları sevmez.</li>
+                                        </ul>
                                     </div>
                                 </div>
                                 <div class="CirItem title-box CirItem4">
                                     <h2 class="title"><span>Duygusal Denge</span></h2>
                                     <div ng-if="result.neuroticism == 'Uygun'">
-                                        <h3 style="color: #d9534f">{{result.neuroticism  }}</h3>
-                                        <p style="color: #ffffff">Çok fazla stres yaşar.</p>
-                                        <p style="color: #ffffff">Birçok farklı şey hakkında endişelenir.</p>
-                                        <p style="color: #ffffff">Kolayca üzülür.</p>
-                                        <p style="color: #ffffff">DRuh halindeki dramatik değişimleri deneyimler.</p>
-                                        <p style="color: #ffffff">Endişeli hisseder.</p>
-                                        <p style="color: #ffffff">Stresli olaylardan sonra kendine toplamak için çabalar.</p>
+                                        <h3 style="color: #d9534f; padding-bottom: 20px">{{result.neuroticism  }}</h3>
+                                        <ul style="line-height: 2; color: #ffffff; padding-left: 0px">
+                                            <li>Çok fazla stres yaşar.</li>
+                                            <li>Birçok farklı şey hakkında endişelenir.</li>
+                                            <li>Kolayca üzülür.</li>
+                                            <li>DRuh halindeki dramatik değişimleri deneyimler.</li>
+                                            <li>Endişeli hisseder.</li>
+                                            <li>Stresli olaylardan sonra kendine toplamak için çabalar.</li>
+                                        </ul>
                                     </div>
                                     <div ng-if="result.neuroticism == 'Uygun Değil'">
-                                        <h3 style="color: #5cb85c">{{result.neuroticism  }}</h3>
-                                        <p style="color: #ffffff">Duygusal olarak istikrarlıdır.</p>
-                                        <p style="color: #ffffff">Stresle başa çıkabilir</p>
-                                        <p style="color: #ffffff">Nadiren üzgün veya depresyonda hisseder.</p>
-                                        <p style="color: #ffffff">Çok endişelenmez.</p>
-                                        <p style="color: #ffffff">Genelde çok rahattır.</p>
+                                        <h3 style="color: #5cb85c; padding-bottom: 20px">{{result.neuroticism  }}</h3>
+                                        <ul style="line-height: 2; color: #ffffff; padding-left: 0px">
+                                            <li>Duygusal olarak istikrarlıdır.</li>
+                                            <li>Stresle başa çıkabilir</li>
+                                            <li>Nadiren üzgün veya depresyonda hisseder.</li>
+                                            <li>Çok endişelenmez.</li>
+                                            <li>Genelde çok rahattır.</li>
+                                        </ul>
                                     </div>
                                 </div>
                                 <div class="CirItem title-box CirItem5">
                                     <h2 class="title"><span>Dışa Dönüklülük</span></h2>
                                     <div ng-if="result.extraversion  == 'Uygun'">
-                                        <h3 style="color: #5cb85c">{{result.extraversion }}</h3>
-                                        <p style="color: #ffffff">İlgi odağı olmaktan hoşlanır.</p>
-                                        <p style="color: #ffffff">Konuşma başlatmayı sever.</p>
-                                        <p style="color: #ffffff">Yeni insanlarla tanışmaktan hoşlanır.</p>
-                                        <p style="color: #ffffff">Geniş sosyal arkadaş çevresi ve tanıdıklar var.</p>
-                                        <p style="color: #ffffff">Kolayca yeni arkadaş edinebilir.</p>
+                                        <h3 style="color: #5cb85c; padding-bottom: 20px">{{result.extraversion }}</h3>
+                                        <ul style="line-height: 2; color: #ffffff; padding-left: 0px">
+                                            <li>İlgi odağı olmaktan hoşlanır.</li>
+                                            <li>Konuşma başlatmayı sever.</li>
+                                            <li>Yeni insanlarla tanışmaktan hoşlanır.</li>
+                                            <li>Geniş sosyal arkadaş çevresi ve tanıdıklar var.</li>
+                                            <li>Kolayca yeni arkadaş edinebilir.</li>
+                                        </ul>
                                     </div>
                                     <div ng-if="result.extraversion  == 'Uygun Değil'">
-                                        <h3 style="color: #d9534f">{{result.extraversion }}</h3>
-                                        <p style="color: #ffffff">Yalnızlığı tercih eder.</p>
-                                        <p style="color: #ffffff">Sosyalleşmeyi zor bulur.</p>
-                                        <p style="color: #ffffff">Konuşma başlatmayı zor bulur.</p>
-                                        <p style="color: #ffffff">Kısa sohbetlerden hoşlanmıyor</p>
-                                        <p style="color: #ffffff">Konuşmadan önce bir şeyleri dikkatlice düşünür.</p>
-                                        <p style="color: #ffffff">İlgi odağı olmayı sevmez.</p>
+                                        <h3 style="color: #d9534f; padding-bottom: 20px">{{result.extraversion }}</h3>
+                                        <ul style="line-height: 2; color: #ffffff; padding-left: 0px">
+                                            <li>Yalnızlığı tercih eder.</li>
+                                            <li>Sosyalleşmeyi zor bulur.</li>
+                                            <li>Konuşma başlatmayı zor bulur.</li>
+                                            <li>Kısa sohbetlerden hoşlanmıyor</li>
+                                            <li>Konuşmadan önce bir şeyleri dikkatlice düşünür.</li>
+                                            <li>İlgi odağı olmayı sevmez.</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
